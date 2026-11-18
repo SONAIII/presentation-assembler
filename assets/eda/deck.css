@@ -1,0 +1,263 @@
+/* ============================================================
+   Дизайн-система «Еда» для кастомных HTML-слайдов (family: custom)
+   Вендорена В ЭТОТ СКИЛЛ — папка самодостаточна, сиблинг не нужен.
+   Канва 1920×1080 (= 26.665″×15″ шаблона @72dpi → 1pt = 1px).
+   Токены/кегли — из Templates/…/brand-tokens (v13), совпадают с pptx-мастером.
+
+   Подключение из custom-слайда — абсолютным путём к ЭТОМУ файлу
+   (references/custom-html.md показывает как); шрифты YS — СИСТЕМНЫЕ
+   (ставит scripts/fetch_template.py --fonts, проверяет preflight), поэтому
+   @font-face здесь НЕ нужен — семейства 'YS Geo'/'YS Text' резолвятся из
+   установленных.  Декоративные псевдоэлементы (::after-вуали, ::before-точки)
+   в .pptx НЕ конвертируются — для конвертируемых слайдов декор реальными
+   элементами (см. references/custom-html.md, «Конвертируемость»).
+   ============================================================ */
+
+/* ---- Токены ---- */
+:root{
+  --yellow:#FFD700;      /* accent1 — жёлтый акцент (одна роль на слайд: первая карта / баннер / даты / пилюли) */
+  --grey:#E9E7E6;        /* accent2 — серые карты, фоны, коннекторы, hairline-линии */
+  --grey-text:#918784;   /* accent3 — вторичный текст, цифры рядовых бейджей, ghost-значения */
+  --ink:#230F0A;         /* tx1 — основной текст (тёмно-коричневый, НЕ чёрный) */
+  --paper:#FFFFFF;       /* bg1 */
+  --grey-line:#4F4E49;   /* accent4 — линии-разделители (зеркало atom:divider) */
+  --ok:#00B533;          /* семантический «да/рост» (палитра v14, atom:icon-check) — ТОЛЬКО семантика, не декор */
+  --no:#FF3700;          /* семантический «нет/падение» (atom:icon-cross) — ТОЛЬКО семантика, не декор */
+  --f-geo:'YS Geo';      /* заголовки, имена блоков, значения */
+  --f-text:'YS Text';    /* основной текст, подписи */
+  --r-photo:44px;        /* скругление фото-панелей и рамочных вставок */
+  --r-card:40px;         /* карты, баннеры, плитки дат */
+  --r-badge:24px;        /* номерные бейджи, табы, иконки-чипы */
+  --inset:29px;          /* отступ рамки от края слайда (0.4″) */
+  --mx:125px;            /* поле контента слева/справа (1.74″) */
+  --gap:56px;            /* межколоночный зазор сетки (0.78″) */
+  --gap-dense:40px;      /* зазор уплотнённой сетки (шкала уплотнения, шаг 1) */
+  --photo-w:786px;       /* ширина боковой фото-панели */
+  --slide-bg:var(--paper);
+}
+
+/* ---- Reset + сцена ---- */
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{background:#8A8580;font-family:var(--f-text),-apple-system,sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+img{display:block;}
+
+/* ---- списки: <ul>/<li> → НАТИВНЫЕ буллиты PowerPoint (0.40.x). Конвертер
+   собирает li абзацами-буллитами: маркер «•» 150% цветом текста, висячая
+   строка 36.9pt, <ol> — нумерация. Канон маркера снят с донора Хурала #42 и
+   действует ДВИЖКОВЫМ ДЕФОЛТОМ для всех шаблонов, пока дизайнер этого бренда
+   не принесёт свой. Дефисы/точки руками не верстать — перечисление всегда
+   настоящим списком. padding-left = висячая строка (reset выше обнуляет
+   UA-дефолт), кегль/гарнитуру li наследует от контекста. ---- */
+ul,ol{padding-left:37px;}
+li{margin:6px 0 16px;}
+li::marker{font-size:1.5em;}
+
+
+.slide{
+  position:relative;width:1920px;height:1080px;overflow:hidden;
+  background:var(--slide-bg);color:var(--ink);
+  display:flex;flex-direction:column;margin:0 auto;
+}
+
+/* ---- Типы слайдов ---- */
+/* Контентный: белый/серый фон, заголовок-датум сверху.
+   Нижний отступ 120px — якорь футера (user-правило 2026-07-20: якоря
+   неподвижны, наложения не должно быть): полоса номера страницы в лэйауте
+   y 981→1015, контент заканчивается на 960 (= медиана контент-низа
+   дизайнерских слайдов шаблона). Наезд лечится размерами карточек/текста,
+   не перекрытием; машинная страховка — гвард A15 при сборке. */
+.slide--content{padding:79px var(--mx) 120px;}
+.slide--grey{--slide-bg:var(--grey);}
+/* Рамочный: жёлтая рамка + фото на всю канву (cover, toc_photo, contacts) */
+.slide--frame{--slide-bg:var(--yellow);}
+/* Жёлтый полноформат (statement, closing) */
+.slide--yellow{--slide-bg:var(--yellow);}
+
+/* ---- Заголовочный датум контентного слайда ---- */
+.h1{font:900 66px/1.06 var(--f-geo);letter-spacing:0;max-width:1450px;}
+.sub{font:400 44px/1.25 var(--f-text);margin-top:24px;max-width:1300px;}
+.content{flex:1;min-height:0;margin-top:44px;display:flex;flex-direction:column;}
+.content--center{justify-content:center;}
+/* Зеркало поля номера страницы лэйаута (статический fld slidenum:
+   x 1759→1797, y 994→1013, 18pt; рядом — футер-плейсхолдер x 125→1712,
+   y 981→1015). В .pptx НЕ конвертируется — номер даёт лэйаут; зеркало
+   показывает якорь в его реальных координатах, чтобы вёрстка его обходила */
+.pagenum{position:absolute;right:123px;bottom:67px;font:400 18px/1 var(--f-text);color:var(--grey-text);}
+
+/* ---- Рамочные слайды: фото и плашки ---- */
+.frame-photo{position:absolute;inset:var(--inset);border-radius:var(--r-photo);overflow:hidden;background:var(--grey);}
+.frame-photo img{width:100%;height:100%;object-fit:cover;}
+.frame-photo::after{ /* мягкое затемнение слева под белый текст — НЕ конвертируется, для .pptx делай вуаль <div> */
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(90deg,rgba(35,15,10,.38) 0%,rgba(35,15,10,.16) 45%,rgba(35,15,10,0) 70%);
+}
+.frame-photo--plain::after{display:none;}
+/* Плашка в верхнем левом углу рамки: лого или «Раздел N» */
+.corner-badge{
+  position:absolute;top:var(--inset);left:var(--inset);z-index:2;
+  min-width:380px;height:97px;padding:0 56px;
+  background:var(--yellow);border-radius:0 0 var(--r-photo) 0;
+  display:flex;align-items:center;justify-content:center;gap:20px;
+}
+.corner-badge img{height:60px;}
+.corner-badge .txt{font:700 44px/1 var(--f-geo);color:var(--ink);}
+/* Контент поверх фото */
+.frame-content{position:absolute;left:var(--mx);right:var(--mx);z-index:2;color:#fff;}
+
+/* ---- Роли текста ---- */
+.display-xl{font:900 130px/1.04 var(--f-geo);}   /* контакты «спасибо за внимание» */
+.display-lg{font:900 110px/1.05 var(--f-geo);}   /* титул обложки, закрывающий */
+.display-md{font:900 92px/1.05 var(--f-geo);}    /* разделитель, активный пункт оглавления */
+.statement-text{font:900 120px/1.12 var(--f-geo);} /* statement: одна мысль крупно */
+.value-xl{font:900 138px/.95 var(--f-geo);letter-spacing:-1px;}
+.value-lg{font:900 92px/.95 var(--f-geo);}
+.value-md{font:900 64px/1 var(--f-geo);}
+.tile-name{font:700 32px/1.2 var(--f-geo);}
+.body,.body-32{font:400 32px/1.35 var(--f-text);}
+.body-28{font:400 28px/1.35 var(--f-text);}
+.body-24{font:400 24px/1.35 var(--f-text);}
+.caption{font:400 24px/1.3 var(--f-text);color:var(--grey-text);}
+.lead b,.body b,.body-28 b,.body-24 b{font-weight:700;}
+.ghost{color:var(--grey-text);}
+.on-photo{color:#fff;}
+
+/* ---- Атомы ---- */
+.card{background:var(--grey);border-radius:var(--r-card);padding:44px 48px;}
+.card--yellow{background:var(--yellow);}
+.card--white{background:var(--paper);}
+.card--pad-sm{padding:36px 40px;}
+
+/* Таб-бейдж с номером в верхней кромке карточки (columns #19) */
+.card--tabbed{position:relative;padding-top:104px;}
+.tab-badge{
+  position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:288px;height:68px;background:var(--slide-bg);
+  border-radius:0 0 var(--r-badge) var(--r-badge);
+  display:flex;align-items:center;justify-content:center;
+  font:700 34px/1 var(--f-geo);color:var(--grey-text);
+}
+.card--yellow .tab-badge{color:var(--ink);}
+
+/* Номерной бейдж-квадрат (steps #14) */
+.badge-num{
+  width:76px;height:76px;background:var(--yellow);border-radius:var(--r-badge);
+  display:flex;align-items:center;justify-content:center;
+  font:700 34px/1 var(--f-geo);color:var(--ink);
+}
+
+/* Жёлтый баннер-интро (takeaways #21) */
+.banner{background:var(--yellow);border-radius:var(--r-card);padding:34px 52px;font:400 36px/1.3 var(--f-text);}
+.banner b{font-weight:700;}
+
+/* Пилюля-хайлайт значения (таблицы #36) */
+.pill{display:inline-block;background:var(--yellow);border-radius:999px;padding:6px 22px;}
+
+/* Жёлтая пилюля-хайлайт за словом в заголовке — родня .pill из шаблонной таблицы #36 */
+.mark{background:var(--yellow);border-radius:999px;padding:2px 26px;box-decoration-break:clone;-webkit-box-decoration-break:clone;}
+
+/* Иконка-чип (proscons #22) */
+.icon-chip{width:96px;height:96px;border-radius:var(--r-badge);background:var(--yellow);display:flex;align-items:center;justify-content:center;}
+.icon-chip--ink{background:var(--ink);}
+.icon-chip svg{width:52px;height:52px;}
+
+/* Секционная метка с жёлтой точкой (стиль буллетов Еды) — точка ::before НЕ конвертируется */
+.label-bar{display:flex;align-items:center;gap:20px;font:700 28px/1.1 var(--f-text);}
+.label-bar::before{content:'';width:14px;height:14px;background:var(--bar,var(--yellow));border-radius:50%;flex:none;}
+
+/* Иконка соцсети/сервиса на контактах — фирменный цвет сервиса (санкционированное исключение палитры) */
+.icon-social{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;}
+
+/* Списки с точками — маркер ::before НЕ конвертируется (для .pptx точку реальным элементом) */
+.dots{list-style:none;}
+.dots li{position:relative;padding-left:44px;font:400 34px/1.35 var(--f-text);}
+.dots li+li{margin-top:28px;}
+.dots li::before{content:'';position:absolute;left:6px;top:16px;width:13px;height:13px;border-radius:50%;background:var(--yellow);}
+.dots--ink li::before{background:var(--ink);}
+
+/* Стат-строка метрики: крупная цифра слева, текст справа (metrics #11) */
+.stat-row{display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:center;border-radius:var(--r-card);padding:30px 52px;background:var(--grey);}
+.stat-row .value-lg{text-align:left;}
+.stat-row p{font:400 30px/1.3 var(--f-text);}
+.stat-row--yellow{background:var(--yellow);}
+
+/* Плитка даты таймлайна (timeline #26–28) */
+.date-chip{width:262px;min-height:180px;background:var(--yellow);border-radius:var(--r-card);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;}
+.date-chip .d{font:900 56px/1 var(--f-geo);}
+.date-chip .y{font:400 30px/1 var(--f-text);}
+.date-chip--ghost{background:var(--grey);}
+
+/* Горизонтальный бар (плотные bar-строки) */
+.bar-row{display:grid;grid-template-columns:260px 1fr 320px;gap:28px;align-items:center;}
+.bar-row .name{font:700 30px/1.15 var(--f-text);text-align:right;}
+.bar-track{position:relative;height:56px;background:var(--grey);border-radius:999px;overflow:hidden;}
+.bar-fill{position:absolute;left:0;top:0;bottom:0;background:var(--yellow);border-radius:999px;
+  display:flex;align-items:center;justify-content:flex-end;padding-right:24px;font:700 28px/1 var(--f-text);}
+.bar-fill--ink{background:var(--ink);color:#fff;}
+.bar-note{position:absolute;inset:0;display:flex;align-items:center;padding-left:28px;font:400 24px/1 var(--f-text);color:var(--grey-text);font-style:italic;}
+.bar-abs{font:400 26px/1.25 var(--f-text);}
+.bar-abs b{font-weight:700;}
+
+/* Таблица hairline (datatable #36).
+   Выравнивание — правило вёрстки (user 2026-07-20): текст влево (дефолт),
+   числовой колонке ставь .num на th+td — вправо, заголовок как колонка;
+   линт проверит готовый a:tbl тем же правилом (table-align). */
+.table{width:100%;border-collapse:collapse;}
+.table th{font:700 34px/1.2 var(--f-text);text-align:left;padding:22px 28px 22px 0;border-bottom:3px solid var(--ink);}
+.table td{font:400 34px/1.25 var(--f-text);padding:24px 28px 24px 0;border-bottom:1px solid var(--grey);}
+.table th:last-child,.table td:last-child{padding-right:0;}
+.table .num{text-align:right;}
+.table tr:last-child td{border-bottom:none;}
+
+/* ---- Инфографика (зеркала палитры атомов v14: arrow / divider / icon-check / icon-cross) ----
+   Глифы — инлайн-SVG из assets/eda/glyphs/ (README там же); редполитика —
+   references/custom-html.md §Инфографика: стрелки ink/серые (НЕ жёлтые),
+   --ok/--no только для семантики да-нет / рост-падение. */
+.flow{display:flex;align-items:center;gap:24px;}          /* лента процесса: карточки-шаги + глиф-стрелки в зазорах */
+.flow>.step{flex:1;min-width:0;}                          /* шаг флоу (обычно вместе с .card) */
+.flow>svg{flex:none;}
+.divider-h{height:3px;background:var(--grey-line);border-radius:999px;}  /* зеркало atom:divider (accent4) */
+.nline{background:var(--ink);}                            /* нативная линия: <div class="nline" data-line="arrow" style="width:…px;height:3px"> → редактируемый коннектор */
+.delta{display:inline-flex;align-items:center;gap:12px;}  /* значение + глиф delta-up/down.svg */
+.delta--ok{color:var(--ok);}
+.delta--no{color:var(--no);}
+.verdict-row{display:flex;align-items:center;gap:24px;}   /* строка сравнения: check/cross-circle.svg + текст */
+.verdict-row svg{flex:none;}
+
+/* ---- Скелеты-сетки ---- */
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--gap);}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--gap);}
+.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--gap);}
+.grid--dense{gap:var(--gap-dense);}
+.stack{display:flex;flex-direction:column;gap:40px;}
+.stack--dense{gap:28px;}
+.row{display:flex;gap:var(--gap);align-items:center;}
+.grow{flex:1;min-height:0;}
+
+/* Боковая фото-панель контентного слайда */
+.slide--photo-right{padding-right:calc(var(--photo-w) + var(--inset) + var(--gap));}
+.slide--photo-left{padding-left:calc(var(--photo-w) + var(--inset) + var(--gap));}
+.photo-abs{position:absolute;top:var(--inset);bottom:var(--inset);width:var(--photo-w);
+  border-radius:48px;overflow:hidden;background:var(--grey);}
+.slide--photo-right .photo-abs{right:var(--inset);}
+.slide--photo-left .photo-abs{left:var(--inset);}
+.photo-abs img{width:100%;height:100%;object-fit:cover;}
+
+/* Фото-герой сверху (steps #14) */
+.hero-photo{position:absolute;top:var(--inset);left:var(--inset);right:var(--inset);height:560px;
+  border-radius:var(--r-photo);overflow:hidden;background:var(--grey);}
+.hero-photo img{width:100%;height:100%;object-fit:cover;}
+.hero-photo::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(35,15,10,.42) 0%,rgba(35,15,10,.08) 55%,rgba(35,15,10,0) 75%);}
+
+/* ---- Вьюер: по одному слайду, листание (для превью в браузере) ---- */
+.deck--single .slide{display:none;}
+.deck--single .slide.is-active{display:flex;}
+
+/* ---- Печать: одна страница на слайд ---- */
+@page{size:1920px 1080px;margin:0;}
+@media print{
+  html,body{background:#fff;}
+  .deck--single .slide{display:flex !important;page-break-after:always;break-after:page;}
+  .hint{display:none !important;}
+}
