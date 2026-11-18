@@ -1,0 +1,111 @@
+/* ============================================================
+   Дизайн-система «Городские сервисы» для кастомных HTML-слайдов
+   (family: custom). Вендорена В ЭТОТ СКИЛЛ — папка самодостаточна.
+   Канва 1920×1080 (= 26.665″×15″ шаблона @72dpi → 1pt = 1px).
+   Токены — из layouts/gor-services/brand-tokens.json (тема шаблона v1.0).
+   Шрифты YS Compressed / YS SemiMono — СИСТЕМНЫЕ (ставит
+   fetch_template.py --fonts), @font-face не нужен.
+   Базовый режим — ТЁМНЫЙ (.slide); светлый — .slide.white.
+   Декор реальными элементами (псевдоэлементы в .pptx не конвертируются —
+   см. references/custom-html.md «Конвертируемость»).
+   ============================================================ */
+
+:root{
+  --red:#FF1E00;        /* accent1 — энергия/питч, последний бар, активный пункт */
+  --yellow:#FFD700;     /* accent2 */
+  --blue:#00ADFF;       /* accent3 — спокойный/аналитика */
+  --dark:#292929;       /* accent4 — тёмная карта */
+  --ink:#000000;        /* текст на светлом */
+  --paper:#FFFFFF;      /* белый */
+  --f-disp:'YS Compressed Heavy';  /* заголовки, значения, номера */
+  --f-mono:'YS SemiMono Regular';  /* боди, лейблы, подписи */
+  --r-card:40px;        /* карты */
+  --r-pill:24px;        /* пилюли, бейджи */
+  --r-photo:44px;       /* фото-панели */
+  --inset:29px;         /* рамка от края (0.4″) */
+  --mx:58px;            /* поле контента слева/справа (0.81″) */
+  --gap:56px;
+  --hd-top:72px;        /* верх заголовка (1.0″) */
+}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{background:#5a5a5a;font-family:var(--f-mono),-apple-system,sans-serif;-webkit-font-smoothing:antialiased;}
+img{display:block;}
+
+/* ---- списки: <ul>/<li> → НАТИВНЫЕ буллиты PowerPoint (0.40.x). Конвертер
+   собирает li абзацами-буллитами: маркер «•» 150% цветом текста, висячая
+   строка 36.9pt, <ol> — нумерация. Канон маркера снят с донора Хурала #42 и
+   действует ДВИЖКОВЫМ ДЕФОЛТОМ для всех шаблонов, пока дизайнер этого бренда
+   не принесёт свой. Дефисы/точки руками не верстать — перечисление всегда
+   настоящим списком. padding-left = висячая строка (reset выше обнуляет
+   UA-дефолт), кегль/гарнитуру li наследует от контекста. ---- */
+ul,ol{padding-left:37px;}
+li{margin:6px 0 16px;}
+li::marker{font-size:1.5em;}
+
+
+.slide{
+  position:relative;width:1920px;height:1080px;overflow:hidden;
+  background:var(--dark);color:var(--paper);
+  display:flex;flex-direction:column;margin:0 auto;
+}
+.slide.black{background:#000000;}
+.slide.white{background:var(--paper);color:var(--ink);}
+
+/* ---- заголовок ---- */
+.h1{font-family:var(--f-disp);font-weight:900;font-size:96px;line-height:0.98;
+    margin:var(--hd-top) var(--mx) 0;}
+.display{font-family:var(--f-disp);font-weight:900;font-size:166px;line-height:0.94;}
+.sub{font-family:var(--f-mono);font-size:32px;line-height:1.15;margin:24px var(--mx) 0;opacity:.85;}
+
+/* ---- атомы (канон снят С ЭТАЛОННЫХ СЛАЙДОВ шаблона v2.0 — дизайнер разметила
+   их фигурами atom:* прямо в файле; значения ниже = XML эталонов, не выдумки.
+   Карта «атом → слайд-эталон» — custom-recipes-gor-services.md) ---- */
+
+/* пилюля-подпись = atom:pill #29 (288×65, обводка 1.5px, текст 24 SemiMono) */
+.pill{display:inline-flex;align-items:center;justify-content:center;
+      font-family:var(--f-mono);font-size:24px;height:65px;padding:0 26px;
+      border-radius:33px;border:1.5px solid currentColor;}
+
+/* ---- числа и номера (правило владельца 2026-07-28):
+   ТОЛЬКО две формы — голая крупная цифра ЛИБО цифра в КРУГЕ-ОБВОДКЕ.
+   Залитые цветные круги/бейджи под номера ЗАПРЕЩЕНЫ (не канон). ---- */
+/* голая крупная цифра = «ХХ» метрик (#9 96pt, #19 150pt), «100%» чарта (#35 222pt) */
+.bignum{font-family:var(--f-disp);font-weight:900;font-size:96px;line-height:1;}
+/* цифра в круге-обводке = номера содержания #51/#52: круг 106×106, обводка 1.5px,
+   цифра 60px YS Compressed (Bold). Актив (разделитель #51) — белая заливка,
+   чёрная цифра (fill bg1 + tx1 у дизайнера). */
+.numbox{width:106px;height:106px;border:1.5px solid currentColor;
+        border-radius:50%;
+        display:flex;align-items:center;justify-content:center;
+        font-family:'YS Compressed';font-weight:700;font-size:60px;line-height:1;}
+.numbox.active{background:var(--paper);color:var(--ink);border-color:var(--paper);}
+.slide.white .numbox.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.card{background:var(--dark);border-radius:var(--r-card);padding:56px;}
+.slide.white .card{background:#F2F1F0;}
+.badge{width:106px;height:106px;border-radius:50%;border:1.5px solid currentColor;
+       display:flex;align-items:center;justify-content:center;
+       font-family:'YS Compressed';font-weight:700;font-size:60px;} /* = .numbox */
+.hr{height:2px;background:currentColor;opacity:.4;border:0;}
+/* линия = atom:line #32 (2px, белая/ink); стрелка = atom:arrow #33 (то же +
+   наконечник; в HTML — data-line="arrow", цвет задаёт background) */
+.nline{height:2px;background:var(--paper);}
+.slide.white .nline{background:var(--ink);}
+.value{font-family:var(--f-disp);font-size:96px;line-height:1;}
+.value.red{color:var(--red);}
+.label{font-family:var(--f-mono);font-size:24px;line-height:1.2;opacity:.85;}
+
+/* ---- орг-структура ---- */
+.org{position:absolute;inset:0 0 120px 0;} /* низ 120px чист: полоса номера (B12/A15) */
+.org svg{position:absolute;inset:0;width:1920px;height:960px;pointer-events:none;}
+/* орг-узел = atom:pill #34: ЧЁРНАЯ пилюля (fill tx1) с белой обводкой 2px,
+   полное скругление (adj 50%) */
+.org .node{position:absolute;background:var(--ink);border:2px solid var(--paper);
+           border-radius:999px;
+           padding:20px 26px;display:flex;align-items:center;gap:20px;width:360px;}
+.slide.white .org .node{background:var(--paper);border-color:var(--ink);}
+.org .node.head{background:var(--red);color:var(--paper);}
+.org .ava{width:96px;height:96px;border-radius:24px;object-fit:cover;flex:0 0 auto;background:#111;}
+.org .who{display:flex;flex-direction:column;}
+.org .who .name{font-family:var(--f-disp);font-size:34px;line-height:1.02;}
+.org .who .role{font-family:var(--f-mono);font-size:22px;opacity:.8;}
