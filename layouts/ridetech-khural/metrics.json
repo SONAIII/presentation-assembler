@@ -1,0 +1,211 @@
+{
+ "schema_version": 1,
+ "template": "Хурал Райдтеха",
+ "template_file": "Templates/ridetech-khural/ridetech-khural-v3.3.pptx",
+ "id": "rk_metrics",
+ "family": "metrics",
+ "kind": "content_fill",
+ "_doc": "Метрики (#34 три с тегами-пилюлями, #35 две с сентиментом зел/красн, #25 сетка 2×3 карточек). Шейпы именованы atom:metric_*_N — repeat по match_names. Сентимент цветов (#71FFB5 позитив / #FF9189 негатив) зашит в доноры.",
+ "match": {
+  "form": "metrics",
+  "count": [
+   2,
+   6
+  ]
+ },
+ "_router_note": "2 значения (зел/красн пара) → duo_sentiment; 3 → trio_tags; 6 → grid6. 4–5 → реворд до 3 или 6 (карточных доноров на 4–5 нет). trio_tags подходит и для 3 КОРОТКИХ ТЕКСТОВЫХ пунктов «ярлык + хайлайт + подпись» (решения, ставки, этапы): хайлайт-коробка держит ~6 знаков на 115pt (ужатие до 64pt) — цифра или фраза в 1–2 коротких слова; длиннее → columns.",
+ "variants": [
+  {
+   "name": "trio_tags",
+   "_hint": 33,
+   "preferred": true,
+   "anchor": {
+    "has_shapes": [
+     "atom:metric_tag_3"
+    ]
+   },
+   "_note": "#34: три колонки с вертикальными линиями; тег-пилюля 28pt + значение 115pt + описание.",
+   "slots": {
+    "tags": {
+     "repeat": true,
+     "match_names": [
+      "atom:metric_tag_1",
+      "atom:metric_tag_2",
+      "atom:metric_tag_3"
+     ],
+     "recurse": true,
+     "sort": "left_top",
+     "fit_policy": "text_only",
+     "font": "YS Text Bold",
+     "size_pt": 28,
+     "box_w_in": 2.9,
+     "box_h_in": 1.04,
+     "optional": true,
+     "force_wrap": "none",
+     "_note": "Пилюля растягивается вбок = wrap НЕТ + autofit ЕСТЬ (семантика галки «перенос» обратна интуиции; пересчитывает только PP при открытии — в превью Диска/LO пилюля кажется нерастянутой). В апдейте v2.2 (md5 1410e98c) владелец вернул wrap=none; force_wrap остаётся СТРАХОВКОЙ от будущих пересохранений."
+    },
+    "values": {
+     "repeat": true,
+     "match_names": [
+      "atom:metric_value_1",
+      "atom:metric_value_2",
+      "atom:metric_value_3"
+     ],
+     "recurse": true,
+     "sort": "left_top",
+     "fit_policy": "value_shrink",
+     "font": "YS Text Wide Bold",
+     "size_pt": 115,
+     "box_w_in": 7.22,
+     "min_pt": 64,
+     "max_chars_hint": 6
+    },
+    "descs": {
+     "repeat": true,
+     "match_names": [
+      "atom:metric_desc_1",
+      "atom:metric_desc_2",
+      "atom:metric_desc_3"
+     ],
+     "recurse": true,
+     "sort": "left_top",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 32,
+     "box_w_in": 7.22,
+     "box_h_in": 1.62,
+     "max_lines": 3,
+     "min_pt": 24
+    }
+   }
+  },
+  {
+   "name": "duo_sentiment",
+   "_hint": 34,
+   "anchor": {
+    "has_shapes": [
+     "atom:metric_value_good"
+    ]
+   },
+   "_note": "#35: пара метрик хорошо/плохо — цвет значений в доноре (зелёное слева, красное справа). v2.2: шейпы переименованы дизайнером в *_good/*_bad — порядок [позитив, негатив] гарантирован match_names, не геометрией. Якорь по atom:metric_value_good (СТАРЫЙ якорь has value_2 в v2.2 молча матчил бы чужой слайд 42 screenshots).",
+   "slots": {
+    "tags": {
+     "repeat": true,
+     "match_names": [
+      "atom:metric_tag_good",
+      "atom:metric_tag_bad"
+     ],
+     "recurse": true,
+     "sort": "left_top",
+     "fit_policy": "text_only",
+     "font": "YS Text Bold",
+     "size_pt": 28,
+     "box_w_in": 2.9,
+     "box_h_in": 1.04,
+     "optional": true,
+     "force_wrap": "none",
+     "_note": "Пилюля растягивается вбок = wrap НЕТ + autofit ЕСТЬ (семантика галки «перенос» обратна интуиции; пересчитывает только PP при открытии — в превью Диска/LO пилюля кажется нерастянутой). В апдейте v2.2 (md5 1410e98c) владелец вернул wrap=none; force_wrap остаётся СТРАХОВКОЙ от будущих пересохранений."
+    },
+    "values": {
+     "repeat": true,
+     "match_names": [
+      "atom:metric_value_good",
+      "atom:metric_value_bad"
+     ],
+     "recurse": true,
+     "sort": "left_top",
+     "fit_policy": "value_shrink",
+     "font": "YS Text Wide Bold",
+     "size_pt": 115,
+     "box_w_in": 7.22,
+     "min_pt": 64,
+     "max_chars_hint": 6
+    },
+    "descs": {
+     "repeat": true,
+     "match_names": [
+      "atom:metric_desc_good",
+      "atom:metric_desc_bad"
+     ],
+     "recurse": true,
+     "sort": "left_top",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 32,
+     "box_w_in": 7.22,
+     "box_h_in": 1.08,
+     "max_lines": 2,
+     "min_pt": 24
+    }
+   }
+  },
+  {
+   "name": "grid6",
+   "_hint": 24,
+   "anchor": {
+    "all": [
+     "Six metrics on slide"
+    ]
+   },
+   "_note": "#25: сетка 2×3 карточек, в каждой значение 88pt + описание 24pt. Группы atom:metric_block_N.",
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 1.94,
+     "max_lines": 2,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "values": {
+     "repeat": true,
+     "match_names": [
+      "atom:metric_value_1",
+      "atom:metric_value_2",
+      "atom:metric_value_3",
+      "atom:metric_value_4",
+      "atom:metric_value_5",
+      "atom:metric_value_6"
+     ],
+     "recurse": true,
+     "sort": "left_top",
+     "fit_policy": "value_shrink",
+     "font": "YS Text Wide Bold",
+     "size_pt": 88,
+     "box_w_in": 7.52,
+     "min_pt": 54,
+     "max_chars_hint": 6
+    },
+    "descs": {
+     "repeat": true,
+     "match_names": [
+      "atom:metric_desc_1",
+      "atom:metric_desc_2",
+      "atom:metric_desc_3",
+      "atom:metric_desc_4",
+      "atom:metric_desc_5",
+      "atom:metric_desc_6"
+     ],
+     "recurse": true,
+     "sort": "left_top",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 24,
+     "box_w_in": 7.52,
+     "box_h_in": 0.81,
+     "max_lines": 2,
+     "min_pt": 20
+    }
+   }
+  }
+ ],
+ "dont_touch": [
+  "think-cell data - do not delete",
+  "Rounded Rectangle*",
+  "Straight Connector*"
+ ],
+ "_anchored": "§3Б: trio — has_shapes atom:metric_tag_3; duo — value_2 при no_shapes value_3; grid6 — уникальный заголовок. У #34/#35 заголовка-плейсхолдера нет (метрики сами — герой слайда)."
+}

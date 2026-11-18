@@ -1,0 +1,195 @@
+{
+ "schema_version": 1,
+ "template": "Хурал Райдтеха",
+ "template_file": "Templates/ridetech-khural/ridetech-khural-v3.3.pptx",
+ "id": "rk_statement",
+ "family": "statement",
+ "kind": "structural",
+ "_doc": "Крупное высказывание, 3 режима настроения × 2 формы (#16–21). Режим несёт фон-фото донора: neutral — спокойный, bad — тревожный (красная тональность), good — позитивный (зелёная). Форма text — тезис 72pt; форма value — гигантская цифра 344pt + подпись. Выбор режима — агент по сентименту содержания (families-док), формы — по наличию числа-героя.",
+ "match": {
+  "form": "statement",
+  "count": [
+   1,
+   1
+  ]
+ },
+ "title_policy": "Тезис = сильное короткое утверждение; value = одно число-герой (% / кратность / счёт), подпись 2–4 слова.",
+ "variants": [
+  {
+   "name": "neutral_text",
+   "_hint": 15,
+   "anchor": {
+    "has_shapes": [
+     "meta:variant:statement:neutral"
+    ]
+   },
+   "_note": "Нейтральный тезис (#16).",
+   "slots": {
+    "title": {
+     "match_name": "Title 4",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 72,
+     "box_w_in": 12.5,
+     "box_h_in": 2.18,
+     "max_lines": 3,
+     "min_pt": 54,
+     "clear_soft_breaks": true
+    }
+   }
+  },
+  {
+   "name": "neutral_value",
+   "_hint": 16,
+   "anchor": {
+    "has_shapes": [
+     "meta:variant:statement:neutral",
+     "atom:block_title"
+    ]
+   },
+   "_note": "Нейтральная цифра-герой (#17).",
+   "slots": {
+    "value": {
+     "match_name": "Title 2",
+     "fit_policy": "value_shrink",
+     "font": "YS Text Wide Bold",
+     "size_pt": 344,
+     "box_w_in": 13.07,
+     "min_pt": 200,
+     "max_chars_hint": 5,
+     "clear_soft_breaks": true
+    },
+    "caption": {
+     "match_name": "atom:block_title",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 72,
+     "box_w_in": 6.35,
+     "box_h_in": 1.21,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    }
+   }
+  },
+  {
+   "name": "bad_text",
+   "_hint": 17,
+   "anchor": {
+    "has_shapes": [
+     "meta:variant:statement:bad"
+    ]
+   },
+   "_note": "Негативный тезис (#18).",
+   "slots": {
+    "title": {
+     "match_name": "Title 4",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 72,
+     "box_w_in": 12.5,
+     "box_h_in": 2.18,
+     "max_lines": 3,
+     "min_pt": 54,
+     "clear_soft_breaks": true
+    }
+   }
+  },
+  {
+   "name": "bad_value",
+   "_hint": 18,
+   "anchor": {
+    "has_shapes": [
+     "meta:variant:statement:bad",
+     "atom:block_title"
+    ]
+   },
+   "_note": "Негативная цифра-герой (#19).",
+   "slots": {
+    "value": {
+     "match_name": "Title 4",
+     "fit_policy": "value_shrink",
+     "font": "YS Text Wide Bold",
+     "size_pt": 344,
+     "box_w_in": 13.75,
+     "min_pt": 200,
+     "max_chars_hint": 5,
+     "clear_soft_breaks": true
+    },
+    "caption": {
+     "match_name": "atom:block_title",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 72,
+     "box_w_in": 6.35,
+     "box_h_in": 1.21,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    }
+   }
+  },
+  {
+   "name": "good_text",
+   "_hint": 19,
+   "anchor": {
+    "has_shapes": [
+     "meta:variant:statement:good"
+    ]
+   },
+   "_note": "Позитивный тезис (#20).",
+   "slots": {
+    "title": {
+     "match_name": "Title 4",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 72,
+     "box_w_in": 12.5,
+     "box_h_in": 2.18,
+     "max_lines": 3,
+     "min_pt": 54,
+     "clear_soft_breaks": true
+    }
+   }
+  },
+  {
+   "name": "good_value",
+   "_hint": 20,
+   "anchor": {
+    "has_shapes": [
+     "meta:variant:statement:good",
+     "atom:block_title"
+    ]
+   },
+   "_note": "Позитивная цифра-герой (#21), значение на всю ширину.",
+   "slots": {
+    "value": {
+     "match_name": "Title 2",
+     "fit_policy": "value_shrink",
+     "font": "YS Text Wide Bold",
+     "size_pt": 344,
+     "box_w_in": 25.59,
+     "min_pt": 200,
+     "max_chars_hint": 5,
+     "clear_soft_breaks": true
+    },
+    "caption": {
+     "match_name": "atom:block_title",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 72,
+     "box_w_in": 6.35,
+     "box_h_in": 1.21,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    }
+   }
+  }
+ ],
+ "dont_touch": [
+  "think-cell data - do not delete",
+  "meta:*"
+ ],
+ "_anchored": "§3Б: режим — по группе-метке meta:variant:statement:<mode> (чистые имена, без пробелов — в отличие от cover); формы text/value разводятся has_shapes atom:block_title (есть только у value) + _hint."
+}

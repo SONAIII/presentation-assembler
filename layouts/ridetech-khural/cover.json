@@ -1,0 +1,580 @@
+{
+ "schema_version": 1,
+ "template": "Хурал Райдтеха",
+ "template_file": "Templates/ridetech-khural/ridetech-khural-v3.3.pptx",
+ "id": "rk_cover",
+ "family": "cover",
+ "kind": "structural",
+ "_doc": "Обложка Ridetech Хурала: 12 сервисных вариантов, один слайд-донор на сервис (#1–12). Слева заголовок 60pt YS Text Wide Bold (3 строки) + спикер/должность 40pt; справа фикс-сетка сервисных фото в группе-метке meta: variant: cover: <key> (имена С ПРОБЕЛАМИ — так в файле). Выбор варианта — вопрос брифа «О каком сервисе пойдёт речь?», явный variant в deckspec; без ответа — preferred cover_neutral. Логотип и фон фиксированы.",
+ "match": {
+  "form": "title",
+  "count": [
+   1,
+   1
+  ]
+ },
+ "title_policy": "Заголовок обложки = название доклада, крепкий тезис; не категория. До 3 строк, реворд вместо ужатия.",
+ "subtitle_policy": "Спикер (Имя Фамилия) и должность (2–3 слова) — только из брифа; нет данных → боксы очищаем, не выдумываем.",
+ "variants": [
+  {
+   "name": "cover_go",
+   "_hint": 0,
+   "anchor": {
+    "has_shapes": [
+     "meta: variant: cover: go"
+    ]
+   },
+   "_note": "Обложка сервиса «Яндекс Go» (слайд 1). Справа — сервисная фото-сетка в группе-метке, фикс.",
+   "slots": {
+    "title": {
+     "match_name": "Title 1",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 60,
+     "box_w_in": 11.62,
+     "box_h_in": 2.73,
+     "max_lines": 3,
+     "designer_lines": 3,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "speaker": {
+     "match_name": "TextBox 8",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 40,
+     "box_w_in": 3.96,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    },
+    "position": {
+     "match_name": "TextBox 9",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 40,
+     "box_w_in": 6.12,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    }
+   }
+  },
+  {
+   "name": "cover_yango",
+   "_hint": 1,
+   "anchor": {
+    "has_shapes": [
+     "meta: variant: cover: yango"
+    ]
+   },
+   "_note": "Обложка сервиса «Yango» (слайд 2). Справа — сервисная фото-сетка в группе-метке, фикс.",
+   "slots": {
+    "title": {
+     "match_name": "Title 1",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 60,
+     "box_w_in": 11.62,
+     "box_h_in": 2.73,
+     "max_lines": 3,
+     "designer_lines": 3,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "speaker": {
+     "match_name": "TextBox 8",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 40,
+     "box_w_in": 3.96,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    },
+    "position": {
+     "match_name": "TextBox 9",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 40,
+     "box_w_in": 6.12,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    }
+   }
+  },
+  {
+   "name": "cover_scooters",
+   "_hint": 2,
+   "anchor": {
+    "has_shapes": [
+     "meta: variant: cover: scooters"
+    ]
+   },
+   "_note": "Обложка сервиса «Самокаты» (слайд 3). Справа — сервисная фото-сетка в группе-метке, фикс.",
+   "slots": {
+    "title": {
+     "match_name": "Title 1",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 60,
+     "box_w_in": 11.62,
+     "box_h_in": 2.73,
+     "max_lines": 3,
+     "designer_lines": 3,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "speaker": {
+     "match_name": "TextBox 8",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 40,
+     "box_w_in": 3.96,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    },
+    "position": {
+     "match_name": "TextBox 9",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 40,
+     "box_w_in": 6.12,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    }
+   }
+  },
+  {
+   "name": "cover_intercity",
+   "_hint": 3,
+   "anchor": {
+    "has_shapes": [
+     "meta: variant: cover: intercity"
+    ]
+   },
+   "_note": "Обложка сервиса «Межгород» (слайд 4). Справа — сервисная фото-сетка в группе-метке, фикс.",
+   "slots": {
+    "title": {
+     "match_name": "Title 1",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 60,
+     "box_w_in": 11.62,
+     "box_h_in": 2.73,
+     "max_lines": 3,
+     "designer_lines": 3,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "speaker": {
+     "match_name": "TextBox 8",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 40,
+     "box_w_in": 3.96,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    },
+    "position": {
+     "match_name": "TextBox 9",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 40,
+     "box_w_in": 6.12,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    }
+   }
+  },
+  {
+   "name": "cover_transport",
+   "_hint": 4,
+   "anchor": {
+    "has_shapes": [
+     "meta: variant: cover: transport"
+    ]
+   },
+   "_note": "Обложка сервиса «Транспорт» (слайд 5). Справа — сервисная фото-сетка в группе-метке, фикс.",
+   "slots": {
+    "title": {
+     "match_name": "Title 1",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 60,
+     "box_w_in": 11.62,
+     "box_h_in": 2.73,
+     "max_lines": 3,
+     "designer_lines": 3,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "speaker": {
+     "match_name": "TextBox 8",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 40,
+     "box_w_in": 3.96,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    },
+    "position": {
+     "match_name": "TextBox 9",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 40,
+     "box_w_in": 6.12,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    }
+   }
+  },
+  {
+   "name": "cover_pro",
+   "_hint": 5,
+   "anchor": {
+    "has_shapes": [
+     "meta: variant: cover: pro"
+    ]
+   },
+   "_note": "Обложка сервиса «Про» (слайд 6). Справа — сервисная фото-сетка в группе-метке, фикс.",
+   "slots": {
+    "title": {
+     "match_name": "Title 1",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 60,
+     "box_w_in": 11.62,
+     "box_h_in": 2.73,
+     "max_lines": 3,
+     "designer_lines": 3,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "speaker": {
+     "match_name": "TextBox 8",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 40,
+     "box_w_in": 3.96,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    },
+    "position": {
+     "match_name": "TextBox 9",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 40,
+     "box_w_in": 6.12,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    }
+   }
+  },
+  {
+   "name": "cover_shift",
+   "_hint": 6,
+   "anchor": {
+    "has_shapes": [
+     "meta: variant: cover: shift"
+    ]
+   },
+   "_note": "Обложка сервиса «Shift» (слайд 7). Справа — сервисная фото-сетка в группе-метке, фикс.",
+   "slots": {
+    "title": {
+     "match_name": "Title 1",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 60,
+     "box_w_in": 11.62,
+     "box_h_in": 2.73,
+     "max_lines": 3,
+     "designer_lines": 3,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "speaker": {
+     "match_name": "TextBox 8",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 40,
+     "box_w_in": 3.96,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    },
+    "position": {
+     "match_name": "TextBox 9",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 40,
+     "box_w_in": 6.12,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    }
+   }
+  },
+  {
+   "name": "cover_drive",
+   "_hint": 7,
+   "anchor": {
+    "has_shapes": [
+     "meta: variant: cover: drive"
+    ]
+   },
+   "_note": "Обложка сервиса «Драйв» (слайд 8). Справа — сервисная фото-сетка в группе-метке, фикс.",
+   "slots": {
+    "title": {
+     "match_name": "Title 1",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 60,
+     "box_w_in": 11.62,
+     "box_h_in": 2.73,
+     "max_lines": 3,
+     "designer_lines": 3,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "speaker": {
+     "match_name": "TextBox 8",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 40,
+     "box_w_in": 3.96,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    },
+    "position": {
+     "match_name": "TextBox 9",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 40,
+     "box_w_in": 6.12,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    }
+   }
+  },
+  {
+   "name": "cover_gas",
+   "_hint": 8,
+   "anchor": {
+    "has_shapes": [
+     "meta: variant: cover: gas"
+    ]
+   },
+   "_note": "Обложка сервиса «Заправки» (слайд 9). Справа — сервисная фото-сетка в группе-метке, фикс.",
+   "slots": {
+    "title": {
+     "match_name": "Title 1",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 60,
+     "box_w_in": 11.62,
+     "box_h_in": 2.73,
+     "max_lines": 3,
+     "designer_lines": 3,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "speaker": {
+     "match_name": "TextBox 8",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 40,
+     "box_w_in": 3.96,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    },
+    "position": {
+     "match_name": "TextBox 9",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 40,
+     "box_w_in": 6.12,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    }
+   }
+  },
+  {
+   "name": "cover_powerbanks",
+   "_hint": 9,
+   "anchor": {
+    "has_shapes": [
+     "meta: variant: cover: powerbanks"
+    ]
+   },
+   "_note": "Обложка сервиса «Пауэрбанки» (слайд 10). Справа — сервисная фото-сетка в группе-метке, фикс.",
+   "slots": {
+    "title": {
+     "match_name": "Title 1",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 60,
+     "box_w_in": 11.62,
+     "box_h_in": 2.73,
+     "max_lines": 3,
+     "designer_lines": 3,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "speaker": {
+     "match_name": "TextBox 8",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 40,
+     "box_w_in": 3.96,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    },
+    "position": {
+     "match_name": "TextBox 9",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 40,
+     "box_w_in": 6.12,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    }
+   }
+  },
+  {
+   "name": "cover_ultima",
+   "_hint": 10,
+   "anchor": {
+    "has_shapes": [
+     "meta: variant: cover: ultima"
+    ]
+   },
+   "_note": "Обложка сервиса «Ultima» (слайд 11). Справа — сервисная фото-сетка в группе-метке, фикс.",
+   "slots": {
+    "title": {
+     "match_name": "Title 1",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 60,
+     "box_w_in": 11.62,
+     "box_h_in": 2.73,
+     "max_lines": 3,
+     "designer_lines": 3,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "speaker": {
+     "match_name": "TextBox 8",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 40,
+     "box_w_in": 3.96,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    },
+    "position": {
+     "match_name": "TextBox 9",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 40,
+     "box_w_in": 6.12,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    }
+   }
+  },
+  {
+   "name": "cover_neutral",
+   "_hint": 11,
+   "anchor": {
+    "has_shapes": [
+     "meta: variant: cover: neutral"
+    ]
+   },
+   "_note": "Обложка сервиса «Нейтральный / без сервиса» (слайд 12). Справа — сервисная фото-сетка в группе-метке, фикс.",
+   "slots": {
+    "title": {
+     "match_name": "Title 1",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 60,
+     "box_w_in": 11.62,
+     "box_h_in": 2.73,
+     "max_lines": 3,
+     "designer_lines": 3,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "speaker": {
+     "match_name": "TextBox 8",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 40,
+     "box_w_in": 3.96,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    },
+    "position": {
+     "match_name": "TextBox 9",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 40,
+     "box_w_in": 6.12,
+     "box_h_in": 0.67,
+     "max_lines": 1,
+     "optional": true,
+     "clear_if_empty": true
+    }
+   },
+   "preferred": true
+  }
+ ],
+ "dont_touch": [
+  "think-cell data - do not delete",
+  "Рисунок*",
+  "Picture*",
+  "meta:*"
+ ],
+ "_anchored": "§3Б: текстовые заглушки идентичны на всех 12 → разводка ТОЛЬКО по группе-метке meta: variant: cover: <key> (has_shapes), _hint тайбрейкер."
+}

@@ -1,0 +1,116 @@
+{
+ "schema_version": 1,
+ "template": "Хурал Райдтеха",
+ "template_file": "Templates/ridetech-khural/ridetech-khural-v3.3.pptx",
+ "id": "rk_closing",
+ "family": "closing",
+ "kind": "structural",
+ "_doc": "Финальный слайд (#44): STAY TUNED + QR-код (9.44in, image_slot) с подписью + карточки события «When?/Where?» (дата и место). Пилюли-лейблы When?/Where? — донорские, фикс.",
+ "match": {
+  "form": "closing",
+  "count": [
+   1,
+   1
+  ]
+ },
+ "title_policy": "Заголовок-прощание; донорское «STAY TUNED!» менять только осознанным CTA.",
+ "variants": [
+  {
+   "name": "contacts",
+   "_hint": 43,
+   "preferred": true,
+   "anchor": {
+    "has_shapes": [
+     "atom:qr"
+    ]
+   },
+   "slots": {
+    "title": {
+     "match_name": "Title 53",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 88,
+     "box_w_in": 12.79,
+     "box_h_in": 2.67,
+     "max_lines": 2,
+     "min_pt": 60,
+     "clear_soft_breaks": true
+    },
+    "qr_caption": {
+     "match_name": "atom:qr_caption",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 60,
+     "box_w_in": 5.98,
+     "box_h_in": 1.01,
+     "max_lines": 1,
+     "min_pt": 40,
+     "optional": true
+    },
+    "event_date": {
+     "match_name": "atom:event_date",
+     "recurse": true,
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 44,
+     "box_w_in": 7.36,
+     "box_h_in": 1.38,
+     "max_lines": 1,
+     "min_pt": 32,
+     "optional": true,
+      "_note": "шейп внутри группы — без recurse слот не находился (баг с онбординга, фикс 0.32.0)"
+    },
+    "event_date_label": {
+     "match_name": "Rectangle: Rounded Corners 7",
+     "recurse": true,
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 32,
+     "box_w_in": 3.39,
+     "box_h_in": 1.38,
+     "max_lines": 1,
+     "min_pt": 24,
+     "optional": true,
+     "_note": "локализуемая подпись даты; статика донора When? не должна утекать в русскоязычный дек"
+    },
+    "event_location": {
+     "match_name": "atom:event_location",
+     "recurse": true,
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 44,
+     "box_w_in": 7.36,
+     "box_h_in": 1.38,
+     "max_lines": 1,
+     "min_pt": 32,
+     "optional": true,
+      "_note": "шейп внутри группы — без recurse слот не находился (баг с онбординга, фикс 0.32.0)"
+    },
+    "event_location_label": {
+     "match_name": "Rectangle: Rounded Corners 10",
+     "recurse": true,
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 32,
+     "box_w_in": 3.39,
+     "box_h_in": 1.38,
+     "max_lines": 1,
+     "min_pt": 24,
+     "optional": true,
+     "_note": "локализуемая подпись места; статика донора Where? не должна утекать в русскоязычный дек"
+    }
+   },
+   "image_slots": {
+    "qr": {
+     "match_name": "atom:qr",
+     "_doc": "QR-код 9.44×9.44in — картинка от пользователя; нет QR → донорский passthrough"
+    }
+   }
+  }
+ ],
+ "dont_touch": [
+  "think-cell data - do not delete",
+  "Picture*",
+  "Rectangle: Rounded Corners*"
+ ]
+}

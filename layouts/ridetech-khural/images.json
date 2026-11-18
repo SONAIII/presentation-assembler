@@ -1,0 +1,56 @@
+{
+ "schema_version": 1,
+ "template": "Хурал Райдтеха",
+ "template_file": "Templates/ridetech-khural/ridetech-khural-v3.3.pptx",
+ "id": "rk_images",
+ "family": "images",
+ "kind": "structural",
+ "_doc": "Фото-коллаж (#26): 5 слотов — большой центр (atom:photo_3, 11.98×13.58in) и 4 угловых. Заголовка нет — фото и есть слайд. Пул фото у шаблона отсутствует (photo_pool: null) — все 5 фото приносит пользователь.",
+ "match": {
+  "form": "images",
+  "count": [
+   5,
+   5
+  ]
+ },
+ "_router_note": "Нужны РОВНО 5 фото пользователя — пула нет, недобор оставит донорские заглушки (не собираем).",
+ "variants": [
+  {
+   "name": "collage5",
+   "_hint": 25,
+   "preferred": true,
+   "photo": true,
+   "anchor": {
+    "has_shapes": [
+     "atom:photo_5"
+    ]
+   },
+   "slots": {},
+   "image_slots": {
+    "photo_1": {
+     "match_name": "atom:photo_1",
+     "_doc": "верхний левый (6.46×7.33in)"
+    },
+    "photo_2": {
+     "match_name": "atom:photo_2",
+     "_doc": "нижний левый (6.46×5.84in)"
+    },
+    "photo_3": {
+     "match_name": "atom:photo_3",
+     "_doc": "ЦЕНТР, самый крупный (11.98×13.58in) — сюда главное фото"
+    },
+    "photo_4": {
+     "match_name": "atom:photo_4",
+     "_doc": "верхний правый (6.46×7.33in)"
+    },
+    "photo_5": {
+     "match_name": "atom:photo_5",
+     "_doc": "нижний правый (6.46×5.84in)"
+    }
+   }
+  }
+ ],
+ "dont_touch": [
+  "think-cell data - do not delete"
+ ]
+}

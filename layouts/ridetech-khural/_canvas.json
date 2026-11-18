@@ -1,0 +1,92 @@
+{
+  "_doc": "Измеренная сетка шаблона (scripts/measure_canvas.py). Корневой контейнер движка lib/layout.py: GENERATE-композиции живут в content_band, стиль — из atoms.json, шрифты/цвета — brand-tokens.json.",
+  "template_file": "Templates/ridetech-khural/ridetech-khural-v3.3.pptx",
+  "slide_w_in": 26.665,
+  "slide_h_in": 15.0,
+  "margin_left_in": 0.0,
+  "margin_right_in": 20.005,
+  "heading": {
+    "top_in": 1.57,
+    "left_in": 0.54,
+    "w_in": 25.59,
+    "h_in": 0.97
+  },
+  "content_band": {
+    "left_in": 0.0,
+    "right_in": 6.66,
+    "top_in": 7.733,
+    "bottom_in": 14.34,
+    "w_in": 6.66,
+    "h_in": 6.607
+  },
+  "gutter_in": 0.36,
+  "_evidence": {
+    "slides_measured": 44,
+    "hidden_skipped": 0,
+    "title_top_mode_hits": [
+      [
+        1.57,
+        22
+      ],
+      [
+        6.23,
+        12
+      ],
+      [
+        6.72,
+        3
+      ]
+    ],
+    "footer_top_mode_hits": [],
+    "content_bottom_mode_hits": [
+      [
+        14.34,
+        12
+      ],
+      [
+        0.0,
+        5
+      ],
+      [
+        10.71,
+        3
+      ]
+    ],
+    "content_right_mode_hits": [
+      [
+        6.66,
+        11
+      ],
+      [
+        26.13,
+        6
+      ],
+      [
+        0.0,
+        5
+      ]
+    ],
+    "big_shape_top_mode_hits": [
+      [
+        7.73,
+        6
+      ],
+      [
+        4.18,
+        4
+      ],
+      [
+        5.09,
+        3
+      ],
+      [
+        6.67,
+        2
+      ],
+      [
+        5.36,
+        2
+      ]
+    ]
+  }
+}

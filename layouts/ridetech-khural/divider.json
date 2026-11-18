@@ -1,0 +1,58 @@
+{
+ "schema_version": 1,
+ "template": "Хурал Райдтеха",
+ "template_file": "Templates/ridetech-khural/ridetech-khural-v3.3.pptx",
+ "id": "rk_divider",
+ "family": "divider",
+ "kind": "structural",
+ "_doc": "Разделитель секции (#13): крупный номер раздела 239pt YS Text Wide Bold (atom:section_number) + заголовок секции 80pt. НОМЕР ВСЕГДА ДВУЗНАЧНЫЙ: 01, 02, 03… (визуальный якорь, правило владельца 2026-08-05) — автоинкремент ведёт агент по порядку секций в deckspec. Фон-фото фикс.",
+ "match": {
+  "form": "divider",
+  "count": [
+   1,
+   1
+  ]
+ },
+ "title_policy": "Заголовок секции коротко, 1 строка; КАПС как у донора.",
+ "variants": [
+  {
+   "name": "section",
+   "_hint": 12,
+   "preferred": true,
+   "anchor": {
+    "all": [
+     "SECTION TITLE"
+    ]
+   },
+   "slots": {
+    "title": {
+     "match_name": "Title 4",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 80,
+     "box_w_in": 17.12,
+     "box_h_in": 1.21,
+     "max_lines": 1,
+     "min_pt": 54,
+     "clear_soft_breaks": true
+    },
+    "number": {
+     "match_name": "atom:section_number",
+     "fit_policy": "value_shrink",
+     "font": "YS Text Wide Bold",
+     "size_pt": 239,
+     "box_w_in": 5.7,
+     "min_pt": 160,
+     "max_chars_hint": 2,
+     "optional": true,
+     "_note": "всегда два знака: 01, 02…"
+    }
+   },
+   "_note": " v2.2: коробка заголовка сужена дизайнером до 17.12in (не наезжает на цифру)."
+  }
+ ],
+ "dont_touch": [
+  "think-cell data - do not delete",
+  "Picture*"
+ ]
+}

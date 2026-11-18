@@ -1,0 +1,3112 @@
+{
+  "template": "Templates/ridetech-khural/ridetech-khural-v3.3.pptx",
+  "mtime": "Thu Aug 13 13:22:17 2026",
+  "slide_count": 44,
+  "slides": [
+    {
+      "index0": 0,
+      "index1": 1,
+      "shapes": [
+        {
+          "name": "Title 1",
+          "kind": "text",
+          "text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES"
+        },
+        {
+          "name": "TextBox 8",
+          "kind": "text",
+          "text": "Name Surname"
+        },
+        {
+          "name": "TextBox 9",
+          "kind": "text",
+          "text": "Occupation in 2-3 words"
+        },
+        {
+          "name": "Рисунок 48",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "meta: variant: cover: go",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 10",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 13",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 21",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 24",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 2",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 14",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 22",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 25",
+          "kind": "shape",
+          "text": ""
+        }
+      ],
+      "all_text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES\nName Surname\nOccupation in 2-3 words",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 1,
+      "index1": 2,
+      "shapes": [
+        {
+          "name": "Title 1",
+          "kind": "text",
+          "text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES"
+        },
+        {
+          "name": "TextBox 8",
+          "kind": "text",
+          "text": "Name Surname"
+        },
+        {
+          "name": "TextBox 9",
+          "kind": "text",
+          "text": "Occupation in 2-3 words"
+        },
+        {
+          "name": "Picture 30",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "meta: variant: cover: yango",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 10",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 21",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 24",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 2",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 13",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 14",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 22",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 25",
+          "kind": "shape",
+          "text": ""
+        }
+      ],
+      "all_text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES\nName Surname\nOccupation in 2-3 words",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 2,
+      "index1": 3,
+      "shapes": [
+        {
+          "name": "Title 1",
+          "kind": "text",
+          "text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES"
+        },
+        {
+          "name": "TextBox 8",
+          "kind": "text",
+          "text": "Name Surname"
+        },
+        {
+          "name": "TextBox 9",
+          "kind": "text",
+          "text": "Occupation in 2-3 words"
+        },
+        {
+          "name": "Picture 3",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "meta: variant: cover: scooters",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 10",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 13",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 21",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 24",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 2",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 14",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 22",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 25",
+          "kind": "shape",
+          "text": ""
+        }
+      ],
+      "all_text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES\nName Surname\nOccupation in 2-3 words",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 3,
+      "index1": 4,
+      "shapes": [
+        {
+          "name": "Picture 11",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "Title 1",
+          "kind": "text",
+          "text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES"
+        },
+        {
+          "name": "TextBox 8",
+          "kind": "text",
+          "text": "Name Surname"
+        },
+        {
+          "name": "TextBox 9",
+          "kind": "text",
+          "text": "Occupation in 2-3 words"
+        },
+        {
+          "name": "meta: variant: cover: intercity",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 10",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 13",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 21",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 24",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 2",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 14",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 22",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 25",
+          "kind": "shape",
+          "text": ""
+        }
+      ],
+      "all_text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES\nName Surname\nOccupation in 2-3 words",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 4,
+      "index1": 5,
+      "shapes": [
+        {
+          "name": "Picture 5",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "Title 1",
+          "kind": "text",
+          "text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES"
+        },
+        {
+          "name": "TextBox 8",
+          "kind": "text",
+          "text": "Name Surname"
+        },
+        {
+          "name": "TextBox 9",
+          "kind": "text",
+          "text": "Occupation in 2-3 words"
+        },
+        {
+          "name": "meta: variant: cover: transport",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 21",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 24",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 10",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 2",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 13",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 14",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 22",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 25",
+          "kind": "shape",
+          "text": ""
+        }
+      ],
+      "all_text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES\nName Surname\nOccupation in 2-3 words",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 5,
+      "index1": 6,
+      "shapes": [
+        {
+          "name": "Title 1",
+          "kind": "text",
+          "text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES"
+        },
+        {
+          "name": "TextBox 8",
+          "kind": "text",
+          "text": "Name Surname"
+        },
+        {
+          "name": "TextBox 9",
+          "kind": "text",
+          "text": "Occupation in 2-3 words"
+        },
+        {
+          "name": "Picture 20",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "meta: variant: cover: pro",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 10",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 13",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 21",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 24",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 2",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 14",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 22",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 25",
+          "kind": "shape",
+          "text": ""
+        }
+      ],
+      "all_text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES\nName Surname\nOccupation in 2-3 words",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 6,
+      "index1": 7,
+      "shapes": [
+        {
+          "name": "Graphic 3",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "Title 1",
+          "kind": "text",
+          "text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES"
+        },
+        {
+          "name": "TextBox 8",
+          "kind": "text",
+          "text": "Name Surname"
+        },
+        {
+          "name": "TextBox 9",
+          "kind": "text",
+          "text": "Occupation in 2-3 words"
+        },
+        {
+          "name": "meta: variant: cover: shift",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 13",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 14",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 24",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 25",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 11",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 12",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 16",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 17",
+          "kind": "shape",
+          "text": ""
+        }
+      ],
+      "all_text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES\nName Surname\nOccupation in 2-3 words",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 7,
+      "index1": 8,
+      "shapes": [
+        {
+          "name": "Picture 5",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "Title 1",
+          "kind": "text",
+          "text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES"
+        },
+        {
+          "name": "TextBox 8",
+          "kind": "text",
+          "text": "Name Surname"
+        },
+        {
+          "name": "TextBox 9",
+          "kind": "text",
+          "text": "Occupation in 2-3 words"
+        },
+        {
+          "name": "meta: variant: cover: drive",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 13",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 24",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 11",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 16",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 14",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 25",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 12",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 17",
+          "kind": "shape",
+          "text": ""
+        }
+      ],
+      "all_text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES\nName Surname\nOccupation in 2-3 words",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 8,
+      "index1": 9,
+      "shapes": [
+        {
+          "name": "Picture 7",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "Title 1",
+          "kind": "text",
+          "text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES"
+        },
+        {
+          "name": "TextBox 8",
+          "kind": "text",
+          "text": "Name Surname"
+        },
+        {
+          "name": "TextBox 9",
+          "kind": "text",
+          "text": "Occupation in 2-3 words"
+        },
+        {
+          "name": "meta: variant: cover: gas",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 13",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 24",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 11",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 16",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 14",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 25",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 12",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 17",
+          "kind": "shape",
+          "text": ""
+        }
+      ],
+      "all_text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES\nName Surname\nOccupation in 2-3 words",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 9,
+      "index1": 10,
+      "shapes": [
+        {
+          "name": "Title 1",
+          "kind": "text",
+          "text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES"
+        },
+        {
+          "name": "TextBox 8",
+          "kind": "text",
+          "text": "Name Surname"
+        },
+        {
+          "name": "TextBox 9",
+          "kind": "text",
+          "text": "Occupation in 2-3 words"
+        },
+        {
+          "name": "Picture 3",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "meta: variant: cover: powerbanks",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 13",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 11",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 16",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 14",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 24",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 25",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 12",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 17",
+          "kind": "shape",
+          "text": ""
+        }
+      ],
+      "all_text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES\nName Surname\nOccupation in 2-3 words",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 10,
+      "index1": 11,
+      "shapes": [
+        {
+          "name": "Title 1",
+          "kind": "text",
+          "text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES"
+        },
+        {
+          "name": "TextBox 8",
+          "kind": "text",
+          "text": "Name Surname"
+        },
+        {
+          "name": "TextBox 9",
+          "kind": "text",
+          "text": "Occupation in 2-3 words"
+        },
+        {
+          "name": "Picture 5",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "meta: variant: cover: ultima",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 13",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 24",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 11",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 16",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 14",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 25",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 12",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 17",
+          "kind": "shape",
+          "text": ""
+        }
+      ],
+      "all_text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES\nName Surname\nOccupation in 2-3 words",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 11,
+      "index1": 12,
+      "shapes": [
+        {
+          "name": "Title 1",
+          "kind": "text",
+          "text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES"
+        },
+        {
+          "name": "TextBox 8",
+          "kind": "text",
+          "text": "Name Surname"
+        },
+        {
+          "name": "TextBox 9",
+          "kind": "text",
+          "text": "Occupation in 2-3 words"
+        },
+        {
+          "name": "Picture 5",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "meta: variant: cover: neutral",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 13",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 24",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 11",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 16",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 14",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 25",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 12",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 17",
+          "kind": "shape",
+          "text": ""
+        }
+      ],
+      "all_text": "TITLE OF THE SPEAKERS SPEECH \u000bIN THREE LINES\nName Surname\nOccupation in 2-3 words",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 12,
+      "index1": 13,
+      "shapes": [
+        {
+          "name": "Picture 26",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "Title 4",
+          "kind": "text",
+          "text": "SECTION TITLE"
+        },
+        {
+          "name": "atom:section_number",
+          "kind": "text",
+          "text": "01"
+        }
+      ],
+      "all_text": "SECTION TITLE\n01",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "SECTION TITLE"
+      ]
+    },
+    {
+      "index0": 13,
+      "index1": 14,
+      "shapes": [
+        {
+          "name": "Title 4",
+          "kind": "text",
+          "text": "Agenda 3 theses"
+        },
+        {
+          "name": "Straight Connector 7",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Straight Connector 8",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Straight Connector 9",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "TextBox 11",
+          "kind": "text",
+          "text": "02"
+        },
+        {
+          "name": "TextBox 15",
+          "kind": "text",
+          "text": "03"
+        },
+        {
+          "name": "atom:subtitle",
+          "kind": "text",
+          "text": "Residents report strange radio interference"
+        },
+        {
+          "name": "atom:subtitle",
+          "kind": "text",
+          "text": "A second fog bank forms inland"
+        },
+        {
+          "name": "atom:subtitle",
+          "kind": "text",
+          "text": "The lake's water level drops overnight"
+        },
+        {
+          "name": "TextBox 1",
+          "kind": "text",
+          "text": "01"
+        }
+      ],
+      "all_text": "Agenda 3 theses\n02\n03\nResidents report strange radio interference\nA second fog bank forms inland\nThe lake's water level drops overnight\n01",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "Agenda 3 theses",
+        "A second fog bank forms inland",
+        "The lake's water level drops overnight"
+      ]
+    },
+    {
+      "index0": 14,
+      "index1": 15,
+      "shapes": [
+        {
+          "name": "Title 4",
+          "kind": "text",
+          "text": "Agenda 6 theses"
+        },
+        {
+          "name": "Straight Connector 7",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Straight Connector 8",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Straight Connector 9",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "TextBox 10",
+          "kind": "text",
+          "text": "01"
+        },
+        {
+          "name": "TextBox 11",
+          "kind": "text",
+          "text": "02"
+        },
+        {
+          "name": "TextBox 15",
+          "kind": "text",
+          "text": "03"
+        },
+        {
+          "name": "Straight Connector 12",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Straight Connector 13",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Straight Connector 14",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "TextBox 19",
+          "kind": "text",
+          "text": "04"
+        },
+        {
+          "name": "TextBox 20",
+          "kind": "text",
+          "text": "05"
+        },
+        {
+          "name": "TextBox 21",
+          "kind": "text",
+          "text": "06"
+        },
+        {
+          "name": "atom:subtitle",
+          "kind": "text",
+          "text": "Residents report strange radio interference"
+        },
+        {
+          "name": "atom:subtitle",
+          "kind": "text",
+          "text": "The lake's water level\u000bdrops overnight"
+        },
+        {
+          "name": "atom:subtitle",
+          "kind": "text",
+          "text": "A second fog bank forms \u000binland"
+        },
+        {
+          "name": "atom:subtitle",
+          "kind": "text",
+          "text": "Residents report strange radio interference"
+        },
+        {
+          "name": "atom:subtitle",
+          "kind": "text",
+          "text": "The lake's water level\u000bdrops overnight"
+        },
+        {
+          "name": "atom:subtitle",
+          "kind": "text",
+          "text": "A second fog bank forms \u000binland"
+        }
+      ],
+      "all_text": "Agenda 6 theses\n01\n02\n03\n04\n05\n06\nResidents report strange radio interference\nThe lake's water level\u000bdrops overnight\nA second fog bank forms \u000binland\nResidents report strange radio interference\nThe lake's water level\u000bdrops overnight\nA second fog bank forms \u000binland",
+      "dup_shapes": [
+        {
+          "text": "Residents report strange radio interference",
+          "count": 2
+        },
+        {
+          "text": "The lake's water level\u000bdrops overnight",
+          "count": 2
+        },
+        {
+          "text": "A second fog bank forms \u000binland",
+          "count": 2
+        }
+      ],
+      "uneditable": [],
+      "unique_strings": [
+        "04",
+        "05",
+        "06",
+        "inland",
+        "Agenda 6 theses",
+        "drops overnight",
+        "The lake's water level",
+        "A second fog bank forms"
+      ]
+    },
+    {
+      "index0": 15,
+      "index1": 16,
+      "shapes": [
+        {
+          "name": "Title 4",
+          "kind": "text",
+          "text": "What the archives \u000brefuse to explain"
+        },
+        {
+          "name": "meta:variant:statement:neutral",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Полилиния: фигура 26",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Полилиния: фигура 26",
+          "kind": "shape",
+          "text": ""
+        }
+      ],
+      "all_text": "What the archives \u000brefuse to explain",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 16,
+      "index1": 17,
+      "shapes": [
+        {
+          "name": "meta:variant:statement:neutral",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Полилиния: фигура 26",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Полилиния: фигура 26",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Title 2",
+          "kind": "text",
+          "text": "35%"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "good number"
+        }
+      ],
+      "all_text": "35%\ngood number",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 17,
+      "index1": 18,
+      "shapes": [
+        {
+          "name": "meta:variant:statement:bad",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "Title 4",
+          "kind": "text",
+          "text": "What the archives \u000brefuse to explain"
+        }
+      ],
+      "all_text": "What the archives \u000brefuse to explain",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 18,
+      "index1": 19,
+      "shapes": [
+        {
+          "name": "meta:variant:statement:bad",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "Title 4",
+          "kind": "text",
+          "text": "45%"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "bad number"
+        }
+      ],
+      "all_text": "45%\nbad number",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "45%",
+        "bad number"
+      ]
+    },
+    {
+      "index0": 19,
+      "index1": 20,
+      "shapes": [
+        {
+          "name": "meta:variant:statement:good",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "Title 4",
+          "kind": "text",
+          "text": "What the archives \u000brefuse to explain"
+        }
+      ],
+      "all_text": "What the archives \u000brefuse to explain",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 20,
+      "index1": 21,
+      "shapes": [
+        {
+          "name": "meta:variant:statement:good",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "Title 2",
+          "kind": "text",
+          "text": "35%"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "good number"
+        }
+      ],
+      "all_text": "35%\ngood number",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 21,
+      "index1": 22,
+      "shapes": [
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "Three theses on slide\u000bwith long title  "
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files\nFiling dates on some patient charts are older than the building itself"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "No bell, still ringing\nIt was removed decades ago, yet it still rings on schedule"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "A missing week\nNo edition has ever been found covering that week"
+        }
+      ],
+      "all_text": "Three theses on slide\u000bwith long title  \nBackdated files\nFiling dates on some patient charts are older than the building itself\nNo bell, still ringing\nIt was removed decades ago, yet it still rings on schedule\nA missing week\nNo edition has ever been found covering that week",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 22,
+      "index1": 23,
+      "shapes": [
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "Three theses on slide\u000bwith long title  "
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "No bell, still ringing\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "A missing week\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself"
+        }
+      ],
+      "all_text": "Three theses on slide\u000bwith long title  \nBackdated files\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself\nNo bell, still ringing\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself\nA missing week\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 23,
+      "index1": 24,
+      "shapes": [
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "Four theses on slide\u000bwith long title "
+        },
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files\nFiling dates on some patient charts are older than the building itself"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files\nFiling dates on some patient charts are older than the building itself"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files\nFiling dates on some patient charts are older than the building itself"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files\nFiling dates on some patient charts are older than the building itself"
+        }
+      ],
+      "all_text": "Four theses on slide\u000bwith long title \nBackdated files\nFiling dates on some patient charts are older than the building itself\nBackdated files\nFiling dates on some patient charts are older than the building itself\nBackdated files\nFiling dates on some patient charts are older than the building itself\nBackdated files\nFiling dates on some patient charts are older than the building itself",
+      "dup_shapes": [
+        {
+          "text": "Backdated files\nFiling dates on some patient charts are older than the building itself",
+          "count": 4
+        }
+      ],
+      "uneditable": [],
+      "unique_strings": [
+        "Four theses on slide"
+      ]
+    },
+    {
+      "index0": 24,
+      "index1": 25,
+      "shapes": [
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "Six metrics on slide\u000bwith long title  "
+        },
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Rounded Rectangle 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:metric_block_1",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:metric_value_1",
+          "kind": "text",
+          "text": "4"
+        },
+        {
+          "name": "atom:metric_desc_1",
+          "kind": "text",
+          "text": "games make up the original team's core Silent Hill run — the era the whole mythos rests on"
+        },
+        {
+          "name": "atom:metric_block_2",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:metric_value_2",
+          "kind": "text",
+          "text": "380"
+        },
+        {
+          "name": "atom:metric_desc_2",
+          "kind": "text",
+          "text": "games make up the original team's core Silent Hill run — the era the whole mythos rests on"
+        },
+        {
+          "name": "atom:metric_block_3",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:metric_value_3",
+          "kind": "text",
+          "text": "78"
+        },
+        {
+          "name": "atom:metric_desc_3",
+          "kind": "text",
+          "text": "games make up the original team's core Silent Hill run — the era the whole mythos rests on"
+        },
+        {
+          "name": "atom:metric_block_4",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:metric_value_4",
+          "kind": "text",
+          "text": "4"
+        },
+        {
+          "name": "atom:metric_desc_4",
+          "kind": "text",
+          "text": "games make up the original team's core Silent Hill run — the era the whole mythos rests on"
+        },
+        {
+          "name": "atom:metric_block_5",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:metric_value_5",
+          "kind": "text",
+          "text": "380"
+        },
+        {
+          "name": "atom:metric_desc_5",
+          "kind": "text",
+          "text": "games make up the original team's core Silent Hill run — the era the whole mythos rests on"
+        },
+        {
+          "name": "atom:metric_block_6",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:metric_value_6",
+          "kind": "text",
+          "text": "78"
+        },
+        {
+          "name": "atom:metric_desc_6",
+          "kind": "text",
+          "text": "games make up the original team's core Silent Hill run — the era the whole mythos rests on"
+        }
+      ],
+      "all_text": "Six metrics on slide\u000bwith long title  \n4\ngames make up the original team's core Silent Hill run — the era the whole mythos rests on\n380\ngames make up the original team's core Silent Hill run — the era the whole mythos rests on\n78\ngames make up the original team's core Silent Hill run — the era the whole mythos rests on\n4\ngames make up the original team's core Silent Hill run — the era the whole mythos rests on\n380\ngames make up the original team's core Silent Hill run — the era the whole mythos rests on\n78\ngames make up the original team's core Silent Hill run — the era the whole mythos rests on",
+      "dup_shapes": [
+        {
+          "text": "games make up the original team's core Silent Hill run — the era the whole mythos rests on",
+          "count": 6
+        },
+        {
+          "text": "4",
+          "count": 2
+        },
+        {
+          "text": "380",
+          "count": 2
+        },
+        {
+          "text": "78",
+          "count": 2
+        }
+      ],
+      "uneditable": [],
+      "unique_strings": [
+        "78",
+        "380",
+        "Six metrics on slide"
+      ]
+    },
+    {
+      "index0": 25,
+      "index1": 26,
+      "shapes": [
+        {
+          "name": "atom:photo_5",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:photo_4",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:photo_3",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:photo_2",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:photo_1",
+          "kind": "picture",
+          "text": ""
+        }
+      ],
+      "all_text": "",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 26,
+      "index1": 27,
+      "shapes": [
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "A big table on slide"
+        },
+        {
+          "name": "Table 3",
+          "kind": "table",
+          "text": "Monster Name\tGame Appeared In\tDifficulty \u000b(1–5)\tAggressiveness \u000b(1–5)\tSpeed \u000b(1–5)\nPyramid Head\tSilent Hill 2\t5\t5\t2\nBubble Head Nurse\tSilent Hill 2, 3\t3\t4\t3\nGrey Child\tSilent Hill\t2\t2\t3\nNeedler\tSilent Hill: Homecoming\t4\t4\t5\nTwin Victim\tSilent Hill 4: The Room\t3\t2\t1\nAverage\t—\t3.4\t3.4\t2.8"
+        }
+      ],
+      "all_text": "A big table on slide\nMonster Name\tGame Appeared In\tDifficulty \u000b(1–5)\tAggressiveness \u000b(1–5)\tSpeed \u000b(1–5)\nPyramid Head\tSilent Hill 2\t5\t5\t2\nBubble Head Nurse\tSilent Hill 2, 3\t3\t4\t3\nGrey Child\tSilent Hill\t2\t2\t3\nNeedler\tSilent Hill: Homecoming\t4\t4\t5\nTwin Victim\tSilent Hill 4: The Room\t3\t2\t1\nAverage\t—\t3.4\t3.4\t2.8",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 27,
+      "index1": 28,
+      "shapes": [
+        {
+          "name": "atom:highlight_negative",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:highlight_positive",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "A big table on slide with good and bad \u000bhighlighted rows"
+        },
+        {
+          "name": "Table 1",
+          "kind": "table",
+          "text": "Monster Name\tGame Appeared In\tDifficulty \u000b(1–5)\tAggressiveness \u000b(1–5)\tSpeed \u000b(1–5)\nPyramid Head\tSilent Hill 2\t5\t5\t2\nBubble Head Nurse\tSilent Hill 2, 3\t3\t4\t3\nGrey Child\tSilent Hill\t2\t2\t3\nNeedler\tSilent Hill: Homecoming\t4\t4\t5\nTwin Victim\tSilent Hill 4: The Room\t3\t2\t1\nAverage\t—\t3.4\t3.4\t2.8"
+        }
+      ],
+      "all_text": "A big table on slide with good and bad \u000bhighlighted rows\nMonster Name\tGame Appeared In\tDifficulty \u000b(1–5)\tAggressiveness \u000b(1–5)\tSpeed \u000b(1–5)\nPyramid Head\tSilent Hill 2\t5\t5\t2\nBubble Head Nurse\tSilent Hill 2, 3\t3\t4\t3\nGrey Child\tSilent Hill\t2\t2\t3\nNeedler\tSilent Hill: Homecoming\t4\t4\t5\nTwin Victim\tSilent Hill 4: The Room\t3\t2\t1\nAverage\t—\t3.4\t3.4\t2.8",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "highlighted rows",
+        "A big table on slide with good and bad"
+      ]
+    },
+    {
+      "index0": 28,
+      "index1": 29,
+      "shapes": [
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "A big table on slide\u000bwith so what thesis"
+        },
+        {
+          "name": "Table 3",
+          "kind": "table",
+          "text": "Monster \u000bName\tGame \u000bAppeared In\tDifficulty \u000b(1–5)\tAggressiveness \u000b(1–5)\tSpeed \u000b(1–5)\nPyramid Head\tSilent Hill 2\t5\t5\t2\nBubble Head \u000bNurse\tSilent Hill 2, 3\t3\t4\t3\nGrey Child\tSilent Hill\t2\t2\t3\nNeedler\tSilent Hill: Homecoming\t4\t4\t5\nTwin Victim\tSilent Hill 4: The Room\t3\t2\t1\nAverage\t—\t3.4\t3.4\t2.8"
+        },
+        {
+          "name": "atom:so_what_bg",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:so_what_body",
+          "kind": "text",
+          "text": "Filing dates on some patient charts are older than the building itself\nIt was removed decades ago, yet it still rings on schedule\nNo edition has ever been found covering that week\nSurvey counts never quite reach the number of recorded names"
+        },
+        {
+          "name": "atom:so_what_title",
+          "kind": "text",
+          "text": "Long so what subtitle\u000bwith interesting and unique\u000btake out on the problem "
+        }
+      ],
+      "all_text": "A big table on slide\u000bwith so what thesis\nMonster \u000bName\tGame \u000bAppeared In\tDifficulty \u000b(1–5)\tAggressiveness \u000b(1–5)\tSpeed \u000b(1–5)\nPyramid Head\tSilent Hill 2\t5\t5\t2\nBubble Head \u000bNurse\tSilent Hill 2, 3\t3\t4\t3\nGrey Child\tSilent Hill\t2\t2\t3\nNeedler\tSilent Hill: Homecoming\t4\t4\t5\nTwin Victim\tSilent Hill 4: The Room\t3\t2\t1\nAverage\t—\t3.4\t3.4\t2.8\nFiling dates on some patient charts are older than the building itself\nIt was removed decades ago, yet it still rings on schedule\nNo edition has ever been found covering that week\nSurvey counts never quite reach the number of recorded names\nLong so what subtitle\u000bwith interesting and unique\u000btake out on the problem ",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "Monster",
+        "Name\tGame",
+        "Bubble Head",
+        "with so what thesis",
+        "Long so what subtitle",
+        "Appeared In\tDifficulty",
+        "take out on the problem",
+        "with interesting and unique",
+        "Nurse\tSilent Hill 2, 3\t3\t4\t3",
+        "Survey counts never quite reach the number of recorded names"
+      ]
+    },
+    {
+      "index0": 29,
+      "index1": 30,
+      "shapes": [
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "A big bar chart with long title"
+        },
+        {
+          "name": "Chart 42",
+          "kind": "chart",
+          "text": ""
+        },
+        {
+          "name": "atom:chart_subtitle",
+          "kind": "text",
+          "text": "Missing persons and fog events 1993-1998, people"
+        }
+      ],
+      "all_text": "A big bar chart with long title\nMissing persons and fog events 1993-1998, people",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "A big bar chart with long title",
+        "Missing persons and fog events 1993-1998, people"
+      ]
+    },
+    {
+      "index0": 30,
+      "index1": 31,
+      "shapes": [
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "Two bar charts on slide"
+        },
+        {
+          "name": "Chart 42",
+          "kind": "chart",
+          "text": ""
+        },
+        {
+          "name": "atom:chart_left_subtitle",
+          "kind": "text",
+          "text": "Still in town vs. vanished into the fog, people"
+        },
+        {
+          "name": "atom:chart_right_subtitle",
+          "kind": "text",
+          "text": "Recorded fog events, events per year"
+        },
+        {
+          "name": "Chart 4",
+          "kind": "chart",
+          "text": ""
+        }
+      ],
+      "all_text": "Two bar charts on slide\nStill in town vs. vanished into the fog, people\nRecorded fog events, events per year",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "Two bar charts on slide",
+        "Recorded fog events, events per year",
+        "Still in town vs. vanished into the fog, people"
+      ]
+    },
+    {
+      "index0": 31,
+      "index1": 32,
+      "shapes": [
+        {
+          "name": "Chart 8",
+          "kind": "chart",
+          "text": ""
+        },
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "Two line charts on slide"
+        },
+        {
+          "name": "atom:chart_left_subtitle",
+          "kind": "text",
+          "text": "Share of days affected by each phenomenon, \u000b% of days per year"
+        },
+        {
+          "name": "atom:chart_right_subtitle",
+          "kind": "text",
+          "text": "Occupancy and safety across town,\u000b% per year"
+        },
+        {
+          "name": "Chart 7",
+          "kind": "chart",
+          "text": ""
+        }
+      ],
+      "all_text": "Two line charts on slide\nShare of days affected by each phenomenon, \u000b% of days per year\nOccupancy and safety across town,\u000b% per year",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "% per year",
+        "% of days per year",
+        "Two line charts on slide",
+        "Occupancy and safety across town,",
+        "Share of days affected by each phenomenon,"
+      ]
+    },
+    {
+      "index0": 32,
+      "index1": 33,
+      "shapes": [
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "A big line chart with long title"
+        },
+        {
+          "name": "Chart 4",
+          "kind": "chart",
+          "text": ""
+        },
+        {
+          "name": "atom:chart_subtitle",
+          "kind": "text",
+          "text": "Silent Hill: the town fades as the power grows, 1993–1998"
+        }
+      ],
+      "all_text": "A big line chart with long title\nSilent Hill: the town fades as the power grows, 1993–1998",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "A big line chart with long title",
+        "Silent Hill: the town fades as the power grows, 1993–1998"
+      ]
+    },
+    {
+      "index0": 33,
+      "index1": 34,
+      "shapes": [
+        {
+          "name": "atom:metric_value_1",
+          "kind": "text",
+          "text": "4"
+        },
+        {
+          "name": "Straight Connector 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:metric_desc_1",
+          "kind": "text",
+          "text": "games make up the original team's core Silent Hill run — the era the whole mythos rests on"
+        },
+        {
+          "name": "atom:metric_desc_2",
+          "kind": "text",
+          "text": "of visitors who lose all sense \u000bof time once the fog rolls in"
+        },
+        {
+          "name": "atom:metric_tag_1",
+          "kind": "text",
+          "text": "Canon"
+        },
+        {
+          "name": "atom:metric_tag_2",
+          "kind": "text",
+          "text": "Descent"
+        },
+        {
+          "name": "atom:metric_value_2",
+          "kind": "text",
+          "text": "89%"
+        },
+        {
+          "name": "atom:metric_desc_3",
+          "kind": "text",
+          "text": "year-over-year spike in recorded fog events as Alessa's power grew"
+        },
+        {
+          "name": "atom:metric_tag_3",
+          "kind": "text",
+          "text": "Resonance"
+        },
+        {
+          "name": "atom:metric_value_3",
+          "kind": "text",
+          "text": "+340%"
+        },
+        {
+          "name": "Straight Connector 7",
+          "kind": "shape",
+          "text": ""
+        }
+      ],
+      "all_text": "4\ngames make up the original team's core Silent Hill run — the era the whole mythos rests on\nof visitors who lose all sense \u000bof time once the fog rolls in\nCanon\nDescent\n89%\nyear-over-year spike in recorded fog events as Alessa's power grew\nResonance\n+340%",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "Descent"
+      ]
+    },
+    {
+      "index0": 34,
+      "index1": 35,
+      "shapes": [
+        {
+          "name": "Straight Connector 4",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:metric_desc_bad",
+          "kind": "text",
+          "text": "year-over-year spike in recorded fog events as Alessa's power grew"
+        },
+        {
+          "name": "atom:metric_tag_bad",
+          "kind": "text",
+          "text": "Resonance"
+        },
+        {
+          "name": "atom:metric_value_bad",
+          "kind": "text",
+          "text": "+340%"
+        },
+        {
+          "name": "atom:metric_value_good",
+          "kind": "text",
+          "text": "89%"
+        },
+        {
+          "name": "atom:metric_desc_good",
+          "kind": "text",
+          "text": "of visitors who lose all sense \u000bof time once the fog rolls in"
+        },
+        {
+          "name": "atom:metric_tag_good",
+          "kind": "text",
+          "text": "Canon"
+        }
+      ],
+      "all_text": "year-over-year spike in recorded fog events as Alessa's power grew\nResonance\n+340%\n89%\nof visitors who lose all sense \u000bof time once the fog rolls in\nCanon",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": []
+    },
+    {
+      "index0": 35,
+      "index1": 36,
+      "shapes": [
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "Timeline 4 milestones"
+        },
+        {
+          "name": "atom:milestone_1",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:arrow",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Oval 7",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Graphic 8",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "March"
+        },
+        {
+          "name": "Straight Connector 18",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:milestone_2",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "April"
+        },
+        {
+          "name": "Straight Connector 22",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:arrow",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Oval 12",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Graphic 13",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_3",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "May"
+        },
+        {
+          "name": "Straight Connector 42",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:arrow",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Oval 15",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Graphic 16",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_4",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "June"
+        },
+        {
+          "name": "Straight Connector 55",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        }
+      ],
+      "all_text": "Timeline 4 milestones\nMarch\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nApril\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nMay\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nJune\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding",
+      "dup_shapes": [
+        {
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order",
+          "count": 4
+        },
+        {
+          "text": "Founding",
+          "count": 4
+        }
+      ],
+      "uneditable": [],
+      "unique_strings": [
+        "Timeline 4 milestones"
+      ]
+    },
+    {
+      "index0": 36,
+      "index1": 37,
+      "shapes": [
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "Timeline 5 milestones"
+        },
+        {
+          "name": "atom:milestone_1",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:arrow",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Oval 7",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Graphic 8",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "March"
+        },
+        {
+          "name": "Straight Connector 18",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:milestone_2",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "April"
+        },
+        {
+          "name": "Straight Connector 22",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:arrow",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Oval 25",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Graphic 26",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_3",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "May"
+        },
+        {
+          "name": "Straight Connector 42",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:arrow",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Oval 34",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Graphic 35",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_4",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "June"
+        },
+        {
+          "name": "Straight Connector 55",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:arrow",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Oval 37",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Graphic 38",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_5",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "July"
+        },
+        {
+          "name": "Straight Connector 19",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        }
+      ],
+      "all_text": "Timeline 5 milestones\nMarch\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nApril\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nMay\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nJune\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nJuly\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding",
+      "dup_shapes": [
+        {
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order",
+          "count": 5
+        },
+        {
+          "text": "Founding",
+          "count": 5
+        }
+      ],
+      "uneditable": [],
+      "unique_strings": [
+        "Timeline 5 milestones"
+      ]
+    },
+    {
+      "index0": 37,
+      "index1": 38,
+      "shapes": [
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "Timeline 6 milestones"
+        },
+        {
+          "name": "atom:milestone_1",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:arrow",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Oval 7",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Graphic 8",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "March"
+        },
+        {
+          "name": "Straight Connector 18",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:milestone_2",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "April"
+        },
+        {
+          "name": "Straight Connector 22",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:arrow",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Oval 46",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Graphic 47",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_3",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "May"
+        },
+        {
+          "name": "Straight Connector 42",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:arrow",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Oval 49",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Graphic 58",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_4",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "June"
+        },
+        {
+          "name": "Straight Connector 55",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:arrow",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Oval 60",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Graphic 61",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_5",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "July"
+        },
+        {
+          "name": "Straight Connector 19",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:arrow",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Oval 63",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Graphic 64",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_6",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "August"
+        },
+        {
+          "name": "Straight Connector 25",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        }
+      ],
+      "all_text": "Timeline 6 milestones\nMarch\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nApril\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nMay\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nJune\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nJuly\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nAugust\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding",
+      "dup_shapes": [
+        {
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order",
+          "count": 6
+        },
+        {
+          "text": "Founding",
+          "count": 6
+        }
+      ],
+      "uneditable": [],
+      "unique_strings": [
+        "Timeline 6 milestones"
+      ]
+    },
+    {
+      "index0": 38,
+      "index1": 39,
+      "shapes": [
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "Timeline 7 milestones"
+        },
+        {
+          "name": "Straight Connector 35",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_1",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "Straight Connector 18",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "April"
+        },
+        {
+          "name": "atom:milestone_2",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "Straight Connector 22",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "May"
+        },
+        {
+          "name": "atom:milestone_3",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "Straight Connector 42",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "June"
+        },
+        {
+          "name": "atom:milestone_4",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "Straight Connector 55",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "July"
+        },
+        {
+          "name": "atom:milestone_5",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Straight Connector 19",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "August"
+        },
+        {
+          "name": "atom:milestone_6",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Straight Connector 25",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "September"
+        },
+        {
+          "name": "atom:milestone_7",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "Straight Connector 75",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:milestone_desc",
+          "kind": "text",
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order"
+        },
+        {
+          "name": "atom:milestone_title",
+          "kind": "text",
+          "text": "Founding"
+        },
+        {
+          "name": "atom:milestone_date",
+          "kind": "text",
+          "text": "November"
+        }
+      ],
+      "all_text": "Timeline 7 milestones\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nApril\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nMay\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nJune\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nJuly\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nAugust\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nSeptember\nThe town of Silent Hill is founded by a group of settlers who establish a cult known as The Order\nFounding\nNovember",
+      "dup_shapes": [
+        {
+          "text": "The town of Silent Hill is founded by a group of settlers who establish a cult known as The Order",
+          "count": 7
+        },
+        {
+          "text": "Founding",
+          "count": 7
+        }
+      ],
+      "uneditable": [],
+      "unique_strings": [
+        "November",
+        "September",
+        "Timeline 7 milestones"
+      ]
+    },
+    {
+      "index0": 39,
+      "index1": 40,
+      "shapes": [
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "Two screenshots and subtitles"
+        },
+        {
+          "name": "atom:screenshot_1",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:screenshot_2",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files"
+        }
+      ],
+      "all_text": "Two screenshots and subtitles\nBackdated files\nBackdated files",
+      "dup_shapes": [
+        {
+          "text": "Backdated files",
+          "count": 2
+        }
+      ],
+      "uneditable": [],
+      "unique_strings": [
+        "Two screenshots and subtitles"
+      ]
+    },
+    {
+      "index0": 40,
+      "index1": 41,
+      "shapes": [
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "Three screenshots and subtitles"
+        },
+        {
+          "name": "atom:screenshot_1",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:screenshot_2",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files"
+        },
+        {
+          "name": "atom:screenshot_3",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files"
+        }
+      ],
+      "all_text": "Three screenshots and subtitles\nBackdated files\nBackdated files\nBackdated files",
+      "dup_shapes": [
+        {
+          "text": "Backdated files",
+          "count": 3
+        }
+      ],
+      "uneditable": [],
+      "unique_strings": [
+        "Three screenshots and subtitles"
+      ]
+    },
+    {
+      "index0": 41,
+      "index1": 42,
+      "shapes": [
+        {
+          "name": "Rectangle: Rounded Corners 6",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "Two screenshots and subtitles, metrics,\u000bbullets"
+        },
+        {
+          "name": "atom:screenshot_1",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:metric_value_1",
+          "kind": "text",
+          "text": "x6.7"
+        },
+        {
+          "name": "atom:metric_desc_1",
+          "kind": "text",
+          "text": "Active drivers \u000bin fog"
+        },
+        {
+          "name": "Rectangle: Rounded Corners 10",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:screenshot_2",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:metric_value_2",
+          "kind": "text",
+          "text": "x6.7"
+        },
+        {
+          "name": "atom:metric_desc_2",
+          "kind": "text",
+          "text": "Active drivers \u000bin fog"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself"
+        }
+      ],
+      "all_text": "Two screenshots and subtitles, metrics,\u000bbullets\nx6.7\nActive drivers \u000bin fog\nx6.7\nActive drivers \u000bin fog\nBackdated files\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself\nBackdated files\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself",
+      "dup_shapes": [
+        {
+          "text": "x6.7",
+          "count": 2
+        },
+        {
+          "text": "Active drivers \u000bin fog",
+          "count": 2
+        },
+        {
+          "text": "Backdated files\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself",
+          "count": 2
+        }
+      ],
+      "uneditable": [],
+      "unique_strings": [
+        "x6.7",
+        "in fog",
+        "bullets",
+        "Active drivers",
+        "Two screenshots and subtitles, metrics,"
+      ]
+    },
+    {
+      "index0": 42,
+      "index1": 43,
+      "shapes": [
+        {
+          "name": "Rectangle: Rounded Corners 6",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "Заголовок 27",
+          "kind": "text",
+          "text": "Two screenshots and subtitles, bullets"
+        },
+        {
+          "name": "atom:screenshot_1",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "Rectangle: Rounded Corners 10",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "atom:screenshot_2",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself"
+        },
+        {
+          "name": "atom:block_title",
+          "kind": "text",
+          "text": "Backdated files\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself"
+        }
+      ],
+      "all_text": "Two screenshots and subtitles, bullets\nBackdated files\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself\nBackdated files\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself",
+      "dup_shapes": [
+        {
+          "text": "Backdated files\nFiling dates on some patient charts are older than the building itself\nFiling dates on some patient charts are older than the building itself",
+          "count": 2
+        }
+      ],
+      "uneditable": [],
+      "unique_strings": [
+        "Two screenshots and subtitles, bullets"
+      ]
+    },
+    {
+      "index0": 43,
+      "index1": 44,
+      "shapes": [
+        {
+          "name": "Picture 3",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "Title 53",
+          "kind": "text",
+          "text": "STAY\u000bTUNED!"
+        },
+        {
+          "name": "atom:qr",
+          "kind": "picture",
+          "text": ""
+        },
+        {
+          "name": "atom:qr_caption",
+          "kind": "text",
+          "text": "Our TG-channel"
+        },
+        {
+          "name": "atom:event_card",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:event_date",
+          "kind": "text",
+          "text": "December 17th"
+        },
+        {
+          "name": "Rectangle: Rounded Corners 7",
+          "kind": "text",
+          "text": "When?"
+        },
+        {
+          "name": "atom:event_card",
+          "kind": "group",
+          "text": ""
+        },
+        {
+          "name": "atom:event_location",
+          "kind": "text",
+          "text": "Silent Hill"
+        },
+        {
+          "name": "Rectangle: Rounded Corners 10",
+          "kind": "text",
+          "text": "Where?"
+        }
+      ],
+      "all_text": "STAY\u000bTUNED!\nOur TG-channel\nDecember 17th\nWhen?\nSilent Hill\nWhere?",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "STAY",
+        "When?",
+        "TUNED!",
+        "Where?",
+        "Silent Hill",
+        "December 17th",
+        "Our TG-channel"
+      ]
+    }
+  ]
+}

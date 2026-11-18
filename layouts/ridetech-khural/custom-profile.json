@@ -1,0 +1,82 @@
+{
+ "_comment": "Пер-шаблонный профиль кастом-контура «Хурала Райдтеха» (family:custom). Модель — layouts/eda/custom-profile.json. Шрифты YS Text (Wide Bold — дисплей, Bold — лейблы, Regular — боди). Лэйауты хрома: «Title» (светлый; его используют все 19 контентных слайдов шаблона) и «Black title» (тёмный; обложки/statement/closing — 25 слайдов) — оба несут TITLE-плейсхолдер idx=0 (контракт движка: хром без title-ph молча теряет h1). «Gray Title»/Blank/Black Blank слайдами шаблона не используются, хромом не являются. Канва = слайд 1919.875×1080 pt (1px=1pt). title_dy_px перемерен по PP-рендеру пробы (методика — шапка lib/html2pptx.py): чернила h1 64px YS Text Wide Bold на хроме «Title», дельта PP−браузер.",
+ "schema_version": 1,
+ "fonts": {
+  "files": {
+   "YS Text Wide Bold": "YS Text Wide-Bold.ttf",
+   "YS Text Wide": "YS Text Wide-Bold.ttf",
+   "YS Text Bold": "YS Text-Bold.ttf",
+   "YS Text Regular": "YS Text-Regular.ttf",
+   "YS Text": "YS Text-Regular.ttf"
+  },
+  "fallback": "YS Text Regular",
+  "resolve": [
+   {
+    "family_contains": "Wide",
+    "style": "YS Text Wide Bold"
+   },
+   {
+    "weight_min": 700,
+    "style": "YS Text Bold"
+   },
+   {
+    "style": "YS Text Regular"
+   }
+  ],
+  "bold_family": {
+   "YS Text Regular": "YS Text Bold",
+   "YS Text": "YS Text Bold",
+   "YS Text Bold": "YS Text Wide Bold"
+  }
+ },
+ "layouts": {
+  "_comment": "by_bg: фон HTML-слайда → лэйаут хрома с TITLE-плейсхолдером. Тёмный (все каналы низкие) → «Black title»; default — светлый «Title» (контентные слайды шаблона белые). default_bg: фон, на который рассчитан default-лэйаут (контентные слайды белые); фон HTML вне by_bg и дальше 12/канал от default_bg переносится нативным фоном слайда с предупреждением (0.34.0).",
+  "by_bg": [
+   {
+    "r": [
+     0,
+     80
+    ],
+    "g": [
+     0,
+     80
+    ],
+    "b": [
+     0,
+     80
+    ],
+    "layout": "Black title"
+   }
+  ],
+  "default": "Title",
+  "default_bg": [
+   255,
+   255,
+   255
+  ]
+ },
+ "calibration": {
+  "_comment": "title_dy_px: сдвиг чернил заголовка PP↔браузер; перемерен по пробе на хроме «Title» (h1 64px YS Text Wide Bold). До перемера — 0, НЕ копировать у соседних шаблонов (правило плейбука шаг 7).",
+  "title_dy_px": 0
+ },
+ "canvas": {
+  "_comment": "Слайд Хурала Райдтеха = 1919.875×1080 pt (канон Яндекс-шаблонов, как Еда и Городские); допуск ~2px в валидаторах канвы.",
+  "px": [
+   1920,
+   1080
+  ]
+ },
+ "a15": {
+  "photo_panel": {
+   "top_max": 35,
+   "bottom_min_from_h": 40
+  }
+ },
+ "margins": {
+  "_comment": "Контентные поля канвы custom-слайда, px (канон Хурала: колонка контента стартует x=54, правый край 54, шапка-линия ~40px сверху, футер 120px снизу). Гвард A15 валит сборку атомом вне полей; фото-панель канона — та же санкция, что у полосы номера. user-фидбек 2026-08-07 (дек drive-long).",
+  "left": 54,
+  "right": 54,
+  "top": 40,
+  "bottom": 120
+ }
+}

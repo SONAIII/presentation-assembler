@@ -1,0 +1,95 @@
+{
+ "schema_version": 1,
+ "template": "Хурал Райдтеха",
+ "template_file": "Templates/ridetech-khural/ridetech-khural-v3.3.pptx",
+ "id": "rk_agenda",
+ "family": "toc",
+ "kind": "structural",
+ "_doc": "Агенда (#14 на 3 тезиса, #15 на 6 в две колонки). Тезисы — repeat-слот atom:subtitle; номера 01–06 и линии-коннекторы донорские, фикс. Иерархии активного пункта нет (в отличие от Городских) — все пункты равны.",
+ "match": {
+  "form": "toc",
+  "count": [
+   3,
+   6
+  ]
+ },
+ "_router_note": "3 тезиса → t3; 6 → t6. Промежуточных доноров нет: 4–5 тезисов агент доводит ревордом до 3 или 6 (объединить/разбить), пустых строк-болванок не оставляем.",
+ "variants": [
+  {
+   "name": "t3",
+   "_hint": 13,
+   "preferred": true,
+   "anchor": {
+    "all": [
+     "Agenda 3 theses"
+    ]
+   },
+   "slots": {
+    "title": {
+     "match_name": "Title 4",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 19.87,
+     "box_h_in": 0.97,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "items": {
+     "repeat": true,
+     "match_name": "atom:subtitle",
+     "sort": "top",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 40,
+     "box_w_in": 19.91,
+     "box_h_in": 0.61,
+     "max_lines": 1,
+     "min_pt": 32
+    }
+   }
+  },
+  {
+   "name": "t6",
+   "_hint": 14,
+   "anchor": {
+    "all": [
+     "Agenda 6 theses"
+    ]
+   },
+   "_note": "Две колонки по 3: чтение колонками (левая 01–03 сверху вниз, правая 04–06) → sort left_top. Фикс 0.32.0: якорь был «Agenda» (exact-line никогда не матчился — латентно с онбординга), теперь «Agenda 6 theses».",
+   "slots": {
+    "title": {
+     "match_name": "Title 4",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 17.46,
+     "box_h_in": 0.97,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "items": {
+     "repeat": true,
+     "match_name": "atom:subtitle",
+     "sort": "left_top",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 40,
+     "box_w_in": 8.21,
+     "box_h_in": 1.08,
+     "max_lines": 2,
+     "min_pt": 32
+    }
+   }
+  }
+ ],
+ "dont_touch": [
+  "think-cell data - do not delete",
+  "Straight Connector*",
+  "TextBox*"
+ ],
+ "_anchored": "§3Б: t3 уникален строкой «Agenda 3 theses»; t6 — «Agenda» + has_shapes TextBox 19 (правая колонка номеров, на t3 его нет)."
+}

@@ -1,0 +1,105 @@
+{
+ "_doc": "Бренд-токены Ridetech Хурала (тема шаблона + placeholder-тексты для линта утечки заглушек). Шаблон однорежимный: тёмный фон фиксирован, оси black/white НЕТ. Фото-пул отсутствует (photo_pool: null — решение дизайнера): фото/скрины приносит пользователь. Семантика цветов от дизайнера: зелёный = позитив/текущее, красный = негатив.",
+ "template": "Хурал Райдтеха",
+ "modes": null,
+ "colors": {
+  "positive": {
+   "hex": "71FFB5",
+   "_role": "позитивная метрика / текущая веха таймлайна"
+  },
+  "negative": {
+   "hex": "FF9189",
+   "_role": "негативная метрика"
+  },
+  "neutral_text": {
+   "hex": "FFFFFF",
+   "_role": "нейтральный текст на тёмном фоне"
+  },
+  "highlight_positive": {
+   "hex": "C1FFDE",
+   "_role": "плашка-подсветка позитивной строки таблицы"
+  },
+  "highlight_negative": {
+   "hex": "FFC7C7",
+   "_role": "плашка-подсветка негативной строки таблицы"
+  }
+ },
+ "fonts": {
+  "heading": {
+   "font": "YS Text Wide Bold",
+   "size_pt": 64
+  },
+  "display": {
+   "font": "YS Text Wide Bold",
+   "size_pt": 344
+  },
+  "value": {
+   "font": "YS Text Wide Bold",
+   "size_pt": 115
+  },
+  "body": {
+   "font": "YS Text Regular",
+   "size_pt": 32
+  },
+  "label": {
+   "font": "YS Text Bold",
+   "size_pt": 32
+  }
+ },
+ "photo_pool": null,
+ "placeholder_texts": [
+  "TITLE OF THE SPEAKERS SPEECH",
+  "Name Surname",
+  "Occupation in 2-3 words",
+  "SECTION TITLE",
+  "Agenda 3 theses",
+  "Residents report strange radio interfere",
+  "The lake's water level drops overnight",
+  "A second fog bank forms inland",
+  "What the archives refuse to explain",
+  "good number",
+  "bad number",
+  "Three theses on slide",
+  "Four theses on slide",
+  "Six metrics on slide",
+  "Filing dates on some patient charts",
+  "Backdated files",
+  "No bell, still ringing",
+  "A missing week",
+  "It was removed decades ago",
+  "No edition has ever been found",
+  "games make up the original team",
+  "of visitors who lose all sense",
+  "year-over-year spike in recorded fog",
+  "A big table on slide",
+  "Monster Name",
+  "Game Appeared In",
+  "Long so what subtitle",
+  "A big bar chart with long title",
+  "Two bar charts on slide",
+  "Two line charts on slide",
+  "A big line chart with long title",
+  "Missing persons and fog events",
+  "Share of days affected by each",
+  "Occupancy and safety across to",
+  "Timeline 4 milestones",
+  "Timeline 5 milestones",
+  "Timeline 6 milestones",
+  "Timeline 7 milestones",
+  "The town of Silent Hill is founded",
+  "Founding",
+  "Two screenshots and subtitles",
+  "Three screenshots and subtitles",
+  "Active drivers in fog",
+  "STAY",
+  "TUNED",
+  "Our TG-channel",
+  "December 17th",
+  "Silent Hill",
+  "Canon",
+  "Descent",
+  "Resonance",
+  "STAY TUNED!",
+  "Residents report strange radio interference"
+ ]
+}

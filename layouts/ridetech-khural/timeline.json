@@ -1,0 +1,274 @@
+{
+ "schema_version": 1,
+ "template": "Хурал Райдтеха",
+ "template_file": "Templates/ridetech-khural/ridetech-khural-v3.3.pptx",
+ "id": "rk_timeline",
+ "family": "timeline",
+ "kind": "content_fill",
+ "_doc": "Таймлайн (#36–39): готовая линейка на 4/5/6/7 вех, вехи чередуются верх/низ. Каждая веха — группа atom:milestone_N (дата-пилюля 32pt + заголовок 36pt + описание 32pt); стрелки-переходы atom:arrow между вехами — декор донора, у последней вехи стрелки нет (задумано). t7 — упрощённый, без стрелок. Клон-генератора НЕТ — только готовые N (решение шага 3: палитра не нужна). Акцент вехи — слот slots.accent (номер 1-based, O9 хэндоффа №2 2026-08-13): веха accent — зелёная пилюля #71FFB5, остальные серые; ключа НЕТ → вся линейка серая (движок гасит донорскую зелёную третью — акцент утверждает семантику, которой без ключа в контенте нет). Акцент ставится только при явной опоре сторитела, один на слайд; accent вне 1..N — честная ошибка.",
+ "match": {
+  "form": "timeline",
+  "count": [
+   4,
+   7
+  ]
+ },
+ "router": "timeline",
+ "_router_note": "Вех ровно 4/5/6/7 → соответствующий вариант; <4 или >7 → честная ошибка (реворд контента). Стрелочные t4–t6 предпочтительнее; t7 — когда вех семь или нужен слайд попроще.",
+ "variants": [
+  {
+   "name": "t4",
+   "_hint": 35,
+   "anchor": {
+    "all": [
+     "Timeline 4 milestones"
+    ]
+   },
+   "_note": "#36, 4 вехи со стрелками.",
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 0.97,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "dates": {
+     "repeat": true,
+     "match_name": "atom:milestone_date",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "value_shrink",
+     "font": "YS Text Regular",
+     "size_pt": 32,
+     "box_w_in": 4.96,
+     "min_pt": 24,
+     "max_chars_hint": 14
+    },
+    "titles": {
+     "repeat": true,
+     "match_name": "atom:milestone_title",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 36,
+     "box_w_in": 4.5,
+     "box_h_in": 0.61,
+     "max_lines": 1,
+     "min_pt": 28
+    },
+    "descs": {
+     "repeat": true,
+     "match_name": "atom:milestone_desc",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 32,
+     "box_w_in": 4.5,
+     "box_h_in": 2.69,
+     "max_lines": 4,
+     "min_pt": 24
+    }
+   },
+   "steps": 4
+  },
+  {
+   "name": "t5",
+   "_hint": 36,
+   "anchor": {
+    "all": [
+     "Timeline 5 milestones"
+    ]
+   },
+   "_note": "#37, 5 вех со стрелками.",
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 0.97,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "dates": {
+     "repeat": true,
+     "match_name": "atom:milestone_date",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "value_shrink",
+     "font": "YS Text Regular",
+     "size_pt": 32,
+     "box_w_in": 4.96,
+     "min_pt": 24,
+     "max_chars_hint": 14
+    },
+    "titles": {
+     "repeat": true,
+     "match_name": "atom:milestone_title",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 36,
+     "box_w_in": 4.5,
+     "box_h_in": 0.61,
+     "max_lines": 1,
+     "min_pt": 28
+    },
+    "descs": {
+     "repeat": true,
+     "match_name": "atom:milestone_desc",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 32,
+     "box_w_in": 4.5,
+     "box_h_in": 2.69,
+     "max_lines": 4,
+     "min_pt": 24
+    }
+   },
+   "steps": 5
+  },
+  {
+   "name": "t6",
+   "_hint": 37,
+   "anchor": {
+    "all": [
+     "Timeline 6 milestones"
+    ]
+   },
+   "_note": "#38, 6 вех со стрелками.",
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 0.97,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "dates": {
+     "repeat": true,
+     "match_name": "atom:milestone_date",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "value_shrink",
+     "font": "YS Text Regular",
+     "size_pt": 32,
+     "box_w_in": 4.96,
+     "min_pt": 24,
+     "max_chars_hint": 14
+    },
+    "titles": {
+     "repeat": true,
+     "match_name": "atom:milestone_title",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 36,
+     "box_w_in": 4.5,
+     "box_h_in": 0.61,
+     "max_lines": 1,
+     "min_pt": 28
+    },
+    "descs": {
+     "repeat": true,
+     "match_name": "atom:milestone_desc",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 32,
+     "box_w_in": 4.5,
+     "box_h_in": 2.69,
+     "max_lines": 4,
+     "min_pt": 24
+    }
+   },
+   "steps": 6
+  },
+  {
+   "name": "t7",
+   "_hint": 38,
+   "anchor": {
+    "all": [
+     "Timeline 7 milestones"
+    ]
+   },
+   "_note": "#39, 7 вех, упрощённый — без стрелок.",
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 0.97,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "dates": {
+     "repeat": true,
+     "match_name": "atom:milestone_date",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "value_shrink",
+     "font": "YS Text Regular",
+     "size_pt": 32,
+     "box_w_in": 4.96,
+     "min_pt": 24,
+     "max_chars_hint": 14
+    },
+    "titles": {
+     "repeat": true,
+     "match_name": "atom:milestone_title",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 36,
+     "box_w_in": 4.5,
+     "box_h_in": 0.61,
+     "max_lines": 1,
+     "min_pt": 28
+    },
+    "descs": {
+     "repeat": true,
+     "match_name": "atom:milestone_desc",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 32,
+     "box_w_in": 4.5,
+     "box_h_in": 2.69,
+     "max_lines": 4,
+     "min_pt": 24
+    }
+   },
+   "steps": 7
+  }
+ ],
+ "dont_touch": [
+  "think-cell data - do not delete",
+  "atom:arrow",
+  "Straight Connector*"
+ ],
+ "_anchored": "§3Б: доноры уникальны заголовком-заглушкой «Timeline N milestones»."
+}

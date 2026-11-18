@@ -1,0 +1,216 @@
+{
+ "schema_version": 1,
+ "template": "Хурал Райдтеха",
+ "template_file": "Templates/ridetech-khural/ridetech-khural-v3.3.pptx",
+ "id": "rk_charts",
+ "family": "charts",
+ "kind": "content_fill",
+ "_doc": "Нативные PowerPoint-чарты (#30–33): стековый бар / два бара / две линии / линия. Легенды нативные (справа), внешних лейблов нет — категории и серии подменяются replace_data из deckspec.charts. Подписи осей — atom:chart_subtitle (у duo — left/right).",
+ "match": {
+  "form": "charts",
+  "count": [
+   1,
+   1
+  ]
+ },
+ "_router_note": "Динамика во времени → line; сравнение состава → bar (stacked); два сопоставимых графика рядом → *_duo. Вариант выбирает агент по данным.",
+ "variants": [
+  {
+   "name": "bar",
+   "_hint": 29,
+   "preferred": true,
+   "anchor": {
+    "all": [
+     "A big bar chart with long title"
+    ]
+   },
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 0.97,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "subtitle": {
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 32,
+     "box_w_in": 10.54,
+     "box_h_in": 0.54,
+     "max_lines": 1,
+     "min_pt": 24,
+     "optional": true,
+     "match_name": "atom:chart_subtitle"
+    }
+   },
+   "chart_slots": {
+    "chart": {
+     "match_name": "Chart 42",
+     "kind": "column",
+     "_doc": "стековый бар на всю ширину; 2 серии в доноре"
+    }
+   }
+  },
+  {
+   "name": "bar_duo",
+   "_hint": 30,
+   "anchor": {
+    "all": [
+     "Two bar charts on slide"
+    ]
+   },
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 0.97,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "subtitle_left": {
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 32,
+     "box_w_in": 10.54,
+     "box_h_in": 0.54,
+     "max_lines": 1,
+     "min_pt": 24,
+     "optional": true,
+     "match_name": "atom:chart_left_subtitle"
+    },
+    "subtitle_right": {
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 32,
+     "box_w_in": 10.54,
+     "box_h_in": 0.54,
+     "max_lines": 1,
+     "min_pt": 24,
+     "optional": true,
+     "match_name": "atom:chart_right_subtitle"
+    }
+   },
+   "chart_slots": {
+    "chart_left": {
+     "match_name": "Chart 42",
+     "kind": "column",
+     "_doc": "левый бар"
+    },
+    "chart_right": {
+     "match_name": "Chart 4",
+     "kind": "column",
+     "_doc": "правый бар"
+    }
+   }
+  },
+  {
+   "name": "line_duo",
+   "_hint": 31,
+   "anchor": {
+    "all": [
+     "Two line charts on slide"
+    ]
+   },
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 0.97,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "subtitle_left": {
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 32,
+     "box_w_in": 10.54,
+     "box_h_in": 1.08,
+     "max_lines": 2,
+     "min_pt": 24,
+     "optional": true,
+     "match_name": "atom:chart_left_subtitle"
+    },
+    "subtitle_right": {
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 32,
+     "box_w_in": 10.54,
+     "box_h_in": 1.08,
+     "max_lines": 2,
+     "min_pt": 24,
+     "optional": true,
+     "match_name": "atom:chart_right_subtitle"
+    }
+   },
+   "chart_slots": {
+    "chart_left": {
+     "match_name": "Chart 7",
+     "kind": "line",
+     "_doc": "левая линия"
+    },
+    "chart_right": {
+     "match_name": "Chart 8",
+     "kind": "line",
+     "_doc": "правая линия"
+    }
+   }
+  },
+  {
+   "name": "line",
+   "_hint": 32,
+   "anchor": {
+    "all": [
+     "A big line chart with long title"
+    ]
+   },
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 0.97,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "subtitle": {
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 32,
+     "box_w_in": 10.54,
+     "box_h_in": 0.54,
+     "max_lines": 1,
+     "min_pt": 24,
+     "optional": true,
+     "match_name": "atom:chart_subtitle"
+    }
+   },
+   "chart_slots": {
+    "chart": {
+     "match_name": "Chart 4",
+     "kind": "line",
+     "_doc": "линия на всю ширину; 2 серии в доноре"
+    }
+   }
+  }
+ ],
+ "dont_touch": [
+  "think-cell data - do not delete"
+ ],
+ "_anchored": "§3Б: все четыре донора уникальны заголовком-заглушкой."
+}

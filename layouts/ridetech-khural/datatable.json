@@ -1,0 +1,147 @@
+{
+ "schema_version": 1,
+ "template": "Хурал Райдтеха",
+ "template_file": "Templates/ridetech-khural/ridetech-khural-v3.3.pptx",
+ "id": "rk_datatable",
+ "family": "datatable",
+ "kind": "content_fill",
+ "_doc": "Таблицы (#27–29), донорская сетка 7×5, строки одинаковой высоты 100.54pt. simple — вся ширина; highlight — + цветные плашки-подсветки строк ПОД таблицей (зел #C1FFDE / красн #FFC7C7); sowhat — таблица уже + сайдбар вывода справа. Trim/stretch — штатные.",
+ "match": {
+  "form": "datatable",
+  "count": [
+   1,
+   1
+  ]
+ },
+ "_router_note": "Вариант выбирает агент по контенту: есть вывод-резюме → sowhat; есть строки-герои → highlight (см. ограничение в _note варианта); иначе simple.",
+ "variants": [
+  {
+   "name": "simple",
+   "_hint": 26,
+   "preferred": true,
+   "anchor": {
+    "all": [
+     "A big table on slide"
+    ],
+    "no_shapes": [
+     "atom:so_what_bg",
+     "atom:highlight_positive"
+    ]
+   },
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 0.97,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "table": {
+     "kind": "table",
+     "match_name": "Table 3",
+     "trim": true,
+     "font": "YS Text Regular",
+     "size_pt": 28,
+     "box_w_in": 25.59
+    }
+   }
+  },
+  {
+   "name": "highlight",
+   "_hint": 27,
+   "anchor": {
+    "has_shapes": [
+     "atom:highlight_positive",
+     "atom:highlight_negative"
+    ]
+   },
+   "_note": "ОГРАНИЧЕНИЕ v1: плашки atom:highlight_* прибиты к строкам донора (2-я и 7-я, формула y = table_y + row×100.54pt + 8.8). Движок их не переставляет — вариант выбирать, когда строки-герои пользователя можно поставить в эти позиции сортировкой данных; иначе simple. Подвижные подсветки — кандидат в фичи движка (решение владельца).",
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 1.94,
+     "max_lines": 2,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "table": {
+     "kind": "table",
+     "match_name": "Table 1",
+     "trim": true,
+     "font": "YS Text Regular",
+     "size_pt": 28,
+     "box_w_in": 25.59
+    }
+   },
+   "decor_highlights": [
+    "atom:highlight_positive",
+    "atom:highlight_negative"
+   ]
+  },
+  {
+   "name": "sowhat",
+   "_hint": 28,
+   "anchor": {
+    "has_shapes": [
+     "atom:so_what_bg"
+    ]
+   },
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 1.94,
+     "max_lines": 2,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "table": {
+     "kind": "table",
+     "match_name": "Table 3",
+     "trim": true,
+     "stretch_font": false,
+     "_stretch_note": "Кегль ячеек НЕ растёт при высотном stretch: донор набран в паритете 28pt = atom:so_what_body 28pt (решение дизайнера); рост до 37pt обгонял плашку so-what, читалось как «в плашке вечно мелко» (хэндофф Ultima 2026-08-11, O3)",
+     "font": "YS Text Regular",
+     "size_pt": 28,
+     "box_w_in": 17.46
+    },
+    "so_what_title": {
+     "match_name": "atom:so_what_title",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 44,
+     "box_w_in": 6.45,
+     "box_h_in": 1.82,
+     "max_lines": 2,
+     "min_pt": 32
+    },
+    "so_what_body": {
+     "match_name": "atom:so_what_body",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 28,
+     "box_w_in": 6.12,
+     "box_h_in": 4.75,
+     "max_lines": 8,
+     "min_pt": 22,
+     "multiline": true
+    }
+   }
+  }
+ ],
+ "dont_touch": [
+  "think-cell data - do not delete"
+ ],
+ "_anchored": "§3Б: highlight — has_shapes плашек; sowhat — has_shapes сайдбара; simple — текст + no_shapes обоих."
+}

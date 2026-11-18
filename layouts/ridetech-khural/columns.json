@@ -1,0 +1,160 @@
+{
+ "schema_version": 1,
+ "template": "Хурал Райдтеха",
+ "template_file": "Templates/ridetech-khural/ridetech-khural-v3.3.pptx",
+ "id": "rk_columns",
+ "family": "columns",
+ "kind": "content_fill",
+ "_doc": "Колонки-карточки тезисов (#22–24). v2.2: заголовок и тело карточки ОБЪЕДИНЕНЫ в одну коробку atom:block_title (пара абзацев-заглушек: абзац 0 — заголовок темовым major-шрифтом, абзацы 1+ — тело/буллеты 32pt). Бюджет карточки общий: длинный заголовок отъедает строку у тела. Заполнение — композитный слот cards (compose titles+bodies), deckspec-контракт titles/bodies НЕ меняется. Карточки-подложки фикс.",
+ "match": {
+  "form": "columns",
+  "count": [
+   3,
+   4
+  ]
+ },
+ "_router_note": "3 тезиса-прозы → t3_body; 3 тезиса-списки → t3_bullets; 4 → t4_body. Буллеты при 4 колонках ревордить в прозу. ПЕРЕД выбором колонок: 3 коротких пункта с ярлыком и ёмким хайлайтом (цифра или 1–2 слова) визуально сильнее лягут в metrics/trio_tags (#34) — проверь его первым (user-фидбек 2026-08-07).",
+ "variants": [
+  {
+   "name": "t3_body",
+   "_hint": 21,
+   "anchor": {
+    "all": [
+     "Three theses on slide"
+    ]
+   },
+   "_note": "3 карточки, тело — проза (#22). v3.3: экс-тела block_body (запаркованные за канвой в v2.2) дизайнер удалила — карточка = единая коробка block_title 7.01×1.91 (compose). Сигнатура идентична t3_bullets (#23) — разводит тайбрейкер _hint (штатно, как тема-варианты Городских).",
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 1.94,
+     "max_lines": 2,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "cards": {
+     "repeat": true,
+     "compose": [
+      "titles",
+      "bodies"
+     ],
+     "match_name": "atom:block_title",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 32,
+     "head_font": "YS Text Bold",
+     "head_size_pt": 36,
+     "box_w_in": 7.01,
+     "box_h_in": 1.91,
+     "max_lines": 3,
+     "min_pt": 24,
+     "multiline": false,
+     "_note": "абзац 0 — заголовок (+mj-lt=YS Text Bold, дефолт 36pt), дальше тело 32pt; итоговый бюджет ~1 строка заголовка + 2 строки тела"
+    }
+   }
+  },
+  {
+   "name": "t3_bullets",
+   "_hint": 22,
+   "anchor": {
+    "all": [
+     "Three theses on slide"
+    ]
+   },
+   "_note": "3 карточки, тело — буллет-список (#23): блок выше (блок 7.01×4.45), боди-абзацы несут буллиты донора. Сигнатура идентична t3_body (#22) — разводит тайбрейкер _hint.",
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 1.94,
+     "max_lines": 2,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "cards": {
+     "repeat": true,
+     "compose": [
+      "titles",
+      "bodies"
+     ],
+     "match_name": "atom:block_title",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 32,
+     "head_font": "YS Text Bold",
+     "head_size_pt": 36,
+     "box_w_in": 7.01,
+     "box_h_in": 4.45,
+     "max_lines": 8,
+     "min_pt": 24,
+     "multiline": true,
+     "_note": "абзац 0 — заголовок 36pt, абзацы 1+ — буллеты 32pt (стиль клонируется с последнего абзаца-заглушки)"
+    }
+   }
+  },
+  {
+   "name": "t4_body",
+   "_hint": 23,
+   "anchor": {
+    "all": [
+     "Four theses on slide"
+    ]
+   },
+   "_note": "4 карточки, тело — проза (#24). v2.2: единая коробка block_title 4.90×2.45 (заголовок + тело), block_body удалены.",
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 1.94,
+     "max_lines": 2,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "cards": {
+     "repeat": true,
+     "compose": [
+      "titles",
+      "bodies"
+     ],
+     "match_name": "atom:block_title",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 32,
+     "head_font": "YS Text Bold",
+     "head_size_pt": 36,
+     "box_w_in": 4.9,
+     "box_h_in": 2.45,
+     "max_lines": 4,
+     "min_pt": 24,
+     "multiline": false,
+     "_note": "абзац 0 — заголовок 36pt, дальше тело 32pt; бюджет ~1 строка заголовка + 3 строки тела"
+    }
+   }
+  }
+ ],
+ "dont_touch": [
+  "Rounded Rectangle*"
+ ],
+ "_anchored": "§3Б v2.2: t3_body/t3_bullets текстово идентичны → body держит has_shapes atom:block_body (запаркованные за канвой экс-тела, recurse в группы), bullets — no_shapes того же. t4 уникален строкой. Дизайнер удалит block_body из шаблона → якорь упадёт ГРОМКО (философия anchor.py), перепривязать.",
+ "fit_check": {
+  "fill_ratio_min": 0.4,
+  "fit_tolerance": 1.05,
+  "line_spacing": 1.15
+ }
+}

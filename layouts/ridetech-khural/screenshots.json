@@ -1,0 +1,264 @@
+{
+ "schema_version": 1,
+ "template": "Хурал Райдтеха",
+ "template_file": "Templates/ridetech-khural/ridetech-khural-v3.3.pptx",
+ "id": "rk_screenshots",
+ "family": "screenshots",
+ "kind": "structural",
+ "_doc": "Скриншоты продукта в телефонах (#40–43) — НОВОЕ семейство словаря (введено Ridetech Хуралом). 2–3 портретных скрина; формы: подписи сверху / + метрика слева / + буллет-блоки снизу. Скрины приносит пользователь; сырой скрин без рамки телефона агент прогоняет через scripts/phone_mockup.py --template ridetech-khural.",
+ "match": {
+  "form": "screenshots",
+  "count": [
+   2,
+   3
+  ]
+ },
+ "_router_note": "2 скрина + короткие подписи → duo_titled; 3 скрина → trio_titled; 2 скрина + по метрике на каждый → duo_metrics_bullets; 2 скрина + текстовые блоки → duo_bullets.",
+ "variants": [
+  {
+   "name": "duo_titled",
+   "_hint": 39,
+   "preferred": true,
+   "photo": true,
+   "anchor": {
+    "all": [
+     "Two screenshots and subtitles"
+    ],
+    "no_shapes": [
+     "atom:block",
+     "atom:metric_value_1"
+    ]
+   },
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 0.97,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "captions": {
+     "repeat": true,
+     "match_name": "atom:block_title",
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 32,
+     "box_w_in": 4.39,
+     "box_h_in": 0.54,
+     "max_lines": 1,
+     "min_pt": 24
+    }
+   },
+   "image_slots": {
+    "screenshot_1": {
+     "match_name": "atom:screenshot_1",
+     "_doc": "скрин телефона #1, портрет 6.31×11.46in; сырой скрин прогнать через scripts/phone_mockup.py"
+    },
+    "screenshot_2": {
+     "match_name": "atom:screenshot_2",
+     "_doc": "скрин телефона #2, портрет 6.31×11.46in; сырой скрин прогнать через scripts/phone_mockup.py"
+    }
+   }
+  },
+  {
+   "name": "trio_titled",
+   "_hint": 40,
+   "photo": true,
+   "anchor": {
+    "all": [
+     "Three screenshots and subtitles"
+    ]
+   },
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 0.97,
+     "max_lines": 1,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "captions": {
+     "repeat": true,
+     "match_name": "atom:block_title",
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Bold",
+     "size_pt": 32,
+     "box_w_in": 4.39,
+     "box_h_in": 0.54,
+     "max_lines": 1,
+     "min_pt": 24
+    }
+   },
+   "image_slots": {
+    "screenshot_1": {
+     "match_name": "atom:screenshot_1",
+     "_doc": "скрин телефона #1, портрет 5.5×10.0in; сырой скрин прогнать через scripts/phone_mockup.py"
+    },
+    "screenshot_2": {
+     "match_name": "atom:screenshot_2",
+     "_doc": "скрин телефона #2, портрет 5.5×10.0in; сырой скрин прогнать через scripts/phone_mockup.py"
+    },
+    "screenshot_3": {
+     "match_name": "atom:screenshot_3",
+     "_doc": "скрин телефона #3, портрет 5.5×10.0in; сырой скрин прогнать через scripts/phone_mockup.py"
+    }
+   }
+  },
+  {
+   "name": "duo_metrics_bullets",
+   "_hint": 41,
+   "photo": true,
+   "anchor": {
+    "has_shapes": [
+     "atom:metric_value_1",
+     "atom:screenshot_1"
+    ]
+   },
+   "_note": "Самый насыщенный: скрин + метрика (88pt) слева от него + карточка с буллетами снизу, ×2.",
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 1.94,
+     "max_lines": 2,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "metric_values": {
+     "repeat": true,
+     "match_names": [
+      "atom:metric_value_1",
+      "atom:metric_value_2"
+     ],
+     "sort": "left",
+     "fit_policy": "value_shrink",
+     "font": "YS Text Wide Bold",
+     "size_pt": 88,
+     "box_w_in": 3.99,
+     "min_pt": 54,
+     "max_chars_hint": 6
+    },
+    "metric_descs": {
+     "repeat": true,
+     "match_names": [
+      "atom:metric_desc_1",
+      "atom:metric_desc_2"
+     ],
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 28,
+     "box_w_in": 3.99,
+     "box_h_in": 0.94,
+     "max_lines": 2,
+     "min_pt": 22
+    },
+    "cards": {
+     "repeat": true,
+     "compose": [
+      "block_titles",
+      "block_bullets"
+     ],
+     "match_name": "atom:block_title",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 28,
+     "head_font": "YS Text Bold",
+     "head_size_pt": 32,
+     "box_w_in": 4.99,
+     "box_h_in": 4.05,
+     "max_lines": 8,
+     "min_pt": 22,
+     "multiline": true,
+     "_note": "v2.2: заголовок и буллеты блока объединены в одну коробку (абзац 0 — заголовок 32pt, абзацы 1+ — буллеты 28pt); block_bullets из шаблона удалены, deckspec-ключи block_titles/block_bullets живут через compose"
+    }
+   },
+   "image_slots": {
+    "screenshot_1": {
+     "match_name": "atom:screenshot_1",
+     "_doc": "скрин телефона #1, портрет 6.01×10.91in; сырой скрин прогнать через scripts/phone_mockup.py"
+    },
+    "screenshot_2": {
+     "match_name": "atom:screenshot_2",
+     "_doc": "скрин телефона #2, портрет 6.01×10.91in; сырой скрин прогнать через scripts/phone_mockup.py"
+    }
+   }
+  },
+  {
+   "name": "duo_bullets",
+   "_hint": 42,
+   "photo": true,
+   "anchor": {
+    "all": [
+     "Two screenshots and subtitles, bullets"
+    ],
+    "no_shapes": [
+     "atom:metric_value_1"
+    ]
+   },
+   "slots": {
+    "heading": {
+     "match_name": "Заголовок 27",
+     "fit_policy": "reword_first",
+     "font": "YS Text Wide Bold",
+     "size_pt": 64,
+     "box_w_in": 25.59,
+     "box_h_in": 1.94,
+     "max_lines": 2,
+     "min_pt": 44,
+     "clear_soft_breaks": true
+    },
+    "cards": {
+     "repeat": true,
+     "compose": [
+      "block_titles",
+      "block_bullets"
+     ],
+     "match_name": "atom:block_title",
+     "recurse": true,
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Text Regular",
+     "size_pt": 28,
+     "head_font": "YS Text Bold",
+     "head_size_pt": 32,
+     "box_w_in": 4.99,
+     "box_h_in": 4.05,
+     "max_lines": 8,
+     "min_pt": 22,
+     "multiline": true,
+     "_note": "v2.2: заголовок и буллеты блока объединены в одну коробку (абзац 0 — заголовок 32pt, абзацы 1+ — буллеты 28pt); block_bullets из шаблона удалены, deckspec-ключи block_titles/block_bullets живут через compose"
+    }
+   },
+   "image_slots": {
+    "screenshot_1": {
+     "match_name": "atom:screenshot_1",
+     "_doc": "скрин телефона #1, портрет 6.01×10.91in; сырой скрин прогнать через scripts/phone_mockup.py"
+    },
+    "screenshot_2": {
+     "match_name": "atom:screenshot_2",
+     "_doc": "скрин телефона #2, портрет 6.01×10.91in; сырой скрин прогнать через scripts/phone_mockup.py"
+    }
+   }
+  }
+ ],
+ "dont_touch": [
+  "Rectangle: Rounded Corners*"
+ ],
+ "_anchored": "§3Б: заглушки заголовков различны (exact-line); duo_titled дополнительно отсечён no_shapes от насыщенных форм (atom:block в v2.2 уже не существует — запись no-op, оставлена на случай отката шаблона)."
+}
