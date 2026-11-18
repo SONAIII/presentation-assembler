@@ -1,0 +1,190 @@
+{
+  "id": "gor_services_agenda",
+  "schema_version": 1,
+  "template": "Городские сервисы",
+  "template_file": "Templates/gor-services/template-gs-v2.0.pptx",
+  "family": "toc",
+  "kind": "structural",
+  "_doc": "Оглавление Городских — ТЁМНЫЙ контрастный слайд (дизайн владельца, v1.0, слайды #47/#48). Номера 1..N = фикс-декор (Rounded Rectangle), заполняем только пункты. Пункты — одноимённый текст-заглушка «Служить счастью…» → повтор по тексту (find_shapes_by_text). Заголовок «Содержание» (Заголовок 1, 166pt) — фикс. Хедер (Дата / Название документа) — опциональные слоты. Варианты: sections3 (#47, одна колонка, sort=top) / sections6 (#48, две колонки 1-3|4-6, sort=left_top). Идентичный заголовок → _hint. Вариант sections3_focus (#51) — содержание-разделитель: заливка активного номера, slots.active_index.",
+  "match": {
+    "form": "toc",
+    "count": [
+      3,
+      6
+    ]
+  },
+  "variants": [
+    {
+      "name": "sections3",
+      "_hint": 49,
+      "preferred": true,
+      "anchor": {
+        "all": [
+          "Содержание"
+        ]
+      },
+      "_note": "#47: 3 пункта в одну колонку сверху вниз.",
+      "slots": {
+        "items": {
+          "repeat": true,
+          "find": "Служить",
+          "ci": true,
+          "sort": "top",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 32,
+          "box_w_in": 10.16,
+          "box_h_in": 1.5,
+          "max_lines": 2,
+          "min_pt": 22,
+          "clear_soft_breaks": true
+        },
+        "doc_name": {
+          "match_name": "Скругленный прямоугольник 12",
+          "font": "YS SemiMono Regular",
+          "size_pt": 28,
+          "box_w_in": 5.17,
+          "box_h_in": 0.69,
+          "max_lines": 1,
+          "min_pt": 18,
+          "optional": true,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "date": {
+          "match_name": "Скругленный прямоугольник 14",
+          "font": "YS SemiMono Regular",
+          "size_pt": 28,
+          "box_w_in": 2.79,
+          "box_h_in": 0.69,
+          "max_lines": 1,
+          "min_pt": 18,
+          "optional": true,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        }
+      }
+    },
+    {
+      "name": "sections3_focus",
+      "_hint": 50,
+      "anchor": {
+        "all": [
+          "Содержание"
+        ]
+      },
+      "_note": "#51 (решение владельца 2026-07-29): содержание как РАЗДЕЛИТЕЛЬ с фокусом на активной теме — номер активного пункта ЗАЛИТ (у донора пункт 1), остальные в обводке. slots.active_index (0-based) двигает заливку (движок: focus_fill). Все темы видны, фокус на текущей.",
+      "slots": {
+        "items": {
+          "repeat": true,
+          "find": "Служить",
+          "ci": true,
+          "sort": "top",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 32,
+          "box_w_in": 10.16,
+          "box_h_in": 1.5,
+          "max_lines": 2,
+          "min_pt": 22,
+          "clear_soft_breaks": true
+        },
+        "doc_name": {
+          "match_name": "Скругленный прямоугольник 12",
+          "font": "YS SemiMono Regular",
+          "size_pt": 28,
+          "box_w_in": 5.17,
+          "box_h_in": 0.69,
+          "max_lines": 1,
+          "min_pt": 18,
+          "optional": true,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "date": {
+          "match_name": "Скругленный прямоугольник 14",
+          "font": "YS SemiMono Regular",
+          "size_pt": 28,
+          "box_w_in": 2.79,
+          "box_h_in": 0.69,
+          "max_lines": 1,
+          "min_pt": 18,
+          "optional": true,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        }
+      },
+      "focus_fill": {
+        "match_names": [
+          "Rounded Rectangle 4",
+          "Rounded Rectangle 6",
+          "Rounded Rectangle 9"
+        ],
+        "sort": "top",
+        "active_slot": "active_index",
+        "companion_names": [
+          "TextBox 5",
+          "TextBox 7",
+          "TextBox 10"
+        ]
+      }
+    },
+    {
+      "name": "sections6",
+      "_hint": 51,
+      "anchor": {
+        "all": [
+          "Содержание"
+        ]
+      },
+      "_note": "#48: 6 пунктов в две колонки (лево 1-3, право 4-6). sort=left_top даёт колоночный порядок чтения.",
+      "slots": {
+        "items": {
+          "repeat": true,
+          "find": "Служить",
+          "ci": true,
+          "sort": "left_top",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 32,
+          "box_w_in": 7.67,
+          "box_h_in": 1.5,
+          "max_lines": 2,
+          "min_pt": 22,
+          "clear_soft_breaks": true
+        },
+        "doc_name": {
+          "match_name": "Скругленный прямоугольник 12",
+          "font": "YS SemiMono Regular",
+          "size_pt": 28,
+          "box_w_in": 5.17,
+          "box_h_in": 0.69,
+          "max_lines": 1,
+          "min_pt": 18,
+          "optional": true,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "date": {
+          "match_name": "Скругленный прямоугольник 14",
+          "font": "YS SemiMono Regular",
+          "size_pt": 28,
+          "box_w_in": 2.79,
+          "box_h_in": 0.69,
+          "max_lines": 1,
+          "min_pt": 18,
+          "optional": true,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        }
+      }
+    }
+  ],
+  "dont_touch": [
+    "Rounded Rectangle*",
+    "Прямая соединительная линия*",
+    "Заголовок*",
+    "Picture*"
+  ],
+  "_anchored": "§3Б: #47/#48 заголовок «Содержание» идентичен → _hint (46/47). Пункты = N× «Служить счастью…» (одна заглушка, разные имена) → find. Номера 1..N — Rounded Rectangle (декор, dont_touch)."
+}

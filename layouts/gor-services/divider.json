@@ -1,0 +1,74 @@
+{
+ "id": "gor_services_divider",
+ "schema_version": 1,
+ "template": "Городские сервисы",
+ "template_file": "Templates/gor-services/template-gs-v2.0.pptx",
+ "family": "divider",
+ "kind": "structural",
+ "_doc": "Разделитель секции Городских (#03/#04/#05): хедер (Дата/Название документа) + крупный заголовок 166pt (Заголовок 1) + опц. пользовательские портреты (image_slots) и имена. Заголовок идентичен на трёх → _hint. Варианты: plain (#05), person1 (#04, 1 портрет), person2 (#03, 2 портрета). Портрет-фото не даны → остаются донорские; имена — match_names.",
+ "match": {
+  "form": "divider",
+  "count": [
+   1,
+   1
+  ]
+ },
+ "title_policy": "Заголовок раздела = о чём секция (тезис/название), не «Раздел 2».",
+ "variants": [
+  {
+   "name": "plain",
+   "_hint": 4,
+   "preferred": true,
+   "anchor": {
+    "all": [
+     "Разделитель секции",
+     "в несколько строк"
+    ]
+   },
+   "_note": "#05: только заголовок + хедер.",
+   "slots": {
+    "title": {
+     "match_name": "Заголовок 1",
+     "fit_policy": "reword_first",
+     "font": "YS Compressed Heavy",
+     "size_pt": 166,
+     "box_w_in": 24.98,
+     "box_h_in": 3.88,
+     "max_lines": 2,
+     "min_pt": 96,
+     "clear_soft_breaks": true
+    },
+    "doc_name": {
+     "match_name": "Скругленный прямоугольник 12",
+     "font": "YS SemiMono Regular",
+     "size_pt": 28,
+     "box_w_in": 5.17,
+     "box_h_in": 0.69,
+     "max_lines": 1,
+     "min_pt": 18,
+     "optional": true,
+     "clear_if_empty": false,
+     "clear_soft_breaks": true
+    },
+    "date": {
+     "match_name": "Скругленный прямоугольник 14",
+     "font": "YS SemiMono Regular",
+     "size_pt": 28,
+     "box_w_in": 2.79,
+     "box_h_in": 0.69,
+     "max_lines": 1,
+     "min_pt": 18,
+     "optional": true,
+     "clear_if_empty": false,
+     "clear_soft_breaks": true
+    }
+   }
+  }
+ ],
+ "dont_touch": [
+  "Picture*",
+  "Прямая соединительная линия*",
+  "Rounded Rectangle*"
+ ],
+ "_anchored": "§3Б: #03/#04/#05 заголовок идентичен → _hint (2/3/4); person2 доп. has_shapes[Picture 4] (2-й портрет только на #03). Имена = match_names."
+}

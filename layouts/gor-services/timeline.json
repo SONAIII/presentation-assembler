@@ -1,0 +1,141 @@
+{
+  "id": "gor_services_timeline",
+  "schema_version": 1,
+  "template": "Городские сервисы",
+  "template_file": "Templates/gor-services/template-gs-v2.0.pptx",
+  "family": "timeline",
+  "kind": "content_fill",
+  "_doc": "Таймлайн Городских = N нумерованных шагов на прямом рельсе поверх фото. Отличие от Еды: НЕТ дата-боксов, номера 1..N — фиксированный ДЕКОР (Овал*), заполняем только описания. Все описания — одноимённые «Text 11» → повторяемый слот match_name sort=left (движковый find по имени, как у Еды t4). Фото/рельс/номера не трогаем. Варианты по числу точек (3/5/6) выбираются ЯВНО (decide_timeline→decide_structural при variant_name, route.py:187); заголовок «Таймлайн» идентичен на #26/#27/#28 → доноры разводятся _hint. router:timeline — stages мапятся в descs выбранного по ёмкости варианта; ёмкость = явный steps (номера зашиты в овалы донора). N вне 3/5/6 — честная ошибка (клон-генератора у Городских нет: generate-секции нет, коннектор atom:line — задел).",
+  "match": {
+    "form": "timeline",
+    "count": [
+      3,
+      6
+    ]
+  },
+  "variants": [
+    {
+      "name": "steps3",
+      "_hint": 29,
+      "anchor": {
+        "all": [
+          "Таймлайн"
+        ]
+      },
+      "_note": "#26: 3 нумерованных шага, описания 36pt (крупнее — их мало).",
+      "slots": {
+        "heading": {
+          "match_name": "Заголовок 7",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 25.0,
+          "box_h_in": 1.4,
+          "max_lines": 1,
+          "min_pt": 54,
+          "clear_soft_breaks": true
+        },
+        "descs": {
+          "repeat": true,
+          "match_name": "Text 11",
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 36,
+          "box_w_in": 6.0,
+          "box_h_in": 1.82,
+          "max_lines": 3,
+          "min_pt": 24,
+          "clear_soft_breaks": true
+        }
+      },
+      "steps": 3
+    },
+    {
+      "name": "steps5",
+      "_hint": 30,
+      "preferred": true,
+      "anchor": {
+        "all": [
+          "Таймлайн"
+        ]
+      },
+      "_note": "#27: 5 нумерованных шагов, описания 28pt.",
+      "slots": {
+        "heading": {
+          "match_name": "Заголовок 7",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 25.0,
+          "box_h_in": 1.4,
+          "max_lines": 1,
+          "min_pt": 54,
+          "clear_soft_breaks": true
+        },
+        "descs": {
+          "repeat": true,
+          "match_name": "Text 11",
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 28,
+          "box_w_in": 4.4,
+          "box_h_in": 1.9,
+          "max_lines": 3,
+          "min_pt": 20,
+          "clear_soft_breaks": true
+        }
+      },
+      "steps": 5
+    },
+    {
+      "name": "steps6",
+      "_hint": 31,
+      "anchor": {
+        "all": [
+          "Таймлайн"
+        ]
+      },
+      "_note": "#28: 6 нумерованных шагов, описания 28pt.",
+      "slots": {
+        "heading": {
+          "match_name": "Заголовок 7",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 25.0,
+          "box_h_in": 1.4,
+          "max_lines": 1,
+          "min_pt": 54,
+          "clear_soft_breaks": true
+        },
+        "descs": {
+          "repeat": true,
+          "match_name": "Text 11",
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 28,
+          "box_w_in": 3.7,
+          "box_h_in": 1.9,
+          "max_lines": 3,
+          "min_pt": 20,
+          "clear_soft_breaks": true
+        }
+      },
+      "steps": 6
+    }
+  ],
+  "dont_touch": [
+    "Рисунок*",
+    "Picture*",
+    "Rectangle*",
+    "Прямоугольник*",
+    "Straight Connector*",
+    "Овал*",
+    "Oval*"
+  ],
+  "_anchored": "§3Б: #26/#27/#28 заголовок «Таймлайн» ИДЕНТИЧЕН → разводим _hint (25/26/27, 0-based). Описания = N× «Text 11» (одно имя), sort=left = порядок чтения. Номера 1..N — Овал* (декор, dont_touch).",
+  "router": "timeline"
+}

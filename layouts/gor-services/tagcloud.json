@@ -1,0 +1,35 @@
+{
+  "id": "gor_services_tagcloud",
+  "schema_version": 1,
+  "template": "Городские сервисы",
+  "template_file": "Templates/gor-services/template-gs-v2.0.pptx",
+  "family": "tagcloud",
+  "kind": "structural",
+  "_doc": "Облако тем/вопросов Городских (#06, НОВОЕ имя словаря): фото сверху + заголовок + россыпь пилюль-слов (Rounded Rectangle*, индивидуальные имена + разный текст → match_names, sort top_left = порядок чтения). Пилюли фикс-ширины (авто-подгона нет) → теги должны быть короткими (1–3 слова), фит-чек ругнётся на длинных. Число пилюль фиксировано дизайном (16); лишние теги = сигнал резать.",
+  "match": { "form": "tagcloud", "count": [1, 16] },
+  "variants": [
+    {
+      "name": "cloud", "_hint": 5, "preferred": true,
+      "anchor": { "all": ["вопросами или проблемами для обсуждения"] },
+      "_note": "#06: заголовок + 16 пилюль-тегов.",
+      "slots": {
+        "heading": { "match_name": "Title 1", "fit_policy": "reword_first", "font": "YS Compressed Heavy", "size_pt": 96, "box_w_in": 25.0, "box_h_in": 2.1, "max_lines": 2, "min_pt": 54, "clear_soft_breaks": true },
+        "tags": {
+          "repeat": true,
+          "match_names": ["Rounded Rectangle 14", "Rounded Rectangle 15", "Rounded Rectangle 16", "Rounded Rectangle 18", "Rounded Rectangle 19", "Rounded Rectangle 17", "Rounded Rectangle 21", "Rounded Rectangle 26", "Rounded Rectangle 4", "Rounded Rectangle 5", "Rounded Rectangle 6", "Rounded Rectangle 10", "Rounded Rectangle 20", "Rounded Rectangle 11", "Rounded Rectangle 27", "Rounded Rectangle 7"],
+          "sort": "top_left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 28,
+          "box_w_in": 3.6,
+          "box_h_in": 1.5,
+          "max_lines": 1,
+          "min_pt": 20,
+          "clear_soft_breaks": true
+        }
+      }
+    }
+  ],
+  "dont_touch": ["Picture*", "Rectangle 25"],
+  "_anchored": "§3Б: #06 уникальный заголовок. Теги = 16× Rounded Rectangle (индивидуальные имена, разный текст) → match_names, sort=top_left."
+}

@@ -1,0 +1,80 @@
+{
+ "_comment": "Пер-шаблонный профиль кастом-контура Городских (family:custom). Модель — layouts/eda/custom-profile.json. Шрифты YS Compressed (дисплей) + YS SemiMono (боди/лейблы). Лэйауты хрома (v2.0, переименованы дизайнером): Title_Black/Title_White — несут TITLE-плейсхолдер (h1 из HTML кладётся в него; КОНТРАКТ движка: хром без title-ph молча теряет h1 — боевой урок 2026-07-28, на пустых лэйаутах v1.0 заголовки исчезали) и штатный футер ftr idx=3. Пустые лэйауты Empty_Black/Epmpty_White (опечатка «Epmpty» — в шаблоне!) хромом НЕ являются. Канва = слайд 1919.875×1080 (1px=1pt). title_dy_px перемерен по PP-рендеру пробы v2.0 (методика — research/html2pptx-spike/README).",
+ "schema_version": 1,
+ "fonts": {
+  "files": {
+   "YS Compressed Heavy": "YSCompressed-Heavy.otf",
+   "YS Compressed Bold": "YSCompressed-Bold.otf",
+   "YS Compressed": "YSCompressed-Bold.otf",
+   "YS SemiMono Regular": "YS_SemiMono_Pixels_June2025.ttf",
+   "YS SemiMono": "YS_SemiMono_Pixels_June2025.ttf"
+  },
+  "fallback": "YS SemiMono Regular",
+  "resolve": [
+   {
+    "family_contains": "Compressed",
+    "weight_min": 800,
+    "style": "YS Compressed Heavy"
+   },
+   {
+    "family_contains": "Compressed",
+    "style": "YS Compressed Bold"
+   },
+   {
+    "family_contains": "SemiMono",
+    "style": "YS SemiMono Regular"
+   },
+   {
+    "style": "YS SemiMono Regular"
+   }
+  ],
+  "bold_family": {
+   "YS SemiMono Regular": "YS Compressed Heavy",
+   "YS SemiMono": "YS Compressed Heavy",
+   "YS Compressed Bold": "YS Compressed Heavy"
+  }
+ },
+ "layouts": {
+  "_comment": "by_bg: фон HTML-слайда → лэйаут хрома С TITLE-плейсхолдером. Светлый (все каналы высокие) → Title_White; иначе (тёмный — базовый режим Городских) → Title_Black. default_bg: фон default-лэйаута Title_Black = --dark #292929 канона; фон HTML вне by_bg и дальше 12/канал от default_bg переносится нативным фоном слайда с предупреждением (0.34.0).",
+  "by_bg": [
+   {
+    "r": [
+     200,
+     255
+    ],
+    "g": [
+     200,
+     255
+    ],
+    "b": [
+     200,
+     255
+    ],
+    "layout": "Title_White"
+   }
+  ],
+  "default": "Title_Black",
+  "default_bg": [
+   41,
+   41,
+   41
+  ]
+ },
+ "calibration": {
+  "_comment": "title_dy_px: сдвиг чернил заголовка PP↔браузер. ПЕРЕМЕРЕН 2026-07-29 по пробе (методика spike): h1 96px YS Compressed Heavy на хроме Title_Black, PP-рендер @2.083x vs headless-Chrome 1920×1080 — чернила браузера y=83.0, PP y=64.3, дельта -18.7 → -19. (У Еды -9 при 66pt — согласуется по модели строчного бокса.) Проба: /private/tmp/gs_dy_probe.",
+  "title_dy_px": -19
+ },
+ "canvas": {
+  "_comment": "Слайд Городских = 1919.875×1080 pt (как Еда); допуск ~2px в валидаторах канвы.",
+  "px": [
+   1920,
+   1080
+  ]
+ },
+ "a15": {
+  "photo_panel": {
+   "top_max": 35,
+   "bottom_min_from_h": 40
+  }
+ }
+}

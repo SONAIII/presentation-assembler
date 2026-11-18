@@ -1,0 +1,42 @@
+{
+  "template_file": "Templates/gor-services/template-gs-v2.0.pptx",
+  "palette_slides_1based": [
+    29,
+    32,
+    33,
+    34
+  ],
+  "roles": {
+    "pill": {
+      "shape": "atom:pill"
+    },
+    "connector": {
+      "shape": "atom:line"
+    },
+    "arrow": {
+      "shape": "atom:arrow"
+    }
+  },
+  "atoms": {
+    "atom:pill": {
+      "slide1": 29,
+      "kind": "text",
+      "w_in": 4.001,
+      "h_in": 0.9,
+      "font": null,
+      "size_pt": 24.0
+    },
+    "atom:line": {
+      "slide1": 32,
+      "kind": "line",
+      "w_in": 26.665,
+      "h_in": 0.0
+    },
+    "atom:arrow": {
+      "slide1": 33,
+      "kind": "line",
+      "w_in": 25.814,
+      "h_in": 0.0
+    }
+  }
+}

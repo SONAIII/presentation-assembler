@@ -1,0 +1,26 @@
+{
+  "id": "gor_services_statement",
+  "schema_version": 1,
+  "template": "Городские сервисы",
+  "template_file": "Templates/gor-services/template-gs-v2.0.pptx",
+  "family": "statement",
+  "kind": "structural",
+  "_doc": "Открывающий раздел / манифест Городских (#23): крупный заголовок 166pt + большой номер раздела «01» (Text 11, 380pt) + описание сбоку (Text 11, 24pt) + doc-name. Номер и описание — одноимённые «Text 11», разводятся occ по позиции (0=номер сверху, 1=описание ниже). Номер опционален (по умолчанию «01»). Фрагментированные цитаты-постеры #13/#14 сюда НЕ мапятся — они custom (ручная раскладка фраз).",
+  "match": { "form": "statement", "count": [1, 1] },
+  "title_policy": "Заголовок манифеста/раздела = сама мысль, коротко. Action-title-правило не применяется.",
+  "variants": [
+    {
+      "name": "chapter", "_hint": 26, "preferred": true,
+      "anchor": { "all": ["Название раздела", "очень коротко"] },
+      "_note": "#23: заголовок + номер 01 + описание.",
+      "slots": {
+        "title": { "match_name": "Заголовок 1", "fit_policy": "reword_first", "font": "YS Compressed Heavy", "size_pt": 166, "box_w_in": 12.89, "box_h_in": 5.69, "max_lines": 3, "min_pt": 96, "clear_soft_breaks": true },
+        "number": { "match_name": "Text 11", "occ": 0, "sort": "top", "fit_policy": "value_shrink", "font": "YS SemiMono Regular", "size_pt": 380, "box_w_in": 6.76, "min_pt": 200, "optional": true, "clear_soft_breaks": true },
+        "desc": { "match_name": "Text 11", "occ": 1, "sort": "top", "fit_policy": "reword_first", "font": "YS SemiMono Regular", "size_pt": 24, "box_w_in": 7.74, "box_h_in": 3.23, "max_lines": 6, "min_pt": 18, "optional": true, "clear_if_empty": true, "clear_soft_breaks": true },
+        "doc_name": { "match_name": "Скругленный прямоугольник 12", "font": "YS SemiMono Regular", "size_pt": 28, "box_w_in": 5.33, "box_h_in": 0.69, "max_lines": 1, "min_pt": 18, "optional": true, "clear_if_empty": false, "clear_soft_breaks": true }
+      }
+    }
+  ],
+  "dont_touch": ["Rounded Rectangle*", "Picture*"],
+  "_anchored": "§3Б: #23 уникальный заголовок «Название раздела очень коротко». Номер/описание — «Text 11» ×2, разводятся occ (sort top: 0=номер 380pt, 1=описание 24pt)."
+}

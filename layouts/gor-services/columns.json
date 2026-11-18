@@ -1,0 +1,459 @@
+{
+  "id": "gor_services_columns",
+  "schema_version": 1,
+  "template": "Городские сервисы",
+  "template_file": "Templates/gor-services/template-gs-v2.0.pptx",
+  "family": "columns",
+  "kind": "content_fill",
+  "_doc": "Колонки Городских (v2.0: тёмные пары и 4-колоночные раскладки дорисованы дизайнером — дыра боевого прогона 2026-07-28 закрыта). Раскладка донора ИНАЯ, чем у Еды: заголовок колонки и текст — ОТДЕЛЬНЫЕ индивидуально-именованные шейпы (не один бокс с [имя,описание]). Повторяемые слоты собираются по ЯВНОМУ списку имён (match_names) и заполняются двумя параллельными списками heads/bodies в порядке чтения (sort=left; у сетки 2×2 — top_left). Вариант выбирается ЯВНО (variant): N колонок × режим (dark/white) × раскладка (row/grid для N=4). Тёмные и белые доноры текстово идентичны — разводка через вариант-уровневый _hint. Заголовок Title 96pt YS Compressed Heavy, сабтайтл 32pt YS SemiMono.",
+  "match": {
+    "form": "columns",
+    "count": [
+      3,
+      4
+    ]
+  },
+  "variants": [
+    {
+      "name": "groups3_dark",
+      "_hint": 20,
+      "preferred": true,
+      "anchor": {
+        "all": [
+          "Слайд с тремя группами тезисов",
+          "Контроль и утрата свободы"
+        ]
+      },
+      "_note": "#21 (v2.0): сабтайтл + 3 колонки {пилюля-заголовок 48pt + тело 28pt}. ТЁМНАЯ тема (Title_Black). Текстово идентичен белому #22 — разводка _hint.",
+      "slots": {
+        "heading": {
+          "match_name": "Title 32",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 25.0,
+          "box_h_in": 1.4,
+          "max_lines": 1,
+          "min_pt": 54,
+          "clear_soft_breaks": true
+        },
+        "subtitle": {
+          "match_name": "TextBox 11",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 32,
+          "box_w_in": 14.94,
+          "box_h_in": 1.08,
+          "max_lines": 2,
+          "min_pt": 20,
+          "optional": true,
+          "clear_if_empty": true,
+          "clear_soft_breaks": true
+        },
+        "heads": {
+          "repeat": true,
+          "match_names": [
+            "Rectangle 8",
+            "Rectangle 9",
+            "Rectangle 10"
+          ],
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 48,
+          "box_w_in": 4.7,
+          "box_h_in": 1.26,
+          "max_lines": 2,
+          "min_pt": 32,
+          "clear_soft_breaks": true
+        },
+        "bodies": {
+          "repeat": true,
+          "match_names": [
+            "TextBox 12",
+            "TextBox 13",
+            "TextBox 14"
+          ],
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 28,
+          "box_w_in": 6.17,
+          "box_h_in": 4.96,
+          "max_lines": 12,
+          "min_pt": 20,
+          "clear_soft_breaks": true
+        }
+      }
+    },
+    {
+      "name": "groups3_white",
+      "_hint": 21,
+      "anchor": {
+        "all": [
+          "Слайд с тремя группами тезисов",
+          "Контроль и утрата свободы"
+        ]
+      },
+      "_note": "#22 (v2.0; экс-groups3 = v1.0 #20): сабтайтл + 3 колонки {пилюля 48pt + тело 28pt}. Светлая тема (Title_White).",
+      "slots": {
+        "heading": {
+          "match_name": "Title 32",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 25.0,
+          "box_h_in": 1.4,
+          "max_lines": 1,
+          "min_pt": 54,
+          "clear_soft_breaks": true
+        },
+        "subtitle": {
+          "match_name": "TextBox 11",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 32,
+          "box_w_in": 14.94,
+          "box_h_in": 1.08,
+          "max_lines": 2,
+          "min_pt": 20,
+          "optional": true,
+          "clear_if_empty": true,
+          "clear_soft_breaks": true
+        },
+        "heads": {
+          "repeat": true,
+          "match_names": [
+            "Rectangle 8",
+            "Rectangle 9",
+            "Rectangle 10"
+          ],
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 48,
+          "box_w_in": 4.7,
+          "box_h_in": 1.26,
+          "max_lines": 2,
+          "min_pt": 32,
+          "clear_soft_breaks": true
+        },
+        "bodies": {
+          "repeat": true,
+          "match_names": [
+            "TextBox 12",
+            "TextBox 13",
+            "TextBox 14"
+          ],
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 28,
+          "box_w_in": 6.17,
+          "box_h_in": 4.96,
+          "max_lines": 12,
+          "min_pt": 20,
+          "clear_soft_breaks": true
+        }
+      }
+    },
+    {
+      "name": "groups4_row_dark",
+      "_hint": 22,
+      "anchor": {
+        "all": [
+          "Слайд с четырьмя группами тезисов"
+        ]
+      },
+      "_note": "#23 (ревизия 516a1966, владелец вычистила дубль-пилюлю): 4 колонки В РЯД {пилюля 48pt + тело 24pt}. ТЁМНАЯ. Пилюля колонки 1 — 'Rectangle 19' (экс-дубль 'Rectangle 3' удалён владельцем 2026-07-29). Сабтайтл 'TextBox 15' (не 11!), 'TextBox 11' — тело колонки 2.",
+      "slots": {
+        "heading": {
+          "match_name": "Title 32",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 25.0,
+          "box_h_in": 1.4,
+          "max_lines": 1,
+          "min_pt": 54,
+          "clear_soft_breaks": true
+        },
+        "subtitle": {
+          "match_name": "TextBox 15",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 32,
+          "box_w_in": 14.94,
+          "box_h_in": 1.08,
+          "max_lines": 2,
+          "min_pt": 20,
+          "optional": true,
+          "clear_if_empty": true,
+          "clear_soft_breaks": true
+        },
+        "heads": {
+          "repeat": true,
+          "match_names": [
+            "Rectangle 19",
+            "Rectangle 8",
+            "Rectangle 9",
+            "Rectangle 13"
+          ],
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 48,
+          "box_w_in": 4.07,
+          "box_h_in": 1.26,
+          "max_lines": 2,
+          "min_pt": 32,
+          "clear_soft_breaks": true
+        },
+        "bodies": {
+          "repeat": true,
+          "match_names": [
+            "TextBox 10",
+            "TextBox 11",
+            "TextBox 12",
+            "TextBox 14"
+          ],
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 24,
+          "box_w_in": 4.7,
+          "box_h_in": 4.29,
+          "max_lines": 10,
+          "min_pt": 18,
+          "clear_soft_breaks": true
+        }
+      }
+    },
+    {
+      "name": "groups4_row_white",
+      "_hint": 23,
+      "anchor": {
+        "all": [
+          "Слайд с четырьмя группами тезисов"
+        ]
+      },
+      "_note": "#24 (ревизия 72e6d578, дубль вычищен владельцем): 4 колонки В РЯД, светлая. Пилюля колонки 1 — 'Rectangle 3' (в тёмном #23 — 'Rectangle 19': пара несимметрична по именам после чистки).",
+      "slots": {
+        "heading": {
+          "match_name": "Title 32",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 25.0,
+          "box_h_in": 1.4,
+          "max_lines": 1,
+          "min_pt": 54,
+          "clear_soft_breaks": true
+        },
+        "subtitle": {
+          "match_name": "TextBox 15",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 32,
+          "box_w_in": 14.94,
+          "box_h_in": 1.08,
+          "max_lines": 2,
+          "min_pt": 20,
+          "optional": true,
+          "clear_if_empty": true,
+          "clear_soft_breaks": true
+        },
+        "heads": {
+          "repeat": true,
+          "match_names": [
+            "Rectangle 3",
+            "Rectangle 8",
+            "Rectangle 9",
+            "Rectangle 13"
+          ],
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 48,
+          "box_w_in": 4.07,
+          "box_h_in": 1.26,
+          "max_lines": 2,
+          "min_pt": 32,
+          "clear_soft_breaks": true
+        },
+        "bodies": {
+          "repeat": true,
+          "match_names": [
+            "TextBox 10",
+            "TextBox 11",
+            "TextBox 12",
+            "TextBox 14"
+          ],
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 24,
+          "box_w_in": 4.7,
+          "box_h_in": 4.29,
+          "max_lines": 10,
+          "min_pt": 18,
+          "clear_soft_breaks": true
+        }
+      }
+    },
+    {
+      "name": "groups4_grid_dark",
+      "_hint": 24,
+      "anchor": {
+        "all": [
+          "Слайд с четырьмя группами тезисов"
+        ]
+      },
+      "_note": "#25 (v2.0): 4 группы СЕТКОЙ 2×2 {узкая пилюля 48pt в 1 строку + тело 24pt до 4 строк}. ТЁМНАЯ. Порядок чтения top_left.",
+      "slots": {
+        "heading": {
+          "match_name": "Title 32",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 25.0,
+          "box_h_in": 1.4,
+          "max_lines": 1,
+          "min_pt": 54,
+          "clear_soft_breaks": true
+        },
+        "subtitle": {
+          "match_name": "TextBox 15",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 32,
+          "box_w_in": 14.94,
+          "box_h_in": 1.08,
+          "max_lines": 2,
+          "min_pt": 20,
+          "optional": true,
+          "clear_if_empty": true,
+          "clear_soft_breaks": true
+        },
+        "heads": {
+          "repeat": true,
+          "match_names": [
+            "Rectangle 22",
+            "Rectangle 24",
+            "Rectangle 26",
+            "Rectangle 28"
+          ],
+          "sort": "top_left",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 48,
+          "box_w_in": 7.35,
+          "box_h_in": 0.66,
+          "max_lines": 1,
+          "min_pt": 32,
+          "clear_soft_breaks": true
+        },
+        "bodies": {
+          "repeat": true,
+          "match_names": [
+            "TextBox 21",
+            "TextBox 25",
+            "TextBox 27",
+            "TextBox 29"
+          ],
+          "sort": "top_left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 24,
+          "box_w_in": 10.75,
+          "box_h_in": 2.27,
+          "max_lines": 4,
+          "min_pt": 18,
+          "clear_soft_breaks": true
+        }
+      }
+    },
+    {
+      "name": "groups4_grid_white",
+      "_hint": 25,
+      "anchor": {
+        "all": [
+          "Слайд с четырьмя группами тезисов"
+        ]
+      },
+      "_note": "#26 (v2.0): 4 группы СЕТКОЙ 2×2, светлая.",
+      "slots": {
+        "heading": {
+          "match_name": "Title 32",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 25.0,
+          "box_h_in": 1.4,
+          "max_lines": 1,
+          "min_pt": 54,
+          "clear_soft_breaks": true
+        },
+        "subtitle": {
+          "match_name": "TextBox 15",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 32,
+          "box_w_in": 14.94,
+          "box_h_in": 1.08,
+          "max_lines": 2,
+          "min_pt": 20,
+          "optional": true,
+          "clear_if_empty": true,
+          "clear_soft_breaks": true
+        },
+        "heads": {
+          "repeat": true,
+          "match_names": [
+            "Rectangle 22",
+            "Rectangle 24",
+            "Rectangle 26",
+            "Rectangle 28"
+          ],
+          "sort": "top_left",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 48,
+          "box_w_in": 7.35,
+          "box_h_in": 0.66,
+          "max_lines": 1,
+          "min_pt": 32,
+          "clear_soft_breaks": true
+        },
+        "bodies": {
+          "repeat": true,
+          "match_names": [
+            "TextBox 21",
+            "TextBox 25",
+            "TextBox 27",
+            "TextBox 29"
+          ],
+          "sort": "top_left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 24,
+          "box_w_in": 10.75,
+          "box_h_in": 2.27,
+          "max_lines": 4,
+          "min_pt": 18,
+          "clear_soft_breaks": true
+        }
+      }
+    }
+  ],
+  "dont_touch": [
+    "Rounded Rectangle*",
+    "Picture*",
+    "Graphic*"
+  ],
+  "fit_check": {
+    "fill_ratio_min": 0.4,
+    "fit_tolerance": 1.05,
+    "line_spacing": 1.15
+  }
+}

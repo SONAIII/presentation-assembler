@@ -1,0 +1,98 @@
+{
+  "id": "gor_services_charts",
+  "schema_version": 1,
+  "template": "Городские сервисы",
+  "template_file": "Templates/gor-services/template-gs-v2.0.pptx",
+  "family": "charts",
+  "kind": "content_fill",
+  "_doc": "Чарт-слайды Городских. focus_bar (v2.0 #35–40): нативный бар-чарт (Chart 6, kind:column) + фокус-метрика 222pt + описание + заголовок слайда — все три текста одноимённы «Title 4», разводятся occ по позиции (sort top: 0=метрика, 1=описание, 2=заголовок). Акцент последнего бара × тема — 6 вариантов: red (#35/#36, dark FF4112 / white accent1 FF1E00), blue (#37/#38, accent3 00ADFF), yellow (#39/#40, accent2 FFD700). Все шесть текстово идентичны — разводка вариант-уровневым _hint. Чарт+метрики #41–46 — отдельная раскладка (контент в группах), НЕ отмаплена: уходит в custom, задел на будущее.",
+  "match": { "form": "charts", "count": [1, 1] },
+  "variants": [
+    {
+      "name": "focus_bar_red_dark", "_hint": 34, "preferred": true,
+      "anchor": { "all": ["Слайд с графиком и фокусной метрикой"] },
+      "_note": "#35 (v2.0): тёмный, акцент последнего бара — красный (FF4112).",
+      "move_shapes": [{ "match_name": "Rounded Rectangle 33", "set_left_in": 7.10, "set_top_in": 0.64 }],
+      "slots": {
+        "value": { "match_name": "Title 4", "occ": 0, "sort": "top", "set_left_in": 0.81, "set_top_in": 0.11, "fit_policy": "value_shrink", "font": "YS Compressed Heavy", "size_pt": 222, "box_w_in": 9.39, "min_pt": 120, "clear_soft_breaks": true },
+        "desc": { "match_name": "Title 4", "occ": 1, "sort": "top", "set_left_in": 0.81, "set_top_in": 3.41, "fit_policy": "reword_first", "font": "YS SemiMono Regular", "size_pt": 28, "box_w_in": 7.79, "box_h_in": 2.83, "max_lines": 4, "min_pt": 20, "optional": true, "clear_if_empty": true, "clear_soft_breaks": true },
+        "heading": { "match_name": "Title 4", "occ": 2, "sort": "top", "fit_policy": "reword_first", "font": "YS Compressed Heavy", "size_pt": 88, "box_w_in": 9.39, "box_h_in": 3.22, "max_lines": 3, "min_pt": 44, "clear_soft_breaks": true }
+      },
+      "chart_slots": {
+        "chart": { "match_name": "Chart 6", "kind": "column", "_doc": "нативный бар-чарт, последний бар — акцент; categories/series из deckspec.charts.chart" }
+      }
+    },
+    {
+      "name": "focus_bar_red_white", "_hint": 35,
+      "anchor": { "all": ["Слайд с графиком и фокусной метрикой"] },
+      "_note": "#36 (v2.0): светлый, акцент — красный (accent1 FF1E00).",
+      "move_shapes": [{ "match_name": "Rounded Rectangle 33", "set_left_in": 7.10, "set_top_in": 0.64 }],
+      "slots": {
+        "value": { "match_name": "Title 4", "occ": 0, "sort": "top", "set_left_in": 0.81, "set_top_in": 0.11, "fit_policy": "value_shrink", "font": "YS Compressed Heavy", "size_pt": 222, "box_w_in": 9.39, "min_pt": 120, "clear_soft_breaks": true },
+        "desc": { "match_name": "Title 4", "occ": 1, "sort": "top", "set_left_in": 0.81, "set_top_in": 3.41, "fit_policy": "reword_first", "font": "YS SemiMono Regular", "size_pt": 28, "box_w_in": 7.79, "box_h_in": 2.83, "max_lines": 4, "min_pt": 20, "optional": true, "clear_if_empty": true, "clear_soft_breaks": true },
+        "heading": { "match_name": "Title 4", "occ": 2, "sort": "top", "fit_policy": "reword_first", "font": "YS Compressed Heavy", "size_pt": 88, "box_w_in": 9.39, "box_h_in": 3.22, "max_lines": 3, "min_pt": 44, "clear_soft_breaks": true }
+      },
+      "chart_slots": {
+        "chart": { "match_name": "Chart 6", "kind": "column", "_doc": "нативный бар-чарт, последний бар — акцент" }
+      }
+    },
+    {
+      "name": "focus_bar_blue_dark", "_hint": 36,
+      "anchor": { "all": ["Слайд с графиком и фокусной метрикой"] },
+      "_note": "#37 (v2.0): тёмный, акцент — синий (accent3 00ADFF).",
+      "move_shapes": [{ "match_name": "Rounded Rectangle 33", "set_left_in": 7.10, "set_top_in": 0.64 }],
+      "slots": {
+        "value": { "match_name": "Title 4", "occ": 0, "sort": "top", "set_left_in": 0.81, "set_top_in": 0.11, "fit_policy": "value_shrink", "font": "YS Compressed Heavy", "size_pt": 222, "box_w_in": 9.39, "min_pt": 120, "clear_soft_breaks": true },
+        "desc": { "match_name": "Title 4", "occ": 1, "sort": "top", "set_left_in": 0.81, "set_top_in": 3.41, "fit_policy": "reword_first", "font": "YS SemiMono Regular", "size_pt": 28, "box_w_in": 7.79, "box_h_in": 2.83, "max_lines": 4, "min_pt": 20, "optional": true, "clear_if_empty": true, "clear_soft_breaks": true },
+        "heading": { "match_name": "Title 4", "occ": 2, "sort": "top", "fit_policy": "reword_first", "font": "YS Compressed Heavy", "size_pt": 88, "box_w_in": 9.39, "box_h_in": 3.22, "max_lines": 3, "min_pt": 44, "clear_soft_breaks": true }
+      },
+      "chart_slots": {
+        "chart": { "match_name": "Chart 6", "kind": "column", "_doc": "нативный бар-чарт, последний бар — акцент" }
+      }
+    },
+    {
+      "name": "focus_bar_blue_white", "_hint": 37,
+      "anchor": { "all": ["Слайд с графиком и фокусной метрикой"] },
+      "_note": "#38 (v2.0): светлый, акцент — синий (accent3 00ADFF).",
+      "move_shapes": [{ "match_name": "Rounded Rectangle 33", "set_left_in": 7.10, "set_top_in": 0.64 }],
+      "slots": {
+        "value": { "match_name": "Title 4", "occ": 0, "sort": "top", "set_left_in": 0.81, "set_top_in": 0.11, "fit_policy": "value_shrink", "font": "YS Compressed Heavy", "size_pt": 222, "box_w_in": 9.39, "min_pt": 120, "clear_soft_breaks": true },
+        "desc": { "match_name": "Title 4", "occ": 1, "sort": "top", "set_left_in": 0.81, "set_top_in": 3.41, "fit_policy": "reword_first", "font": "YS SemiMono Regular", "size_pt": 28, "box_w_in": 7.79, "box_h_in": 2.83, "max_lines": 4, "min_pt": 20, "optional": true, "clear_if_empty": true, "clear_soft_breaks": true },
+        "heading": { "match_name": "Title 4", "occ": 2, "sort": "top", "fit_policy": "reword_first", "font": "YS Compressed Heavy", "size_pt": 88, "box_w_in": 9.39, "box_h_in": 3.22, "max_lines": 3, "min_pt": 44, "clear_soft_breaks": true }
+      },
+      "chart_slots": {
+        "chart": { "match_name": "Chart 6", "kind": "column", "_doc": "нативный бар-чарт, последний бар — акцент" }
+      }
+    },
+    {
+      "name": "focus_bar_yellow_dark", "_hint": 38,
+      "anchor": { "all": ["Слайд с графиком и фокусной метрикой"] },
+      "_note": "#39 (v2.0): тёмный, акцент — жёлтый (accent2 FFD700).",
+      "move_shapes": [{ "match_name": "Rounded Rectangle 33", "set_left_in": 7.10, "set_top_in": 0.64 }],
+      "slots": {
+        "value": { "match_name": "Title 4", "occ": 0, "sort": "top", "set_left_in": 0.81, "set_top_in": 0.11, "fit_policy": "value_shrink", "font": "YS Compressed Heavy", "size_pt": 222, "box_w_in": 9.39, "min_pt": 120, "clear_soft_breaks": true },
+        "desc": { "match_name": "Title 4", "occ": 1, "sort": "top", "set_left_in": 0.81, "set_top_in": 3.41, "fit_policy": "reword_first", "font": "YS SemiMono Regular", "size_pt": 28, "box_w_in": 7.79, "box_h_in": 2.83, "max_lines": 4, "min_pt": 20, "optional": true, "clear_if_empty": true, "clear_soft_breaks": true },
+        "heading": { "match_name": "Title 4", "occ": 2, "sort": "top", "fit_policy": "reword_first", "font": "YS Compressed Heavy", "size_pt": 88, "box_w_in": 9.39, "box_h_in": 3.22, "max_lines": 3, "min_pt": 44, "clear_soft_breaks": true }
+      },
+      "chart_slots": {
+        "chart": { "match_name": "Chart 6", "kind": "column", "_doc": "нативный бар-чарт, последний бар — акцент" }
+      }
+    },
+    {
+      "name": "focus_bar_yellow_white", "_hint": 39,
+      "anchor": { "all": ["Слайд с графиком и фокусной метрикой"] },
+      "_note": "#40 (v2.0): светлый, акцент — жёлтый (accent2 FFD700).",
+      "move_shapes": [{ "match_name": "Rounded Rectangle 33", "set_left_in": 7.10, "set_top_in": 0.64 }],
+      "slots": {
+        "value": { "match_name": "Title 4", "occ": 0, "sort": "top", "set_left_in": 0.81, "set_top_in": 0.11, "fit_policy": "value_shrink", "font": "YS Compressed Heavy", "size_pt": 222, "box_w_in": 9.39, "min_pt": 120, "clear_soft_breaks": true },
+        "desc": { "match_name": "Title 4", "occ": 1, "sort": "top", "set_left_in": 0.81, "set_top_in": 3.41, "fit_policy": "reword_first", "font": "YS SemiMono Regular", "size_pt": 28, "box_w_in": 7.79, "box_h_in": 2.83, "max_lines": 4, "min_pt": 20, "optional": true, "clear_if_empty": true, "clear_soft_breaks": true },
+        "heading": { "match_name": "Title 4", "occ": 2, "sort": "top", "fit_policy": "reword_first", "font": "YS Compressed Heavy", "size_pt": 88, "box_w_in": 9.39, "box_h_in": 3.22, "max_lines": 3, "min_pt": 44, "clear_soft_breaks": true }
+      },
+      "chart_slots": {
+        "chart": { "match_name": "Chart 6", "kind": "column", "_doc": "нативный бар-чарт, последний бар — акцент" }
+      }
+    }
+  ],
+  "dont_touch": ["Rounded Rectangle*", "TextBox 1"],
+  "_anchored": "§3Б: «Слайд с графиком и фокусной метрикой» — 6 текстово идентичных доноров #35–40, разводка ТОЛЬКО _hint. Три «Title 4» → occ (sort top: 0/1/2). Бар — chart_slot."
+}

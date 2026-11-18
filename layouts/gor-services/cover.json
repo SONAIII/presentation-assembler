@@ -1,0 +1,198 @@
+{
+ "id": "gor_services_cover",
+ "schema_version": 1,
+ "template": "Городские сервисы",
+ "template_file": "Templates/gor-services/template-gs-v2.0.pptx",
+ "family": "cover",
+ "kind": "structural",
+ "_doc": "Обложка Городских: две готовые фотообложки — #1 сине-городская, #2 красно-ночная. Текст-заглушки идентичны, доноры разводятся _hint (0/1) + слоем layout-фото. Фон-фото и лого «Городские сервисы» живут на лэйауте (slideLayout1/2), не слайд-слот — под кастомную обложку идём в custom. Заголовок Title 2 199pt YS Compressed Heavy (bg1/белый) снизу-слева; дескриптор Text Placeholder 3 (ph idx=10) 40pt YS SemiMono Regular под ним.",
+ "match": {
+  "form": "title",
+  "count": [
+   1,
+   1
+  ]
+ },
+ "fit": {
+  "title": {
+   "mode": "reword_first",
+   "wrap": true,
+   "line_spacing_eff": 1.0
+  },
+  "subtitle": {
+   "mode": "reword_first",
+   "wrap": true,
+   "line_spacing_eff": 1.0
+  }
+ },
+ "title_policy": "Заголовок обложки = крепкий тезис/название, не размытая категория («Обзор», «Итоги»). editorial-principles.md Rule 2.",
+ "subtitle_policy": "Дескриптор обложки = период/контекст («Стратегия 2026», «Май 2026»). Нет контекста → дескриптор ПУСТОЙ (бокс очищаем), не выдумываем.",
+ "variants": [
+  {
+   "name": "photo_blue",
+   "_hint": 0,
+   "preferred": true,
+   "photo": true,
+   "anchor": {
+    "all": [
+     "Название презентации в две строки",
+     "Дескриптор, можно удалить, если не нужен"
+    ]
+   },
+   "_note": "#1: сине-городское фото на лэйауте; заголовок снизу-слева 199pt.",
+   "slots": {
+    "title": {
+     "find": "название презентации",
+     "ci": true,
+     "shape_name": "Title 2",
+     "font": "YS Compressed Heavy",
+     "size_pt": 199,
+     "box_w_in": 25.0,
+     "box_h_in": 4.647,
+     "max_lines": 2,
+     "min_pt": 120,
+     "clear_soft_breaks": true
+    },
+    "subtitle": {
+     "find": "Дескриптор",
+     "ci": true,
+     "shape_name": "Text Placeholder 3",
+     "font": "YS SemiMono Regular",
+     "size_pt": 40,
+     "box_w_in": 22.63,
+     "box_h_in": 0.673,
+     "max_lines": 1,
+     "min_pt": 24,
+     "optional": true,
+     "clear_if_empty": true,
+     "clear_soft_breaks": true
+    }
+   }
+  },
+  {
+   "name": "photo_red",
+   "_hint": 1,
+   "photo": true,
+   "anchor": {
+    "all": [
+     "Название презентации в две строки",
+     "Дескриптор, можно удалить, если не нужен"
+    ]
+   },
+   "_note": "#2: красно-ночное фото на лэйауте; текст идентичен #1, разводится _hint=1.",
+   "slots": {
+    "title": {
+     "find": "название презентации",
+     "ci": true,
+     "shape_name": "Title 2",
+     "font": "YS Compressed Heavy",
+     "size_pt": 199,
+     "box_w_in": 25.0,
+     "box_h_in": 4.94,
+     "max_lines": 2,
+     "min_pt": 120,
+     "clear_soft_breaks": true
+    },
+    "subtitle": {
+     "find": "Дескриптор",
+     "ci": true,
+     "shape_name": "Text Placeholder 3",
+     "font": "YS SemiMono Regular",
+     "size_pt": 40,
+     "box_w_in": 22.63,
+     "box_h_in": 0.673,
+     "max_lines": 1,
+     "min_pt": 24,
+     "optional": true,
+     "clear_if_empty": true,
+     "clear_soft_breaks": true
+    }
+   }
+  },
+  {
+   "name": "speakers",
+   "_hint": 2,
+   "photo": true,
+   "anchor": {
+    "all": [
+     "Разделитель секции",
+     "в несколько строк"
+    ],
+    "has_shapes": [
+     "Picture 4",
+     "Picture 2"
+    ]
+   },
+   "_note": "#03: обложка «тема выступления + спикеры» (решение владельца 2026-07-29 — донор каталогизирован обложкой, НЕ разделителем): заголовок 166pt + 2 портрета (Picture 2/4) + имена (TextBox 5/7).",
+   "slots": {
+    "title": {
+     "match_name": "Заголовок 1",
+     "fit_policy": "reword_first",
+     "font": "YS Compressed Heavy",
+     "size_pt": 166,
+     "box_w_in": 24.98,
+     "box_h_in": 3.88,
+     "max_lines": 2,
+     "min_pt": 96,
+     "clear_soft_breaks": true
+    },
+    "names": {
+     "repeat": true,
+     "match_names": [
+      "TextBox 5",
+      "TextBox 7"
+     ],
+     "sort": "left",
+     "fit_policy": "reword_first",
+     "font": "YS Compressed Heavy",
+     "size_pt": 60,
+     "box_w_in": 8.54,
+     "box_h_in": 1.49,
+     "max_lines": 1,
+     "min_pt": 32,
+     "clear_soft_breaks": true
+    },
+    "doc_name": {
+     "match_name": "Скругленный прямоугольник 12",
+     "font": "YS SemiMono Regular",
+     "size_pt": 28,
+     "box_w_in": 5.17,
+     "box_h_in": 0.69,
+     "max_lines": 1,
+     "min_pt": 18,
+     "optional": true,
+     "clear_if_empty": false,
+     "clear_soft_breaks": true
+    },
+    "date": {
+     "match_name": "Скругленный прямоугольник 14",
+     "font": "YS SemiMono Regular",
+     "size_pt": 28,
+     "box_w_in": 2.79,
+     "box_h_in": 0.69,
+     "max_lines": 1,
+     "min_pt": 18,
+     "optional": true,
+     "clear_if_empty": false,
+     "clear_soft_breaks": true
+    }
+   },
+   "image_slots": {
+    "portrait_1": {
+     "match_name": "Picture 2",
+     "_doc": "левый портрет пользователя"
+    },
+    "portrait_2": {
+     "match_name": "Picture 4",
+     "_doc": "правый портрет пользователя"
+    }
+   }
+  }
+ ],
+ "dont_touch": [
+  "Picture*",
+  "Graphic*",
+  "Freeform*",
+  "Rectangle*"
+ ]
+}

@@ -1,0 +1,101 @@
+{
+  "_doc": "Измеренная сетка шаблона (scripts/measure_canvas.py). Корневой контейнер движка lib/layout.py: GENERATE-композиции живут в content_band, стиль — из atoms.json, шрифты/цвета — brand-tokens.json.",
+  "template_file": "Templates/gor-services/template-gs-v2.0.pptx",
+  "slide_w_in": 26.665,
+  "slide_h_in": 15.0,
+  "margin_left_in": 0.81,
+  "margin_right_in": 0.855,
+  "heading": {
+    "top_in": 1.0,
+    "left_in": 0.81,
+    "w_in": 25.0,
+    "h_in": 1.09
+  },
+  "content_band": {
+    "left_in": 0.81,
+    "right_in": 25.81,
+    "top_in": 4.879,
+    "bottom_in": 14.14,
+    "w_in": 25.0,
+    "h_in": 9.261
+  },
+  "gutter_in": 0.26,
+  "_evidence": {
+    "slides_measured": 53,
+    "hidden_skipped": 0,
+    "title_top_mode_hits": [
+      [
+        1.0,
+        34
+      ],
+      [
+        8.41,
+        1
+      ],
+      [
+        8.11,
+        1
+      ]
+    ],
+    "footer_top_mode_hits": [
+      [
+        14.14,
+        34
+      ],
+      [
+        13.42,
+        2
+      ]
+    ],
+    "content_bottom_mode_hits": [
+      [
+        14.0,
+        14
+      ],
+      [
+        14.18,
+        7
+      ],
+      [
+        13.72,
+        5
+      ]
+    ],
+    "content_right_mode_hits": [
+      [
+        25.81,
+        16
+      ],
+      [
+        19.82,
+        6
+      ],
+      [
+        14.62,
+        5
+      ]
+    ],
+    "big_shape_top_mode_hits": [
+      [
+        4.88,
+        14
+      ],
+      [
+        4.46,
+        7
+      ],
+      [
+        3.9,
+        5
+      ],
+      [
+        6.55,
+        4
+      ],
+      [
+        9.34,
+        4
+      ]
+    ]
+  }
+}

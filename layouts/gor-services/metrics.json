@@ -1,0 +1,229 @@
+{
+  "id": "gor_services_metrics",
+  "schema_version": 1,
+  "template": "Городские сервисы",
+  "template_file": "Templates/gor-services/template-gs-v2.0.pptx",
+  "family": "metrics",
+  "kind": "content_fill",
+  "_doc": "Метрики Городских = 3-up карточки. Раскладка ИНАЯ, чем стат-стек Еды (там ready_slides/card_unit), поэтому это content_fill с variants → route_slide отдаёт в decide_structural (kind=content_fill, без fit_check). Еда-метрики (без kind) остаются на своём стат-грид-пути — не тронуты. Значение и описание в доноре — ОТДЕЛЬНЫЕ боксы, но текст-заглушки ОДИНАКОВЫЕ («ХХ» / «Счастье…») → повторяемые слоты по тексту (find_shapes_by_text, sort=left). Иконки — image_slots (Graphic*), опциональны: не дал — остаются донорские. Вариант выбирается ЯВНО; #09/#10 текстово идентичны (dark/white) → _hint.",
+  "match": {
+    "form": "metrics",
+    "count": [
+      3,
+      3
+    ]
+  },
+  "variants": [
+    {
+      "name": "icons3_dark",
+      "_hint": 8,
+      "preferred": true,
+      "anchor": {
+        "all": [
+          "описанием и иконками"
+        ]
+      },
+      "_note": "#09 тёмная: 3 карточки {иконка + значение 96pt + описание 24pt}, текст белый.",
+      "slots": {
+        "heading": {
+          "match_name": "Title 1",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 25.0,
+          "box_h_in": 2.1,
+          "max_lines": 2,
+          "min_pt": 54,
+          "clear_soft_breaks": true
+        },
+        "values": {
+          "repeat": true,
+          "find": "ХХ",
+          "sort": "left",
+          "fit_policy": "value_shrink",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 5.24,
+          "min_pt": 44,
+          "max_chars_hint": 5
+        },
+        "descs": {
+          "repeat": true,
+          "find": "Счастье",
+          "ci": true,
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 24,
+          "box_w_in": 6.7,
+          "box_h_in": 1.21,
+          "max_lines": 3,
+          "min_pt": 18,
+          "clear_soft_breaks": true
+        }
+      },
+      "image_slots": {
+        "icon_1": {
+          "match_name": "Graphic 24",
+          "_doc": "иконка карточки 1 (лево)"
+        },
+        "icon_2": {
+          "match_name": "Graphic 919",
+          "_doc": "иконка карточки 2 (центр)"
+        },
+        "icon_3": {
+          "match_name": "Graphic 920",
+          "_doc": "иконка карточки 3 (право)"
+        }
+      }
+    },
+    {
+      "name": "icons3_white",
+      "_hint": 9,
+      "anchor": {
+        "all": [
+          "описанием и иконками"
+        ]
+      },
+      "_note": "#10 белая: те же 3 карточки, тёмный текст на светлых карточках. Текст идентичен #09 → _hint=9.",
+      "slots": {
+        "heading": {
+          "match_name": "Title 1",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 25.0,
+          "box_h_in": 2.1,
+          "max_lines": 2,
+          "min_pt": 54,
+          "clear_soft_breaks": true
+        },
+        "values": {
+          "repeat": true,
+          "find": "ХХ",
+          "sort": "left",
+          "fit_policy": "value_shrink",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 5.24,
+          "min_pt": 44,
+          "max_chars_hint": 5
+        },
+        "descs": {
+          "repeat": true,
+          "find": "Счастье",
+          "ci": true,
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 24,
+          "box_w_in": 6.7,
+          "box_h_in": 1.21,
+          "max_lines": 3,
+          "min_pt": 18,
+          "clear_soft_breaks": true
+        }
+      },
+      "image_slots": {
+        "icon_1": {
+          "match_name": "Graphic 24",
+          "_doc": "иконка карточки 1 (лево)"
+        },
+        "icon_2": {
+          "match_name": "Graphic 919",
+          "_doc": "иконка карточки 2 (центр)"
+        },
+        "icon_3": {
+          "match_name": "Graphic 920",
+          "_doc": "иконка карточки 3 (право)"
+        }
+      }
+    },
+    {
+      "name": "lead3_dark",
+      "_hint": 28,
+      "anchor": {
+        "all": [
+          "и тремя метриками с комментариями"
+        ]
+      },
+      "_note": "#25 тёмная: лид-абзац сверху + 3 метрики {значение 104pt + подпись-источник + описание}. Слот pills (3 пилюли-подписи под значениями, эталон atom:pill): контент или авто-очистка — донорская заглушка «ОЛДОС ХАКСЛИ» больше не утекает (найдено 2026-07-29 на v2.0: пилюли вышли из Group 20).",
+      "slots": {
+        "heading": {
+          "match_name": "Title 1",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 25.0,
+          "box_h_in": 2.1,
+          "max_lines": 2,
+          "min_pt": 54,
+          "clear_soft_breaks": true
+        },
+        "lead": {
+          "match_name": "Text 11",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 24,
+          "box_w_in": 14.39,
+          "box_h_in": 1.62,
+          "max_lines": 3,
+          "min_pt": 18,
+          "optional": true,
+          "clear_if_empty": true,
+          "clear_soft_breaks": true
+        },
+        "values": {
+          "repeat": true,
+          "find": "ХХ",
+          "sort": "left",
+          "recurse": true,
+          "fit_policy": "value_shrink",
+          "font": "YS Compressed Heavy",
+          "size_pt": 104,
+          "box_w_in": 5.5,
+          "min_pt": 44,
+          "max_chars_hint": 5
+        },
+        "descs": {
+          "repeat": true,
+          "find": "Счастье",
+          "ci": true,
+          "sort": "left",
+          "recurse": true,
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 24,
+          "box_w_in": 7.4,
+          "box_h_in": 1.4,
+          "max_lines": 3,
+          "min_pt": 18,
+          "clear_soft_breaks": true
+        },
+        "pills": {
+          "repeat": true,
+          "match_names": [
+            "Rounded Rectangle 14",
+            "Rounded Rectangle 15",
+            "atom:pill"
+          ],
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 24,
+          "box_w_in": 4.0,
+          "box_h_in": 0.9,
+          "max_lines": 1,
+          "min_pt": 18,
+          "clear_soft_breaks": true
+        }
+      }
+    }
+  ],
+  "dont_touch": [
+    "Rounded Rectangle*",
+    "Group*",
+    "Picture*"
+  ],
+  "_anchored": "§3Б: #09/#10 разводятся _hint (8/9), заголовок «…описанием и иконками» идентичен. #25 — «и тремя метриками с комментариями» (уникально). Значения/описания = повтор по тексту «ХХ»/«Счастье», sort=left. #25 метрики в группе → recurse=true."
+}

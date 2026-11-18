@@ -1,0 +1,45 @@
+{
+  "id": "gor_services_closing",
+  "schema_version": 1,
+  "template": "Городские сервисы",
+  "template_file": "Templates/gor-services/template-gs-v2.0.pptx",
+  "family": "closing",
+  "kind": "structural",
+  "_doc": "Закрывающий Городских — дизайнерский слайд #49 (дизайн владельца, v1.0): полноэкранное фото + крупный statement-призыв 199pt (Заголовок 1). Заголовок = CTA/манифест («Создавать то, чем живёт город», «Запускаем в двух городах»), НЕ «Спасибо»/«Вопросы?». Фото фикс.",
+  "match": {
+    "form": "closing",
+    "count": [1, 1]
+  },
+  "fit": {
+    "title": { "mode": "reword_first", "wrap": true, "line_spacing_eff": 1.0 }
+  },
+  "title_policy": "Заголовок закрывающего = КОНКРЕТНЫЙ призыв/манифест/следующий шаг, НЕ «Спасибо»/«Вопросы?»/«Thank you». editorial-principles Rule 2a.",
+  "variants": [
+    {
+      "name": "statement",
+      "_hint": 52,
+      "preferred": true,
+      "photo": true,
+      "anchor": { "all": ["чем живет город"] },
+      "_note": "#49: фото-фон + крупный манифест 199pt.",
+      "slots": {
+        "title": {
+          "match_name": "Заголовок 1",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 199,
+          "box_w_in": 24.47,
+          "box_h_in": 4.647,
+          "max_lines": 2,
+          "min_pt": 110,
+          "clear_soft_breaks": true
+        }
+      }
+    }
+  ],
+  "dont_touch": [
+    "Picture*",
+    "Rectangle*",
+    "Graphic*"
+  ]
+}

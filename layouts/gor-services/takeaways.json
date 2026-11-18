@@ -1,0 +1,142 @@
+{
+  "id": "gor_services_takeaways",
+  "schema_version": 1,
+  "template": "Городские сервисы",
+  "template_file": "Templates/gor-services/template-gs-v2.0.pptx",
+  "family": "takeaways",
+  "kind": "content_fill",
+  "_doc": "Тезисы/выводы Городских — «Слайд с тремя тезисами» (v2.0 #19 тёмный / #18 светлый): 3 карточки {огромный маркер 150pt YS Compressed Heavy + текст 32pt YS SemiMono}, центральная карточка — фирменный градиент (Picture, не трогаем). Контент карточек сидит ВНУТРИ групп (Group 5/23/8) — слоты собираются match_names с recurse:true, сортировка по позиции ВНЕШНЕЙ группы (движковый контракт find_shapes_by_names). values = крупный маркер карточки: число («34%», «×2») или порядковый номер («01»…«03») — ОБЯЗАТЕЛЕН, донорскую заглушку «ХХ» оставлять нельзя. Тёмный и светлый доноры текстово идентичны — разводка вариант-уровневым _hint.",
+  "match": {
+    "form": "takeaways",
+    "count": [3, 3]
+  },
+  "variants": [
+    {
+      "name": "cards3_dark",
+      "_hint": 18,
+      "preferred": true,
+      "anchor": {
+        "all": ["Слайд с тремя тезисами"]
+      },
+      "_note": "#19 (v2.0, НОВЫЙ тёмный близнец): 3 карточки {маркер 150pt + текст 32pt}, центр — градиент-карточка. Title_Black.",
+      "slots": {
+        "heading": {
+          "match_name": "Title 2",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 25.0,
+          "box_h_in": 1.4,
+          "max_lines": 1,
+          "min_pt": 54,
+          "clear_soft_breaks": true
+        },
+        "subtitle": {
+          "match_name": "TextBox 11",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 32,
+          "box_w_in": 14.94,
+          "box_h_in": 1.08,
+          "max_lines": 2,
+          "min_pt": 20,
+          "optional": true,
+          "clear_if_empty": true,
+          "clear_soft_breaks": true
+        },
+        "values": {
+          "repeat": true,
+          "match_names": ["TextBox 7", "TextBox 25", "TextBox 10"],
+          "recurse": true,
+          "sort": "left",
+          "fit_policy": "value_shrink",
+          "font": "YS Compressed Heavy",
+          "size_pt": 150,
+          "box_w_in": 5.24,
+          "min_pt": 72,
+          "max_chars_hint": 6
+        },
+        "texts": {
+          "repeat": true,
+          "match_names": ["TextBox 6", "TextBox 24", "TextBox 9"],
+          "recurse": true,
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 32,
+          "box_w_in": 6.9,
+          "box_h_in": 2.1,
+          "max_lines": 5,
+          "min_pt": 20,
+          "clear_soft_breaks": true
+        }
+      }
+    },
+    {
+      "name": "cards3_white",
+      "_hint": 17,
+      "anchor": {
+        "all": ["Слайд с тремя тезисами"]
+      },
+      "_note": "#18 (v2.0; = v1.0 #18): та же раскладка, светлая. Title_White.",
+      "slots": {
+        "heading": {
+          "match_name": "Title 2",
+          "fit_policy": "reword_first",
+          "font": "YS Compressed Heavy",
+          "size_pt": 96,
+          "box_w_in": 25.0,
+          "box_h_in": 1.4,
+          "max_lines": 1,
+          "min_pt": 54,
+          "clear_soft_breaks": true
+        },
+        "subtitle": {
+          "match_name": "TextBox 11",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 32,
+          "box_w_in": 14.94,
+          "box_h_in": 1.08,
+          "max_lines": 2,
+          "min_pt": 20,
+          "optional": true,
+          "clear_if_empty": true,
+          "clear_soft_breaks": true
+        },
+        "values": {
+          "repeat": true,
+          "match_names": ["TextBox 7", "TextBox 25", "TextBox 10"],
+          "recurse": true,
+          "sort": "left",
+          "fit_policy": "value_shrink",
+          "font": "YS Compressed Heavy",
+          "size_pt": 150,
+          "box_w_in": 5.24,
+          "min_pt": 72,
+          "max_chars_hint": 6
+        },
+        "texts": {
+          "repeat": true,
+          "match_names": ["TextBox 6", "TextBox 24", "TextBox 9"],
+          "recurse": true,
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS SemiMono Regular",
+          "size_pt": 32,
+          "box_w_in": 6.9,
+          "box_h_in": 2.1,
+          "max_lines": 5,
+          "min_pt": 20,
+          "clear_soft_breaks": true
+        }
+      }
+    }
+  ],
+  "dont_touch": ["Rounded Rectangle*", "Picture*"],
+  "fit_check": {
+    "fill_ratio_min": 0.4,
+    "fit_tolerance": 1.05,
+    "line_spacing": 1.15
+  }
+}

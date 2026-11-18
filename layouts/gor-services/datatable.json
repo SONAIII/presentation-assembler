@@ -1,0 +1,91 @@
+{
+ "id": "gor_services_datatable",
+ "schema_version": 1,
+ "template": "Городские сервисы",
+ "template_file": "Templates/gor-services/template-gs-v2.0.pptx",
+ "family": "datatable",
+ "kind": "content_fill",
+ "_doc": "Полноширинная таблица Городских (#45): заголовок (Title 1) + подзаголовок (TextBox 2) + нативная таблица (Table 17, kind:table, trim — лишние строки/колонки режем, болванки чистим, числа→вправо; stretch — усечённая сетка растягивается на донорскую высоту, кегль до потолков спеки). Статус-пилюли (Rounded Rectangle*) — декор, не трогаем. HR-дашборд #43 (карточки+таблица) слишком кастомен → custom.",
+ "match": {
+  "form": "datatable",
+  "count": [
+   1,
+   1
+  ]
+ },
+ "variants": [
+  {
+   "name": "table_fullwidth",
+   "_hint": 48,
+   "preferred": true,
+   "anchor": {
+    "all": [
+     "Слайд с таблицей"
+    ]
+   },
+   "_note": "#45: заголовок + подзаголовок + таблица во всю ширину.",
+   "slots": {
+    "heading": {
+     "match_name": "Title 1",
+     "fit_policy": "reword_first",
+     "font": "YS Compressed Heavy",
+     "size_pt": 96,
+     "box_w_in": 25.0,
+     "box_h_in": 1.4,
+     "max_lines": 1,
+     "min_pt": 54,
+     "clear_soft_breaks": true
+    },
+    "subheading": {
+     "match_name": "TextBox 2",
+     "fit_policy": "reword_first",
+     "font": "YS SemiMono Regular",
+     "size_pt": 28,
+     "box_w_in": 19.74,
+     "box_h_in": 0.61,
+     "max_lines": 1,
+     "min_pt": 18,
+     "optional": true,
+     "clear_if_empty": true,
+     "clear_soft_breaks": true
+    },
+    "table": {
+     "match_name": "Table 17",
+     "kind": "table",
+     "trim": true,
+     "font": "YS SemiMono Regular",
+     "header_size_pt": 28,
+     "body_size_pt": 24,
+     "stretch": true,
+     "stretch_max_header_pt": 36,
+     "stretch_max_body_pt": 32,
+     "_stretch_note": "user 2026-07-29 (образец владельца): при меньшем числе строк таблица растягивается на донорскую высоту, кегль растёт до потолков"
+    }
+   },
+   "strip_shapes": [
+    "Rounded Rectangle 30",
+    "Rounded Rectangle 5",
+    "Rounded Rectangle 6",
+    "Rounded Rectangle 9",
+    "Rounded Rectangle 13",
+    "Rounded Rectangle 15",
+    "Rounded Rectangle 16",
+    "Rounded Rectangle 21",
+    "Rounded Rectangle 22",
+    "Rounded Rectangle 23",
+    "Rounded Rectangle 24",
+    "Rounded Rectangle 25",
+    "Rounded Rectangle 26",
+    "Rounded Rectangle 27",
+    "Rounded Rectangle 28",
+    "Rounded Rectangle 29"
+   ],
+   "_strip_note": "user 2026-07-29: статус-пилюли донора (15 шт) и серая подложка-хайлайт колонки (Rect 30) — артефакты, движок их не заполняет; вычищаем всегда"
+  }
+ ],
+ "dont_touch": [
+  "Rounded Rectangle*",
+  "Picture*"
+ ],
+ "_anchored": "§3Б: #45 уникальный «Слайд с таблицей». Таблица = kind:table + trim (модель eda datatable)."
+}
