@@ -1,0 +1,119 @@
+{
+  "id": "eda_charts_duo",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "charts_duo",
+  "kind": "content_fill",
+  "_doc": "Двухчартовый слайд Еды с РАЗНЫМИ чартами (#40, добавлен дизайнером в 43-слайдовой ревизии): двухстрочный заголовок + две белые плашки; слева BAR-чарт (1 серия, горизонтальные полосы, категории-строки) + подпись; справа COLUMN-чарт (до 3 серий, группированные столбики) + подпись + РУЧНАЯ легенда (3 свотча + подписи legend_1..3, коллаут-линии в столбики). chart_slots: chart_left (bar) / chart_right (column).",
+  "match": {
+    "form": "charts_duo",
+    "count": [
+      1,
+      1
+    ]
+  },
+  "variants": [
+    {
+      "anchor": {
+        "all": [
+          "Мерч"
+        ],
+        "has_shapes": [
+          "Chart 11"
+        ]
+      },
+      "_hint": 39,
+      "name": "bar_plus_column",
+      "preferred": true,
+      "photo": false,
+      "slots": {
+        "heading": {
+          "match_name": "Заголовок 26",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Geo Heavy",
+          "size_pt": 66,
+          "box_w_in": 23.22,
+          "box_h_in": 1.79,
+          "max_lines": 2,
+          "min_pt": 24,
+          "_doc": "у дизайнера заголовок в 2 строки — бокс 1.79\""
+        },
+        "left_title": {
+          "match_name": "TextBox 29",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Geo Bold",
+          "size_pt": 28,
+          "box_w_in": 8.41,
+          "box_h_in": 0.96,
+          "max_lines": 2,
+          "min_pt": 20
+        },
+        "right_title": {
+          "match_name": "TextBox 17",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Geo Bold",
+          "size_pt": 28,
+          "box_w_in": 10.75,
+          "box_h_in": 0.94,
+          "max_lines": 2,
+          "min_pt": 20
+        },
+        "legend_1": {
+          "match_name": "TextBox 19",
+          "fit_policy": "text_only",
+          "font": "YS Text Regular",
+          "size_pt": 24,
+          "box_w_in": 1.46,
+          "box_h_in": 0.4,
+          "max_lines": 1,
+          "min_pt": 18,
+          "_doc": "верхняя подпись ручной легенды (серия 1 правого чарта)"
+        },
+        "legend_2": {
+          "match_name": "TextBox 23",
+          "fit_policy": "text_only",
+          "font": "YS Text Regular",
+          "size_pt": 24,
+          "box_w_in": 1.43,
+          "box_h_in": 0.4,
+          "max_lines": 1,
+          "min_pt": 18,
+          "_doc": "средняя подпись (серия 2)"
+        },
+        "legend_3": {
+          "match_name": "TextBox 25",
+          "fit_policy": "text_only",
+          "font": "YS Text Regular",
+          "size_pt": 24,
+          "box_w_in": 0.86,
+          "box_h_in": 0.4,
+          "max_lines": 1,
+          "min_pt": 18,
+          "_doc": "нижняя подпись (серия 3)"
+        }
+      },
+      "chart_slots": {
+        "chart_left": {
+          "match_name": "Диаграмма 20",
+          "kind": "bar",
+          "_doc": "BAR горизонтальный, 1 дизайнерская серия, категории-строки. Акцент (жёлтый) прибит к ПЕРВОЙ точке данных — подавай категории по УБЫВАНИЮ значения (как дизайнер: максимум первым = жёлтый и заметный)"
+        },
+        "chart_right": {
+          "match_name": "Chart 11",
+          "kind": "column",
+          "_doc": "COLUMN группированный, 3 дизайнерские серии × 2 категории; имена серий дублируй в legend_1..3 (ручная легенда со свотчами)"
+        }
+      }
+    }
+  ],
+  "dont_touch": [
+    "Rectangle*",
+    "Straight Connector*",
+    "Rectangle: Rounded Corners*"
+  ],
+  "_anchored": "§3Б: #40 по строке «Мерч» (уникальна) + has_shapes[Chart 11]. Коллаут-линии ручной легенды указывают в столбики на дизайнерских местах — при радикально другой форме данных могут указывать мимо; свотчи-цвета соответствуют порядку серий (честные ограничения)."
+}

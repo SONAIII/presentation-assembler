@@ -1,0 +1,37 @@
+{
+  "id": "eda_contract",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "contract",
+  "kind": "content_fill",
+
+  "_doc": "Слайд «структура контракта» Еды (#33): заголовок (Title 1) + 2 подзаголовка-секции (TextBox 14 «Условия», TextBox 15 «Калькулятор…») + 4 колонки-метки (Title 3, слева направо) + таблица-калькулятор 4×3 (Table 20). Скруглённые плашки/иконки/фото — декор. Tier C §3Б.",
+
+  "match": { "form": "contract", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "all": ["Структура контракта"] },
+      "_hint": 32,
+      "name": "contract_calc",
+      "preferred": true,
+      "photo": true,
+      "slots": {
+        "heading": { "match_name": "Title 1", "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 66, "box_w_in": 23.22, "box_h_in": 0.9, "max_lines": 1, "min_pt": 24 },
+        "section1": { "match_name": "TextBox 14", "fit_policy": "reword_first",
+          "font": "YS Geo Bold", "size_pt": 28, "box_w_in": 5.65, "box_h_in": 0.74, "max_lines": 1, "min_pt": 20 },
+        "section2": { "match_name": "TextBox 15", "fit_policy": "reword_first",
+          "font": "YS Geo Bold", "size_pt": 28, "box_w_in": 11.13, "box_h_in": 0.74, "max_lines": 1, "min_pt": 20 },
+        "col_labels": { "repeat": true, "match_name": "Title 3", "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS Text Regular", "size_pt": 24, "box_w_in": 4.34, "box_h_in": 0.57, "max_lines": 1, "min_pt": 16 },
+        "table": { "kind": "table", "match_name": "Table 20" }
+      }
+    }
+  ],
+
+  "dont_touch": ["Picture*", "Рисунок*", "Rectangle: Rounded Corners*", "Скругленный прямоугольник*", "think-cell data*", "TextBox 1"],
+  "_anchored": "§3Б: #33 all[«Структура контракта»]. col_labels = 4× Title 3 sort:left. table = Table 20 (4×3). Плашки Самовывоз/Комиссия/Х% и иконки — декор. _hint 0-based."
+}

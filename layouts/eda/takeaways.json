@@ -1,0 +1,85 @@
+{
+  "id": "eda_takeaways",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "takeaways",
+  "kind": "content_fill",
+  "_doc": "Слайд «основные выводы» Еды (#21): заголовок + вводный абзац + 3 колонки-вывода (Text Placeholder 3, 32pt: строка-заголовок + тело). Интро-баннер (жёлтый, верхний TP3) — отдельный слот intro; blocks = 3 колонки (max_w_in отфильтровывает баннер). FILL-ALL §3Б — всегда FILL.",
+  "match": {
+    "form": "takeaways",
+    "count": [
+      3,
+      3
+    ],
+    "_count_note": "N ВЫВОДОВ (интро-баннер отдельным слотом, в счёт не входит); дизайнерская ёмкость #21 = 3 колонки"
+  },
+  "_generate_doc": "GENERATE-ветка (§3/§9): дизайнерский слайд #21 имеет верхний баннер-интро + 3 карточки-вывода. Для N выводов клонируем карточку {roundRect + блок [заголовок,тело]} по ГОРИЗОНТАЛИ; баннер-интро (полноширинный roundRect, шире карточки) НЕ трогаем — заполняем отдельно. Общее горизонтальное ядро с columns (layout.generate_tiles), без номеров. N≥6 → density guard.",
+  "variants": [
+    {
+      "anchor": {
+        "all": [
+          "Основные выводы"
+        ]
+      },
+      "_hint": 20,
+      "name": "intro_plus_3",
+      "preferred": true,
+      "photo": false,
+      "slots": {
+        "heading": {
+          "find": "Основные выводы",
+          "ci": false,
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 40,
+          "box_w_in": 23.22,
+          "box_h_in": 0.9,
+          "max_lines": 1,
+          "min_pt": 24
+        },
+        "blocks": {
+          "repeat": true,
+          "match_name": "Text Placeholder 3",
+          "sort": "doc",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Bold",
+          "size_pt": 32,
+          "box_w_in": 5.74,
+          "box_h_in": 6.09,
+          "max_lines": 12,
+          "min_pt": 20,
+          "max_w_in": 10,
+          "_max_w_note": "dual-role по геометрии: интро-баннер и колонки делят имя TP3; фильтр по ширине оставляет 3 колонки"
+        },
+        "intro": {
+          "match_name": "Text Placeholder 3",
+          "occ": 0,
+          "sort": "top",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Text Regular",
+          "size_pt": 32,
+          "box_w_in": 15.98,
+          "box_h_in": 1.08,
+          "max_lines": 2,
+          "min_pt": 24,
+          "_doc": "вводная строка на жёлтом баннере (верхний TP3, T3.16, sort:top отделяет от колонок). Давать всегда: без значения бокс очищается (clear_if_empty), заглушка дизайнера не остаётся",
+          "clear_if_empty": true
+        }
+      }
+    }
+  ],
+  "dont_touch": [
+    "Picture*",
+    "Graphic*",
+    "think-cell data*"
+  ],
+  "_anchored": "§3Б: слайд по сигнатуре «Основные выводы». blocks = 4× Text Placeholder 3 (вводный + 3 колонки) в порядке документа = порядок чтения. _hint — 0-based индекс.",
+  "fit_check": {
+    "_doc": "Пороги decide_columns для takeaways: ratio выводов против колонки 5.74×6.09.",
+    "fill_ratio_min": 0.5,
+    "fit_tolerance": 1.05,
+    "line_spacing": 1.15
+  }
+}

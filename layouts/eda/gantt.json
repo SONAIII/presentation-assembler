@@ -1,0 +1,33 @@
+{
+  "id": "eda_gantt",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "gantt",
+  "kind": "content_fill",
+
+  "_doc": "Слайд «Гант-чарт» Еды (#31): заголовок (Title 22) + таблица-сетка 7×13 (Table 7; r0 = «Задачи»+месяцы, col0 r1–6 = названия задач) + 7 оверлей-подписей на барах (Text Placeholder 1 «70 часов»/«Всегда»/…, find по позиции). Бары/цвета — декор. Месяцы-заголовки оставляем. Tier C §3Б.",
+
+  "match": { "form": "gantt", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "all": ["Слайд с Гант-чартом"] },
+      "_hint": 30,
+      "name": "gantt_6",
+      "preferred": true,
+      "photo": false,
+      "slots": {
+        "heading": { "match_name": "Title 22", "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 66, "box_w_in": 23.22, "box_h_in": 0.9, "max_lines": 1, "min_pt": 24 },
+        "table": { "kind": "table", "match_name": "Table 7" },
+        "bars": { "repeat": true, "match_name": "Text Placeholder 1", "sort": "top_left",
+          "fit_policy": "reword_first",
+          "font": "YS Text Regular", "size_pt": 24, "box_w_in": 3.0, "box_h_in": 0.67, "max_lines": 1, "min_pt": 16 }
+      }
+    }
+  ],
+
+  "dont_touch": ["Graphic*", "Rectangle*", "think-cell data*"],
+  "_anchored": "§3Б: #31 all[«Слайд с Гант-чартом»]. table col0 = названия задач (r0 месяцы оставляем → None). bars = 7× Text Placeholder 1 (оверлеи на барах) sort:top_left. _hint 0-based."
+}

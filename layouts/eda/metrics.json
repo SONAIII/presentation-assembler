@@ -1,0 +1,74 @@
+{
+  "id": "eda_metrics_statgrid",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "metrics",
+  "style": "stat-stack",
+
+  "_doc": "Стат-сетка Еды: вертикальный стек строк-карточек {roundRect-фон + значение + подпись} в правой зоне (слева фото). Одна спека на обе ветки роутера (§3/§4). Геометрия выверена по слайду 27 (2026-06-30).",
+
+  "match": { "form": "metrics", "count": [1, 8] },
+
+  "ready_slides": [
+    { "anchor": { "all": ["7,9", "7,8", "4,8"] }, "_hint": 10, "cards": 3, "preferred": true }
+  ],
+  "_anchored": "§3Б: слайд #11 (3-карточная стат-сетка roundRect) привязан по сигнатуре (три дизайнерских значения). Геометрия card_unit/zone совпала с ним byte-exact (дизайн стабилен, сменилась только позиция: старый slide 27 → #11). _hint — 0-based индекс-тайбрейкер.",
+
+  "zone": { "left_in": 12.710, "top_in": 3.630, "width_in": 12.247, "bottom_in": 13.263 },
+
+  "card_unit": {
+    "_locate": "Карточки ищем ГЕОМЕТРИЧЕСКИ (имена подписей дублируются: 'Text Placeholder 7' ×2). bg = roundRect в зоне, сортируем по top; value/label = текст-боксы по x-якорю внутри y-диапазона своего bg. Запасной ключ — a16:creationId (все уникальны).",
+    "bg": {
+      "geom_prst": "roundRect",
+      "name_prefix": "Rectangle: Rounded Corners",
+      "fill_scheme_first": "accent1",
+      "fill_scheme_rest": "accent2",
+      "_accent_hex": { "accent1": "FFD700", "accent2": "E9E7E6" }
+    },
+    "value": {
+      "match_left_in": 13.159,
+      "rel_left_in": 0.449,
+      "width_in": 1.947,
+      "height_in": 1.481,
+      "font": "YS Geo Heavy",
+      "size_pt": 88,
+      "wrap": "none",
+      "align": "r",
+      "anchor": "ctr",
+      "_note": "Выравнивание ПО ПРАВОМУ краю: значение растёт влево от правого края бокса (15.106\"), к подписи не лезет. Поэтому fit-check для wrap=off правого значения смотрит ЛЕВЫЙ вылет (к фото), а не коллизию с подписью."
+    },
+    "label": {
+      "match_left_in": 15.595,
+      "rel_left_in": 2.885,
+      "width_in": 8.398,
+      "rel_top_in": 0.567,
+      "height_in": 1.414,
+      "font": "YS Geo Bold",
+      "size_pt": 28,
+      "wrap": "square",
+      "anchor": "ctr",
+      "line_spacing": 1.0
+    }
+  },
+
+  "reflow": {
+    "stack": "vertical",
+    "columns": 1,
+    "value_vcenter": true,
+    "label_rel_top_in": 0.567,
+    "designer_gap_in": 0.759,
+    "designer_card_h_in": 2.548,
+    "gen_gap_in": 0.30,
+    "min_card_h_in": 1.55,
+    "card_h_rule": "GENERATE: card_h = (zone_h - gen_gap*(N-1)) / N, не больше designer_card_h, не меньше min_card_h (иначе raise → N≥6 в 2 колонки, отложено). N=3 FILL вёрстку готового слайда НЕ трогает.",
+    "_gen_gap_note": "Дизайнерский зазор 0.759\" — для 3 воздушных карточек; при генерации многих карточек берём плотнее (0.30\"), иначе card_h<значения. N=5 → card_h≈1.69\" (ок), N=6 → ≈1.36\" (<min, отложено)."
+  },
+
+  "accent": { "rule": "first_card_accent1_rest_accent2" },
+
+  "fit": {
+    "value": { "mode": "shrink_to_fit", "wrap": false, "min_pt": 40, "max_chars": 4, "pad_left_in": 0.2 },
+    "label": { "mode": "wrap", "max_lines_soft": 3, "max_chars": 34 }
+  }
+}

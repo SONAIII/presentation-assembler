@@ -1,0 +1,265 @@
+{
+  "template_file": "Templates/eda/eda-template.pptx",
+  "palette_slides_1based": [
+    44,
+    45
+  ],
+  "roles": {
+    "card": {
+      "shape": "atom:card"
+    },
+    "badge": {
+      "shape": "atom:badge",
+      "params": {
+        "number_scheme_first": "tx1",
+        "number_scheme_rest": "accent3",
+        "_doc": "бейджи #19 XML-идентичны, различается ТОЛЬКО цвет цифры: первая колонка tx1, остальные accent3"
+      }
+    },
+    "block": {
+      "shape": "atom:block"
+    },
+    "block_bullets": {
+      "shape": "atom:block-bullets"
+    },
+    "value": {
+      "shape": "atom:value"
+    },
+    "label": {
+      "shape": "atom:label"
+    },
+    "pill": {
+      "shape": "atom:pill"
+    },
+    "stage_desc": {
+      "shape": "atom:stage_desc"
+    },
+    "connector": {
+      "shape": "atom:connector"
+    },
+    "arrow": {
+      "shape": "atom:arrow"
+    },
+    "divider": {
+      "shape": "atom:divider"
+    },
+    "icon_check": {
+      "shape": "atom:icon-check"
+    },
+    "icon_cross": {
+      "shape": "atom:icon-cross"
+    },
+    "chart_line": {
+      "shape": "atom:chart_line"
+    },
+    "chart_column": {
+      "shape": "atom:chart_column"
+    },
+    "chart_title": {
+      "shape": "atom:chart_title"
+    },
+    "chart_legend_label": {
+      "shapes": [
+        "atom:chart_line-label-1",
+        "atom:chart_line-label-2",
+        "atom:chart_line-label-3"
+      ]
+    }
+  },
+  "atoms": {
+    "atom:connector": {
+      "slide1": 44,
+      "kind": "line",
+      "w_in": 3.769,
+      "h_in": 0.0
+    },
+    "atom:card": {
+      "slide1": 44,
+      "kind": "shape",
+      "w_in": 7.211,
+      "h_in": 9.407
+    },
+    "atom:badge": {
+      "slide1": 44,
+      "kind": "group",
+      "w_in": 4.003,
+      "h_in": 0.947,
+      "children": [
+        {
+          "name": "atom:badge_outline",
+          "kind": "shape"
+        },
+        {
+          "name": "atom:badge_number",
+          "kind": "text"
+        }
+      ]
+    },
+    "atom:block-bullets": {
+      "slide1": 44,
+      "kind": "text",
+      "w_in": 5.826,
+      "h_in": 2.149,
+      "font": "YS Geo Bold",
+      "size_pt": 32.0
+    },
+    "atom:block": {
+      "slide1": 44,
+      "kind": "text",
+      "w_in": 5.826,
+      "h_in": 1.245,
+      "font": "YS Geo Bold",
+      "size_pt": 32.0
+    },
+    "atom:value": {
+      "slide1": 44,
+      "kind": "text",
+      "w_in": 3.235,
+      "h_in": 2.322,
+      "font": "YS Geo Heavy",
+      "size_pt": 138.0
+    },
+    "atom:label": {
+      "slide1": 44,
+      "kind": "text",
+      "w_in": 3.235,
+      "h_in": 1.077,
+      "font": null,
+      "size_pt": 32.0
+    },
+    "atom:pill": {
+      "slide1": 44,
+      "kind": "group",
+      "w_in": 3.626,
+      "h_in": 2.595,
+      "children": [
+        {
+          "name": "atom:pill-shape",
+          "kind": "shape"
+        },
+        {
+          "name": "atom:pill-text",
+          "kind": "text"
+        }
+      ]
+    },
+    "atom:stage_desc": {
+      "slide1": 44,
+      "kind": "text",
+      "w_in": 4.277,
+      "h_in": 3.467,
+      "font": "YS Geo Bold",
+      "size_pt": 28.0
+    },
+    "atom:arrow": {
+      "slide1": 44,
+      "kind": "line",
+      "w_in": 2.946,
+      "h_in": 0.0
+    },
+    "atom:icon-check": {
+      "slide1": 44,
+      "kind": "group",
+      "w_in": 0.625,
+      "h_in": 0.625,
+      "children": [
+        {
+          "name": "circle",
+          "kind": "shape"
+        },
+        {
+          "name": "Graphic 57",
+          "kind": "shape"
+        }
+      ]
+    },
+    "atom:icon-cross": {
+      "slide1": 44,
+      "kind": "group",
+      "w_in": 0.625,
+      "h_in": 0.625,
+      "children": [
+        {
+          "name": "circle",
+          "kind": "shape"
+        },
+        {
+          "name": "Группа 94",
+          "kind": "group"
+        }
+      ]
+    },
+    "atom:divider": {
+      "slide1": 44,
+      "kind": "line",
+      "w_in": 2.946,
+      "h_in": 0.0
+    },
+    "atom:chart_line": {
+      "slide1": 45,
+      "kind": "chart",
+      "w_in": 12.613,
+      "h_in": 7.578
+    },
+    "atom:chart_line-label-3": {
+      "slide1": 45,
+      "kind": "text",
+      "w_in": 2.367,
+      "h_in": 0.539,
+      "font": "+mn-lt",
+      "size_pt": null
+    },
+    "atom:chart_line-label-1": {
+      "slide1": 45,
+      "kind": "text",
+      "w_in": 2.775,
+      "h_in": 0.539,
+      "font": "+mn-lt",
+      "size_pt": null
+    },
+    "atom:chart_line-label-2": {
+      "slide1": 45,
+      "kind": "text",
+      "w_in": 2.282,
+      "h_in": 0.539,
+      "font": "+mn-lt",
+      "size_pt": null
+    },
+    "atom:chart_title": {
+      "slide1": 45,
+      "kind": "text",
+      "w_in": 5.787,
+      "h_in": 1.262,
+      "font": "+mj-lt",
+      "size_pt": null
+    },
+    "atom:chart_column": {
+      "slide1": 45,
+      "kind": "group",
+      "w_in": 5.787,
+      "h_in": 5.801,
+      "children": [
+        {
+          "name": "atom:chart_column-chart",
+          "kind": "chart"
+        },
+        {
+          "name": "Straight Connector 192",
+          "kind": "line"
+        },
+        {
+          "name": "Straight Connector 192",
+          "kind": "line"
+        },
+        {
+          "name": "Straight Connector 192",
+          "kind": "line"
+        },
+        {
+          "name": "Прямоугольник 19",
+          "kind": "text"
+        }
+      ]
+    }
+  }
+}

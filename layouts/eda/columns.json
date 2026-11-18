@@ -1,0 +1,209 @@
+{
+  "id": "eda_columns",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "columns",
+  "kind": "content_fill",
+  "_doc": "Семейство «колонки-персонажи» Еды: заголовок (Title 1) + N повторяемых блоков (Title 3, каждый = [имя, описание] в 2 абзацах, YS Geo Bold + тема) + фото. blocks — повторяемый слот sort=left (лево→право = порядок чтения). Картинки/карточки не трогаем. Варианты = дизайнерские композиции (3 фото / 2 фото / 3 текст-карточки). FILL-ALL §3Б — всегда FILL.",
+  "match": {
+    "form": "columns",
+    "count": [
+      2,
+      3
+    ]
+  },
+  "_generate_doc": "GENERATE-ветка (§3/§9 «примерь → иначе собери»): для N колонок, которых нет среди готовых (2/3), клонируем текст-колонку #19 {roundRect-карточка + блок [имя,описание] + бейдж Graphic + номер 01..0N} по ГОРИЗОНТАЛИ и раскладываем по зоне. Геометрия/заливка/типографика byte-exact из мастера; параметрически считаем ширину карточки, X-слот, номер, симметричное сужение блока. Юнит и рел-смещения выводятся из базового слайда в рантайме (locate_hstrip_units). N≥6 → density guard (2 ряда, отложено).",
+  "variants": [
+    {
+      "anchor": {
+        "has_shapes": [
+          "Picture 8"
+        ]
+      },
+      "_hint": 15,
+      "name": "three_photos",
+      "preferred": true,
+      "photo": true,
+      "slots": {
+        "heading": {
+          "match_name": "Title 1",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 66,
+          "box_w_in": 23.22,
+          "box_h_in": 0.9,
+          "max_lines": 1,
+          "min_pt": 24
+        },
+        "blocks": {
+          "repeat": true,
+          "match_name": "Title 3",
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Geo Bold",
+          "size_pt": 32,
+          "box_w_in": 6.62,
+          "box_h_in": 4.48,
+          "max_lines": 8,
+          "min_pt": 24
+        }
+      },
+      "image_slots": {
+        "photo_1": {
+          "match_name": "Picture 6",
+          "_doc": "лево-верх"
+        },
+        "photo_2": {
+          "match_name": "Picture 8",
+          "_doc": "право-верх"
+        },
+        "photo_3": {
+          "match_name": "Picture 7",
+          "_doc": "центр-низ"
+        }
+      }
+    },
+    {
+      "anchor": {
+        "all": [
+          "Две картинки на слайде"
+        ]
+      },
+      "_hint": 16,
+      "name": "two_photos",
+      "photo": true,
+      "slots": {
+        "heading": {
+          "match_name": "Title 1",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 66,
+          "box_w_in": 23.22,
+          "box_h_in": 0.9,
+          "max_lines": 1,
+          "min_pt": 24
+        },
+        "blocks": {
+          "repeat": true,
+          "match_name": "Title 3",
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Geo Bold",
+          "size_pt": 32,
+          "box_w_in": 10.3,
+          "box_h_in": 3.4,
+          "max_lines": 6,
+          "min_pt": 24
+        }
+      },
+      "image_slots": {
+        "photo_1": {
+          "match_name": "Picture 6",
+          "_doc": "лево-верх, roundRect"
+        },
+        "photo_2": {
+          "match_name": "Picture 7",
+          "_doc": "право-низ, roundRect"
+        }
+      }
+    },
+    {
+      "anchor": {
+        "has_shapes": [
+          "Graphic 28"
+        ]
+      },
+      "_hint": 18,
+      "name": "three_cols_numbered",
+      "_doc": "#19: 3 колонки [имя, описание] + бейджи «01/02/03». Title 3 в ДВУХ ролях (блоки + номера) → skip_regex выкидывает номера, оставляя блоки; номера-декор не трогаем.",
+      "slots": {
+        "heading": {
+          "match_name": "Title 1",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 66,
+          "box_w_in": 23.22,
+          "box_h_in": 0.9,
+          "max_lines": 1,
+          "min_pt": 24
+        },
+        "blocks": {
+          "repeat": true,
+          "match_name": "Title 3",
+          "sort": "left",
+          "skip_regex": "^\\d\\d$",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Geo Bold",
+          "size_pt": 32,
+          "box_w_in": 5.83,
+          "box_h_in": 6.46,
+          "max_lines": 11,
+          "min_pt": 24
+        }
+      },
+      "accent_cards": [
+        "Rectangle: Rounded Corners 41",
+        "Rectangle: Rounded Corners 42",
+        "Rectangle: Rounded Corners 44"
+      ]
+    },
+    {
+      "anchor": {
+        "has_shapes": [
+          "Picture 16"
+        ]
+      },
+      "_hint": 19,
+      "name": "three_text_cards",
+      "photo": true,
+      "slots": {
+        "heading": {
+          "match_name": "Title 1",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 66,
+          "box_w_in": 23.22,
+          "box_h_in": 0.9,
+          "max_lines": 1,
+          "min_pt": 24
+        },
+        "blocks": {
+          "repeat": true,
+          "match_name": "Title 3",
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Geo Bold",
+          "size_pt": 32,
+          "box_w_in": 5.88,
+          "box_h_in": 5.02,
+          "max_lines": 9,
+          "min_pt": 24
+        }
+      },
+      "accent_cards": [
+        "Rectangle: Rounded Corners 7",
+        "Rectangle: Rounded Corners 8",
+        "Rectangle: Rounded Corners 9"
+      ]
+    }
+  ],
+  "dont_touch": [
+    "Picture*",
+    "Graphic*",
+    "Rectangle*",
+    "think-cell data*",
+    "Text Placeholder 2"
+  ],
+  "_anchored": "§3Б: three_photos→has_shapes[Picture 8] (отличает #16 от #17), two_photos→строка «Две картинки на слайде», three_text_cards→has_shapes[Picture 16]. blocks = N× Title 3, sort=left; каждый блок [имя, описание]. Заголовок Title 1 (уникален в слайде). _hint — 0-based индекс.",
+  "fit_check": {
+    "_doc": "Пороги честной развилки decide_columns (route.py). Калибровка: собственный контент дизайнера = 0.79–1.03 по всем 4 вариантам (замер 2026-07-02, YS Geo Bold 32, ls 1.15).",
+    "fill_ratio_min": 0.5,
+    "fit_tolerance": 1.05,
+    "line_spacing": 1.15
+  }
+}

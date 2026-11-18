@@ -1,0 +1,34 @@
+{
+  "id": "eda_impact",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "impact",
+  "kind": "content_fill",
+
+  "_doc": "Слайд «импакт/факторы» Еды (#30): большой заголовок (Заголовок 2, многострочный) + подзаголовок (TextBox 4) + 3 подписи-фактора (TextBox 6/8/10 «Риск возникновения…», слева направо). think-cell диаграмма — декор (не заполняется). FILL-ALL §3Б.",
+
+  "match": { "form": "impact", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "has_shapes": ["Скругленный прямоугольник 41"] },
+      "_hint": 29,
+      "name": "impact_3",
+      "preferred": true,
+      "photo": false,
+      "slots": {
+        "heading": { "match_name": "Заголовок 2", "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Geo Heavy", "size_pt": 54, "box_w_in": 23.22, "box_h_in": 1.79, "max_lines": 2, "min_pt": 24 },
+        "subtitle": { "match_name": "TextBox 4", "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 32, "box_w_in": 23.22, "box_h_in": 1.26, "max_lines": 2, "min_pt": 20 },
+        "labels": { "repeat": true, "find": "Риск", "sort": "left",
+          "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 28, "box_w_in": 5.79, "box_h_in": 1.26, "max_lines": 2, "min_pt": 20 }
+      }
+    }
+  ],
+
+  "dont_touch": ["Скругленный прямоугольник*", "Graphic*", "think-cell data*"],
+  "_anchored": "§3Б: #30 has_shapes[Скругленный прямоугольник 41]. labels = 3× TextBox по find«Риск» sort:left. Диаграмма think-cell — декор. _hint 0-based."
+}

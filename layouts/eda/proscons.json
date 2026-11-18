@@ -1,0 +1,48 @@
+{
+  "id": "eda_proscons",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "proscons",
+  "kind": "content_fill",
+
+  "_doc": "Слайд-сравнение «за/против» Еды (#22): заголовок + 2 колонки (Text Placeholder 2 = левая, Text Placeholder 3 = правая, 34pt), каждая = строка-заголовок + буллеты. Иконки/группы не трогаем. FILL-ALL §3Б — всегда FILL.",
+
+  "match": { "form": "proscons", "count": [2, 2] },
+
+  "variants": [
+    {
+      "anchor": { "all": ["Сравнение двух сущностей"] },
+      "_hint": 21,
+      "name": "two_columns",
+      "preferred": true,
+      "photo": false,
+      "slots": {
+        "heading": {
+          "find": "Сравнение", "ci": false,
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 40,
+          "box_w_in": 10.68, "box_h_in": 1.79,
+          "max_lines": 2, "min_pt": 24
+        },
+        "pro": {
+          "find": "Что хорошо", "ci": false, "multiline": true,
+          "fit_policy": "reword_first",
+          "font": "YS Geo Bold", "size_pt": 34,
+          "box_w_in": 10.68, "box_h_in": 7.86,
+          "max_lines": 12, "min_pt": 20
+        },
+        "con": {
+          "find": "Что не очень", "ci": false, "multiline": true,
+          "fit_policy": "reword_first",
+          "font": "YS Geo Bold", "size_pt": 34,
+          "box_w_in": 10.21, "box_h_in": 7.86,
+          "max_lines": 12, "min_pt": 20
+        }
+      }
+    }
+  ],
+
+  "dont_touch": ["Picture*", "Graphic*", "TextBox 1", "think-cell data*"],
+  "_anchored": "§3Б: слайд по сигнатуре «Сравнение двух сущностей». ВНИМАНИЕ: на #22 ДВА шейпа «Text Placeholder 2» (большая левая колонка + пустая футер-полоса y=13.63) — match_name взял бы первый (пустой), поэтому pro/con ищем по тексту-заглушке заголовка колонки (find «Что хорошо»/«Что не очень»). _hint — 0-based индекс."
+}

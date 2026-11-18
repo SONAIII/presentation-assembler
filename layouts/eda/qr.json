@@ -1,0 +1,40 @@
+{
+  "id": "eda_qr",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "qr",
+  "kind": "content_fill",
+
+  "_doc": "QR-слайд (#43, добавлен user 2026-07-07): белая карточка с QR-кодом (Рисунок 19, квадрат 7.78\") и подписью-призывом под ним (48pt, центр, до 3 строк); фон — брендовая иллюстрация (пицца). QR меняется через photos: сам код скилл НЕ генерирует — картинку даёт пользователь (см. SKILL.md «Photo-swap»).",
+
+  "match": { "form": "qr", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "all": ["во вселенной черепашек!"] },
+      "_hint": 42,
+      "name": "card_qr",
+      "preferred": true,
+      "photo": true,
+      "image_slots": {
+        "qr": {
+          "match_name": "Рисунок 19",
+          "_doc": "квадрат 7.78×7.72 внутри белой карты; своя картинка QR должна быть ~квадратной"
+        }
+      },
+      "slots": {
+        "caption": {
+          "match_name": "TextBox 20",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 48,
+          "box_w_in": 7.78, "box_h_in": 2.18,
+          "max_lines": 3, "min_pt": 32
+        }
+      }
+    }
+  ],
+
+  "dont_touch": ["Рисунок 2", "Рисунок 8", "Рисунок 11", "Рисунок 18", "Скругленный*"],
+  "_anchored": "§3Б: якорь — строка подписи пристинного шаблона (уникальна). Фоновые иллюстрации не трогаем."
+}

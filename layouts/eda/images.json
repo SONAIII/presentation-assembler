@@ -1,0 +1,158 @@
+{
+  "id": "eda_images",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "images",
+  "kind": "content_fill",
+  "_doc": "Семейство «картинки» Еды (Tier B): заголовок (+ опц. подпись/комментарий), сами картинки — passthrough (не трогаем). 3 варианта: three_pics #39 (только заголовок), moodboard #38 (заголовок + подпись-абзац), screenshots #37 (большой 3-строчный тайтл + левая колонка-комментарий). FILL-ALL §3Б.",
+  "match": {
+    "form": "images",
+    "count": [
+      1,
+      1
+    ]
+  },
+  "variants": [
+    {
+      "anchor": {
+        "all": [
+          "Слайд с тремя картинками"
+        ]
+      },
+      "_hint": 38,
+      "name": "three_pics",
+      "preferred": true,
+      "photo": true,
+      "slots": {
+        "heading": {
+          "match_name": "Title 36",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 66,
+          "box_w_in": 23.22,
+          "box_h_in": 0.9,
+          "max_lines": 1,
+          "min_pt": 24
+        }
+      },
+      "image_slots": {
+        "photo_1": {
+          "match_name": "Picture 30",
+          "_doc": "левая, roundRect"
+        },
+        "photo_2": {
+          "match_name": "Picture 32",
+          "_doc": "центральная высокая"
+        },
+        "photo_3": {
+          "match_name": "Picture 29",
+          "_doc": "правая, roundRect"
+        }
+      }
+    },
+    {
+      "anchor": {
+        "all": [
+          "Мудборд"
+        ]
+      },
+      "_hint": 37,
+      "name": "moodboard",
+      "photo": true,
+      "slots": {
+        "heading": {
+          "match_name": "Title 1",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 66,
+          "box_w_in": 17.6,
+          "box_h_in": 0.9,
+          "max_lines": 1,
+          "min_pt": 24
+        },
+        "caption": {
+          "match_name": "TextBox 7",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Text Regular",
+          "size_pt": 28,
+          "box_w_in": 10.39,
+          "box_h_in": 2.22,
+          "max_lines": 3,
+          "min_pt": 18,
+          "optional": true,
+          "clear_if_empty": true
+        }
+      },
+      "image_slots": {
+        "photo_1": {
+          "match_name": "Picture 43",
+          "_doc": "верх-центр вертикальная 5.48×7.30"
+        },
+        "photo_2": {
+          "match_name": "Picture 39",
+          "_doc": "верх-право горизонтальная 5.46×4.10"
+        },
+        "photo_3": {
+          "match_name": "Picture 41",
+          "_doc": "большая левая 11.05×7.30"
+        },
+        "photo_4": {
+          "match_name": "Picture 4",
+          "_doc": "низ-право вертикальная 5.45×7.30"
+        },
+        "photo_5": {
+          "match_name": "Picture 40",
+          "_doc": "низ-центр горизонтальная 5.47×4.10"
+        }
+      }
+    },
+    {
+      "anchor": {
+        "all": [
+          "со скриншотами"
+        ]
+      },
+      "_hint": 36,
+      "name": "screenshots",
+      "photo": true,
+      "slots": {
+        "heading": {
+          "match_name": "Title 1",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Geo Heavy",
+          "size_pt": 66,
+          "_box_note": "тайтл-бокс полноширинный, но скриншоты перекрывают справа с 12.49 → видимая ширина ≈10.5; допускаем до 3 строк (H=2.67)",
+          "box_w_in": 10.5,
+          "box_h_in": 2.67,
+          "max_lines": 3,
+          "min_pt": 24
+        },
+        "comment": {
+          "match_name": "Text Placeholder 5",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Text Regular",
+          "size_pt": 24,
+          "box_w_in": 8.08,
+          "box_h_in": 8.52,
+          "max_lines": 20,
+          "min_pt": 18
+        }
+      }
+    }
+  ],
+  "dont_touch": [
+    "Picture*",
+    "Рисунок*",
+    "Object*",
+    "Rectangle*",
+    "Graphic*",
+    "think-cell data*",
+    "Text Placeholder 2",
+    "Text Placeholder 44"
+  ],
+  "_anchored": "§3Б: three_pics→«Слайд с тремя картинками», moodboard→«Мудборд», screenshots→«со скриншотами» (фрагмент строки после soft-break). Заголовки по match_name (Title 36/Title 1). Картинки passthrough. _hint — 0-based индекс."
+}

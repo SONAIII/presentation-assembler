@@ -1,0 +1,79 @@
+{
+  "id": "eda_steps",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "steps",
+  "kind": "content_fill",
+  "_doc": "Слайд «нумерованные шаги» Еды (#14): заголовок (Title 20) + подзаголовок (Title 3) + 3 шага (Text Placeholder 7, 36pt). Номера 01/02/03 (Graphic 6) — ДЕКОР последовательности, НЕ заполняем (остаются как есть). FILL-ALL §3Б.",
+  "match": {
+    "form": "steps",
+    "count": [
+      1,
+      1
+    ]
+  },
+  "variants": [
+    {
+      "anchor": {
+        "has_shapes": [
+          "Title 20"
+        ]
+      },
+      "_hint": 13,
+      "name": "steps_3",
+      "preferred": true,
+      "photo": true,
+      "slots": {
+        "heading": {
+          "find": "Заголовок",
+          "ci": false,
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 40,
+          "box_w_in": 23.22,
+          "box_h_in": 0.9,
+          "max_lines": 1,
+          "min_pt": 24
+        },
+        "subheading": {
+          "find": "Подзаголовок",
+          "ci": false,
+          "fit_policy": "reword_first",
+          "font": "YS Text Regular",
+          "size_pt": 48,
+          "box_w_in": 12.25,
+          "box_h_in": 0.81,
+          "max_lines": 1,
+          "min_pt": 24,
+          "optional": true,
+          "clear_if_empty": true
+        },
+        "steps": {
+          "repeat": true,
+          "match_name": "Text Placeholder 7",
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS Text Regular",
+          "size_pt": 36,
+          "box_w_in": 6.53,
+          "box_h_in": 2.42,
+          "max_lines": 4,
+          "min_pt": 24
+        }
+      },
+      "image_slots": {
+        "photo": {
+          "match_name": "Picture 52",
+          "_doc": "фото-герой сверху (было passthrough — фидбек C медиакита)"
+        }
+      }
+    }
+  ],
+  "dont_touch": [
+    "Picture*",
+    "Graphic*",
+    "think-cell data*"
+  ],
+  "_anchored": "§3Б: слайд по сигнатуре has_shapes=[Title 20]. steps = 3× Text Placeholder 7, sort=left (01→02→03). Номера Graphic 6 не в слотах → сохраняются. _hint — 0-based индекс."
+}

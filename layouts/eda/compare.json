@@ -1,0 +1,36 @@
+{
+  "id": "eda_compare",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "compare",
+  "kind": "content_fill",
+
+  "_doc": "Слайд «сравнение/мета-анализ» Еды (#32): большой заголовок (Заголовок 2) + таблица 7×9 (Таблица 14; текст в первых 4 колонках, колонки 5–9 = иконки-галочки, данные пустые) + крупная стата (Title 2, value_shrink) + 2 подписи (TextBox 51/52) + фото. Tier C §3Б.",
+
+  "match": { "form": "compare", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "has_shapes": ["Таблица 14"] },
+      "_hint": 31,
+      "name": "compare_table",
+      "preferred": true,
+      "photo": true,
+      "slots": {
+        "heading": { "match_name": "Заголовок 2", "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Geo Heavy", "size_pt": 54, "box_w_in": 23.22, "box_h_in": 1.79, "max_lines": 2, "min_pt": 24 },
+        "table": { "kind": "table", "match_name": "Таблица 14" },
+        "stat": { "match_name": "Title 2", "fit_policy": "value_shrink",
+          "font": "YS Geo Heavy", "size_pt": 96, "box_w_in": 3.16, "min_pt": 44 },
+        "caption1": { "match_name": "TextBox 51", "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 24, "box_w_in": 4.42, "box_h_in": 1.21, "max_lines": 3, "min_pt": 18 },
+        "caption2": { "match_name": "TextBox 52", "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 24, "box_w_in": 6.82, "box_h_in": 1.72, "max_lines": 4, "min_pt": 18 }
+      }
+    }
+  ],
+
+  "dont_touch": ["Picture*", "Скругленный прямоугольник*", "Group*", "think-cell data*", "TextBox 1"],
+  "_anchored": "§3Б: #32 has_shapes[Таблица 14]. Таблица: r0 = 9 заголовков, r1–6 первые 4 колонки текст; колонки 5–9 (галочки) = None (не трогаем). stat Title 2 value_shrink. _hint 0-based."
+}

@@ -1,0 +1,125 @@
+{
+  "id": "eda_toc",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "toc",
+  "kind": "structural",
+  "_doc": "Содержание/раздел-с-оглавлением Еды: метка «Раздел N» + МНОГОСТРОЧНЫЙ список пунктов (один пункт = один абзац в боксе Title 1). #2 (с фото, метка Text Placeholder 6, 115pt) / #7 (без фото, метка Text Placeholder 1, 96pt). #8 — тот же дизайн что #7, но заглушка «Раздел 2» (покрыт вариантом toc_plain, отдельный не нужен). Число пунктов варьируется В ОДНОМ боксе (абзацы), НЕ генерацией → структурный FILL с многострочным слотом. agenda_hierarchy: слот items принимает slots.active_index (0-based) — стили активного (пара 0) и обычного (пара 1) пункта снимаются с самого слайда и переназначаются по индексу (агенда-per-section длинных деков, user-правило 2026-07-02); слайд на раздел = клоны (lib/clone.py).",
+  "match": {
+    "form": "toc",
+    "count": [
+      1,
+      1
+    ]
+  },
+  "variants": [
+    {
+      "anchor": {
+        "all": [
+          "Раздел 1"
+        ],
+        "has_picture": true
+      },
+      "_hint": 1,
+      "name": "toc_photo",
+      "preferred": true,
+      "photo": true,
+      "slots": {
+        "section_label": {
+          "find": "Раздел",
+          "ci": false,
+          "shape_name": "Text Placeholder 6",
+          "font": "YS Geo Heavy",
+          "size_pt": 40,
+          "box_w_in": 4.84,
+          "box_h_in": 0.9,
+          "max_lines": 1,
+          "min_pt": 24
+        },
+        "items": {
+          "find": "Проблема",
+          "ci": false,
+          "shape_name": "Title 1",
+          "multiline": true,
+          "agenda_hierarchy": true,
+          "measure": {
+            "active": {
+              "font": "YS Geo Heavy",
+              "size_pt": 115
+            },
+            "regular": {
+              "font": "YS Text Regular",
+              "size_pt": 72
+            }
+          },
+          "font": "YS Geo Heavy",
+          "size_pt": 115,
+          "box_w_in": 19.51,
+          "box_h_in": 7.09,
+          "max_lines": 6,
+          "min_pt": 54
+        }
+      },
+      "image_slots": {
+        "photo": {
+          "match_name": "Picture 4",
+          "_doc": "полноэкранная подложка (как у обложки)"
+        }
+      }
+    },
+    {
+      "anchor": {
+        "all": [
+          "Раздел 1"
+        ],
+        "has_picture": false
+      },
+      "_hint": 6,
+      "name": "toc_plain",
+      "photo": false,
+      "slots": {
+        "section_label": {
+          "find": "Раздел",
+          "ci": false,
+          "shape_name": "Text Placeholder 1",
+          "font": "YS Geo Heavy",
+          "size_pt": 40,
+          "box_w_in": 4.84,
+          "box_h_in": 0.9,
+          "max_lines": 1,
+          "min_pt": 24
+        },
+        "items": {
+          "find": "Проблема",
+          "ci": false,
+          "shape_name": "Title 1",
+          "multiline": true,
+          "agenda_hierarchy": true,
+          "measure": {
+            "active": {
+              "font": "YS Geo Heavy",
+              "size_pt": 96
+            },
+            "regular": {
+              "font": "YS Text Regular",
+              "size_pt": 66
+            }
+          },
+          "font": "YS Geo Heavy",
+          "size_pt": 96,
+          "box_w_in": 13.96,
+          "box_h_in": 6.46,
+          "max_lines": 6,
+          "min_pt": 54
+        }
+      }
+    }
+  ],
+  "dont_touch": [
+    "Picture*",
+    "Graphic*",
+    "think-cell data*"
+  ],
+  "_anchored": "§3Б: слайды по сигнатуре. #2 vs #7 текстово идентичны («Раздел 1») → разводим по has_picture (у #2 фото, у #7 нет). find items по «Проблема» — текущая заглушка. _hint — 0-based индекс-тайбрейкер."
+}

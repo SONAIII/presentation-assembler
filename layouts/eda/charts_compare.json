@@ -1,0 +1,88 @@
+{
+  "id": "eda_charts_compare",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "charts_compare",
+  "kind": "content_fill",
+
+  "_doc": "Двухчартовый слайд-СРАВНЕНИЕ Еды (#41, добавлен дизайнером в 43-слайдовой ревизии): заголовок + две белые плашки (правило чартов user: >1 чарта → плашка под каждым), в каждой COLUMN-чарт (1 серия, текстовые категории) + подпись над чартом + дельта-бейдж (+50%/-29%) + комментарий из 2 абзацев [жирный лид 32pt, тело 28pt]. Коннекторы у бейджей — декор, не трогаем. chart_slots: chart_left/chart_right (replace_data).",
+
+  "match": { "form": "charts_compare", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "all": ["+50%", "-29%"] },
+      "_hint": 40,
+      "name": "two_columns_delta",
+      "preferred": true,
+      "photo": false,
+      "slots": {
+        "heading": {
+          "match_name": "Заголовок 2",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 66,
+          "box_w_in": 23.22, "box_h_in": 0.9,
+          "max_lines": 1, "min_pt": 24
+        },
+        "left_title": {
+          "match_name": "TextBox 7",
+          "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Geo Bold", "size_pt": 36,
+          "box_w_in": 9.22, "box_h_in": 1.08,
+          "max_lines": 2, "min_pt": 24
+        },
+        "right_title": {
+          "match_name": "TextBox 9",
+          "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Geo Bold", "size_pt": 36,
+          "box_w_in": 9.22, "box_h_in": 1.08,
+          "max_lines": 2, "min_pt": 24
+        },
+        "delta_left": {
+          "match_name": "TextBox 69",
+          "fit_policy": "text_only",
+          "font": "YS Geo Bold", "size_pt": 28,
+          "box_w_in": 1.22, "box_h_in": 0.47,
+          "max_lines": 1, "min_pt": 20
+        },
+        "delta_right": {
+          "match_name": "TextBox 70",
+          "fit_policy": "text_only",
+          "font": "YS Geo Bold", "size_pt": 28,
+          "box_w_in": 1.22, "box_h_in": 0.47,
+          "max_lines": 1, "min_pt": 20
+        },
+        "comment_left": {
+          "match_name": "TextBox 15",
+          "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 28,
+          "box_w_in": 9.54, "box_h_in": 2.04,
+          "max_lines": 4, "min_pt": 20,
+          "_doc": "значение = [жирный лид, тело] — 2 абзаца, кегли дизайнера (32/28) сохраняются"
+        },
+        "comment_right": {
+          "match_name": "TextBox 19",
+          "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 28,
+          "box_w_in": 8.90, "box_h_in": 2.04,
+          "max_lines": 4, "min_pt": 20,
+          "_doc": "значение = [жирный лид, тело]"
+        }
+      },
+      "chart_slots": {
+        "chart_left": {
+          "match_name": "Диаграмма 6", "kind": "column",
+          "_doc": "COLUMN, 1 дизайнерская серия, текстовые категории (годы строками)"
+        },
+        "chart_right": {
+          "match_name": "Диаграмма 8", "kind": "column",
+          "_doc": "COLUMN, 1 дизайнерская серия"
+        }
+      }
+    }
+  ],
+
+  "dont_touch": ["Скругленный прямоугольник*", "Прямая соединительная линия*"],
+  "_anchored": "§3Б: #41 по строкам «+50%»+«-29%» (уникальны в шаблоне). Все слоты — уникальные имена шейпов. Дельта-коннекторы у бейджей стоят на дизайнерских местах — если новые данные меняют форму столбиков радикально, бейджи могут указывать мимо (честное ограничение, см. _doc)."
+}

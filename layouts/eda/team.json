@@ -1,0 +1,75 @@
+{
+  "id": "eda_team",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "team",
+  "kind": "content_fill",
+
+  "_doc": "Семейство «команда» Еды (Tier B): заголовок + N карточек-людей (текст-бокс [имя, роль] + фото). Все карточки — заглушка «Костя Константинов»/«Роль в команде» с РАЗНЫМИ именами шейпов → повторяемый слот по ТЕКСТУ (find «Костя»), sort=top_left (по рядам). Фото passthrough. 2 варианта: team_10a #24 (10 человек + 2 подписи секций), team_10b #25 (10 человек). FILL-ALL §3Б.",
+
+  "match": { "form": "team", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "has_shapes": ["TextBox 73"] },
+      "_hint": 23,
+      "name": "team_10a",
+      "preferred": true,
+      "photo": true,
+      "slots": {
+        "heading": { "match_name": "Title 11", "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 66, "box_w_in": 23.22, "box_h_in": 0.9, "max_lines": 1, "min_pt": 24 },
+        "section1": { "match_name": "TextBox 73", "fit_policy": "reword_first",
+          "font": "YS Geo Bold", "size_pt": 28, "box_w_in": 4.72, "box_h_in": 0.9, "max_lines": 2, "min_pt": 20,
+          "optional": true, "clear_if_empty": true },
+        "section2": { "match_name": "TextBox 74", "fit_policy": "reword_first",
+          "font": "YS Geo Bold", "size_pt": 28, "box_w_in": 4.79, "box_h_in": 0.9, "max_lines": 2, "min_pt": 20,
+          "optional": true, "clear_if_empty": true },
+        "persons": { "repeat": true, "find": "Костя", "sort": "top_left",
+          "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 28, "box_w_in": 3.27, "box_h_in": 2.3, "max_lines": 4, "min_pt": 20 }
+      },
+      "image_slots": {
+        "photo_1":  { "match_name": "Picture 19", "_doc": "аватар 2.22×2.22, ряд 1 поз. 1 — порядок как у persons (top_left)" },
+        "photo_2":  { "match_name": "Picture 23", "_doc": "ряд 1 поз. 2" },
+        "photo_3":  { "match_name": "Picture 26", "_doc": "ряд 1 поз. 3" },
+        "photo_4":  { "match_name": "Picture 29", "_doc": "ряд 1 поз. 4" },
+        "photo_5":  { "match_name": "Picture 68", "_doc": "ряд 1 поз. 5" },
+        "photo_6":  { "match_name": "Picture 46", "_doc": "ряд 2 поз. 1" },
+        "photo_7":  { "match_name": "Picture 49", "_doc": "ряд 2 поз. 2" },
+        "photo_8":  { "match_name": "Picture 52", "_doc": "ряд 2 поз. 3" },
+        "photo_9":  { "match_name": "Picture 69", "_doc": "ряд 2 поз. 4" },
+        "photo_10": { "match_name": "Picture 70", "_doc": "ряд 2 поз. 5" }
+      }
+    },
+    {
+      "anchor": { "all": ["Команда"] },
+      "_hint": 24,
+      "name": "team_10b",
+      "photo": true,
+      "slots": {
+        "heading": { "match_name": "Title 11", "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 66, "box_w_in": 23.22, "box_h_in": 0.9, "max_lines": 1, "min_pt": 24 },
+        "persons": { "repeat": true, "find": "Костя", "sort": "top_left",
+          "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 28, "box_w_in": 3.27, "box_h_in": 2.3, "max_lines": 4, "min_pt": 20 }
+      },
+      "image_slots": {
+        "photo_1":  { "match_name": "Picture 3",  "_doc": "аватар 2.22×2.22, ряд 1 поз. 1 — порядок как у persons (top_left)" },
+        "photo_2":  { "match_name": "Picture 27", "_doc": "ряд 1 поз. 2" },
+        "photo_3":  { "match_name": "Picture 33", "_doc": "ряд 1 поз. 3" },
+        "photo_4":  { "match_name": "Picture 37", "_doc": "ряд 1 поз. 4" },
+        "photo_5":  { "match_name": "Picture 41", "_doc": "ряд 1 поз. 5" },
+        "photo_6":  { "match_name": "Picture 15", "_doc": "ряд 2 поз. 1" },
+        "photo_7":  { "match_name": "Picture 30", "_doc": "ряд 2 поз. 2" },
+        "photo_8":  { "match_name": "Picture 35", "_doc": "ряд 2 поз. 3" },
+        "photo_9":  { "match_name": "Picture 42", "_doc": "ряд 2 поз. 4" },
+        "photo_10": { "match_name": "Picture 44", "_doc": "ряд 2 поз. 5" }
+      }
+    }
+  ],
+
+  "dont_touch": ["Picture*", "Rectangle*", "think-cell data*", "Text Placeholder 1", "Text Placeholder 32"],
+  "_anchored": "§3Б: #24 has_shapes[TextBox 73], #25 all[«Команда»]. persons = повторяемый по тексту-заглушке find«Костя», sort=top_left (ряд за рядом), каждый [имя, роль]. Фото сменные через image_slots photo_1..photo_10 (нумерация = порядок persons); слот без значения = passthrough. _hint — 0-based."
+}

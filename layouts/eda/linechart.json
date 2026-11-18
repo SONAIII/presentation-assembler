@@ -1,0 +1,99 @@
+{
+  "id": "eda_linechart",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "linechart",
+  "kind": "content_fill",
+  "_doc": "Слайд «график с пояснением» Еды (#35): заголовок (Title 1) + подзаголовок (Title 3) + подпись оси/единиц (Text Placeholder 4) + LINE-чарт (Chart 9, НАТИВНЫЙ после перерисовки 2026-07-02: 3 серии, читается python-pptx → replace_data разблокирован, replace_data РАБОТАЕТ (chart_slots.chart, 2026-07-02); легенда TP1 автозаполняется именами серий) + легенда НАТИВНАЯ сверху чарта (TP1-подписи удалены из шаблона user 2026-07-03; имена серий подхватываются replace_data автоматически) + правая колонка-пояснение (Text Placeholder 5). Tier C §3Б: числа серий вне текст-пруфа.",
+  "match": {
+    "form": "linechart",
+    "count": [
+      1,
+      1
+    ]
+  },
+  "variants": [
+    {
+      "anchor": {
+        "all": [
+          "Один график с пояснением"
+        ]
+      },
+      "_hint": 34,
+      "name": "line_3series",
+      "preferred": true,
+      "photo": false,
+      "slots": {
+        "heading": {
+          "match_name": "Title 1",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 66,
+          "box_w_in": 15.0,
+          "box_h_in": 1.79,
+          "max_lines": 2,
+          "min_pt": 24,
+          "wrap_to_visible": true,
+          "designer_lines": 1,
+          "_doc": "видимая ширина 15.0 — справа серая плашка (Freeform 17.04), полный бокс 23.22 ЗАЕЗЖАЕТ на неё (user-фидбек 2026-07-03); длинный заголовок → перенос текстом на 2 строки; при 2 строках подзаголовок ОБЯЗАН быть пуст; машинный чек multiline_requires_empty: 2 строки + заполненный subheading = DeckError",
+          "multiline_requires_empty": [
+            "subheading"
+          ]
+        },
+        "subheading": {
+          "match_name": "Title 3",
+          "fit_policy": "reword_first",
+          "font": "YS Text Regular",
+          "size_pt": 44,
+          "box_w_in": 14.46,
+          "box_h_in": 0.81,
+          "max_lines": 1,
+          "min_pt": 20,
+          "optional": true,
+          "clear_if_empty": true,
+          "_doc": "ОПЦИОНАЛЕН: заполнять только смысловым подзаголовком; НЕ дублировать подпись графика и НЕ заполнять ради заполнения (слот=роль, user-правило 2026-07-03); при 2-строчном заголовке — пусто"
+        },
+        "caption": {
+          "match_name": "Text Placeholder 4",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Geo Bold",
+          "size_pt": 32,
+          "box_w_in": 14.46,
+          "box_h_in": 1.08,
+          "max_lines": 2,
+          "min_pt": 18,
+          "_doc": "ЗАГОЛОВОК ГРАФИКА — что показывает и единицы («Доля задач, %...»); ОБЯЗАТЕЛЕН при заполненном чарте; дисклеймеры/источники сюда НЕ писать"
+        },
+        "comment": {
+          "match_name": "Text Placeholder 5",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Text Regular",
+          "size_pt": 24,
+          "box_w_in": 6.89,
+          "box_h_in": 6.85,
+          "max_lines": 24,
+          "min_pt": 18,
+          "set_top_in": 5.72,
+          "set_h_in": 6.85,
+          "_doc": "значение = [«Лид», «тело», ...]: лид жирный YS Geo Bold 32, тело YS Text Regular 32 — стили дизайнерских абзацев сохраняются по индексам; бокс выравнивается по верху чарта (set_top 5.72, user-fix 2026-07-03); НЕ сплошной жирный текст"
+        }
+      },
+      "chart_slots": {
+        "chart": {
+          "match_name": "Chart 9",
+          "kind": "line",
+          "_doc": "нативный LINE, 3 дизайнерские серии, ось ДАТНАЯ ([$-419]mmmm — русские месяцы) → categories в deckspec = даты ISO (2026-03 / 2026-03-01); текст на этой оси — громкая ошибка. Серий ≤3 — дизайнерские цвета; больше — стиль клонируется"
+        }
+      }
+    }
+  ],
+  "dont_touch": [
+    "Chart*",
+    "think-cell data*",
+    "TextBox 1"
+  ],
+  "_anchored": "§3Б: #35 all[«Один график с пояснением»]. legend = 3× Text Placeholder 1, match_name+sort:left (после перерисовки чарта 2026-07-02 месяцы живут в нативной оси, TP1 остались только легендные — find«Ряд» больше не работает, тексты теперь содержательные). Чарт Chart 9 (данные/тип) не меняем; think-cell OLE на слайде возможно осиротел — спросить дизайнера. _hint 0-based."
+}

@@ -1,0 +1,56 @@
+{
+  "_comment": "Пер-шаблонный профиль кастом-контура (family:custom): шрифты, лэйауты хрома, калибровка заголовка, канва, санкция фото-панели A15. Дом того, что было захардкожено под Еду в lib/html2pptx.py (_FONT_FILES / font_name / LAYOUT_BY_BG / LAYOUT_DEFAULT / TITLE_DY) и lib/fill.py (_BOLD_FAMILY). Значения eda = прежним константам 1:1 (юнит test_custom_profile_matches_legacy_constants в tests/test_checkers.py замораживает равенство). НЕ brand-tokens.json: у того другой потребитель (layout.generate_tiles) — контракты не смешивать. Читается движком через lib/template_profile.py. Методика перемера при новом шаблоне — references/template-onboarding.md.",
+  "schema_version": 1,
+  "fonts": {
+    "_comment": "files: имя стиля PP → ttf в системных папках шрифтов (поиск — html2pptx._FONT_DIRS, они OS-уровневые, не пер-шаблонные). fallback: стиль, чей файл берётся, если запрошенного имени нет в files. resolve: CSS family+weight → стиль (первое совпавшее правило; family_contains — подстрока, weight_min/max — включительные границы; synthetic_bold=false у всех правил Еды, «жирный» = файловое семейство). bold_family: инлайн **жирный** на fill-пути — имя стиля → его bold-файл-семейство (канон бренда 2026-07-16).",
+    "files": {
+      "YS Geo Heavy": "YS Geo-Heavy.ttf",
+      "YS Geo Bold": "YS Geo-Bold.ttf",
+      "YS Geo Medium": "YS Geo-Medium.ttf",
+      "YS Geo": "YS Geo-Regular.ttf",
+      "YS Text": "YS Text-Regular.ttf",
+      "YS Text Regular": "YS Text-Regular.ttf",
+      "YS Text Medium": "YS Text-Medium.ttf",
+      "YS Text Bold": "YS Text-Bold.ttf"
+    },
+    "fallback": "YS Text",
+    "resolve": [
+      {"family_contains": "Geo", "weight_min": 800, "style": "YS Geo Heavy"},
+      {"family_contains": "Geo", "weight_min": 700, "style": "YS Geo Bold"},
+      {"family_contains": "Geo", "weight_min": 500, "style": "YS Geo Medium"},
+      {"family_contains": "Geo", "style": "YS Geo"},
+      {"weight_min": 700, "style": "YS Text Bold"},
+      {"weight_min": 500, "style": "YS Text Medium"},
+      {"style": "YS Text Regular"}
+    ],
+    "bold_family": {
+      "YS Text": "YS Text Bold",
+      "YS Text Regular": "YS Text Bold",
+      "YS Text Medium": "YS Text Bold",
+      "YS Text Light": "YS Text Bold",
+      "YS Geo": "YS Geo Bold",
+      "YS Geo Medium": "YS Geo Bold"
+    }
+  },
+  "layouts": {
+    "_comment": "by_bg: фон HTML-слайда → лэйаут хрома (порядок = приоритет, первое совпадение). r/g/b — включительные [min,max] по каналу 0..255; правило Title_grey эквивалентно прежнему abs(канал-центр)<12 для целочисленных каналов (r 233±12→[222,244], g 231±12→[220,242], b 230±12→[219,241]), Yellow — прежнему r>240 & g>200 & b<60. default — если ни одно правило не сработало. default_bg: фон, на который рассчитан default-лэйаут (белый); фон HTML вне by_bg и дальше 12/канал от default_bg переносится нативным фоном слайда с предупреждением (0.34.0).",
+    "by_bg": [
+      {"r": [222, 244], "g": [220, 242], "b": [219, 241], "layout": "Title_grey"},
+      {"r": [241, 255], "g": [201, 255], "b": [0, 59], "layout": "Yellow_no frame"}
+    ],
+    "default": "Title_no frame",
+    "default_bg": [255, 255, 255]
+  },
+  "calibration": {
+    "_comment": "title_dy_px: PP ставит чернила заголовка выше браузера (модель строчного бокса) — сдвиг плашек .mark в многострочном заголовке. Замерено по PP-рендерам спайка 2026-07-10 при 66pt/lnSpc 80%; при смене шаблона/кегля заголовка — перемерить (см. references/template-onboarding.md).",
+    "title_dy_px": -9
+  },
+  "canvas": {
+    "_comment": "px: канва дизайн-системы = слайд шаблона (1px = 1pt). Валидация в build_custom_slide и measure_html сверяет слайд prs / обмер с этим размером (допуск ~2px: датумы шаблона Еды дают слайд 1919.875×1080 — 0.125px слоп по ширине, не дефект); грубое расхождение = честная Html2PptxError, не молчаливый сдвиг.",
+    "px": [1920, 1080]
+  },
+  "a15": {
+    "_comment": "photo_panel: единственное исключение полосы номера страницы в гварде A15 — фото-панель дизайнерского канона (inset до нижней кромки; у дизайнеров номер лежит на фото). Санкция: верх кадра <= top_max И низ кадра >= H - bottom_min_from_h. Контентным атомам исключений нет.",
+    "photo_panel": {"top_max": 35, "bottom_min_from_h": 40}
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "id": "eda_two_values",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "two_values",
+  "kind": "content_fill",
+
+  "_doc": "Слайд «две цифры» Еды (#13): заголовок + 2 крупных значения (Текст 3, 138pt) с подписями (TextBox 25) + опциональный контекст-абзац. value_shrink на числах (wrap=off + shrink). FILL-ALL §3Б — всегда FILL.",
+
+  "match": { "form": "two_values", "count": [2, 2] },
+
+  "variants": [
+    {
+      "anchor": { "all": ["Две цифры на слайде"] },
+      "_hint": 12,
+      "name": "two_up",
+      "preferred": true,
+      "photo": true,
+      "slots": {
+        "heading": {
+          "find": "Две цифры", "ci": false,
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 66,
+          "_size_note": "run наследует 66pt из titleStyle мастера (ловушка #2 FILL-ALL); 40 было неверно → push/overflow мерились мимо",
+          "wrap_to_visible": true,
+          "_wrap_note": "бокс НЕ трогаем (placeholder без xfrm от set width улетает в 0,0 — урок 2026-07-02, user-fix): перенос делаем ТЕКСТОМ по видимой ширине, сбалансированный разрыв",
+          "box_w_in": 13.3, "box_h_in": 1.8,
+          "_box_w_note": "бокс шейпа 23.22, но Picture 13 перекрывает справа с 15.29 → ВИДИМАЯ ширина ~13.3 (класс-ловушка hero #15; поймано клиппингом на деке Мачу-Пикчу 2026-07-02)",
+          "max_lines": 2, "min_pt": 24,
+          "push_below": ["caption"], "designer_lines": 1,
+          "_push_note": "смысловой заголовок важнее краткости (user 2026-07-02): до 2 строк, caption сдвигается вниз на добавочную строку (_apply_push_below); под caption запас до значений 9.43\""
+        },
+        "values": {
+          "repeat": true, "match_name": "Текст 3", "sort": "left",
+          "fit_policy": "value_shrink",
+          "font": "YS Geo Heavy", "size_pt": 138,
+          "box_w_in": 4.95, "min_pt": 72
+        },
+        "labels": {
+          "repeat": true, "match_name": "TextBox 25", "sort": "left",
+          "fit_policy": "reword_first",
+          "font": "YS Text Regular", "size_pt": 28,
+          "box_w_in": 5.95, "box_h_in": 1.41,
+          "max_lines": 3, "min_pt": 18
+        },
+        "caption": {
+          "find": "Поке", "ci": false,
+          "fit_policy": "reword_first",
+          "font": "YS Text Regular", "size_pt": 40,
+          "box_w_in": 11.76, "box_h_in": 4.71,
+          "max_lines": 6, "min_pt": 24,
+          "optional": true, "clear_if_empty": true
+        }
+      }
+    }
+  ],
+
+  "dont_touch": ["Picture*", "Graphic*", "think-cell data*"],
+  "_anchored": "§3Б: слайд по сигнатуре «Две цифры на слайде». values/labels — повторяемые (2×) по match_name, sort=left (лево-направо). heading/caption — оба Title 1, различаем по тексту-заглушке (find). _hint — 0-based индекс."
+}

@@ -1,0 +1,54 @@
+{
+  "id": "eda_closing",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "closing",
+  "kind": "structural",
+
+  "_doc": "Финальный слайд Еды (#4): «спасибо вам за участие / приходите ещё» + строка автора/даты. ВАЖНО: наследуемая редполитика (editorial-principles.md) ЗАПРЕЩАЕТ «спасибо» — заголовок заполняем CTA с конкретным действием, второстепенную строку по необходимости. Контакты с логинами — это семейство contacts (#3/#9), не closing.",
+
+  "title_policy": "Заголовок = CTA с конкретным действием (email / следующий шаг / «обсудим X?» / «нужно от вас Y к дате»). НИКОГДА «Спасибо за внимание» / «Вопросы?». Источник: editorial-principles.md.",
+
+  "match": { "form": "closing", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "all": ["приходите ещё"] },
+      "_hint": 3,
+      "name": "thanks_cta",
+      "preferred": true,
+      "photo": true,
+      "slots": {
+        "title": {
+          "find": "спасибо вам", "ci": true,
+          "shape_name": "Text Placeholder 3",
+          "font": "YS Geo Heavy", "size_pt": 170,
+          "box_w_in": 23.21, "box_h_in": 4.68,
+          "max_lines": 2, "min_pt": 96,
+          "clear_soft_breaks": true
+        },
+        "secondary": {
+          "find": "приходите", "ci": false,
+          "shape_name": "Text Placeholder 3",
+          "font": "YS Text Regular", "size_pt": 80,
+          "box_w_in": 23.21, "box_h_in": 1.09,
+          "max_lines": 1, "min_pt": 40,
+          "optional": true, "clear_if_empty": true
+        },
+        "author": {
+          "find": "При необходимости", "ci": false,
+          "shape_name": "Text Placeholder 4",
+          "font": "YS Text Regular", "size_pt": 44,
+          "box_w_in": 14.02, "box_h_in": 1.48,
+          "max_lines": 2, "min_pt": 24,
+          "optional": true, "clear_if_empty": true,
+          "clear_soft_breaks": true
+        }
+      }
+    }
+  ],
+
+  "dont_touch": ["Picture*", "Graphic*", "Rectangle*", "think-cell data*"],
+  "_anchored": "§3Б: слайд по сигнатуре «приходите ещё» (уникальна для #4). title/secondary — оба Text Placeholder 3, различаем по тексту-заглушке (find). _hint — 0-based индекс. Старый вариант cta_contacts переехал в contacts (реорг шаблона)."
+}

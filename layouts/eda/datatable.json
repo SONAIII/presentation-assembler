@@ -1,0 +1,59 @@
+{
+ "id": "eda_datatable",
+ "schema_version": 1,
+ "template": "Еда",
+ "template_file": "Templates/eda/eda-template.pptx",
+ "family": "datatable",
+ "kind": "content_fill",
+ "_doc": "Слайд «одна таблица» Еды (#36): заголовок (Title 6) + таблица 9×4 (Table 20). Сетка ужимается под контент (trim): лишние строки/колонки удаляются физически (высоты донорские), болванки чистятся, подсветки при неполной сетке снимаются (slots.highlights=false — снять всегда), выравнивание колонок по типу контента: текст → влево, числа → вправо; усечённая сетка растягивается на донорскую высоту с ростом кегля до потолка ×4/3 (stretch, общий режим 2026-07-29). Tier C §3Б — kind:table.",
+ "match": {
+  "form": "datatable",
+  "count": [
+   1,
+   1
+  ]
+ },
+ "variants": [
+  {
+   "anchor": {
+    "all": [
+     "Одна таблица на слайде"
+    ]
+   },
+   "_hint": 35,
+   "name": "table_9x4",
+   "preferred": true,
+   "photo": false,
+   "slots": {
+    "heading": {
+     "match_name": "Title 6",
+     "fit_policy": "reword_first",
+     "font": "YS Geo Heavy",
+     "size_pt": 66,
+     "box_w_in": 23.22,
+     "box_h_in": 0.9,
+     "max_lines": 1,
+     "min_pt": 24
+    },
+    "table": {
+     "kind": "table",
+     "match_name": "Table 20",
+     "trim": true
+    }
+   },
+   "decor_highlights": [
+    "Rectangle: Rounded Corners 7",
+    "Rectangle: Rounded Corners 12"
+   ],
+   "strip_shapes": [
+    "TextBox 1"
+   ],
+   "_doc_trim": "trim: сетка ужимается под контент (лишние a:tr/gridCol удаляются, высоты донорские), болванки чистятся, algn колонок по типу контента; подсветки decor_highlights живут только над полной сеткой (slots.highlights=false — снять всегда); strip_shapes — статики донора, вычищаются всегда (залипший номер «36»); stretch (дефолт движка): усечённая сетка → донорская высота, кегль ×k до потолка ×4/3 дизайнерского"
+  }
+ ],
+ "dont_touch": [
+  "think-cell data*",
+  "Text Placeholder*"
+ ],
+ "_anchored": "§3Б: #36 all[«Одна таблица на слайде»]. table = Table 20 (9×4), cell(r,c).text. _hint 0-based."
+}

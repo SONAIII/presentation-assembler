@@ -1,0 +1,41 @@
+{
+  "id": "eda_funnel",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "funnel",
+  "kind": "content_fill",
+
+  "_doc": "Слайд «воронка три этапа» Еды (#29): заголовок + 3 значения-числа (TextBox 34/35/36, 60pt, сверху вниз убывают) + 3 подписи этапов (TextBox 28/40/41, 32pt, справа). Овалы/дуги/картинки воронки — декор. value_shrink на числах. FILL-ALL §3Б.",
+
+  "match": { "form": "funnel", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "all": ["Воронка три этапа"] },
+      "_hint": 28,
+      "name": "funnel_3",
+      "preferred": true,
+      "photo": false,
+      "slots": {
+        "heading": { "match_name": "Title 1", "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 66, "box_w_in": 23.22, "box_h_in": 0.9, "max_lines": 1, "min_pt": 24 },
+        "value1": { "match_name": "TextBox 34", "fit_policy": "value_shrink",
+          "font": "YS Geo Heavy", "size_pt": 60, "box_w_in": 4.83, "min_pt": 32 },
+        "value2": { "match_name": "TextBox 35", "fit_policy": "value_shrink",
+          "font": "YS Geo Heavy", "size_pt": 60, "box_w_in": 2.4, "min_pt": 32 },
+        "value3": { "match_name": "TextBox 36", "fit_policy": "value_shrink",
+          "font": "YS Geo Heavy", "size_pt": 60, "box_w_in": 2.0, "min_pt": 32 },
+        "label1": { "match_name": "TextBox 28", "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 32, "box_w_in": 8.37, "box_h_in": 2.4, "max_lines": 3, "min_pt": 20 },
+        "label2": { "match_name": "TextBox 40", "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 32, "box_w_in": 8.37, "box_h_in": 2.4, "max_lines": 3, "min_pt": 20 },
+        "label3": { "match_name": "TextBox 41", "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 32, "box_w_in": 8.37, "box_h_in": 2.4, "max_lines": 3, "min_pt": 20 }
+      }
+    }
+  ],
+
+  "dont_touch": ["Овал*", "Дуга*", "Рисунок*", "Прямая соединительная*", "think-cell data*", "Text Placeholder 2"],
+  "_anchored": "§3Б: слайд по «Воронка три этапа». Значения TextBox 34/35/36 (сверху вниз, value_shrink к своей ширине). Подписи TextBox 28/40/41 справа. Овалы/дуги воронки — декор. _hint — 0-based."
+}

@@ -1,0 +1,49 @@
+{
+  "id": "eda_mixed",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "mixed",
+  "kind": "content_fill",
+
+  "_doc": "Слайд-инфографика «история/факты» Еды (#23): заголовок (Title 1) + 8× Text Placeholder 10 (30pt, кроме лида 32pt) в трёх регионах (лево с бейджами 1/2/3, центр с хедером, право) + правый колаут (TextBox 3) + номерные бейджи (Rectangle: Rounded Corners 28/45/46 = «1/2/3», декор) + скруглённые карточки-фоны. items = один повторяемый слот sort=top_left (порядок occ0..7); каждый шейп держит СВОЙ дизайнерский кегль. FILL-ALL §3Б.",
+
+  "match": { "form": "mixed", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "has_shapes": ["Right Brace 19"] },
+      "_hint": 22,
+      "name": "story_map",
+      "preferred": true,
+      "photo": false,
+      "slots": {
+        "heading": {
+          "find": "Заголовок", "ci": false,
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 66,
+          "box_w_in": 23.22, "box_h_in": 0.9,
+          "max_lines": 1, "min_pt": 24
+        },
+        "items": {
+          "repeat": true, "match_name": "Text Placeholder 10", "sort": "top_left",
+          "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 30,
+          "_box_note": "боксы разной ширины (4.5–13.17) и лид 32pt; box_* здесь для приблизительного overflow-флага, кегль каждого шейпа сохраняется при заливке",
+          "box_w_in": 5.0, "box_h_in": 2.6,
+          "max_lines": 5, "min_pt": 24
+        },
+        "callout": {
+          "match_name": "TextBox 3",
+          "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 30,
+          "box_w_in": 4.51, "box_h_in": 2.2,
+          "max_lines": 4, "min_pt": 24
+        }
+      }
+    }
+  ],
+
+  "dont_touch": ["Rounded Rectangle*", "Rectangle: Rounded Corners*", "Right Brace*", "think-cell data*", "Text Placeholder 6"],
+  "_anchored": "§3Б: слайд по сигнатуре has_shapes=[Right Brace 19]. items = 8× Text Placeholder 10, sort=top_left (occ0=лид 32pt · occ1=хедер · occ2..7=факты). Номерные бейджи «1/2/3» = Rectangle: Rounded Corners 28/45/46 (уникальные имена, декор). callout = TextBox 3 (уникально). heading по тексту. _hint — 0-based индекс."
+}

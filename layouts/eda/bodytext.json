@@ -1,0 +1,42 @@
+{
+  "id": "eda_bodytext",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "bodytext",
+  "kind": "content_fill",
+
+  "_doc": "Текстовый слайд-тезис Еды (#18): крупное утверждение (TextBox 6, 110pt) + поясняющий абзац (TextBox 7, 54pt). Два плоских слота по имени шейпа. FILL-ALL §3Б — всегда FILL, вёрстку не трогаем.",
+
+  "match": { "form": "bodytext", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "all": ["и фильмы"] },
+      "_hint": 17,
+      "name": "lead_para",
+      "preferred": true,
+      "photo": false,
+      "slots": {
+        "lead": {
+          "match_name": "TextBox 6",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 110,
+          "box_w_in": 18.11, "box_h_in": 7.42,
+          "max_lines": 4, "min_pt": 54
+        },
+        "para": {
+          "match_name": "TextBox 7",
+          "fit_policy": "reword_first",
+          "font": "YS Text Regular", "size_pt": 54,
+          "box_w_in": 18.92, "box_h_in": 1.82,
+          "max_lines": 2, "min_pt": 28,
+          "optional": true, "clear_if_empty": true
+        }
+      }
+    }
+  ],
+
+  "dont_touch": ["Picture*", "Graphic*", "think-cell data*"],
+  "_anchored": "§3Б: слайд по сигнатуре. Слоты по match_name (имя шейпа стабильнее lorem). _hint — 0-based индекс."
+}

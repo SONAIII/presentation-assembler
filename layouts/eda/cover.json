@@ -1,0 +1,127 @@
+{
+  "id": "eda_cover",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "cover",
+  "kind": "structural",
+  "_doc": "Fill-map обложки Еды (структурный тир — всегда FILL, без генерации). variants = меню готовых дизайнерских обложек; выбор варианта = выбор фоновой картинки/композиции. slots ищем по тексту-заглушке (CI-префикс), затем гасим зашитые мягкие переносы. Геометрия выверена по XML (2026-07-01): #1 — заголовок Text Placeholder 3 144pt снизу + подпись Text Placeholder 4; #6 — заголовок Title 2 сверху + подпись Text Placeholder 1 (с опцией даты).",
+  "match": {
+    "form": "title",
+    "count": [
+      1,
+      1
+    ]
+  },
+  "fit": {
+    "title": {
+      "mode": "reword_first",
+      "wrap": true,
+      "line_spacing_eff": 1.0
+    },
+    "subtitle": {
+      "mode": "reword_first",
+      "wrap": true,
+      "line_spacing_eff": 1.0
+    }
+  },
+  "subtitle_policy": "Подпись обложки = период/контекст («Стратегия 2026», «Май 2026», «Пилот в двух городах»). Нет контекста → подпись ПУСТАЯ (бокс очищаем), НЕ выдумываем. Источник: urban_services content-assembly-rules.md.",
+  "title_policy": "Заголовок обложки = крепкий тезис/название, не размытая категория («Обзор», «Итоги»). Источник: editorial-principles.md Rule 2.",
+  "variants": [
+    {
+      "anchor": {
+        "all": [
+          "ваши Имя и Фамилия, должность"
+        ]
+      },
+      "_hint": 0,
+      "name": "photo_title_bottom",
+      "preferred": true,
+      "photo": true,
+      "_note": "#1: заголовок снизу-слева на фото (Text Placeholder 3, 144pt), подпись под ним.",
+      "slots": {
+        "title": {
+          "find": "название презентации",
+          "ci": true,
+          "shape_name": "Text Placeholder 3",
+          "font": "YS Geo Heavy",
+          "size_pt": 144,
+          "box_w_in": 13.9,
+          "box_h_in": 6.0,
+          "max_lines": 3,
+          "min_pt": 96,
+          "max_chars_hint": 24,
+          "clear_soft_breaks": true
+        },
+        "subtitle": {
+          "find": "При необходимости",
+          "ci": false,
+          "shape_name": "Text Placeholder 4",
+          "font": "YS Text Regular",
+          "size_pt": 28,
+          "box_w_in": 13.9,
+          "box_h_in": 1.48,
+          "max_lines": 2,
+          "min_pt": 18,
+          "optional": true,
+          "clear_if_empty": true,
+          "clear_soft_breaks": true
+        }
+      },
+      "image_slots": {
+        "photo": {
+          "match_name": "Picture 20",
+          "_doc": "полноэкранная подложка 25.86×14.19"
+        }
+      }
+    },
+    {
+      "anchor": {
+        "all": [
+          "ваши Имя и Фамилия, должность или дату выступления"
+        ]
+      },
+      "_hint": 5,
+      "name": "photo_title_top",
+      "photo": true,
+      "_note": "#6: заголовок сверху (Title 2), подпись с опцией даты снизу (Text Placeholder 1).",
+      "slots": {
+        "title": {
+          "find": "название",
+          "ci": true,
+          "shape_name": "Title 2",
+          "font": "YS Geo Heavy",
+          "size_pt": 130,
+          "box_w_in": 14.01,
+          "box_h_in": 5.27,
+          "max_lines": 3,
+          "min_pt": 96,
+          "clear_soft_breaks": true
+        },
+        "subtitle": {
+          "find": "При необходимости",
+          "ci": false,
+          "shape_name": "Text Placeholder 1",
+          "font": "YS Text Regular",
+          "size_pt": 28,
+          "box_w_in": 14.02,
+          "box_h_in": 2.22,
+          "max_lines": 3,
+          "min_pt": 18,
+          "optional": true,
+          "clear_if_empty": true,
+          "clear_soft_breaks": true
+        }
+      }
+    }
+  ],
+  "dont_touch": [
+    "Freeform: Shape 2",
+    "Rectangle 2",
+    "Rectangle 9",
+    "Picture*",
+    "Graphic*",
+    "think-cell data*"
+  ],
+  "_anchored": "§3Б: слайды привязаны по сигнатуре (anchor.all), не по индексу. #1 vs #6 разводятся точной строкой подписи (у #6 «…или дату выступления»). _hint — 0-based индекс-тайбрейкер."
+}

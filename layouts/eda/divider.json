@@ -1,0 +1,35 @@
+{
+  "id": "eda_divider",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "divider",
+  "kind": "structural",
+
+  "_doc": "Раздел-разделитель Еды: один слот — имя секции. Слайд #5 (Text Placeholder 8, зашитый мягкий перенос). Простейшая структурная fill-map.",
+
+  "match": { "form": "divider", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "all": ["Название секции", "или раздела презентации"] },
+      "_hint": 4,
+      "name": "section_name",
+      "preferred": true,
+      "photo": false,
+      "slots": {
+        "title": {
+          "find": "название секции", "ci": true,
+          "shape_name": "Text Placeholder 8",
+          "font": "YS Geo Heavy", "size_pt": 100,
+          "box_w_in": 11.0, "box_h_in": 6.2,
+          "max_lines": 3, "min_pt": 54,
+          "clear_soft_breaks": true
+        }
+      }
+    }
+  ],
+
+  "dont_touch": ["Picture*", "Graphic*", "Freeform*", "Rectangle*", "think-cell data*"],
+  "_anchored": "§3Б: слайд привязан по сигнатуре (anchor.all), не по индексу. _hint — последний известный 0-based индекс (тайбрейкер). Проверять scripts/inventory_template.py при апдейте шаблона."
+}

@@ -1,0 +1,158 @@
+{
+  "id": "eda_contacts",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "contacts",
+  "kind": "structural",
+  "_doc": "Контактный слайд Еды: заголовок «спасибо за внимание» (заполняем CTA per редполитика) + автор + логины (стафф/телеграм). #3 (заголовок Text Placeholder 3, 173pt) / #9 (заголовок Title 2, 130pt). Логины лежат в отдельных боксах, ищем по тексту-заглушке. Это то, что раньше было closing/cta_contacts — переехало сюда при реорге шаблона.",
+  "title_policy": "Заголовок = CTA / «останемся на связи», НЕ «спасибо за внимание». Источник: editorial-principles.md.",
+  "match": {
+    "form": "contacts",
+    "count": [
+      1,
+      1
+    ]
+  },
+  "variants": [
+    {
+      "anchor": {
+        "all": [
+          "за внимание"
+        ],
+        "has_shapes": [
+          "Text Placeholder 3"
+        ]
+      },
+      "_hint": 2,
+      "name": "contacts_tp3",
+      "preferred": true,
+      "photo": true,
+      "slots": {
+        "title": {
+          "find": "спасибо",
+          "ci": true,
+          "shape_name": "Text Placeholder 3",
+          "font": "YS Geo Heavy",
+          "size_pt": 173,
+          "box_w_in": 15.41,
+          "box_h_in": 4.68,
+          "max_lines": 2,
+          "min_pt": 96,
+          "clear_soft_breaks": true,
+          "fit_policy": "text_shrink",
+          "_doc_shrink": "CTA жмётся единым кеглем до min_pt (фидбек F: 2-строчный CTA на дизайнерском кегле не влезает физически, min_pt спеки = санкция на ужатие)"
+        },
+        "author": {
+          "find": "Имя Фамилия",
+          "ci": false,
+          "shape_name": "Text Placeholder 4",
+          "font": "YS Text Regular",
+          "size_pt": 44,
+          "box_w_in": 14.02,
+          "box_h_in": 0.74,
+          "max_lines": 1,
+          "min_pt": 24,
+          "optional": true,
+          "clear_if_empty": true
+        },
+        "contact_staff": {
+          "find": "логин_на_стаффе@",
+          "ci": false,
+          "font": "YS Text Regular",
+          "size_pt": 44,
+          "box_w_in": 5.89,
+          "box_h_in": 0.74,
+          "max_lines": 1,
+          "min_pt": 24,
+          "optional": true,
+          "clear_if_empty": true
+        },
+        "contact_tg": {
+          "find": "@логин_в_телеграмм",
+          "ci": false,
+          "font": "YS Text Regular",
+          "size_pt": 44,
+          "box_w_in": 6.66,
+          "box_h_in": 0.74,
+          "max_lines": 1,
+          "min_pt": 24,
+          "optional": true,
+          "clear_if_empty": true
+        }
+      }
+    },
+    {
+      "anchor": {
+        "all": [
+          "за внимание"
+        ],
+        "has_shapes": [
+          "Title 2"
+        ]
+      },
+      "_hint": 8,
+      "name": "contacts_title2",
+      "photo": true,
+      "slots": {
+        "title": {
+          "find": "спасибо",
+          "ci": true,
+          "shape_name": "Title 2",
+          "font": "YS Geo Heavy",
+          "size_pt": 130,
+          "box_w_in": 14.01,
+          "box_h_in": 3.52,
+          "max_lines": 2,
+          "min_pt": 96,
+          "clear_soft_breaks": true,
+          "fit_policy": "text_shrink",
+          "_doc_shrink": "CTA жмётся единым кеглем до min_pt (фидбек F: 2-строчный CTA на дизайнерском кегле не влезает физически, min_pt спеки = санкция на ужатие)"
+        },
+        "author": {
+          "find": "Имя Фамилия",
+          "ci": false,
+          "shape_name": "Text Placeholder 4",
+          "font": "YS Text Regular",
+          "size_pt": 44,
+          "box_w_in": 14.02,
+          "box_h_in": 0.74,
+          "max_lines": 1,
+          "min_pt": 24,
+          "optional": true,
+          "clear_if_empty": true
+        },
+        "contact_staff": {
+          "find": "логин_на_стаффе@",
+          "ci": false,
+          "font": "YS Text Regular",
+          "size_pt": 44,
+          "box_w_in": 5.89,
+          "box_h_in": 0.74,
+          "max_lines": 1,
+          "min_pt": 24,
+          "optional": true,
+          "clear_if_empty": true
+        },
+        "contact_tg": {
+          "find": "@логин_в_телеграмм",
+          "ci": false,
+          "font": "YS Text Regular",
+          "size_pt": 44,
+          "box_w_in": 6.66,
+          "box_h_in": 0.74,
+          "max_lines": 1,
+          "min_pt": 24,
+          "optional": true,
+          "clear_if_empty": true
+        }
+      }
+    }
+  ],
+  "dont_touch": [
+    "Picture*",
+    "Graphic*",
+    "think-cell data*"
+  ],
+  "_anchored": "§3Б: слайды по сигнатуре «спасибо за внимание». #3 vs #9 текстово идентичны → разводим по has_shapes (у #3 заголовок в Text Placeholder 3, у #9 — в Title 2). _hint — 0-based индекс-тайбрейкер."
+}

@@ -1,0 +1,33 @@
+{
+  "id": "eda_orgchart",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "orgchart",
+  "kind": "content_fill",
+
+  "_doc": "Слайд «оргсхема» Еды (#34): заголовок + 11 карточек-людей (Text Placeholder 7 = [имя, роль], ВНУТРИ групп) + коннекторы + фото. persons = повторяемый слот recurse (заходим в группы) sort=top_left (босс сверху T=2.9 первым, затем уровни). Коннекторы/фото — декор/passthrough. FILL-ALL §3Б.",
+
+  "match": { "form": "orgchart", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "all": ["Слайд с организационной схемой"] },
+      "_hint": 33,
+      "name": "org_11",
+      "preferred": true,
+      "photo": true,
+      "slots": {
+        "heading": { "match_name": "Title 3", "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 66, "box_w_in": 23.22, "box_h_in": 0.9, "max_lines": 1, "min_pt": 24 },
+        "persons": { "repeat": true, "match_name": "Text Placeholder 7",
+          "recurse": true, "sort": "top_left",
+          "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 28, "box_w_in": 3.4, "box_h_in": 1.9, "max_lines": 4, "min_pt": 18 }
+      }
+    }
+  ],
+
+  "dont_touch": ["Picture*", "Straight Connector*", "Rectangle*", "think-cell data*", "Text Placeholder 4"],
+  "_anchored": "§3Б: слайд по «Слайд с организационной схемой». persons = 11× Text Placeholder 7 внутри групп (recurse), sort=top_left (босс сверху первым). Коннекторы декор, фото passthrough. _hint — 0-based."
+}

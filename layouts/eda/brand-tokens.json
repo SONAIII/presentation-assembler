@@ -1,0 +1,79 @@
+{
+  "_doc": "Бренд-токены Еды (адаптер шаблона, слой 2 из 3: канва / токены / атомы). Цвета — theme1 шаблона (schemeClr-имена первичны, hex для справки/линта). Типографика генеративных плиток: базовые кегли = дизайнерские (#19), шкала — санкционированные шаги вниз при плотном контенте (пол = body-floor 24 из наследованных правил urban_services). Стиль фигур живёт в атомах (atoms.json), не здесь.",
+  "template": "Еда",
+  "colors": {
+    "accent1": {
+      "scheme": "accent1",
+      "hex": "FFD700",
+      "_role": "жёлтый акцент (первая плитка)"
+    },
+    "accent2": {
+      "scheme": "accent2",
+      "hex": "E9E7E6",
+      "_role": "серый фон рядовых плиток"
+    },
+    "accent3": {
+      "scheme": "accent3",
+      "hex": "918784",
+      "_role": "серые цифры рядовых бейджей"
+    },
+    "text": {
+      "scheme": "tx1",
+      "hex": "230F0A",
+      "_role": "основной текст / цифра акцент-бейджа"
+    },
+    "bg": {
+      "scheme": "bg1",
+      "hex": "FFFFFF",
+      "_role": "белый (фон слайда, заливка бейджа, плашка чартов bg1/bg2)"
+    }
+  },
+  "fonts": {
+    "heading": {
+      "font": "YS Geo Heavy",
+      "size_pt": 66
+    },
+    "tile_title": {
+      "font": "YS Geo Bold",
+      "size_pt": 32
+    },
+    "tile_desc": {
+      "font": "YS Text Regular",
+      "size_pt": 32
+    }
+  },
+  "type_scale_pt": [
+    32,
+    28,
+    24
+  ],
+  "line_spacing": 1.15,
+  "tiles": {
+    "max_tile_w_in": 7.211,
+    "min_tile_w_in": 4.4,
+    "_min_note": "min = ширина атома badge 4.003\" + 0.4 воздуха; уже — бейдж вылезает",
+    "row_gap_in": 1.1,
+    "pad_x_in": 0.55,
+    "badge_gap_in": 0.25,
+    "block_top_in": 1.5,
+    "pad_bottom_in": 0.5,
+    "_geometry_reference": "user-fix demo_generate_reasons_n6 2026-07-02: таб бейджа ВРОВЕНЬ с верхом карточки, цифра по центру таба, row_gap ~1.1, block rel_top 1.497",
+    "single_row_full_h_in": 9.407,
+    "_single_row_note": "user-правило 2026-07-02: один ряд плиток → дизайнерская высота карточки (#19, 9.407\"), «пеньки» не проходят по стандартам качества; ≥2 рядов — компактные, под контент"
+  },
+  "rules": {
+    "charts": {
+      "_source": "user 2026-07-02",
+      "bg_must_be_white": true,
+      "multi_chart_plate": "при >1 чарта на слайде под каждым белая плашка (атом chart_plate, как #30) и слайд в варианте title_grey"
+    },
+    "multi_chart_plate": "при >1 чарта на слайде под каждым белая плашка (у дизайнерских #40/#41 запечена; атом chart_shape снят из палитры v11 — для генерации плашка = белая заливка atom:card) и слайд title_grey"
+  },
+  "placeholder_texts": ["заголовок слайда", "подзаголовок слайда", "текст слайда", "название разд[её]ла"],
+  "_placeholder_texts_doc": "Пер-шаблонные тексты-заглушки дизайнерского шаблона (regex-фрагменты, IGNORECASE) для линта placeholder-leak — утёкший демо-текст в финальном деке. Универсальные маркеры (lorem ipsum/todo/tbd/…) — в lib/lint.py. Линт union'ит placeholder_texts со всех layouts/*/brand-tokens.json.",
+  "photo_pool": {
+    "_doc": "Одобренный пул фото на замену (user 2026-07-02). Публичная папка Я.Диска, качается БЕЗ OAuth через фиксированные HTTPS-хосты API и скачивания (scripts/fetch_photo.py); в скилле/репо фото не храним — тяжело (25 файлов ≈ 62МБ на шаблон). Ротацию ссылки делает команда скилла.",
+    "url": "https://disk.yandex.ru/d/BCsnpUKfKCzG1A",
+    "name": "Нейро-фото Еда"
+  }
+}

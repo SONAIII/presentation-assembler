@@ -1,0 +1,336 @@
+{
+  "id": "eda_timeline",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "timeline",
+  "kind": "content_fill",
+  "_doc": "Семейство «таймлайн проекта» Еды (Tier B): заголовок + N этапов (дата-бейдж [месяц 54pt, год 28pt] + описание 28pt) на кривой (Graphic — декор). Кривая/бейдж-фоны не трогаем. 3 варианта: t3_first #26 и t3_second #27 (3 этапа, описания Text Placeholder 9/10/12 по позиции, разные имена → адресуем по имени; даты — свои TextBox на вариант), t4 #28 (4 этапа, описания = 4× Text Placeholder 9 один слот sort:left + 4 дата-бокса). FILL-ALL §3Б.",
+  "match": {
+    "form": "timeline",
+    "count": [
+      1,
+      1
+    ]
+  },
+  "_generate_doc": "GENERATE-ветка (§3/§9). Дизайнерские таймлайны кладут этапы на ДЕКОРАТИВНУЮ freeform-кривую (custGeom) — репараметризовать её под произвольное N (arc-length на безье) вне scope, как внутренности чартов (§3Б). Поэтому GENERATE даёт ЧИСТЫЙ ПРЯМОЙ таймлайн: клонируем этап {пилюля+дата, описание} до N, пилюли на одной базовой линии, описания через одно сверху/снизу, прямой коннектор вместо кривой. Кривые дизайнера остаются через FILL для N=3 (#26/#27) и N=4 (#28). База клонирования — #28 (t4, описания = 4× Text Placeholder 9).",
+  "generate": {
+    "base_variant": "t4",
+    "orientation": "timeline-straight",
+    "count": [
+      2,
+      6
+    ],
+    "zone": {
+      "left_in": 1.736,
+      "width_in": 23.221
+    },
+    "unit": {
+      "pill_prst": "roundRect",
+      "date_name_prefix": "TextBox",
+      "desc_name": "Text Placeholder 9",
+      "date_rel_top_in": 0.414,
+      "date_w_in": 1.9,
+      "_date_w_note": "Дизайнерский дата-бокс 1.42\" уже 4-значного года (1.55\" при 28pt) → template-inherent overflow (#28). Свой лейаут — даём боксу 1.9\" (центрирован в пилюле 3.146\"), год влезает в строку."
+    },
+    "reflow": {
+      "baseline_y_in": 7.9,
+      "desc_h_in": 3.5,
+      "desc_gap_in": 0.69,
+      "min_slot_w_in": 3.4,
+      "_note": "Пилюля 3.146\" узкая → таймлайн тянется до N=6 (slot 3.87\"); N=7 slot 3.32\"<min → guard. baseline 7.5: описание-сверху top≈2.5 (>заголовок), описание-снизу bottom≈12.5 (<футер).",
+      "edge_to_edge": true,
+      "min_pill_gap_in": 0.3
+    },
+    "connector": {
+      "draw": true,
+      "thickness_in": 0.05,
+      "color": "BFBDBC",
+      "full_bleed": true
+    },
+    "fit": {
+      "desc": {
+        "font": "YS Text Regular",
+        "size_pt": 32,
+        "bold": false,
+        "min_pt": 24,
+        "pad_h_in": 0.12
+      }
+    },
+    "_user_reference": "USER-FIX 2026-07-02 (слайд 2 в tl_n6.pptx, взят за основу длинных таймлайнов): линия ВО ВСЮ ширину слайда (full_bleed, 0→26.66); пилюли от края до края контентной полосы (edge_to_edge: первая слева на zone.left, последняя справа на zone.right, шаг равный — N=6 → 4.01\"); базовая линия 7.9; описания ШИРИНОЙ С ПИЛЮЛЮ, выровнены по её ЛЕВОМУ краю, зазор 0.69, высота ПОД КОНТЕНТ; текст 32pt YS Text Regular БЕЗ жирного, по левому краю. Guard: зазор пилюль < 0.3 → не собираем"
+  },
+  "variants": [
+    {
+      "anchor": {
+        "has_shapes": [
+          "TextBox 17"
+        ],
+        "all": [
+          "Таймлайн проекта"
+        ]
+      },
+      "_hint": 25,
+      "name": "t3_first",
+      "preferred": true,
+      "photo": false,
+      "slots": {
+        "heading": {
+          "match_name": "Title 1",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 66,
+          "box_w_in": 23.22,
+          "box_h_in": 0.9,
+          "max_lines": 1,
+          "min_pt": 24
+        },
+        "date1": {
+          "match_name": "TextBox 17",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 54,
+          "box_w_in": 1.9,
+          "box_h_in": 1.33,
+          "max_lines": 2,
+          "min_pt": 24,
+          "set_w_in": 1.9
+        },
+        "desc1": {
+          "match_name": "Text Placeholder 9",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Text Regular",
+          "size_pt": 28,
+          "box_w_in": 5.95,
+          "box_h_in": 5.52,
+          "max_lines": 8,
+          "min_pt": 20
+        },
+        "date2": {
+          "match_name": "TextBox 26",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 54,
+          "box_w_in": 1.9,
+          "box_h_in": 1.33,
+          "max_lines": 2,
+          "min_pt": 24,
+          "set_w_in": 1.9
+        },
+        "desc2": {
+          "match_name": "Text Placeholder 10",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Text Regular",
+          "size_pt": 28,
+          "box_w_in": 5.49,
+          "box_h_in": 4.41,
+          "max_lines": 6,
+          "min_pt": 20
+        },
+        "date3": {
+          "match_name": "TextBox 20",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 54,
+          "box_w_in": 1.9,
+          "box_h_in": 1.33,
+          "max_lines": 2,
+          "min_pt": 24,
+          "set_w_in": 1.9
+        },
+        "desc3": {
+          "match_name": "Text Placeholder 12",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Text Regular",
+          "size_pt": 28,
+          "box_w_in": 5.63,
+          "box_h_in": 3.47,
+          "max_lines": 5,
+          "min_pt": 20
+        }
+      }
+    },
+    {
+      "anchor": {
+        "has_shapes": [
+          "TextBox 18"
+        ]
+      },
+      "_hint": 26,
+      "name": "t3_second",
+      "photo": false,
+      "slots": {
+        "heading": {
+          "match_name": "Title 1",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 66,
+          "box_w_in": 23.22,
+          "box_h_in": 0.9,
+          "max_lines": 1,
+          "min_pt": 24
+        },
+        "date1": {
+          "match_name": "TextBox 25",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 54,
+          "box_w_in": 1.9,
+          "box_h_in": 1.33,
+          "max_lines": 2,
+          "min_pt": 24,
+          "set_w_in": 1.9
+        },
+        "desc1": {
+          "match_name": "Text Placeholder 9",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Text Regular",
+          "size_pt": 28,
+          "box_w_in": 5.95,
+          "box_h_in": 5.52,
+          "max_lines": 8,
+          "min_pt": 20
+        },
+        "date2": {
+          "match_name": "TextBox 18",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 54,
+          "box_w_in": 1.9,
+          "box_h_in": 1.33,
+          "max_lines": 2,
+          "min_pt": 24,
+          "set_w_in": 1.9
+        },
+        "desc2": {
+          "match_name": "Text Placeholder 10",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Text Regular",
+          "size_pt": 28,
+          "box_w_in": 5.49,
+          "box_h_in": 4.41,
+          "max_lines": 6,
+          "min_pt": 20
+        },
+        "date3": {
+          "match_name": "TextBox 54",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 54,
+          "box_w_in": 1.9,
+          "box_h_in": 1.33,
+          "max_lines": 2,
+          "min_pt": 24,
+          "set_w_in": 1.9
+        },
+        "desc3": {
+          "match_name": "Text Placeholder 12",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Text Regular",
+          "size_pt": 28,
+          "box_w_in": 5.63,
+          "box_h_in": 3.47,
+          "max_lines": 5,
+          "min_pt": 20
+        }
+      }
+    },
+    {
+      "anchor": {
+        "has_shapes": [
+          "TextBox 9"
+        ],
+        "all": [
+          "Таймлайн проекта"
+        ]
+      },
+      "_hint": 27,
+      "name": "t4",
+      "photo": false,
+      "slots": {
+        "heading": {
+          "match_name": "Title 1",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 66,
+          "box_w_in": 23.22,
+          "box_h_in": 0.9,
+          "max_lines": 1,
+          "min_pt": 24
+        },
+        "descs": {
+          "repeat": true,
+          "match_name": "Text Placeholder 9",
+          "sort": "left",
+          "fit_policy": "reword_first",
+          "clear_soft_breaks": true,
+          "font": "YS Text Regular",
+          "size_pt": 28,
+          "box_w_in": 4.34,
+          "box_h_in": 3.47,
+          "max_lines": 6,
+          "min_pt": 20
+        },
+        "date1": {
+          "match_name": "TextBox 9",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 48,
+          "box_w_in": 1.9,
+          "box_h_in": 1.24,
+          "max_lines": 2,
+          "min_pt": 24,
+          "set_w_in": 1.9
+        },
+        "date2": {
+          "match_name": "TextBox 14",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 48,
+          "box_w_in": 1.9,
+          "box_h_in": 1.24,
+          "max_lines": 2,
+          "min_pt": 24,
+          "set_w_in": 1.9
+        },
+        "date3": {
+          "match_name": "TextBox 15",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 48,
+          "box_w_in": 1.9,
+          "box_h_in": 1.24,
+          "max_lines": 2,
+          "min_pt": 24,
+          "set_w_in": 1.9
+        },
+        "date4": {
+          "match_name": "TextBox 27",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy",
+          "size_pt": 48,
+          "box_w_in": 1.9,
+          "box_h_in": 1.24,
+          "max_lines": 2,
+          "min_pt": 24,
+          "set_w_in": 1.9
+        }
+      }
+    }
+  ],
+  "dont_touch": [
+    "Graphic*",
+    "Rectangle: Rounded Corners*",
+    "think-cell data*",
+    "Text Placeholder 2"
+  ],
+  "_anchored": "§3Б: #26 has_shapes[TextBox 17], #27 [TextBox 18], #28 [TextBox 9] («Таймлайн проекта» — дубль на всех трёх). Даты = [месяц/номер 54-48pt, год 28pt] списком. Описания: #26/#27 по имени (Text Placeholder 9/10/12 = лево/центр/право), #28 повторяемый sort:left. _hint — 0-based. | 2026-07-02: t3_first/t4 добавлен all:[«Таймлайн проекта»] — новые дизайнерские слайды #40/#41 (два графика) переиспользуют имена TextBox 17/9, одного has_shapes мало.",
+  "router": "timeline",
+  "_router_note": "2026-07-02: deckspec-контракт = slots.stages [{date:[метка,год], desc}, ...]; N=3→t3_first, N=4→t4 (FILL кривой), N=5-6→generate_timeline (прямая линия из atom:connector), N>6 — честная ошибка (сплит). Явный variant — override.",
+  "_date_fix_note": "set_w_in 1.9 на дата-слотах (2026-07-02): лечит template-inherent дефект #26-28 — дизайнерский бокс 1.42\" уже 4-значного года 1.51\" (28pt). Расширение с сохранением центра, тот же фикс что у generate (unit.date_w_in); только шейпы с собственным xfrm"
+}

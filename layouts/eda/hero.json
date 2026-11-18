@@ -1,0 +1,68 @@
+{
+  "id": "eda_hero",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "hero",
+  "kind": "content_fill",
+
+  "_doc": "Слайд hero-число Еды (#15): заголовок (Title 29) + подзаголовок (Title 3) + крупное значение (Текст 3, 138pt) с подписью-контекстом (TextBox 25) + 2 боковых текст-бокса (дубль-имя «Десятки миллионов…», sort=left) + большое фото. value_shrink на числе. FILL-ALL §3Б — всегда FILL.",
+
+  "match": { "form": "hero", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "has_shapes": ["Title 29"] },
+      "_hint": 14,
+      "name": "hero_number",
+      "preferred": true,
+      "photo": true,
+      "slots": {
+        "heading": {
+          "find": "Заголовок", "ci": false,
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 66,
+          "_box_note": "плейсхолдер полноширинный (23.22), но фото перекрывает справа с 15.29 → реальная видимая ширина ≈13.3; overflow меряем по ней",
+          "box_w_in": 13.3, "box_h_in": 0.9,
+          "max_lines": 1, "min_pt": 24
+        },
+        "subheading": {
+          "find": "Подзаголовок", "ci": false,
+          "fit_policy": "reword_first",
+          "font": "YS Text Regular", "size_pt": 44,
+          "box_w_in": 11.6, "box_h_in": 0.74,
+          "max_lines": 1, "min_pt": 18,
+          "optional": true, "clear_if_empty": true
+        },
+        "value": {
+          "find": "193", "ci": false,
+          "fit_policy": "value_shrink",
+          "font": "YS Geo Heavy", "size_pt": 138,
+          "box_w_in": 3.66, "min_pt": 72
+        },
+        "caption": {
+          "find": "Эпизода", "ci": false,
+          "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 32,
+          "box_w_in": 5.95, "box_h_in": 1.62,
+          "max_lines": 3, "min_pt": 18
+        },
+        "notes": {
+          "repeat": true, "match_name": "Десятки миллионов аудитории пользователей…",
+          "sort": "left",
+          "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 32,
+          "box_w_in": 4.91, "box_h_in": 2.15,
+          "max_lines": 5, "min_pt": 18
+        }
+      },
+      "image_slots": {
+        "photo": { "match_name": "Picture 35",
+                   "_doc": "правая вертикальная подложка 11.37×14.19 (full-height) — фото брать вертикальное/крупное, портретные из пула по dpi проходят" }
+      }
+    }
+  ],
+
+  "dont_touch": ["Picture*", "Graphic*", "Прямоугольник*", "think-cell data*", "Text Placeholder 2"],
+  "_anchored": "§3Б: слайд по сигнатуре has_shapes=[Title 29]. value = «193» (find, value_shrink 138→72). notes = 2× бокс с дубль-именем «Десятки миллионов…», sort=left (лево→право). heading/caption/subheading — одиночные по тексту-заглушке. _hint — 0-based индекс."
+}

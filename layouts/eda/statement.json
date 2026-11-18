@@ -1,0 +1,34 @@
+{
+  "id": "eda_statement",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "statement",
+  "kind": "content_fill",
+
+  "_doc": "Слайд-заявление (#42, добавлен user 2026-07-07): одна ключевая мысль КРУПНО (166pt, центр) на жёлтой подложке с сетчатым декором справа. Один слот. Повторяем сколько нужно (think-cell с декора снят user'ом — ограничения ≤1 на дек нет).",
+
+  "match": { "form": "statement", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "all": ["Черепашки — популярная вселенная"] },
+      "_hint": 41,
+      "name": "yellow_full",
+      "preferred": true,
+      "photo": false,
+      "slots": {
+        "text": {
+          "match_name": "TextBox 12",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 166,
+          "box_w_in": 24.54, "box_h_in": 6.73,
+          "max_lines": 3, "min_pt": 96
+        }
+      }
+    }
+  ],
+
+  "dont_touch": ["Rectangle*", "Graphic*", "Freeform*"],
+  "_anchored": "§3Б: резолв по сигнатуре-заглушке пристинного шаблона. Декор-сетка = обычная картинка (Graphic 7), не трогаем."
+}

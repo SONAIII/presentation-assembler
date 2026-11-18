@@ -1,0 +1,49 @@
+{
+  "id": "eda_text_grid",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "text_grid",
+  "kind": "content_fill",
+
+  "_doc": "Слайд-текст с подзаголовком и сеткой абзацев Еды (#12): заголовок (Title 13) + подзаголовок (Title 3) + вводный абзац и 2×2 сетка (5× Text Placeholder 4, 28pt) + фото. Абзацы — один повторяемый слот (порядок документа = чтения). FILL-ALL §3Б.",
+
+  "match": { "form": "text_grid", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "has_shapes": ["Title 13"] },
+      "_hint": 11,
+      "name": "subhead_grid",
+      "preferred": true,
+      "photo": true,
+      "slots": {
+        "heading": {
+          "find": "Заголовок", "ci": false,
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 40,
+          "box_w_in": 15.73, "box_h_in": 0.9,
+          "max_lines": 1, "min_pt": 24
+        },
+        "subheading": {
+          "find": "Подзаголовок", "ci": false,
+          "fit_policy": "reword_first",
+          "font": "YS Text Regular", "size_pt": 28,
+          "box_w_in": 12.25, "box_h_in": 0.74,
+          "max_lines": 1, "min_pt": 18,
+          "optional": true, "clear_if_empty": true
+        },
+        "body": {
+          "repeat": true, "match_name": "Text Placeholder 4", "sort": "doc",
+          "fit_policy": "reword_first",
+          "font": "YS Geo Bold", "size_pt": 28,
+          "box_w_in": 6.71, "box_h_in": 3.08,
+          "max_lines": 8, "min_pt": 18
+        }
+      }
+    }
+  ],
+
+  "dont_touch": ["Picture*", "Graphic*", "Rectangle*", "think-cell data*"],
+  "_anchored": "§3Б: слайд по сигнатуре has_shapes=[Title 13] (имя уникально среди слайдов, не зависит от lorem). body = 5× Text Placeholder 4 (вводный + 2×2) в порядке документа. _hint — 0-based индекс."
+}

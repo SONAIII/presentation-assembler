@@ -1,0 +1,51 @@
+{
+  "id": "eda_grouped",
+  "schema_version": 1,
+  "template": "Еда",
+  "template_file": "Templates/eda/eda-template.pptx",
+  "family": "grouped",
+  "kind": "content_fill",
+
+  "_doc": "Слайд «нумерованные факты в группах» Еды (#10): заголовок (Title 1) + подзаголовок (Title 3, 44pt) + 4 факта, каждый в СВОЕЙ группе (Group N = Graphic 6 номер + Text Placeholder 7 текст, 36pt) + фото. Номера 1–4 (Graphic 6) — декор, не трогаем. facts = повторяемый слот с recurse (заходим в группы) + sort=top (порядок групп сверху-вниз = 1→4). FILL-ALL §3Б.",
+
+  "match": { "form": "grouped", "count": [1, 1] },
+
+  "variants": [
+    {
+      "anchor": { "has_shapes": ["Object 4"] },
+      "_hint": 9,
+      "name": "facts_4",
+      "preferred": true,
+      "photo": true,
+      "slots": {
+        "heading": {
+          "find": "Заголовок", "ci": false,
+          "fit_policy": "reword_first",
+          "font": "YS Geo Heavy", "size_pt": 66,
+          "_box_note": "фото Picture 6 перекрывает справа с 15.45 → видимая ширина ≈13.5",
+          "box_w_in": 13.5, "box_h_in": 0.9,
+          "max_lines": 1, "min_pt": 24
+        },
+        "subheading": {
+          "find": "Подзаголовок", "ci": false,
+          "fit_policy": "reword_first",
+          "font": "YS Text Regular", "size_pt": 44,
+          "box_w_in": 11.62, "box_h_in": 0.74,
+          "max_lines": 1, "min_pt": 18,
+          "optional": true, "clear_if_empty": true
+        },
+        "facts": {
+          "repeat": true, "match_name": "Text Placeholder 7",
+          "recurse": true, "sort": "top",
+          "fit_policy": "reword_first", "clear_soft_breaks": true,
+          "font": "YS Text Regular", "size_pt": 36,
+          "box_w_in": 9.82, "box_h_in": 1.55,
+          "max_lines": 2, "min_pt": 24
+        }
+      }
+    }
+  ],
+
+  "dont_touch": ["Picture*", "Graphic*", "Object*", "think-cell data*", "Text Placeholder 9"],
+  "_anchored": "§3Б: слайд по сигнатуре has_shapes=[Object 4]. facts = 4× Text Placeholder 7 ВНУТРИ групп (recurse), sort=top по позиции внешней группы → 1→4. Номера Graphic 6 внутри групп не в слотах → сохраняются. heading/subheading одиночные по тексту. _hint — 0-based индекс."
+}
