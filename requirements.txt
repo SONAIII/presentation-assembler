@@ -1,0 +1,6 @@
+# Install from the internal Yandex PyPI mirror:
+#   python3 -m pip install -i https://pypi.yandex-team.ru/simple/ -r requirements.txt
+python-pptx==1.0.2
+Pillow==12.3.0
+PyMuPDF==1.26.4
+PyYAML==6.0.2

@@ -1,0 +1,14 @@
+{
+  "technical_foundation": "presentations-viscomms",
+  "foundation_version": "5.0.0",
+  "vendored_on": "2026-08-31",
+  "runtime_dependency": false,
+  "owned_overlays": [
+    "adaptive interaction modes",
+    "provider-agnostic source profiles and evidence traceability",
+    "content approval before deckspec",
+    "heading and subtitle methodology",
+    "objection checkpoint",
+    "visual rhythm gate"
+  ]
+}
