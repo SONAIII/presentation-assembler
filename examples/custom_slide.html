@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Смоук custom · матрица недель</title>
+<style>
+/* Самодостаточный смоук кастом-ветки: токены и атомы инлайном (подмножество
+   дизайн-системы Еды скилла, assets/eda/deck.css); шрифты YS — системные
+   (ставит fetch_template.py --fonts, проверяет preflight). Ноль внешних
+   зависимостей — образец переносимого custom-слайда. */
+:root{
+  --yellow:#FFD700; --grey:#E9E7E6; --grey-text:#918784; --ink:#230F0A;
+  --f-geo:'YS Geo'; --f-text:'YS Text';
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+img{display:block;}
+.slide{position:relative;width:1920px;height:1080px;overflow:hidden;
+  background:#fff;color:var(--ink);display:flex;flex-direction:column;
+  padding:79px 125px 120px;}  /* низ 120px = полоса номера (981→1015) + воздух */
+.h1{font:900 66px/1.06 var(--f-geo);letter-spacing:0;max-width:1450px;}
+.mark{background:var(--yellow);border-radius:999px;padding:2px 26px;}
+.content{flex:1;min-height:0;margin-top:44px;display:flex;flex-direction:column;justify-content:center;}
+.grid{display:grid;grid-template-columns:280px repeat(4,1fr);gap:24px;align-items:center;}
+.rowname{font:700 28px/1.2 var(--f-text);}
+.cell{height:110px;border-radius:24px;background:var(--grey);
+  display:flex;align-items:center;justify-content:center;
+  font:700 28px/1.1 var(--f-text);}
+.cell--on{background:var(--yellow);}
+.cell--off{background:transparent;}
+.colhead{font:700 26px/1.2 var(--f-text);text-align:center;}
+.colhead small{display:block;font:400 24px/1.3 var(--f-text);color:var(--grey-text);}
+.legend{margin-top:48px;font:400 26px/1.3 var(--f-text);color:var(--grey-text);}
+.pagenum{position:absolute;right:123px;bottom:67px;font:400 18px/1 var(--f-text);color:var(--grey-text);}
+
+/* ---------- слайд 2: нативная таблица (a:tbl) ---------- */
+.table{width:100%;border-collapse:collapse;table-layout:fixed;}
+.table col.c-name{width:auto;}
+.table col.c-val{width:360px;}
+.table th{font:700 30px/1.2 var(--f-text);text-align:left;padding:0 0 18px 0;
+  border-bottom:3px solid var(--ink);}
+.table td{font:400 30px/1.2 var(--f-text);text-align:left;padding:20px 0;
+  border-bottom:1px solid var(--grey);}
+.table th.r,.table td.r{text-align:right;}
+.table td.b{font-weight:700;}
+.table tr:last-child td{border-bottom:none;}
+
+/* ---------- слайд 3: инфографика — глифы assets/eda/glyphs/ инлайном ---------- */
+.flow{display:flex;align-items:center;gap:24px;}
+.flow>.step{flex:1;min-width:0;background:var(--grey);border-radius:40px;padding:36px 40px;}
+.flow>.step--yellow{background:var(--yellow);}
+.flow>svg{flex:none;}
+.step .name{font:700 32px/1.2 var(--f-geo);}
+.step p{font:400 24px/1.35 var(--f-text);margin-top:8px;}
+.divider-h{height:3px;background:#4F4E49;border-radius:999px;}
+.split{display:flex;gap:56px;align-items:flex-start;}
+.split .grow{flex:1;display:flex;flex-direction:column;gap:28px;}
+.verdict-row{display:flex;align-items:center;gap:24px;}
+.verdict-row svg{flex:none;}
+.verdict-row p{font:400 32px/1.35 var(--f-text);}
+.delta{display:inline-flex;align-items:center;gap:12px;}
+.delta .v{font:900 64px/1 var(--f-geo);color:#00B533;}
+.delta .cap{font:400 24px/1.3 var(--f-text);}
+.donut-wrap{position:relative;width:220px;flex:none;}
+.donut-wrap .center{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:900 64px/1 var(--f-geo);}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+  <section class="slide" data-label="custom-smoke">
+    <h1 class="h1">Раскатка: четыре города за <span class="mark">6 недель</span></h1>
+    <div class="content">
+      <div class="grid">
+        <div></div>
+        <div class="colhead">Недели 1–2<small>пилот</small></div>
+        <div class="colhead">Недели 2–3<small>метрики</small></div>
+        <div class="colhead">Недели 4–5<small>масштаб</small></div>
+        <div class="colhead">Неделя 6<small>ревью</small></div>
+
+        <div class="rowname">Казань</div>
+        <div class="cell cell--on">Пилот</div>
+        <div class="cell">Метрики</div>
+        <div class="cell">Масштаб</div>
+        <div class="cell">Ревью</div>
+
+        <div class="rowname">Самара</div>
+        <div class="cell cell--off"></div>
+        <div class="cell cell--on">Пилот</div>
+        <div class="cell">Метрики</div>
+        <div class="cell">Масштаб</div>
+
+        <div class="rowname">Уфа</div>
+        <div class="cell cell--off"></div>
+        <div class="cell cell--off"></div>
+        <div class="cell cell--on">Пилот</div>
+        <div class="cell">Метрики</div>
+      </div>
+      <div class="legend">Жёлтое — старт волны в городе; серое — фаза по плану.</div>
+    </div>
+    <div class="pagenum">1</div>
+  </section>
+
+  <!-- Слайд 2: семантический <table> → НАТИВНАЯ редактируемая таблица
+       PowerPoint (a:tbl): границы по сторонам, выравнивания, colspan.
+       Таблицы верстаются только так — div-грид таблицей не станет. -->
+  <section class="slide" data-label="custom-smoke-table">
+    <h1 class="h1">Экономика волны по городам</h1>
+    <div class="content">
+      <table class="table">
+        <colgroup><col class="c-name"><col class="c-val"><col class="c-val"><col class="c-val"></colgroup>
+        <thead>
+          <tr><th>Город</th><th class="r">Курьеры</th><th class="r">Заказы в неделю</th><th class="r">Δ юнит-экономики</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Казань</td><td class="r">120</td><td class="r">8 400</td><td class="r b">+3,1%</td></tr>
+          <tr><td>Самара</td><td class="r">90</td><td class="r">6 100</td><td class="r b">+2,4%</td></tr>
+          <tr><td>Уфа</td><td class="r">70</td><td class="r">4 800</td><td class="r b">+2,2%</td></tr>
+          <tr><td colspan="2" class="b">Итого по волне</td><td class="r b">19 300</td><td class="r b">+2,8%</td></tr>
+        </tbody>
+      </table>
+      <div class="legend">Числа демонстрационные — смоук нативной таблицы, не отчёт.</div>
+    </div>
+    <div class="pagenum">2</div>
+  </section>
+
+  <!-- Слайд 3: инфографика — глифы из assets/eda/glyphs/ ИНЛАЙНОМ (растеризация
+       ×4 при конверсии), редполитика — references/custom-html.md §Инфографика:
+       стрелки ink (не жёлтые), зелёный/красный — только семантика да/нет. -->
+  <section class="slide" data-label="custom-smoke-infographic">
+    <h1 class="h1">Онбординг партнёра: три шага</h1>
+    <div class="content">
+      <div class="flow">
+        <div class="step"><div class="name">Заявка</div><p>Партнёр заполняет форму</p></div>
+        <svg width="96" height="24" viewBox="0 0 96 24" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="12" x2="79" y2="12" stroke="#230F0A" stroke-width="3"/><path d="M78 4 L94 12 L78 20 Z" fill="#230F0A"/></svg>
+        <div class="step"><div class="name">Проверка</div><p>Скоринг за 2 часа</p></div>
+        <svg width="96" height="24" viewBox="0 0 96 24" xmlns="http://www.w3.org/2000/svg"><line x1="2" y1="12" x2="79" y2="12" stroke="#230F0A" stroke-width="3"/><path d="M78 4 L94 12 L78 20 Z" fill="#230F0A"/></svg>
+        <div class="step step--yellow"><div class="name">Запуск</div><p>Первый заказ в тот же день</p></div>
+      </div>
+      <div class="divider-h" style="margin:48px 0;"></div>
+      <div class="split">
+        <div class="grow">
+          <div class="verdict-row">
+            <svg width="90" height="90" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg"><circle cx="45" cy="45" r="45" fill="#00B533"/><path d="M26 46 L39 59 L64 32" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <p>Онбординг без бумаги — договор в ЭДО</p>
+          </div>
+          <div class="verdict-row">
+            <svg width="90" height="90" viewBox="0 0 90 90" xmlns="http://www.w3.org/2000/svg"><circle cx="45" cy="45" r="45" fill="#FF3700"/><path d="M31 31 L59 59 M59 31 L31 59" fill="none" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/></svg>
+            <p>Ручная сверка меню больше не нужна</p>
+          </div>
+          <div class="delta" style="margin-top:16px;">
+            <svg width="28" height="22" viewBox="0 0 28 22" xmlns="http://www.w3.org/2000/svg"><path d="M14 2 L26 20 L2 20 Z" fill="#00B533"/></svg>
+            <span class="v">+18%</span>
+            <span class="cap">конверсия в запуск</span>
+          </div>
+        </div>
+        <div class="donut-wrap">
+          <svg width="220" height="220" viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg"><circle cx="110" cy="110" r="90" fill="none" stroke="#E9E7E6" stroke-width="36"/><circle cx="110" cy="110" r="90" fill="none" stroke="#FFD700" stroke-width="36" stroke-dasharray="407 158.5" transform="rotate(-90 110 110)"/></svg>
+          <div class="center">72%</div>
+        </div>
+      </div>
+      <div class="legend" style="margin-top:40px;">Числа демонстрационные — смоук глифов и CSS-атомов инфографики.</div>
+    </div>
+    <div class="pagenum">3</div>
+  </section>
+
+</div>
+</body>
+</html>

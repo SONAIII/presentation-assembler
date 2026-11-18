@@ -1,0 +1,17 @@
+version: 1
+profiles:
+  product-weekly:
+    description: Weekly review from team-owned exports and documents
+    use_when: Product metrics, experiments and decisions for the weekly meeting
+    sources:
+      - kind: file
+        provider: csv
+        locator: ../data/product-weekly.csv
+        purpose: Verified KPI values and periods
+      - kind: connected_service
+        provider: team-knowledge-base
+        locator: product/decisions
+        purpose: Context and decisions; connector access is required
+    rules:
+      freshness: P7D
+      owner: product-team

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Рецепты кастом-структур · проверенные скелеты</title>
+<style>
+/* Скелеты-рецепты кастом-ветки (references/custom-recipes.md). Самодостаточный
+   файл: токены и атомы инлайном (подмножество assets/eda/deck.css), шрифты YS —
+   системные. Каждый слайд — отдельный рецепт; собирается custom_recipes_deck.json,
+   номер слайда в html_slide. Числа демонстрационные. */
+:root{
+  --yellow:#FFD700; --grey:#E9E7E6; --grey-text:#918784; --ink:#230F0A;
+  --grey-line:#4F4E49; --ok:#00B533; --no:#FF3700;
+  --f-geo:'YS Geo'; --f-text:'YS Text';
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+img{display:block;}
+.slide{position:relative;width:1920px;height:1080px;overflow:hidden;
+  background:#fff;color:var(--ink);display:flex;flex-direction:column;
+  padding:79px 125px 120px;}  /* низ 120px = полоса номера (981→1015) + воздух; контент до 960 */
+.h1{font:900 66px/1.06 var(--f-geo);letter-spacing:0;max-width:1450px;}
+.content{flex:1;min-height:0;margin-top:44px;position:relative;}
+.pagenum{position:absolute;right:123px;bottom:67px;font:400 18px/1 var(--f-text);color:var(--grey-text);}
+.ghost{color:var(--grey-text);}
+.cap{font:400 24px/1.3 var(--f-text);}
+.name{font:700 32px/1.2 var(--f-geo);}
+.num{font:700 32px/1.1 var(--f-text);}
+.nline{background:var(--ink);}
+
+/* -- 2×2 -- */
+.q-card{position:absolute;background:var(--grey);border-radius:40px;padding:36px 40px;}
+.q-card--yellow{background:var(--yellow);}
+.q-pill{display:inline-block;background:#fff;border-radius:999px;padding:8px 24px;
+  font:400 26px/1.2 var(--f-text);margin:6px 10px 0 0;}
+
+/* -- водопад -- */
+.wf-bar{position:absolute;width:200px;border-radius:24px;background:var(--grey);}
+.wf-bar--ink{background:var(--ink);}
+.wf-bar--yellow{background:var(--yellow);}
+.wf-val{position:absolute;width:200px;text-align:center;font:700 30px/1 var(--f-text);}
+.wf-lbl{position:absolute;width:200px;text-align:center;font:400 26px/1.2 var(--f-text);color:var(--grey-text);}
+
+/* -- гантт -- */
+.g-row{display:grid;grid-template-columns:280px 1fr;gap:24px;align-items:center;height:86px;}
+.g-track{position:relative;height:56px;}
+.g-bar{position:absolute;top:0;height:56px;border-radius:16px;background:var(--grey);}
+.g-bar--yellow{background:var(--yellow);}
+.g-dot{position:absolute;top:14px;width:28px;height:28px;border-radius:50%;background:var(--ink);}
+
+/* -- воронка -- */
+.f-step{position:relative;height:100px;border-radius:28px;background:var(--grey);
+  display:flex;align-items:center;justify-content:space-between;padding:0 48px;margin:0 auto;}
+.f-step--yellow{background:var(--yellow);}
+
+/* -- оргсхема -- */
+.o-card{position:absolute;background:var(--grey);border-radius:28px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;}
+.o-card--yellow{background:var(--yellow);}
+.o-role{font:400 24px/1.2 var(--f-text);color:var(--grey-text);}
+.o-card--yellow .o-role{color:var(--ink);}
+
+/* -- статус-матрица -- */
+.s-head,.s-row{display:grid;grid-template-columns:460px 200px 240px 1fr;gap:32px;align-items:center;}
+.s-head{height:56px;}
+.s-row{height:104px;}
+.s-line{height:1px;background:var(--grey);}
+.s-dot{width:32px;height:32px;border-radius:50%;}
+
+/* -- витрина скринов: телефоны с подписями (рамка = нативный roundRect) -- */
+.ph-col{display:flex;flex-direction:column;align-items:center;gap:26px;}
+.ph-cap{font:700 30px/1.2 var(--f-text);text-align:center;}
+.ph-frame{width:340px;height:700px;background:var(--ink);border-radius:52px;padding:9px;}
+.ph-screen{width:100%;height:100%;border-radius:44px;overflow:hidden;background:var(--grey);}
+.ph-screen img{width:100%;height:100%;object-fit:cover;}
+
+/* -- бейдж-карточки (шаги + роли): типизированные атомы, не стена текста -- */
+.bc-col{display:flex;flex-direction:column;gap:24px;height:100%;}
+.bc-head{font:700 34px/1.15 var(--f-geo);}
+.bc-card{background:var(--grey);border-radius:40px;padding:40px 44px;flex:1;
+  display:flex;flex-direction:column;align-items:flex-start;gap:22px;}
+.bc-badge{background:var(--ink);color:#fff;border-radius:16px;padding:10px 24px;
+  font:700 24px/1 var(--f-text);}
+.bc-title{font:700 36px/1.2 var(--f-geo);}
+.bc-pill{background:var(--yellow);border-radius:999px;padding:8px 26px;
+  font:400 28px/1.2 var(--f-text);}
+.bc-li{display:flex;gap:18px;align-items:flex-start;font:400 28px/1.35 var(--f-text);}
+.bc-li b{font-weight:700;}
+.bc-dot{width:13px;height:13px;border-radius:50%;background:var(--ink);flex:none;margin-top:12px;}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+  <!-- ═══ Слайд 0: матрица 2×2 (приоритизация) — оси data-line, карты-квадранты ═══ -->
+  <section class="slide" data-label="recipe-2x2">
+    <h1 class="h1">Портфель инициатив: ценность против усилий</h1>
+    <div class="content">
+      <!-- контейнер ≤ высоты контент-зоны при ДВУХСТРОЧНОМ h1 (контракт: низ 960) -->
+      <div style="position:absolute;left:0;top:0;width:1670px;height:690px;">
+        <span class="cap ghost" style="position:absolute;left:70px;top:0;">Ценность выше</span>
+        <span class="cap ghost" style="position:absolute;right:0;bottom:56px;">Усилия больше</span>
+        <div class="nline" data-line="arrow-start" style="position:absolute;left:40px;top:10px;width:3px;height:600px;"></div>
+        <div class="nline" data-line="arrow" style="position:absolute;left:40px;top:610px;width:1580px;height:3px;"></div>
+        <div class="q-card q-card--yellow" style="left:90px;top:40px;width:740px;height:256px;">
+          <div class="name">Делаем сейчас</div>
+          <div style="margin-top:14px;"><span class="q-pill">Самовывоз в приложении</span><span class="q-pill">Чаевые курьеру</span><span class="q-pill">Промо-подборки</span></div>
+        </div>
+        <div class="q-card" style="left:854px;top:40px;width:740px;height:256px;">
+          <div class="name">Планируем</div>
+          <div style="margin-top:14px;"><span class="q-pill">Подписка на рестораны</span><span class="q-pill">Гиперлокальные акции</span></div>
+        </div>
+        <div class="q-card" style="left:90px;top:320px;width:740px;height:256px;">
+          <div class="name">Быстрые победы</div>
+          <div style="margin-top:14px;"><span class="q-pill">Реферальные промокоды</span><span class="q-pill">Виджет повторного заказа</span></div>
+        </div>
+        <div class="q-card" style="left:854px;top:320px;width:740px;height:256px;">
+          <div class="name">Не берём</div>
+          <div style="margin-top:14px;"><span class="q-pill">Собственная соцсеть</span><span class="q-pill">Витрина NFT</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="pagenum">1</div>
+  </section>
+
+  <!-- ═══ Слайд 1: водопад — мосты-коннекторы data-line dashed ═══ -->
+  <section class="slide" data-label="recipe-waterfall">
+    <h1 class="h1">Юнит-экономика заказа: от выручки к марже</h1>
+    <div class="content">
+      <div style="position:absolute;left:35px;top:0;width:1600px;height:730px;">
+        <!-- бары: базовая линия y=640 -->
+        <div class="wf-bar wf-bar--ink"    style="left:0;top:220px;height:420px;"></div>
+        <div class="wf-bar"                style="left:260px;top:220px;height:140px;"></div>
+        <div class="wf-bar"                style="left:520px;top:360px;height:80px;"></div>
+        <div class="wf-bar wf-bar--yellow" style="left:780px;top:320px;height:120px;"></div>
+        <div class="wf-bar"                style="left:1040px;top:320px;height:50px;"></div>
+        <div class="wf-bar wf-bar--ink"    style="left:1300px;top:370px;height:270px;"></div>
+        <!-- мосты уровня между соседними барами -->
+        <div class="nline" data-line="dashed" style="position:absolute;left:200px;top:219px;width:60px;height:2px;background:#918784;"></div>
+        <div class="nline" data-line="dashed" style="position:absolute;left:460px;top:359px;width:60px;height:2px;background:#918784;"></div>
+        <div class="nline" data-line="dashed" style="position:absolute;left:720px;top:439px;width:60px;height:2px;background:#918784;"></div>
+        <div class="nline" data-line="dashed" style="position:absolute;left:980px;top:319px;width:60px;height:2px;background:#918784;"></div>
+        <div class="nline" data-line="dashed" style="position:absolute;left:1240px;top:369px;width:60px;height:2px;background:#918784;"></div>
+        <!-- значения над барами -->
+        <div class="wf-val" style="left:0;top:170px;">420 ₽</div>
+        <div class="wf-val" style="left:260px;top:170px;">−140 ₽</div>
+        <div class="wf-val" style="left:520px;top:310px;">−80 ₽</div>
+        <div class="wf-val" style="left:780px;top:270px;">+120 ₽</div>
+        <div class="wf-val" style="left:1040px;top:270px;">−50 ₽</div>
+        <div class="wf-val" style="left:1300px;top:320px;">270 ₽</div>
+        <!-- подписи под осью -->
+        <div class="wf-lbl" style="left:0;top:664px;">Выручка</div>
+        <div class="wf-lbl" style="left:260px;top:664px;">Комиссия</div>
+        <div class="wf-lbl" style="left:520px;top:664px;">Логистика</div>
+        <div class="wf-lbl" style="left:780px;top:664px;">Промо</div>
+        <div class="wf-lbl" style="left:1040px;top:664px;">Прочее</div>
+        <div class="wf-lbl" style="left:1300px;top:664px;">Маржа</div>
+      </div>
+    </div>
+    <div class="pagenum">2</div>
+  </section>
+
+  <!-- ═══ Слайд 2: гантт — плашки-фазы, вехи-круги, «сегодня» data-line dashed ═══ -->
+  <section class="slide" data-label="recipe-gantt">
+    <h1 class="h1">Раскатка нового тарифа: план на полгода</h1>
+    <div class="content">
+      <div style="position:absolute;left:0;top:0;width:1670px;">
+        <div class="g-row" style="height:48px;">
+          <div></div>
+          <div style="position:relative;height:36px;">
+            <span class="cap ghost" style="position:absolute;left:0;">Июль</span>
+            <span class="cap ghost" style="position:absolute;left:227px;">Август</span>
+            <span class="cap ghost" style="position:absolute;left:454px;">Сентябрь</span>
+            <span class="cap ghost" style="position:absolute;left:681px;">Октябрь</span>
+            <span class="cap ghost" style="position:absolute;left:908px;">Ноябрь</span>
+            <span class="cap ghost" style="position:absolute;left:1135px;">Декабрь</span>
+          </div>
+        </div>
+        <div class="g-row"><div class="name">Дизайн тарифа</div>
+          <div class="g-track"><div class="g-bar g-bar--yellow" style="left:0;width:340px;"></div></div></div>
+        <div class="g-row"><div class="name">Пилот в двух городах</div>
+          <div class="g-track"><div class="g-bar" style="left:227px;width:454px;"></div><div class="g-dot" style="left:639px;"></div></div></div>
+        <div class="g-row"><div class="name">Интеграция с партнёрами</div>
+          <div class="g-track"><div class="g-bar" style="left:454px;width:567px;"></div></div></div>
+        <div class="g-row"><div class="name">Масштабирование</div>
+          <div class="g-track"><div class="g-bar" style="left:794px;width:480px;"></div><div class="g-dot" style="left:1232px;"></div></div></div>
+        <div class="g-row"><div class="name">Ретро и настройка цен</div>
+          <div class="g-track"><div class="g-bar" style="left:1135px;width:227px;"></div></div></div>
+      </div>
+      <!-- «сегодня»: x = 280(имена)+24(гэп)+227×(14/31 июля)≈410 -->
+      <div class="nline" data-line="dashed" style="position:absolute;left:410px;top:52px;width:2px;height:520px;background:#4F4E49;"></div>
+      <span class="cap" style="position:absolute;left:426px;top:580px;color:#4F4E49;">сегодня · 15 июля</span>
+    </div>
+    <div class="pagenum">3</div>
+  </section>
+
+  <!-- ═══ Слайд 3: воронка — сужающиеся плашки, конверсии в зазорах ═══ -->
+  <section class="slide" data-label="recipe-funnel">
+    <h1 class="h1">Воронка подключения ресторана</h1>
+    <div class="content">
+      <div style="position:absolute;left:0;top:10px;width:1670px;">
+        <div style="position:relative;">
+          <div class="f-step f-step--yellow" style="width:1500px;"><span class="name">Заявки из всех каналов</span><span class="num">12 400</span></div>
+          <div class="f-step" style="width:1200px;margin-top:24px;"><span class="name">Прошли скоринг</span><span class="num">8 900</span></div>
+          <div class="f-step" style="width:920px;margin-top:24px;"><span class="name">Подписали договор</span><span class="num">6 100</span></div>
+          <div class="f-step" style="width:660px;margin-top:24px;"><span class="name">Загрузили меню</span><span class="num">4 700</span></div>
+          <div class="f-step" style="width:440px;margin-top:24px;"><span class="name">Первый заказ</span><span class="num">3 900</span></div>
+          <span class="cap ghost" style="position:absolute;left:1540px;top:112px;">72%</span>
+          <span class="cap ghost" style="position:absolute;left:1540px;top:236px;">69%</span>
+          <span class="cap ghost" style="position:absolute;left:1540px;top:360px;">77%</span>
+          <span class="cap ghost" style="position:absolute;left:1540px;top:484px;">83%</span>
+        </div>
+        <div class="cap ghost" style="margin-top:48px;">Сквозная конверсия заявка → первый заказ — 31%.</div>
+      </div>
+    </div>
+    <div class="pagenum">4</div>
+  </section>
+
+  <!-- ═══ Слайд 4: оргсхема — связи ОДНИМ SVG-слоем ПОД карточками ═══ -->
+  <section class="slide" data-label="recipe-orgchart">
+    <h1 class="h1">Команда запуска: три направления</h1>
+    <div class="content">
+      <div style="position:absolute;left:85px;top:20px;width:1500px;height:660px;">
+        <!-- слой связей: в DOM ДО карточек → в .pptx ляжет ПОД ними;
+             рамка svg — по фактическим линиям (растер уйдёт в .pptx этим боксом) -->
+        <svg width="1500" height="660" viewBox="0 0 1500 660" xmlns="http://www.w3.org/2000/svg" style="position:absolute;left:0;top:0;">
+          <path d="M750 120 V200 M250 200 H1250 M250 200 V260 M750 200 V260 M1250 200 V260 M250 400 V460 M155 460 H445 M155 460 V520 M445 460 V520"
+                fill="none" stroke="#4F4E49" stroke-width="2"/>
+        </svg>
+        <div class="o-card o-card--yellow" style="left:560px;top:0;width:380px;height:120px;">
+          <div class="name">Аня Ерёмина</div><div class="o-role">Лид запуска</div>
+        </div>
+        <div class="o-card" style="left:60px;top:260px;width:380px;height:140px;">
+          <div class="name">Продукт</div><div class="o-role">6 человек</div>
+        </div>
+        <div class="o-card" style="left:560px;top:260px;width:380px;height:140px;">
+          <div class="name">Операции</div><div class="o-role">11 человек</div>
+        </div>
+        <div class="o-card" style="left:1060px;top:260px;width:380px;height:140px;">
+          <div class="name">Маркетинг</div><div class="o-role">4 человека</div>
+        </div>
+        <div class="o-card" style="left:20px;top:520px;width:270px;height:110px;">
+          <div class="name">Приложение</div><div class="o-role">команда 3</div>
+        </div>
+        <div class="o-card" style="left:310px;top:520px;width:270px;height:110px;">
+          <div class="name">Партнёрка</div><div class="o-role">команда 3</div>
+        </div>
+      </div>
+    </div>
+    <div class="pagenum">5</div>
+  </section>
+
+  <!-- ═══ Слайд 5: статус-матрица — RAG-круги (нативные) + харви-донаты (SVG) ═══ -->
+  <section class="slide" data-label="recipe-status">
+    <h1 class="h1">Статус ключевых проектов квартала</h1>
+    <div class="content">
+      <div style="position:absolute;left:0;top:0;width:1670px;">
+        <div class="s-head">
+          <span class="cap ghost">Проект</span><span class="cap ghost">Статус</span>
+          <span class="cap ghost">Готовность</span><span class="cap ghost">Комментарий</span>
+        </div>
+        <div class="s-line"></div>
+        <div class="s-row">
+          <span class="name">Новый тариф доставки</span>
+          <div class="s-dot" style="background:var(--ok);"></div>
+          <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="24" fill="none" stroke="#E9E7E6" stroke-width="12"/><circle cx="32" cy="32" r="24" fill="none" stroke="#FFD700" stroke-width="12" stroke-dasharray="113 37.8" transform="rotate(-90 32 32)"/></svg>
+          <span class="cap">Пилот в двух городах, метрики в плане</span>
+        </div>
+        <div class="s-line"></div>
+        <div class="s-row">
+          <span class="name">Подписка для ресторанов</span>
+          <div class="s-dot" style="background:var(--yellow);"></div>
+          <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="24" fill="none" stroke="#E9E7E6" stroke-width="12"/><circle cx="32" cy="32" r="24" fill="none" stroke="#FFD700" stroke-width="12" stroke-dasharray="75.4 75.4" transform="rotate(-90 32 32)"/></svg>
+          <span class="cap">Сдвиг на две недели — ждём юристов</span>
+        </div>
+        <div class="s-line"></div>
+        <div class="s-row">
+          <span class="name">Миграция биллинга</span>
+          <div class="s-dot" style="background:var(--no);"></div>
+          <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="24" fill="none" stroke="#E9E7E6" stroke-width="12"/><circle cx="32" cy="32" r="24" fill="none" stroke="#FFD700" stroke-width="12" stroke-dasharray="37.7 113.1" transform="rotate(-90 32 32)"/></svg>
+          <span class="cap">Блокер: нагрузочное тестирование не пройдено</span>
+        </div>
+        <div class="s-line"></div>
+        <div class="s-row">
+          <span class="name">Дашборд партнёра 2.0</span>
+          <div class="s-dot" style="background:var(--ok);"></div>
+          <svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="24" fill="none" stroke="#E9E7E6" stroke-width="12"/><circle cx="32" cy="32" r="24" fill="none" stroke="#FFD700" stroke-width="12" stroke-dasharray="132 18.8" transform="rotate(-90 32 32)"/></svg>
+          <span class="cap">Бета у 200 партнёров, релиз 1 августа</span>
+        </div>
+        <div class="s-line"></div>
+      </div>
+    </div>
+    <div class="pagenum">6</div>
+  </section>
+
+  <!-- ═══ Слайд 6: бейдж-карточки — шаги {badge·title·pill·caption} + роли {badge·bullets с лид-инами};
+       точки буллетов — реальные круги (::before не конвертируется); жёлтый — одна роль (пилюли);
+       нумерованных табов НЕТ: колонки параллельны, номера навязали бы ложный порядок ═══ -->
+  <section class="slide" data-label="recipe-badge-cards">
+    <h1 class="h1">Как меряем эффект подписки и кто отвечает</h1>
+    <div class="content">
+      <div style="position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;gap:56px;">
+        <div class="bc-col">
+          <div class="bc-head">Как меряем эффект</div>
+          <div class="bc-card">
+            <span class="bc-badge">Шаг 1 · пилот</span>
+            <div class="bc-title">Конверсия в подписку</div>
+            <span class="bc-pill">CR 4,2%</span>
+            <span class="cap ghost" style="margin-top:auto;">два города · четыре недели · база 18 тыс заказов</span>
+          </div>
+          <div class="bc-card">
+            <span class="bc-badge">Шаг 2 · раскатка</span>
+            <div class="bc-title">Удержание и частота заказов</div>
+            <span class="bc-pill">+1,8 заказа в месяц</span>
+            <span class="cap ghost" style="margin-top:auto;">замер через квартал после раскатки</span>
+          </div>
+        </div>
+        <div class="bc-col">
+          <div class="bc-head">Роли в процессе</div>
+          <div class="bc-card">
+            <span class="bc-badge">Продукт</span>
+            <div class="bc-li"><span class="bc-dot"></span><span><b>Тарифы и льготы:</b> итерации по данным пилота</span></div>
+            <div class="bc-li"><span class="bc-dot"></span><span><b>Метрики:</b> мониторинг конверсии и оттока</span></div>
+            <div class="bc-li"><span class="bc-dot"></span><span><b>Эскалации:</b> блокеры — на комитет запуска</span></div>
+          </div>
+          <div class="bc-card">
+            <span class="bc-badge">Города</span>
+            <div class="bc-li"><span class="bc-dot"></span><span><b>Онбординг ресторанов:</b> подключение к подписке</span></div>
+            <div class="bc-li"><span class="bc-dot"></span><span><b>Обратная связь:</b> жалобы и пожелания партнёров</span></div>
+            <div class="bc-li"><span class="bc-dot"></span><span><b>Локальные промо:</b> продвижение на местах</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pagenum">7</div>
+  </section>
+
+  <!-- ═══ Слайд 7: витрина скринов — подпись формата НАД каждым телефоном; рамка ph-frame
+       конвертируется в нативный редактируемый roundRect (не запечённая картинка), скрин —
+       <img src="file:///абсолютный/путь.png"> внутри ph-screen (кроп cover → srcRect);
+       серые заглушки ниже — место скринов в скелете; тени не нужны (бренд без теней) ═══ -->
+  <section class="slide" data-label="recipe-phone-showcase">
+    <h1 class="h1">Форматы рекламы в приложении</h1>
+    <div class="content">
+      <div style="position:absolute;inset:0;display:grid;grid-template-columns:repeat(3,1fr);gap:56px;">
+        <div class="ph-col">
+          <div class="ph-cap">Баннер на главной</div>
+          <div class="ph-frame"><div class="ph-screen"></div></div>
+        </div>
+        <div class="ph-col">
+          <div class="ph-cap">Фулскрин при входе</div>
+          <div class="ph-frame"><div class="ph-screen"></div></div>
+        </div>
+        <div class="ph-col">
+          <div class="ph-cap">Баннер в каталоге</div>
+          <div class="ph-frame"><div class="ph-screen"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="pagenum">8</div>
+  </section>
+
+</div>
+</body>
+</html>

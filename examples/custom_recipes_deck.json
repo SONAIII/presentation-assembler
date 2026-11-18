@@ -1,0 +1,22 @@
+{
+  "template": "еда",
+  "regression_smoke": true,
+  "slides": [
+    {"family": "custom", "html": "custom_recipes.html", "html_slide": 0,
+     "notes": "Рецепт: матрица 2×2 — оси data-line со стрелками, карты-квадранты, пилюли."},
+    {"family": "custom", "html": "custom_recipes.html", "html_slide": 1,
+     "notes": "Рецепт: водопад — бары + пунктирные мосты data-line."},
+    {"family": "custom", "html": "custom_recipes.html", "html_slide": 2,
+     "notes": "Рецепт: гантт — фазы, вехи-круги (нативные OVAL), линия «сегодня»."},
+    {"family": "custom", "html": "custom_recipes.html", "html_slide": 3,
+     "notes": "Рецепт: воронка — сужающиеся плашки, конверсии в зазорах."},
+    {"family": "custom", "html": "custom_recipes.html", "html_slide": 4,
+     "notes": "Рецепт: оргсхема — связи одним SVG-слоем под карточками."},
+    {"family": "custom", "html": "custom_recipes.html", "html_slide": 5,
+     "notes": "Рецепт: статус-матрица — RAG-круги + харви-донаты."},
+    {"family": "custom", "html": "custom_recipes.html", "html_slide": 6,
+     "notes": "Рецепт: бейдж-карточки — шаги {badge·title·pill·caption} + роли {badge·bullets с лид-инами}, точки-круги нативные."},
+    {"family": "custom", "html": "custom_recipes.html", "html_slide": 7,
+     "notes": "Рецепт: витрина скринов — подписи форматов над телефонами, рамки нативные roundRect, скрины file:// в ph-screen."}
+  ]
+}

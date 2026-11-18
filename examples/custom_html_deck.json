@@ -1,0 +1,13 @@
+{
+  "template": "еда",
+  "slides": [
+    {"family": "cover", "variant": "photo_title_bottom",
+     "slots": {"title": "Смоук кастом-ветки", "subtitle": "family: custom"}},
+    {"family": "custom", "html": "custom_slide.html",
+     "notes": "Кастомный слайд: матрица волн раскатки (HTML-хэтч)."},
+    {"family": "custom", "html": "custom_slide.html", "html_slide": 1,
+     "notes": "Кастомный слайд: семантический <table> → нативная редактируемая таблица (colspan, границы, выравнивания)."},
+    {"family": "custom", "html": "custom_slide.html", "html_slide": 2,
+     "notes": "Кастомный слайд: инфографика — SVG-глифы (флоу-стрелки, да/нет, дельта, донат) + CSS-атомы v0.11.0."}
+  ]
+}

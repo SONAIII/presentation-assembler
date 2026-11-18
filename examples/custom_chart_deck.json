@@ -1,0 +1,9 @@
+{
+  "template": "еда",
+  "slides": [
+    {"family": "custom", "html": "custom_chart.html", "html_slide": 0,
+     "notes": "Смоук data-chart: column с двумя сериями и метками + line рядом (комбо = два нативных чарта)."},
+    {"family": "custom", "html": "custom_chart.html", "html_slide": 1,
+     "notes": "Смоук data-chart: doughnut долей с легендой и процентным форматом."}
+  ]
+}

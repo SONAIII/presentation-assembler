@@ -1,0 +1,29 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><style>
+:root{--gray:#ECEDF0;--ink:#000;--paper:#FFF;--f-wide:'YS Text Wide Bold';--f-bold:'YS Text Bold';--f-text:'YS Text Regular';--mx:39px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+.slide{position:relative;width:1920px;height:1080px;overflow:hidden;background:var(--paper);color:var(--ink);font-family:var(--f-text),sans-serif;}
+.h1{font-family:var(--f-wide);font-weight:800;font-size:64px;line-height:1.05;margin:113px var(--mx) 0;}
+.org{position:absolute;inset:0 0 120px 0;}
+.org svg{position:absolute;inset:0;width:1920px;height:960px;}
+.node{position:absolute;background:var(--gray);border-radius:999px;padding:18px 26px;display:flex;align-items:center;gap:18px;width:380px;}
+.node.head{background:var(--ink);color:var(--paper);}
+.ava{width:92px;height:92px;border-radius:50%;background:#c9ccd4;flex:0 0 auto;}
+.who{display:flex;flex-direction:column;}
+.who .name{font-family:var(--f-bold);font-size:32px;line-height:1.05;}
+.who .role{font-family:var(--f-text);font-size:22px;opacity:.75;}
+</style></head><body><div id="deck">
+<div class="slide">
+  <div class="h1">Команда запуска</div>
+  <div class="org">
+    <svg viewBox="0 0 1920 960">
+      <line x1="960" y1="440" x2="380" y2="680" stroke="#c9ccd4" stroke-width="3"/>
+      <line x1="960" y1="440" x2="960" y2="680" stroke="#c9ccd4" stroke-width="3"/>
+      <line x1="960" y1="440" x2="1540" y2="680" stroke="#c9ccd4" stroke-width="3"/>
+    </svg>
+    <div class="node head" style="left:770px;top:360px"><div class="ava"></div><div class="who"><span class="name">Мария Ким</span><span class="role">Руководитель запуска</span></div></div>
+    <div class="node" style="left:190px;top:640px"><div class="ava"></div><div class="who"><span class="name">Илья Гарин</span><span class="role">Операции</span></div></div>
+    <div class="node" style="left:770px;top:640px"><div class="ava"></div><div class="who"><span class="name">Нина Ли</span><span class="role">Продукт</span></div></div>
+    <div class="node" style="left:1350px;top:640px"><div class="ava"></div><div class="who"><span class="name">Пётр Мороз</span><span class="role">Аналитика</span></div></div>
+  </div>
+</div>
+</div></body></html>
