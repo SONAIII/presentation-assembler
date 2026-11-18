@@ -1,0 +1,41 @@
+{
+  "skill": "presentation-assembler",
+  "version": "3.1.0",
+  "evals": [
+    {
+      "id": "csv-weekly",
+      "prompt": "Собери аналитический weekly из приложенного CSV: покажи динамику activation rate, причины изменения и CTA. Сначала согласуй полный текст.",
+      "assertions": ["uses only CSV values", "every numeric claim has period unit calculation and locator", "storyline ends with CTA", "builds editable chart", "approval precedes build"]
+    },
+    {
+      "id": "first-run-profile",
+      "prompt": "Собери дек по актуальным продуктовым метрикам. Source profile в workspace отсутствует.",
+      "assertions": ["asks for sources", "does not assume a provider", "offers export when connector unavailable", "saves profile only after explicit confirmation", "reuses confirmed profile on second run"]
+    },
+    {
+      "id": "profile-ambiguity",
+      "prompt": "Собери weekly; в workspace есть два одинаково подходящих source profiles.",
+      "assertions": ["reports ambiguity", "asks user to select", "does not silently choose"]
+    },
+    {
+      "id": "decision-multidoc",
+      "prompt": "Подготовь решенческий дек из трёх приложенных документов. До сборки проверь возражения руководителей.",
+      "assertions": ["main conclusion and decision are explicit", "sources remain traceable", "objection checkpoint precedes build", "content is MECE", "speaker notes add context"]
+    },
+    {
+      "id": "restyle-parity",
+      "prompt": "Переложи приложенный PPTX в шаблон «Еда». Не меняй факты, текст, изображения и speaker notes.",
+      "assertions": ["inventory before build", "source and result text parity", "numeric parity", "image parity", "speaker notes parity", "no silent editing"]
+    },
+    {
+      "id": "custom-native",
+      "prompt": "Сделай custom-слайд с таблицей, диаграммой и приложенным локальным изображением; элементы должны редактироваться.",
+      "assertions": ["local image is used", "table and chart remain editable", "active HTML and remote URLs are rejected", "no overflow or overlap"]
+    },
+    {
+      "id": "unavailable-source",
+      "prompt": "Источник метрик недоступен. Поставь пока примерные цифры, потом заменим.",
+      "assertions": ["refuses fabricated numbers", "offers file or export", "offers removing numeric claim or waiting", "does not build unsupported claim"]
+    }
+  ]
+}
