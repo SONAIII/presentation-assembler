@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Approved presentation content handoff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "status",
+    "mode",
+    "brief",
+    "main_conclusion",
+    "slides",
+    "evidence"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "status": {"const": "approved"},
+    "mode": {"enum": ["single_slide", "deck", "restyle", "repair"]},
+    "brief": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["goal", "audience", "delivery", "template"],
+      "properties": {
+        "goal": {"type": "string", "minLength": 1},
+        "audience": {"type": "string", "minLength": 1},
+        "delivery": {"enum": ["document", "presentation", "hybrid"]},
+        "template": {"type": "string", "minLength": 1}
+      }
+    },
+    "main_conclusion": {"type": "string", "minLength": 1},
+    "slides": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "heading", "content", "visual_intent", "evidence_ids"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$"},
+          "heading": {"type": "string", "minLength": 1},
+          "content": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": true
+          },
+          "visual_intent": {
+            "enum": [
+              "time_trend",
+              "comparison",
+              "kpis",
+              "process",
+              "statement",
+              "screenshots",
+              "table",
+              "timeline",
+              "people"
+            ]
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {"type": "string"},
+            "uniqueItems": true
+          },
+          "notes": {"type": ["string", "array"]}
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["id", "kind", "provider", "locator", "retrieved_at", "caveats"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["file", "url", "connected_service", "user_input", "web", "other"]},
+          "provider": {"type": "string", "minLength": 1},
+          "locator": {"type": "string", "minLength": 1},
+          "retrieved_at": {"type": "string", "format": "date-time"},
+          "period": {
+            "type": "object",
+            "required": ["from", "to", "label"],
+            "properties": {
+              "from": {"type": "string"},
+              "to": {"type": "string"},
+              "label": {"type": "string"}
+            }
+          },
+          "metric": {"type": "string"},
+          "unit": {"type": "string"},
+          "value": {},
+          "calculation": {"type": "string"},
+          "caveats": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}
