@@ -1,0 +1,130 @@
+/* ============================================================
+   Дизайн-система «Хурал Райдтеха» для кастомных HTML-слайдов
+   (family: custom). Вендорена В ЭТОТ СКИЛЛ — папка самодостаточна.
+   Канва 1920×1080 (= 26.665″×15″ шаблона @72dpi → 1pt = 1px).
+   Токены — из layouts/ridetech-khural/brand-tokens.json + тема шаблона v1.0.
+   Шрифты YS Text (Wide Bold / Bold / Regular) — СИСТЕМНЫЕ (ставит
+   fetch_template.py --fonts), @font-face не нужен.
+   Базовый режим — СВЕТЛЫЙ (.slide; контентные слайды шаблона белые);
+   тёмный — .slide.black (обложки/statement/closing).
+   Канон атомов снят С ЭТАЛОННЫХ СЛАЙДОВ шаблона (значения = XML эталонов,
+   не выдумки; карта «атом → слайд-эталон» — custom-recipes-ridetech-khural.md).
+   Декор реальными элементами (псевдоэлементы в .pptx не конвертируются).
+   ============================================================ */
+
+:root{
+  --green:#71FFB5;      /* позитив / текущая веха (семантика дизайнера) */
+  --red:#FF9189;        /* негатив */
+  --hl-green:#C1FFDE;   /* плашка-подсветка позитивной строки */
+  --hl-red:#FFC7C7;     /* плашка-подсветка негативной строки */
+  --gray:#ECEDF0;       /* dk2 темы — карточки, пилюли на светлом */
+  --gray2:#DADCE2;      /* lt2 темы — границы, вторичные плашки */
+  --yellow:#FFDE40;     /* accent1 темы — точечный акцент, не злоупотреблять */
+  --ink:#000000;        /* текст на светлом / тёмный фон */
+  --paper:#FFFFFF;      /* белый */
+  --f-wide:'YS Text Wide Bold';   /* заголовки, значения, номера */
+  --f-bold:'YS Text Bold';        /* подзаголовки, лейблы, названия */
+  --f-text:'YS Text Regular';     /* боди, подписи */
+  --r-card:48px;        /* карточки (adj 0.10–0.135 эталонов на их высотах) */
+  --r-hl:14px;          /* плашки-подсветки */
+  --mx:39px;            /* поле контента слева/справа (0.542″ шаблона) */
+  --gap:46px;           /* межколоночный зазор карточек (0.65″) */
+  --hd-top:113px;       /* верх заголовка (1.569″ шаблона) */
+}
+
+/* ---- Windows-резолв имён стилей (хэндофф Ultima 2026-08-11, O6.2) ----
+   Chrome/DirectWrite на Windows группирует установленные YS по ТИПОГРАФСКОМУ
+   семейству (name ID 16 «YS Text Wide») + начертанию — имена стилей
+   («YS Text Wide Bold», ID 1/4) как font-family НЕ резолвятся и молча падали
+   в serif: обмер занижен на 15–30%, в PP текст рвал плашки. local()-алиасы
+   учат браузер полному имени (ID 4) и PostScript-имени (ID 6) файла; голое
+   семейство «YS Text Wide» в фолбэки НЕ давать — в нём веса Thin…Black, и
+   family-матч отдал бы Regular. font-weight:100 900 гасит синтетический болд
+   (запрошенный вес 700–800 «в диапазоне» лица). macOS резолвит первый local()
+   как раньше — поведение не меняется. Имена сверены с name-таблицами ttf. */
+@font-face{font-family:'YS Text Wide Bold';font-weight:100 900;
+  src:local('YS Text Wide Bold'),local('YSTextWide-Bold');}
+@font-face{font-family:'YS Text Bold';font-weight:100 900;
+  src:local('YS Text Bold'),local('YSText-Bold');}
+@font-face{font-family:'YS Text Regular';font-weight:100 900;
+  src:local('YS Text Regular'),local('YSText-Regular');}
+
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{background:#5a5a5a;font-family:var(--f-text),-apple-system,sans-serif;-webkit-font-smoothing:antialiased;}
+img{display:block;}
+
+.slide{
+  position:relative;width:1920px;height:1080px;overflow:hidden;
+  background:var(--paper);color:var(--ink);
+  display:flex;flex-direction:column;margin:0 auto;
+}
+.slide.black{background:var(--ink);color:var(--paper);}
+
+/* ---- заголовок (мастер: 64px YS Text Wide Bold, КАПС у структурных) ---- */
+.h1{font-family:var(--f-wide);font-weight:800;font-size:64px;line-height:1.05;
+    margin:var(--hd-top) var(--mx) 0;}
+.display{font-family:var(--f-wide);font-weight:800;font-size:344px;line-height:0.96;}
+.sub{font-family:var(--f-bold);font-size:32px;line-height:1.15;margin:20px var(--mx) 0;opacity:.85;}
+
+/* ---- карточка = Rounded Rectangle эталонов #22/#25 (fill dk2, r≈48) ---- */
+.card{background:var(--gray);border-radius:var(--r-card);padding:44px;}
+.slide.black .card{background:#1c1d21;}
+.card .ct{font-family:var(--f-bold);font-size:32px;line-height:1.15;}
+.card .cb{font-family:var(--f-text);font-size:32px;line-height:1.25;margin-top:18px;}
+
+/* ---- пилюля = atom:milestone_date #36 (полное скругление, fill dk2,
+   текст 32 ink по центру, высота 100px) ---- */
+.pill{display:inline-flex;align-items:center;justify-content:center;
+      font-family:var(--f-text);font-size:32px;height:100px;padding:0 40px;
+      border-radius:999px;background:var(--gray);color:var(--ink);}
+.pill.green{background:var(--green);}
+/* тег-пилюля метрик = atom:metric_tag #34: обводочная, компактная */
+.tag{display:inline-flex;align-items:center;justify-content:center;
+     font-family:var(--f-bold);font-size:28px;height:75px;padding:0 30px;
+     border-radius:999px;border:2px solid currentColor;}
+
+/* ---- числа ---- */
+.value{font-family:var(--f-wide);font-weight:800;font-size:115px;line-height:1;}
+.value.green{color:var(--green);}
+.value.red{color:var(--red);}
+.bignum{font-family:var(--f-wide);font-weight:800;font-size:88px;line-height:1;}
+.label{font-family:var(--f-text);font-size:28px;line-height:1.2;opacity:.85;}
+
+/* ---- списки: <ul>/<li> → НАТИВНЫЕ буллиты (канон atom:block_title #42;
+   хэндофф Ultima 2026-08-11, O2). Конвертер собирает li абзацами-буллитами
+   PowerPoint: маркер «•» Arial 150% цветом текста, висячая строка 36.9pt,
+   <ol> — нумерация. Дефисы/точки руками НЕ верстать — перечисление всегда
+   настоящим списком. padding-left = висячая строка канона (глобальный
+   reset выше обнуляет UA-дефолт). ---- */
+ul,ol{padding-left:37px;}
+li{font-family:var(--f-text);font-size:32px;line-height:1.25;margin:6px 0 16px;}
+li::marker{font-size:1.5em;}      /* превью ≈ buSzPct 150% канона */
+
+/* ---- линии и стрелки ---- */
+.hr{height:2px;background:currentColor;opacity:.35;border:0;}
+.nline{height:2px;background:var(--ink);}
+.slide.black .nline{background:var(--paper);}
+/* круг-стрелка перехода = atom:arrow #36 (Oval 114px, fill ink, глиф paper) */
+.stepdot{width:114px;height:114px;border-radius:50%;background:var(--ink);
+         color:var(--paper);display:flex;align-items:center;justify-content:center;
+         font-size:48px;flex:0 0 auto;}
+.slide.black .stepdot{background:var(--paper);color:var(--ink);}
+
+/* ---- плашки-подсветки (семантика таблиц) ---- */
+.hl{border-radius:var(--r-hl);padding:14px 24px;}
+.hl.good{background:var(--hl-green);color:var(--ink);}
+.hl.bad{background:var(--hl-red);color:var(--ink);}
+
+/* ---- орг-структура (низ 120px чист: полоса футера) ---- */
+.org{position:absolute;inset:0 0 120px 0;}
+.org svg{position:absolute;inset:0;width:1920px;height:960px;pointer-events:none;}
+/* орг-узел: пилюля канона (fill dk2 на светлом), голова — чёрная с белым текстом */
+.org .node{position:absolute;background:var(--gray);border-radius:999px;
+           padding:18px 26px;display:flex;align-items:center;gap:18px;width:360px;}
+.org .node.head{background:var(--ink);color:var(--paper);}
+.slide.black .org .node{background:#1c1d21;color:var(--paper);}
+.slide.black .org .node.head{background:var(--paper);color:var(--ink);}
+.org .ava{width:92px;height:92px;border-radius:50%;object-fit:cover;flex:0 0 auto;background:#c9ccd4;}
+.org .who{display:flex;flex-direction:column;}
+.org .who .name{font-family:var(--f-bold);font-size:32px;line-height:1.05;}
+.org .who .role{font-family:var(--f-text);font-size:22px;opacity:.75;}
