@@ -1,0 +1,4 @@
+<svg width="96" height="24" viewBox="0 0 96 24" xmlns="http://www.w3.org/2000/svg">
+  <line x1="2" y1="12" x2="79" y2="12" stroke="#230F0A" stroke-width="3"/>
+  <path d="M78 4 L94 12 L78 20 Z" fill="#230F0A"/>
+</svg>
