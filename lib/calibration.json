@@ -1,0 +1,15 @@
+{
+  "_default": 0.9845,
+  "fonts": {
+    "YS Geo Heavy": 0.9789,
+    "YS Geo Bold": 0.9885,
+    "YS Text Regular": 0.99,
+    "YS Compressed Heavy": 0.9886,
+    "YS SemiMono Regular": 0.9833
+  },
+  "_meta": {
+    "dpi": 200,
+    "n_probes": 66,
+    "method": "dark-bbox vs raw_width_in"
+  }
+}
