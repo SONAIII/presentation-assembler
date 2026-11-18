@@ -1,0 +1,52 @@
+{
+ "_comment": "Машинная полка шаблонов скилла — публичная папка Я.Диска (без OAuth). Пин = md5: движок качает ровно ту ревизию, под которую калиброваны layouts/<tdir>/. Обновление шаблона: перекалибровка → выкладка новой ревизии на Диск → бамп md5/size здесь. Пин и layouts двигаются ВМЕСТЕ, одним коммитом. Одна корневая ссылка обслуживает подпапки шаблонов; ротацию делает команда скилла.",
+ "public_key": "https://disk.yandex.ru/d/md6uHERGSnCIdA",
+ "templates": {
+  "eda": {
+   "remote_dir": "eda",
+   "template": {
+    "name": "eda-template-v14.pptx",
+    "md5": "3f99e9e372bffc9d6569ccbf5c1a90d9",
+    "sha256": "b9027b1c78d584b2cdaf45073eff42c5e0b41371193e1372ed795ddfe13b762c",
+    "size": 28818212
+   },
+   "fonts": {
+    "name": "fonts-ys.zip",
+    "md5": "2248149d6f63c16ab73925b5f3f3c432",
+    "sha256": "684575328888d6e7ac59ca801408cd94ea96763fc33411e0630d083a3d07ee76",
+    "size": 484057
+   }
+  },
+  "gor-services": {
+   "remote_dir": "gor-services",
+   "template": {
+    "name": "template-gs-v2.0.pptx",
+    "md5": "72e6d57860f8fc2a5844a7a764a1ac06",
+    "sha256": "1dc97a490a008219916e3c9c1bd2c63804cbcbe3eff67bb37a980cee6f880518",
+    "size": 45320527
+   },
+   "fonts": {
+    "name": "fonts-gs.zip",
+    "md5": "179179641a342fc7147df419d3c0f661",
+    "sha256": "f467d17b3d14bec7d881d54e5fa9f9139d80543de0b0c5c359ce1bc86eeb48fe",
+    "size": 408681
+   }
+  },
+  "ridetech-khural": {
+   "remote_dir": "Ridetech Khural",
+   "_shelf_note": "Подпапка «Ridetech Khural» командной корневой полки. Имена файлов — дизайнерские (кириллица/пробелы, работает); при следующей ревизии можно переименовать в ASCII по образцу eda/gor-services.",
+   "template": {
+    "name": "Ridetech_Хурал Шаблон SKILL FRIENDLY_v3.3.pptx",
+    "md5": "6cd545e3e7323d6b62b3fd2e4c867b06",
+    "sha256": "a19131a2dad5b3afb3bfd420cc7a71ac0da4d35515d02d669a83abee7d51553d",
+    "size": 13340258
+   },
+   "fonts": {
+    "name": "fonts.zip",
+    "md5": "80c35342714497e0baba15d69912a2b2",
+    "sha256": "12538ea6503bbe43b5a473fcade885e96ad88d91f0119cb0fb2d9a5c6072e77a",
+    "size": 287055
+   }
+  }
+ }
+}
