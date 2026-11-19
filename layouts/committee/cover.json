@@ -1,0 +1,43 @@
+{
+  "id": "committee_cover",
+  "schema_version": 1,
+  "template": "Комитет",
+  "family": "cover",
+  "kind": "content_fill",
+  "strict_slots": true,
+  "_doc": "Обложка по PDF стр.1; палитра финальной дебиторки, без синего акцента.",
+  "source_page": 1,
+  "variants": [
+    {
+      "name": "source",
+      "_hint": 0,
+      "anchor": {
+        "has_shapes": [
+          "committee:cover:source"
+        ]
+      },
+      "slots": {
+        "title": {
+          "match_name": "committee:cover:source",
+          "font": "YS Text Cond Bold Italic",
+          "size_pt": 61.02,
+          "box_w_in": 9.027777777777779,
+          "box_h_in": 1.1805555555555556,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "date": {
+          "match_name": "date",
+          "font": "YS Text Bold",
+          "size_pt": 14.99,
+          "box_w_in": 8.88888888888889,
+          "box_h_in": 0.3472222222222222,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        }
+      }
+    }
+  ]
+}

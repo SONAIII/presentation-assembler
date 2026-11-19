@@ -1,0 +1,66 @@
+{
+  "id": "committee_roadmap",
+  "schema_version": 1,
+  "template": "Комитет",
+  "family": "roadmap",
+  "kind": "content_fill",
+  "strict_slots": true,
+  "_doc": "Бэклог по PDF стр.30: до восьми проектов с увеличенными отступами, разделителями направлений и отдельной колонкой зависимостей.",
+  "source_page": 30,
+  "variants": [
+    {
+      "name": "source",
+      "_hint": 6,
+      "anchor": {
+        "has_shapes": [
+          "committee:roadmap:source"
+        ]
+      },
+      "slots": {
+        "heading": {
+          "match_name": "committee:roadmap:source",
+          "font": "YS Text Cond Bold Italic",
+          "size_pt": 21.6,
+          "box_w_in": 9.333333333333334,
+          "box_h_in": 0.4444444444444444,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "table": {
+          "kind": "table",
+          "match_name": "roadmap-table",
+          "trim": true,
+          "stretch": false,
+          "stretch_font": false,
+          "max_rows": 9,
+          "max_cols": 4,
+          "exact_cols": 4,
+          "cell_font_pt": 8.4,
+          "fit_table": true,
+          "divider_mode": "groups"
+        },
+        "next_heading": {
+          "match_name": "next-heading",
+          "font": "YS Text Bold",
+          "size_pt": 9.5,
+          "box_w_in": 1.9722222222222223,
+          "box_h_in": 0.2777777777777778,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "next_body": {
+          "match_name": "next-body",
+          "font": "YS Text",
+          "size_pt": 9.8,
+          "box_w_in": 1.9722222222222223,
+          "box_h_in": 2.7083333333333335,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "slide_w_in": 10,
+  "slide_h_in": 5.625,
+  "margin_left_in": 0.33,
+  "margin_right_in": 0.33,
+  "heading": {
+    "left_in": 0.39,
+    "top_in": 0.19,
+    "w_in": 9.22,
+    "h_in": 0.45
+  },
+  "content_band": {
+    "left_in": 0.33,
+    "right_in": 9.67,
+    "top_in": 0.8,
+    "bottom_in": 5.3,
+    "w_in": 9.34,
+    "h_in": 4.5
+  },
+  "gutter_in": 0.14
+}

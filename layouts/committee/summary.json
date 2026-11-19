@@ -1,0 +1,131 @@
+{
+  "id": "committee_summary",
+  "schema_version": 1,
+  "template": "Комитет",
+  "family": "summary",
+  "kind": "content_fill",
+  "strict_slots": true,
+  "_doc": "Саммари по PDF стр.2: три содержательных KPI-блока с контекстом и фокусом; таблица направлений снизу.",
+  "source_page": 2,
+  "variants": [
+    {
+      "name": "source",
+      "_hint": 2,
+      "anchor": {
+        "has_shapes": [
+          "committee:summary:source"
+        ]
+      },
+      "slots": {
+        "heading": {
+          "match_name": "committee:summary:source",
+          "font": "YS Text Cond Bold Italic",
+          "size_pt": 21.6,
+          "box_w_in": 9.222222222222221,
+          "box_h_in": 0.4305555555555556,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "subtitle": {
+          "match_name": "subtitle",
+          "font": "YS Text",
+          "size_pt": 9.0,
+          "box_w_in": 9.11111111111111,
+          "box_h_in": 0.20833333333333334,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "table": {
+          "kind": "table",
+          "match_name": "summary-table",
+          "trim": true,
+          "stretch": false,
+          "stretch_font": false,
+          "max_rows": 4,
+          "max_cols": 3,
+          "exact_cols": 3,
+          "cell_font_pt": 9.2,
+          "fit_table": true,
+          "divider_mode": "rows"
+        },
+        "labels": {
+          "font": "YS Text Bold",
+          "size_pt": 11.15,
+          "box_w_in": 2.4694444444444446,
+          "box_h_in": 0.2638888888888889,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true,
+          "repeat": true,
+          "match_names": [
+            "label-1",
+            "label-2",
+            "label-3"
+          ]
+        },
+        "values": {
+          "font": "YS Text Cond Bold Italic",
+          "size_pt": 26.5,
+          "box_w_in": 2.4694444444444446,
+          "box_h_in": 0.4027777777777778,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true,
+          "repeat": true,
+          "match_names": [
+            "value-1",
+            "value-2",
+            "value-3"
+          ]
+        },
+        "baselines": {
+          "font": "YS Text",
+          "size_pt": 8.69,
+          "box_w_in": 2.4694444444444446,
+          "box_h_in": 0.20833333333333334,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true,
+          "repeat": true,
+          "match_names": [
+            "baseline-1",
+            "baseline-2",
+            "baseline-3"
+          ]
+        },
+        "bodies": {
+          "font": "YS Text",
+          "size_pt": 10.19,
+          "box_w_in": 2.4694444444444446,
+          "box_h_in": 0.6388888888888888,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true,
+          "repeat": true,
+          "match_names": [
+            "body-1",
+            "body-2",
+            "body-3"
+          ]
+        },
+        "focus": {
+          "font": "YS Text Bold",
+          "size_pt": 9.6,
+          "box_w_in": 2.4694444444444446,
+          "box_h_in": 0.3472222222222222,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true,
+          "repeat": true,
+          "match_names": [
+            "focus-1",
+            "focus-2",
+            "focus-3"
+          ]
+        }
+      }
+    }
+  ]
+}

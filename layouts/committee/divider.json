@@ -1,0 +1,43 @@
+{
+  "id": "committee_divider",
+  "schema_version": 1,
+  "template": "Комитет",
+  "family": "divider",
+  "kind": "content_fill",
+  "strict_slots": true,
+  "_doc": "Разделитель по PDF стр.4: номер и название раздела слева; тёмный текст в палитре дебиторки.",
+  "source_page": 4,
+  "variants": [
+    {
+      "name": "source",
+      "_hint": 1,
+      "anchor": {
+        "has_shapes": [
+          "committee:divider:source"
+        ]
+      },
+      "slots": {
+        "number": {
+          "match_name": "committee:divider:source",
+          "font": "YS Text Cond Bold Italic",
+          "size_pt": 64.84,
+          "box_w_in": 2.7777777777777777,
+          "box_h_in": 1.25,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "title": {
+          "match_name": "section",
+          "font": "YS Text Cond Bold Italic",
+          "size_pt": 48.81,
+          "box_w_in": 9.027777777777779,
+          "box_h_in": 0.9027777777777778,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        }
+      }
+    }
+  ]
+}

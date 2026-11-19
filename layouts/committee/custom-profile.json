@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "fonts": {
+    "files": {
+      "YS Text": "YS Text-Regular.ttf",
+      "YS Text Bold": "YS Text-Bold.ttf",
+      "YS Text Cond Bold Italic": "YS Text Cond-Bold Italic.ttf"
+    },
+    "fallback": "YS Text",
+    "resolve": [
+      {
+        "family_contains": "Cond",
+        "style": "YS Text Cond Bold Italic"
+      },
+      {
+        "weight_min": 700,
+        "style": "YS Text Bold"
+      },
+      {
+        "style": "YS Text"
+      }
+    ],
+    "bold_family": {
+      "YS Text": "YS Text Bold"
+    }
+  },
+  "layouts": {
+    "default": "Blank",
+    "default_bg": [
+      230,
+      237,
+      241
+    ],
+    "by_bg": []
+  },
+  "calibration": {
+    "title_dy_px": 0
+  },
+  "canvas": {
+    "px": [
+      720,
+      405
+    ]
+  },
+  "a15": {
+    "photo_panel": {
+      "top_max": 0,
+      "bottom_min_from_h": 0
+    }
+  },
+  "margins": {
+    "left": 24,
+    "right": 24,
+    "top": 14,
+    "bottom": 18
+  }
+}

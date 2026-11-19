@@ -1,0 +1,78 @@
+{
+  "id": "committee_priorities",
+  "schema_version": 1,
+  "template": "Комитет",
+  "family": "priorities",
+  "kind": "content_fill",
+  "strict_slots": true,
+  "_doc": "Приоритизация по PDF стр.25: горизонтальные причины с масштабом и компактный следующий шаг.",
+  "source_page": 25,
+  "variants": [
+    {
+      "name": "source",
+      "_hint": 5,
+      "anchor": {
+        "has_shapes": [
+          "committee:priorities:source"
+        ]
+      },
+      "slots": {
+        "heading": {
+          "match_name": "committee:priorities:source",
+          "font": "YS Text Cond Bold Italic",
+          "size_pt": 21.6,
+          "box_w_in": 9.333333333333334,
+          "box_h_in": 0.4583333333333333,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "subtitle": {
+          "match_name": "subtitle",
+          "font": "YS Text",
+          "size_pt": 9.0,
+          "box_w_in": 9.305555555555555,
+          "box_h_in": 0.20833333333333334,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "chart_title": {
+          "match_name": "chart-title",
+          "font": "YS Text Bold",
+          "size_pt": 10.5,
+          "box_w_in": 8.819444444444445,
+          "box_h_in": 0.4166666666666667,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "callout_label": {
+          "match_name": "callout-label",
+          "font": "YS Text Cond Bold Italic",
+          "size_pt": 12.0,
+          "box_w_in": 1.0555555555555556,
+          "box_h_in": 0.25,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "callout": {
+          "match_name": "callout",
+          "font": "YS Text",
+          "size_pt": 9.0,
+          "box_w_in": 7.375,
+          "box_h_in": 0.4166666666666667,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        }
+      },
+      "chart_slots": {
+        "chart": {
+          "match_name": "ranking"
+        }
+      }
+    }
+  ]
+}

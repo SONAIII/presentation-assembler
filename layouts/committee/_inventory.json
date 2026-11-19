@@ -1,0 +1,477 @@
+{
+  "template": "Templates/committee/committee-template-v1.pptx",
+  "mtime": "Thu Nov 19 16:44:06 2026",
+  "slide_count": 8,
+  "slides": [
+    {
+      "index0": 0,
+      "index1": 1,
+      "shapes": [
+        {
+          "name": "committee:cover:source",
+          "kind": "text",
+          "text": "НАЗВАНИЕ ПРЕЗЕНТАЦИИ"
+        },
+        {
+          "name": "date",
+          "kind": "text",
+          "text": "Дата комитета"
+        }
+      ],
+      "all_text": "НАЗВАНИЕ ПРЕЗЕНТАЦИИ\nДата комитета",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "Дата комитета",
+        "НАЗВАНИЕ ПРЕЗЕНТАЦИИ"
+      ]
+    },
+    {
+      "index0": 1,
+      "index1": 2,
+      "shapes": [
+        {
+          "name": "committee:divider:source",
+          "kind": "text",
+          "text": "01"
+        },
+        {
+          "name": "section",
+          "kind": "text",
+          "text": "НАЗВАНИЕ РАЗДЕЛА"
+        }
+      ],
+      "all_text": "01\nНАЗВАНИЕ РАЗДЕЛА",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "01",
+        "НАЗВАНИЕ РАЗДЕЛА"
+      ]
+    },
+    {
+      "index0": 2,
+      "index1": 3,
+      "shapes": [
+        {
+          "name": "committee:summary:source",
+          "kind": "text",
+          "text": "ЗАГОЛОВОК СЛАЙДА"
+        },
+        {
+          "name": "subtitle",
+          "kind": "text",
+          "text": "Период, сценарий и база сравнения"
+        },
+        {
+          "name": "panel-1",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "label-1",
+          "kind": "text",
+          "text": "Название метрики"
+        },
+        {
+          "name": "value-1",
+          "kind": "text",
+          "text": "—"
+        },
+        {
+          "name": "baseline-1",
+          "kind": "text",
+          "text": "План / сравнение"
+        },
+        {
+          "name": "body-1",
+          "kind": "text",
+          "text": "Контекст и объяснение отклонения"
+        },
+        {
+          "name": "focus-1",
+          "kind": "text",
+          "text": "Фокус на следующий период"
+        },
+        {
+          "name": "panel-2",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "label-2",
+          "kind": "text",
+          "text": "Название метрики"
+        },
+        {
+          "name": "value-2",
+          "kind": "text",
+          "text": "—"
+        },
+        {
+          "name": "baseline-2",
+          "kind": "text",
+          "text": "План / сравнение"
+        },
+        {
+          "name": "body-2",
+          "kind": "text",
+          "text": "Контекст и объяснение отклонения"
+        },
+        {
+          "name": "focus-2",
+          "kind": "text",
+          "text": "Фокус на следующий период"
+        },
+        {
+          "name": "panel-3",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "label-3",
+          "kind": "text",
+          "text": "Название метрики"
+        },
+        {
+          "name": "value-3",
+          "kind": "text",
+          "text": "—"
+        },
+        {
+          "name": "baseline-3",
+          "kind": "text",
+          "text": "План / сравнение"
+        },
+        {
+          "name": "body-3",
+          "kind": "text",
+          "text": "Контекст и объяснение отклонения"
+        },
+        {
+          "name": "focus-3",
+          "kind": "text",
+          "text": "Фокус на следующий период"
+        },
+        {
+          "name": "summary-table",
+          "kind": "table",
+          "text": "Заголовок\tЗаголовок\tЗаголовок\n—\t—\t—\n—\t—\t—\n—\t—\t—"
+        }
+      ],
+      "all_text": "ЗАГОЛОВОК СЛАЙДА\nПериод, сценарий и база сравнения\nНазвание метрики\n—\nПлан / сравнение\nКонтекст и объяснение отклонения\nФокус на следующий период\nНазвание метрики\n—\nПлан / сравнение\nКонтекст и объяснение отклонения\nФокус на следующий период\nНазвание метрики\n—\nПлан / сравнение\nКонтекст и объяснение отклонения\nФокус на следующий период\nЗаголовок\tЗаголовок\tЗаголовок\n—\t—\t—\n—\t—\t—\n—\t—\t—",
+      "dup_shapes": [
+        {
+          "text": "Название метрики",
+          "count": 3
+        },
+        {
+          "text": "—",
+          "count": 3
+        },
+        {
+          "text": "План / сравнение",
+          "count": 3
+        },
+        {
+          "text": "Контекст и объяснение отклонения",
+          "count": 3
+        },
+        {
+          "text": "Фокус на следующий период",
+          "count": 3
+        }
+      ],
+      "uneditable": [],
+      "unique_strings": [
+        "—",
+        "—\t—\t—",
+        "Название метрики",
+        "План / сравнение",
+        "Фокус на следующий период",
+        "Заголовок\tЗаголовок\tЗаголовок",
+        "Контекст и объяснение отклонения",
+        "Период, сценарий и база сравнения"
+      ]
+    },
+    {
+      "index0": 3,
+      "index1": 4,
+      "shapes": [
+        {
+          "name": "committee:chart_note:source",
+          "kind": "text",
+          "text": "ЗАГОЛОВОК СЛАЙДА"
+        },
+        {
+          "name": "chart-panel",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "note-panel",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "chart-title",
+          "kind": "text",
+          "text": "Динамика показателя и сравнение с планом"
+        },
+        {
+          "name": "main-chart",
+          "kind": "chart",
+          "text": ""
+        },
+        {
+          "name": "note-heading",
+          "kind": "text",
+          "text": "Фокус следующего периода"
+        },
+        {
+          "name": "note-body",
+          "kind": "text",
+          "text": "Действия, основанные на данных"
+        }
+      ],
+      "all_text": "ЗАГОЛОВОК СЛАЙДА\nДинамика показателя и сравнение с планом\nФокус следующего периода\nДействия, основанные на данных",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "Фокус следующего периода",
+        "Действия, основанные на данных",
+        "Динамика показателя и сравнение с планом"
+      ]
+    },
+    {
+      "index0": 4,
+      "index1": 5,
+      "shapes": [
+        {
+          "name": "committee:dashboard:source",
+          "kind": "text",
+          "text": "ЗАГОЛОВОК СЛАЙДА"
+        },
+        {
+          "name": "panel-left",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "panel-top",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "panel-bottom",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "left_title",
+          "kind": "text",
+          "text": "Вывод и определение метрики"
+        },
+        {
+          "name": "left_subtitle",
+          "kind": "text",
+          "text": "Вывод и определение метрики"
+        },
+        {
+          "name": "top_title",
+          "kind": "text",
+          "text": "Вывод и определение метрики"
+        },
+        {
+          "name": "top_subtitle",
+          "kind": "text",
+          "text": "Вывод и определение метрики"
+        },
+        {
+          "name": "bottom_title",
+          "kind": "text",
+          "text": "Вывод и определение метрики"
+        },
+        {
+          "name": "bottom_subtitle",
+          "kind": "text",
+          "text": "Вывод и определение метрики"
+        },
+        {
+          "name": "main",
+          "kind": "chart",
+          "text": ""
+        },
+        {
+          "name": "trend",
+          "kind": "chart",
+          "text": ""
+        },
+        {
+          "name": "step1",
+          "kind": "chart",
+          "text": ""
+        },
+        {
+          "name": "step2",
+          "kind": "chart",
+          "text": ""
+        }
+      ],
+      "all_text": "ЗАГОЛОВОК СЛАЙДА\nВывод и определение метрики\nВывод и определение метрики\nВывод и определение метрики\nВывод и определение метрики\nВывод и определение метрики\nВывод и определение метрики",
+      "dup_shapes": [
+        {
+          "text": "Вывод и определение метрики",
+          "count": 6
+        }
+      ],
+      "uneditable": [],
+      "unique_strings": [
+        "Вывод и определение метрики"
+      ]
+    },
+    {
+      "index0": 5,
+      "index1": 6,
+      "shapes": [
+        {
+          "name": "committee:priorities:source",
+          "kind": "text",
+          "text": "ЗАГОЛОВОК СЛАЙДА"
+        },
+        {
+          "name": "subtitle",
+          "kind": "text",
+          "text": "Масштаб проблемы и база расчёта"
+        },
+        {
+          "name": "ranking-panel",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "chart-title",
+          "kind": "text",
+          "text": "ТОП-5 ПРИЧИН"
+        },
+        {
+          "name": "ranking",
+          "kind": "chart",
+          "text": ""
+        },
+        {
+          "name": "callout-panel",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "callout-label",
+          "kind": "text",
+          "text": "ДАЛЬШЕ"
+        },
+        {
+          "name": "callout",
+          "kind": "text",
+          "text": "Действие и ожидаемое изменение"
+        }
+      ],
+      "all_text": "ЗАГОЛОВОК СЛАЙДА\nМасштаб проблемы и база расчёта\nТОП-5 ПРИЧИН\nДАЛЬШЕ\nДействие и ожидаемое изменение",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "ДАЛЬШЕ",
+        "ТОП-5 ПРИЧИН",
+        "Действие и ожидаемое изменение",
+        "Масштаб проблемы и база расчёта"
+      ]
+    },
+    {
+      "index0": 6,
+      "index1": 7,
+      "shapes": [
+        {
+          "name": "committee:roadmap:source",
+          "kind": "text",
+          "text": "ЗАГОЛОВОК СЛАЙДА"
+        },
+        {
+          "name": "table-panel",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "next-panel",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "roadmap-table",
+          "kind": "table",
+          "text": "Заголовок\tЗаголовок\tЗаголовок\tЗаголовок\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—"
+        },
+        {
+          "name": "next-heading",
+          "kind": "text",
+          "text": "ДАЛЬНЕЙШИЕ ШАГИ"
+        },
+        {
+          "name": "next-body",
+          "kind": "text",
+          "text": "Зависимости и следующие решения"
+        }
+      ],
+      "all_text": "ЗАГОЛОВОК СЛАЙДА\nЗаголовок\tЗаголовок\tЗаголовок\tЗаголовок\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\nДАЛЬНЕЙШИЕ ШАГИ\nЗависимости и следующие решения",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "ДАЛЬНЕЙШИЕ ШАГИ",
+        "Зависимости и следующие решения",
+        "Заголовок\tЗаголовок\tЗаголовок\tЗаголовок"
+      ]
+    },
+    {
+      "index0": 7,
+      "index1": 8,
+      "shapes": [
+        {
+          "name": "committee:chart_table:actions",
+          "kind": "text",
+          "text": "НАЗВАНИЕ ПОКАЗАТЕЛЯ"
+        },
+        {
+          "name": "chart-panel",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "chart-unit",
+          "kind": "text",
+          "text": "Единица"
+        },
+        {
+          "name": "committee-combo",
+          "kind": "chart",
+          "text": ""
+        },
+        {
+          "name": "table-panel",
+          "kind": "shape",
+          "text": ""
+        },
+        {
+          "name": "committee-actions",
+          "kind": "table",
+          "text": "ПРИЧИНА\tДОЛЯ\tЧТО ДЕЛАЕМ\tСРОК\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—"
+        }
+      ],
+      "all_text": "НАЗВАНИЕ ПОКАЗАТЕЛЯ\nЕдиница\nПРИЧИНА\tДОЛЯ\tЧТО ДЕЛАЕМ\tСРОК\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—\n—\t—\t—\t—",
+      "dup_shapes": [],
+      "uneditable": [],
+      "unique_strings": [
+        "Единица",
+        "НАЗВАНИЕ ПОКАЗАТЕЛЯ",
+        "ПРИЧИНА\tДОЛЯ\tЧТО ДЕЛАЕМ\tСРОК"
+      ]
+    }
+  ]
+}

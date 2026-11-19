@@ -1,0 +1,53 @@
+{
+  "id": "committee_chart_table",
+  "schema_version": 1,
+  "template": "Комитет",
+  "family": "chart_table",
+  "kind": "content_fill",
+  "strict_slots": true,
+  "_doc": "Динамика сверху, причины/доли/действия/сроки снизу. Два накопительных ряда + процентная линия; нативные график и таблица.",
+  "variants": [
+    {
+      "name": "actions",
+      "_hint": 7,
+      "anchor": {
+        "has_shapes": [
+          "committee:chart_table:actions"
+        ]
+      },
+      "slots": {
+        "heading": {
+          "match_name": "committee:chart_table:actions",
+          "font": "YS Text",
+          "size_pt": 22.5,
+          "box_w_in": 9.25,
+          "box_h_in": 0.385
+        },
+        "unit": {
+          "match_name": "chart-unit",
+          "font": "YS Text",
+          "size_pt": 8.25,
+          "box_w_in": 1.5,
+          "box_h_in": 0.16
+        },
+        "table": {
+          "kind": "table",
+          "match_name": "committee-actions",
+          "trim": true,
+          "stretch": false,
+          "stretch_width": false,
+          "stretch_font": false,
+          "max_rows": 8,
+          "max_cols": 4,
+          "exact_cols": 4
+        }
+      },
+      "chart_slots": {
+        "chart": {
+          "match_name": "committee-combo",
+          "combo_series": 3
+        }
+      }
+    }
+  ]
+}

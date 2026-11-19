@@ -1,0 +1,30 @@
+{
+  "name": "Комитет",
+  "colors": {
+    "background": "E6EDF1",
+    "panel": "FFFFFF",
+    "text": "414C53",
+    "muted": "737982",
+    "accent": "FFCC00",
+    "positive": "029154",
+    "blue": "2775B6",
+    "line": "2775B6"
+  },
+  "fonts": {
+    "heading": "YS Text Cond Bold Italic",
+    "body": "YS Text"
+  },
+  "reference": {
+    "filename": "Комитет_Сходить_09092026_preread [Wl0bcv].pdf",
+    "sha256": "d3fa3eac2c6d8886a2b385e887e4b97045254fd33ac831c5825c3966ad860240"
+  },
+  "source_pages": [
+    1,
+    2,
+    4,
+    8,
+    25,
+    29,
+    30
+  ]
+}

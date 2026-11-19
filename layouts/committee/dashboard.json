@@ -1,0 +1,107 @@
+{
+  "id": "committee_dashboard",
+  "schema_version": 1,
+  "template": "Комитет",
+  "family": "dashboard",
+  "kind": "content_fill",
+  "strict_slots": true,
+  "_doc": "Аналитический слайд по PDF стр.29: большой накопительный график и три компактных графика с подписями.",
+  "source_page": 29,
+  "variants": [
+    {
+      "name": "source",
+      "_hint": 4,
+      "anchor": {
+        "has_shapes": [
+          "committee:dashboard:source"
+        ]
+      },
+      "slots": {
+        "heading": {
+          "match_name": "committee:dashboard:source",
+          "font": "YS Text Cond Bold Italic",
+          "size_pt": 21.6,
+          "box_w_in": 9.166666666666666,
+          "box_h_in": 0.4722222222222222,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "left_title": {
+          "match_name": "left_title",
+          "font": "YS Text Bold",
+          "size_pt": 11.0,
+          "box_w_in": 4.569444444444445,
+          "box_h_in": 0.4166666666666667,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "left_subtitle": {
+          "match_name": "left_subtitle",
+          "font": "YS Text",
+          "size_pt": 8.5,
+          "box_w_in": 4.569444444444445,
+          "box_h_in": 0.19444444444444445,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "top_title": {
+          "match_name": "top_title",
+          "font": "YS Text Bold",
+          "size_pt": 10.0,
+          "box_w_in": 3.6944444444444446,
+          "box_h_in": 0.25,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "top_subtitle": {
+          "match_name": "top_subtitle",
+          "font": "YS Text",
+          "size_pt": 8.0,
+          "box_w_in": 3.6944444444444446,
+          "box_h_in": 0.19444444444444445,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "bottom_title": {
+          "match_name": "bottom_title",
+          "font": "YS Text Bold",
+          "size_pt": 10.0,
+          "box_w_in": 3.6944444444444446,
+          "box_h_in": 0.25,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "bottom_subtitle": {
+          "match_name": "bottom_subtitle",
+          "font": "YS Text",
+          "size_pt": 8.0,
+          "box_w_in": 3.6944444444444446,
+          "box_h_in": 0.19444444444444445,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        }
+      },
+      "chart_slots": {
+        "main": {
+          "match_name": "main"
+        },
+        "trend": {
+          "match_name": "trend"
+        },
+        "step1": {
+          "match_name": "step1"
+        },
+        "step2": {
+          "match_name": "step2"
+        }
+      }
+    }
+  ]
+}

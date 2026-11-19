@@ -1,0 +1,68 @@
+{
+  "id": "committee_chart_note",
+  "schema_version": 1,
+  "template": "Комитет",
+  "family": "chart_note",
+  "kind": "content_fill",
+  "strict_slots": true,
+  "_doc": "График и рабочий план по PDF стр.8; пропорции панелей и плотность исходника.",
+  "source_page": 8,
+  "variants": [
+    {
+      "name": "source",
+      "_hint": 3,
+      "anchor": {
+        "has_shapes": [
+          "committee:chart_note:source"
+        ]
+      },
+      "slots": {
+        "heading": {
+          "match_name": "committee:chart_note:source",
+          "font": "YS Text Cond Bold Italic",
+          "size_pt": 21.6,
+          "box_w_in": 9.055555555555555,
+          "box_h_in": 0.4444444444444444,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "chart_title": {
+          "match_name": "chart-title",
+          "font": "YS Text Bold",
+          "size_pt": 10.0,
+          "box_w_in": 5.25,
+          "box_h_in": 0.2777777777777778,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "note_heading": {
+          "match_name": "note-heading",
+          "font": "YS Text Bold",
+          "size_pt": 11.0,
+          "box_w_in": 2.638888888888889,
+          "box_h_in": 0.5833333333333334,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        },
+        "note_body": {
+          "match_name": "note-body",
+          "font": "YS Text",
+          "size_pt": 10.5,
+          "box_w_in": 2.611111111111111,
+          "box_h_in": 2.5555555555555554,
+          "optional": false,
+          "clear_if_empty": false,
+          "clear_soft_breaks": true
+        }
+      },
+      "chart_slots": {
+        "chart": {
+          "match_name": "main-chart"
+        }
+      }
+    }
+  ]
+}
