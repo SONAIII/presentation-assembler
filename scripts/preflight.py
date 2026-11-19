@@ -210,6 +210,8 @@ def _zip_font_names(tdir: str) -> list[str]:
     """Имена шрифтов из fonts-ys.zip (локальный/кэш), если он уже на диске."""
     man = FT.load_manifest()
     fz = FT._entry(man, tdir)["fonts"]
+    if "system_required" in fz:
+        return fz["system_required"]
     for p in (os.path.join(FT.SKILL_DIR, "Templates", tdir, fz["name"]),
               os.path.join(FT.cache_root(), tdir, fz["sha256"], fz["name"])):
         if os.path.exists(p):
@@ -265,6 +267,15 @@ def check_template(rep: Report, tdir: str, offline: bool):
     tpl = FT._entry(man, tdir)["template"]
     local = os.path.join(FT.SKILL_DIR, "Templates", tdir, tpl["name"])
     cached = os.path.join(FT.cache_root(), tdir, tpl["sha256"], tpl["name"])
+    if FT._entry(man, tdir).get("local_only"):
+        path = local if os.path.isfile(local) else cached
+        if not os.path.isfile(path):
+            rep.add(FAIL, "локальный шаблон", f"восстанови {tpl['name']} из набора скилла")
+        elif not FT._matches_pin(path, tpl):
+            rep.add(FAIL, "локальный шаблон", "size/md5/SHA-256 не совпадают с манифестом")
+        else:
+            rep.add(OK, "локальный шаблон", "файл и size/md5/SHA-256 проверены без сети")
+        return
     if os.path.exists(local):
         rep.add(OK, "шаблон", f"дев-файл {os.path.relpath(local, FT.SKILL_DIR)}")
         src = "local"

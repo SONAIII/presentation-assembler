@@ -57,7 +57,9 @@ PUBLIC_LINK_HOSTS = frozenset({"disk.yandex.ru"})
 DOWNLOAD_HOSTS = frozenset({"downloader.disk.yandex.ru"})
 DOWNLOAD_DOMAINS = frozenset({"storage.yandex.net"})
 
-TDIR_ALIASES = {"еда": "eda",
+TDIR_ALIASES = {"комитет": "committee", "комитет куда сходить": "committee",
+                "комитет: куда сходить": "committee", "offline committee": "committee",
+                "еда": "eda",
                 "городские": "gor-services", "город": "gor-services",
                 "городские сервисы": "gor-services", "gorod": "gor-services",
                 "хурал": "ridetech-khural", "райдтех": "ridetech-khural", "райтех": "ridetech-khural",
@@ -320,6 +322,12 @@ def ensure_fonts(tdir: str) -> None:
     man = load_manifest()
     entry = _entry(man, tdir)
     fz = entry["fonts"]
+    if "system_required" in fz:
+        missing = [name for name in fz["system_required"]
+                   if not os.path.isfile(os.path.join(_font_dest(), name))]
+        if missing:
+            raise SystemExit("Не установлены шрифты локального шаблона: " + ", ".join(missing))
+        return
     if platform.system() == "Windows":
         if _win_fonts_present(tdir):
             return
@@ -374,6 +382,11 @@ def resolve_template(tdir: str) -> str:
     if os.path.exists(cached):
         return _require_pin(cached, tpl, "шаблон в кэше")
 
+    if entry.get("local_only"):
+        raise SystemExit(
+            f"Локальный шаблон {tdir!r} отсутствует: {local}. "
+            "Восстанови файл из установленного набора; этот шаблон не скачивается с публичной полки.")
+
     pk = public_key(man, entry)
     print(f"  шаблона нет локально — качаю {tpl['name']} (~{tpl['size'] >> 20}МБ) с Я.Диска…")
     _fetch_file(pk, _remote_path(entry, tpl["name"]), cached, tpl)
@@ -386,6 +399,11 @@ def check_pin(tdir: str) -> int:
     """Сверка пина с текущим состоянием Диска (md5 из метаданных, без закачки)."""
     man = load_manifest()
     entry = _entry(man, tdir)
+    if entry.get("local_only"):
+        path = resolve_template(tdir)
+        _require_pin(path, entry["template"], "локальный шаблон")
+        print(f"  {entry['template']['name']}: локальный size/md5/SHA-256 пин совпадает")
+        return 0
     pk = public_key(man, entry)
     ok = True
     for key in ("template", "fonts"):

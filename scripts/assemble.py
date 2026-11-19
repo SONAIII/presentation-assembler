@@ -11,6 +11,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 import subprocess
 import sys
 from pathlib import Path
@@ -19,6 +20,8 @@ from pathlib import Path
 def main() -> int:
     parser = argparse.ArgumentParser(description="Manage sources or build a PPTX")
     sub = parser.add_subparsers(dest="command", required=True)
+
+    sub.add_parser("templates", help="List selectable templates without network access")
 
     sources = sub.add_parser("sources", help="Validate or inspect workspace source profiles")
     sources.add_argument("source_args", nargs=argparse.REMAINDER,
@@ -31,6 +34,14 @@ def main() -> int:
 
     args = parser.parse_args()
     scripts = Path(__file__).resolve().parent
+
+    if args.command == "templates":
+        manifest = json.loads((scripts.parent / "Templates/manifest.json").read_text())
+        labels = {"eda": "Еда", "gor-services": "Городские сервисы", "ridetech-khural": "Хурал Райдтеха"}
+        print(json.dumps([{"id": name, "name": entry.get("display_name", labels.get(name, name)),
+                           "local_only": bool(entry.get("local_only"))}
+                          for name, entry in manifest["templates"].items()], ensure_ascii=False, indent=2))
+        return 0
 
     if args.command == "sources":
         cmd = [sys.executable, str(scripts / "source_profiles.py"),

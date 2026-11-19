@@ -115,7 +115,8 @@ import fetch_template                           # noqa: E402  (шаблон с �
 RID = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id"
 LAYOUT_DIRS = {"eda": os.path.join(REPO, "layouts/eda"),
                "gor-services": os.path.join(REPO, "layouts/gor-services"),
-               "ridetech-khural": os.path.join(REPO, "layouts/ridetech-khural")}
+               "ridetech-khural": os.path.join(REPO, "layouts/ridetech-khural"),
+               "committee": os.path.join(REPO, "layouts/committee")}
 TDIR_ALIASES = fetch_template.TDIR_ALIASES   # единый источник — scripts/fetch_template.py (не дублируем)
 
 
@@ -342,7 +343,7 @@ def resolve_entry_plan(prs, entry: dict, tdir: str) -> dict:
         # stages → слоты выбранного варианта (t3: dateN+descN; t4: dateN+descs-repeat);
         # легаси-запись (явный variant + dateN/descN напрямую) идёт мимо маппинга
         stages, vs = slots["stages"], r.fit_report["variant"]["slots"]
-        vslots = {"heading": slots.get("heading")}
+        vslots = {key: value for key, value in slots.items() if key in vs}
         for i, st in enumerate(stages, 1):
             if f"date{i}" in vs:
                 vslots[f"date{i}"] = st["date"]
@@ -359,6 +360,11 @@ def resolve_entry_plan(prs, entry: dict, tdir: str) -> dict:
             f"контент под дизайнерский вариант (references/families-eda.md) "
             f"или сверстай custom (references/custom-html.md)")
     variant = r.fit_report["variant"]
+    if fillmap.get("strict_slots"):
+        if (fillmap.get("router") == "timeline" and "stages" in slots
+                and len(slots["stages"]) != variant.get("steps")):
+            raise DeckError(f"{family}: вариант {variant['name']} вмещает {variant['steps']} этапа; получено {len(slots['stages'])}")
+        validate_strict_slots(family, variant, content.slots or {}, entry, prs.slides[r.ready_slide_index])
     # автолегенда: имена серий чарта → слот legend (если не задан явно).
     # Порядок = ранг ПОСЛЕДНЕГО значения (верхняя подпись — серия с наибольшим
     # финальным значением: подписи стоят у концов линий, так их ставил дизайнер)
@@ -372,6 +378,53 @@ def resolve_entry_plan(prs, entry: dict, tdir: str) -> dict:
     return {"mode": "FILL", "family": family, "entry": entry,
             "src": r.ready_slide_index, "variant": variant,
             "content": content, "reason": r.reason, "routed": r.reason}
+
+
+def validate_strict_slots(family, variant, slots, entry, slide=None):
+    """Opt-in contract for clean local packs: no retained donor placeholders.
+
+    Existing packs retain their existing filling behavior. Reject partial or
+    oversized input before cloning, including the fixed capacity of native tables.
+    """
+    for name, meta in variant["slots"].items():
+        if slide is not None:
+            wanted = meta.get("match_names") or [meta.get("match_name")]
+            actual = [sh.name for sh in slide.shapes]
+            if any(not n or actual.count(n) != 1 for n in wanted):
+                raise DeckError(f"{family}: слот {name} не найден однозначно в шаблоне; обнови fill-map")
+        value = slots.get(name)
+        empty = value is None or value == [] or (isinstance(value, str) and not value.strip())
+        if empty and not meta.get("optional"):
+            raise DeckError(f"{family}: обязателен slots.{name}")
+        if empty:
+            continue
+        if meta.get("repeat"):
+            expected = len(meta.get("match_names") or [])
+            if not isinstance(value, list) or len(value) != expected:
+                raise DeckError(f"{family}: slots.{name} должен содержать ровно {expected} элементов")
+            if any(v is None or not str(v).strip() for v in value):
+                raise DeckError(f"{family}: slots.{name} содержит пустой элемент")
+        if meta.get("kind") == "table":
+            if not isinstance(value, list) or not value or any(not isinstance(row, list) or not row for row in value):
+                raise DeckError(f"{family}: slots.{name} должен быть непустой прямоугольной таблицей")
+            width = len(value[0])
+            if any(len(row) != width for row in value):
+                raise DeckError(f"{family}: строки таблицы должны иметь одинаковое число колонок")
+            if any(cell is None for row in value for cell in row):
+                raise DeckError(f"{family}: None в таблице сохраняет заглушку; передай текст или пустую строку")
+            if len(value) > meta["max_rows"] or width > meta["max_cols"]:
+                raise DeckError(f"{family}: таблица больше вместимости {meta['max_rows']}×{meta['max_cols']}; раздели её на слайды")
+            if meta.get('exact_cols') and width != meta['exact_cols']:
+                raise DeckError(f"{family}: нужно ровно {meta['exact_cols']} колонки")
+    for name in variant.get("chart_slots") or {}:
+        data = (entry.get("charts") or {}).get(name) or {}
+        if not data.get("categories") or not data.get("series"):
+            raise DeckError(f"{family}: обязательны charts.{name}.categories и series")
+        if variant['chart_slots'][name].get('combo_series'):
+            try:
+                CHRT.validate_combo_data(data, variant['chart_slots'][name]['combo_series'])
+            except (CHRT.ChartError, TypeError, ValueError) as e:
+                raise DeckError(str(e)) from e
 
 
 def build_slide_on_clone(prs, plan: dict, tdir: str) -> tuple[int, dict]:
@@ -479,6 +532,9 @@ def build_slide_on_clone(prs, plan: dict, tdir: str) -> tuple[int, dict]:
                         f"{sorted(plan['variant']['slots'])})")
 
     rep = F.fill_structural_slide(slide, plan["variant"], plan["content"])
+    if tdir == "committee":
+        import committee_layout
+        rep["_composition"] = committee_layout.apply(slide, family, plan["variant"])
 
     # O9 (хэндофф №2 2026-08-13): акцент вехи таймлайна — семантика контента.
     # Применяется ТОЛЬКО к вариантам с пилюлями atom:milestone_date (линейка

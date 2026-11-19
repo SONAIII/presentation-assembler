@@ -29,7 +29,9 @@ import platform
 import shutil
 import subprocess
 import sys
+import tempfile
 import time
+from xml.sax.saxutils import escape
 
 
 def pdf_to_png(pdf, outdir, dpi, only=None):
@@ -199,12 +201,35 @@ def find_soffice():
               os.path.expandvars(r"%ProgramFiles(x86)%\LibreOffice\program\soffice.exe")):
         if os.path.isfile(c):
             return c
+    # The desktop runtime can bundle a renderer even when LibreOffice is not
+    # installed as an application or on PATH.
+    roots = [os.environ.get("CODEX_PRIMARY_RUNTIME_ROOT"),
+             os.path.expanduser("~/.cache/codex-runtimes/codex-primary-runtime")]
+    for root in filter(None, roots):
+        c = os.path.join(root, "dependencies/native/libreoffice-headless/libreoffice/LibreOfficeDev.app/Contents/MacOS/soffice")
+        if os.path.isfile(c):
+            return c
     return None
 
 
 def via_soffice(so, pptx, outdir, dpi, only=None):
-    subprocess.run([so, "--headless", "--convert-to", "pdf", "--outdir", outdir, pptx],
-                   check=True, timeout=300, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    with tempfile.TemporaryDirectory(prefix="pptx-preview-") as tmp:
+        env = os.environ.copy()
+        if platform.system() == "Darwin" and "libreoffice-headless" in so:
+            # The bundled fontconfig defaults cannot see macOS user fonts.
+            # Use a private configuration/cache; don't install or change fonts.
+            conf = os.path.join(tmp, "fonts.conf")
+            dirs = [os.path.expanduser("~/Library/Fonts"), "/Library/Fonts", "/System/Library/Fonts",
+                    "/System/Library/Fonts/Supplemental"]
+            with open(conf, "w", encoding="utf-8") as f:
+                f.write('<fontconfig>' + ''.join('<dir>' + escape(d) + '</dir>' for d in dirs)
+                        + '<cachedir>' + escape(os.path.join(tmp, "fontcache")) + '</cachedir></fontconfig>')
+            env.update(FONTCONFIG_FILE=conf, SAL_USE_VCLPLUGIN="svp")
+        from pathlib import Path
+        profile = Path(tmp, "profile").as_uri()
+        subprocess.run([so, "-env:UserInstallation=" + profile, "--headless", "--convert-to", "pdf", "--outdir", outdir, pptx],
+                       check=True, timeout=300, env=env,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     pdf = os.path.join(outdir, os.path.splitext(os.path.basename(pptx))[0] + ".pdf")
     return pdf_to_png(pdf, outdir, dpi, only) if os.path.isfile(pdf) else []
 
