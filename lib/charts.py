@@ -86,7 +86,7 @@ def replace_chart_data(chart, spec: dict) -> dict:
             f".//{qn('c:ser')}/{qn('c:cat')}//{qn('c:formatCode')}")
         cat_fmt = fc.text if fc is not None else None
 
-    n_designer = len(chart.plots[0].series)
+    n_designer = len(chart.series)
     data = CategoryChartData()
     data.categories = cats
     if cat_fmt:
@@ -100,7 +100,7 @@ def replace_chart_data(chart, spec: dict) -> dict:
     # readback-верификация: то, что читается назад, == заказанному
     plot = chart.plots[0]
     got = [(s.name, [None if v is None else float(v) for v in s.values])
-           for s in plot.series]
+           for s in chart.series]
     want = [(n, v) for n, v in sers]
     problems = []
     if len(got) != len(want):
@@ -173,7 +173,25 @@ def replace_chart_slots(slide, variant: dict, charts: dict) -> dict:
                             "error": f"чарт «{slot['match_name']}» не найден"}
             continue
         try:
+            if slot.get('combo_series'):
+                validate_combo_data(spec, slot['combo_series'])
             report[name] = replace_chart_data(frame.chart, spec)
         except ChartError as e:
             report[name] = {"replaced": False, "error": str(e)}
     return report
+
+
+def validate_combo_data(spec, expected=3):
+    """Fixed two-column-plus-percent composition; reject ambiguous or bad data."""
+    import math
+    pairs = _norm_series(spec.get('series') or {})
+    if len(pairs) != expected:
+        raise ChartError(f'комбинированный график требует {expected} ряда: два компонента и доля в процентах')
+    cats = spec.get('categories') or []
+    if not 2 <= len(cats) <= 24:
+        raise ChartError('chart_table: нужно от 2 до 24 категорий; более длинный период агрегируй или раздели')
+    for i,(name,values) in enumerate(pairs):
+        if len(values) != len(cats) or any(v is None or not math.isfinite(v) or v < 0 for v in values):
+            raise ChartError(f'chart_table: ряд {name} должен содержать неотрицательные конечные числа по всем категориям')
+        if i == 2 and any(v > 100 for v in values):
+            raise ChartError('chart_table: третий ряд — проценты от 0 до 100, а не доля от 0 до 1')
