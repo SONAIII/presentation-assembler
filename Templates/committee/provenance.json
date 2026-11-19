@@ -1,0 +1,61 @@
+{
+  "source_filename": "Комитет_Сходить_09092026_preread [Wl0bcv].pdf",
+  "source_sha256": "d3fa3eac2c6d8886a2b385e887e4b97045254fd33ac831c5825c3966ad860240",
+  "source_modified": false,
+  "copied_resources": "measured geometry and styles; native editable objects rebuilt",
+  "contains_business_content": false,
+  "variants": [
+    {
+      "family": "cover",
+      "variant": "source",
+      "source_pdf_page": 1,
+      "geometry": "measured from source PDF; no adaptive recentering or added card grid"
+    },
+    {
+      "family": "divider",
+      "variant": "source",
+      "source_pdf_page": 4,
+      "geometry": "measured from source PDF; no adaptive recentering or added card grid"
+    },
+    {
+      "family": "summary",
+      "variant": "source",
+      "source_pdf_page": 2,
+      "geometry": "measured from source PDF; no adaptive recentering or added card grid"
+    },
+    {
+      "family": "chart_note",
+      "variant": "source",
+      "source_pdf_page": 8,
+      "geometry": "measured from source PDF; no adaptive recentering or added card grid"
+    },
+    {
+      "family": "dashboard",
+      "variant": "source",
+      "source_pdf_page": 29,
+      "geometry": "measured from source PDF; no adaptive recentering or added card grid"
+    },
+    {
+      "family": "priorities",
+      "variant": "source",
+      "source_pdf_page": 25,
+      "geometry": "measured from source PDF; no adaptive recentering or added card grid"
+    },
+    {
+      "family": "roadmap",
+      "variant": "source",
+      "source_pdf_page": 30,
+      "geometry": "measured from source PDF; no adaptive recentering or added card grid"
+    },
+    {
+      "family": "chart_table",
+      "variant": "actions",
+      "source": "final_slide_reference"
+    }
+  ],
+  "final_slide_reference": {
+    "filename": "Дебиторка_комитет_актуальный.pptx",
+    "sha256": "c44c318321561aaee0838240aeca9b4e209520126bc78d609dc13684cb0e612b",
+    "copied_resources": "geometry and style only; chart, table and labels regenerated without business data"
+  }
+}
