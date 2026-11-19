@@ -1,0 +1,12 @@
+/* Committee reference canvas. 1 CSS px = 1 PowerPoint point. */
+@font-face { font-family: 'YS Text'; src: local('YS Text'); }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+.slide { width: 720px; height: 405px; position: relative; overflow: hidden;
+  background: #e6edf1; color: #414c53; font-family: 'YS Text', sans-serif; }
+.heading { position: absolute; left: 18px; top: 16px; width: 684px;
+  margin: 0; font-family: 'YS Text Cond', sans-serif; font-size: 21.6px; font-weight: 700; font-style: italic; line-height: 1.05; }
+.body { position: absolute; left: 18px; right: 18px; top: 80px; bottom: 30px; }
+.panel { background: #fff; border-radius: 9px; padding: 18px; }
+.value { color: #029154; font-size: 28.5px; font-weight: 700; }
+.footer { position: absolute; left: 20px; right: 20px; bottom: 12px; font-size: 8.55px; }
