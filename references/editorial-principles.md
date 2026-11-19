@@ -1,5 +1,11 @@
 # Editorial principles: what the slide says, not how it looks
 
+Актуальные правила и исключения: [content-challenge.md](content-challenge.md) и
+[editorial-quick-ref.md](editorial-quick-ref.md). Они имеют приоритет над
+категоричными формулировками исторического справочника ниже: сохраняй
+согласованные тематические заголовки, не требуй CTA у информационного апдейта,
+не навязывай обложку и exec summary короткому деку.
+
 This file is about **content quality** — what goes on the slide before any layout decision. Layout rules live in [content-assembly-rules.md](content-assembly-rules.md); бренд и типографика живут в fill-maps шаблона и [quality-gates.md](quality-gates.md). This file is read **на шаге 2 (план дека) и шаге 3.5 (контент-вычитка) [SKILL.md](../SKILL.md)** — before writing any slide content, and again before finalizing copy.
 
 A deck that follows brand rules but ignores these principles looks branded but reads as noise. A deck that follows these principles even with imperfect layout still lands the message.
